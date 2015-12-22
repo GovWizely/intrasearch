@@ -1,0 +1,15 @@
+- id: ka5t0000000Kyl2AAC
+  atom: In 2012, foreign-controlled companies employed 275,300 Pennsylvania workers.
+  countries:
+  - United States
+  industry_paths:
+  - "/Financial Services/Investment Services"
+  industries:
+  - Investment Services
+  summary: nil
+  title: Pennsylvania – Foreign Investment
+  topic_paths:
+  - "/Economic Development and Investment/Investment/Foreign Investment"
+  topics:
+  - Foreign Investment
+  url: https://example.org/article2?id=Pennsylvania-Foreign-Investment

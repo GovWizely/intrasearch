@@ -1,0 +1,6 @@
+.ruby-gemset
+/config/intrasearch.yml
+/config/restforce.yml
+/coverage/
+/log/
+/spec/examples.txt

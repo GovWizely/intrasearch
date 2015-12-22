@@ -1,0 +1,16 @@
+language: ruby
+
+rvm:
+  - 2.2.3
+
+bundler_args: --without production
+
+before_script:
+  - cp config/intrasearch.yml.example config/intrasearch.yml
+  - cp config/restforce.yml.example config/restforce.yml
+
+before_install:
+  - curl -O https://download.elastic.co/elasticsearch/elasticsearch/elasticsearch-1.7.4.deb && sudo dpkg -i --force-confnew elasticsearch-1.7.4.deb
+
+services:
+  - elasticsearch

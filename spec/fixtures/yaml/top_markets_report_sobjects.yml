@@ -1,0 +1,27 @@
+---
+- Atom__c: |-
+    <div style="font-size: 12px;"><span style="font-family: arial, helvetica, sans-serif;"><i>The 2015 Top Markets Report for Building Products and Sustainable Construction</i></span></div>
+  DataCategorySelections:
+  - attributes:
+      type: Top_Markets__DataCategorySelection
+      url: "/services/data/v34.0/sobjects/Top_Markets__DataCategorySelection/02ot00000000Q9FAAU"
+    Id: 02ot00000000Q9FAAU
+    DataCategoryName: Canada
+    DataCategoryGroupName: Geographies
+  - attributes:
+      type: Top_Markets__DataCategorySelection
+      url: "/services/data/v34.0/sobjects/Top_Markets__DataCategorySelection/02ot00000000Q9GAAU"
+    Id: 02ot00000000Q9GAAU
+    DataCategoryName: Building_Products
+    DataCategoryGroupName: Industries
+  - attributes:
+      type: Top_Markets__DataCategorySelection
+      url: "/services/data/v34.0/sobjects/Top_Markets__DataCategorySelection/02ot00000000Q9HAAU"
+    Id: 02ot00000000Q9HAAU
+    DataCategoryName: Export_Potential
+    DataCategoryGroupName: Trade_Topics
+  Id: ka6t0000000006sAAA
+  LastPublishedDate: '2015-10-23T20:23:00.000+0000'
+  Summary: Canada ranks first among top export markets for U.S. building product manufacturers
+  Title: Top Markets Title
+  UrlName: Top-Markets-Building-Products

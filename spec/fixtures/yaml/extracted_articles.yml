@@ -1,0 +1,40 @@
+- :id: ka0t0000000PONvAAO
+  :atom: item 1 atom
+  :summary: item 1 summary
+  :title: item 1 title
+  :url_name: Space-Business
+  :geographies:
+  - United States
+  - Cayman Islands
+  - Bogus Country
+  :industries:
+  - Space Launch Equipment
+  - Satellites
+  - Bogus Industry
+  :trade_topics:
+  - Anti Dumping
+  - Climate
+  - Business Management
+  - Bogus Topic
+
+- :id: ka0t0000000PONqAAO
+  :atom: item 2 atom
+  :summary: item 2 summary
+  :title: item 2 title
+  :url_name: Canada-Openess-to-Investment
+  :geographies:
+  - Canada
+  :trade_topics:
+  - Economic Development and Investment
+
+- :id: ka0t0000000PONlAAO
+  :atom: item 3 atom
+  :summary: item 3 summary
+  :title: item 3 title
+  :url_name: Sweden-telecommunications
+  :geographies:
+  - Sweden
+  :industries:
+  - Bogus value
+  :trade_topics:
+  - Climate

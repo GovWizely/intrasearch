@@ -1,0 +1,197 @@
+GEM
+  remote: https://rubygems.org/
+  specs:
+    activemodel (4.2.5)
+      activesupport (= 4.2.5)
+      builder (~> 3.1)
+    activesupport (4.2.5)
+      i18n (~> 0.7)
+      json (~> 1.7, >= 1.7.7)
+      minitest (~> 5.1)
+      thread_safe (~> 0.3, >= 0.3.4)
+      tzinfo (~> 1.1)
+    axiom-types (0.1.1)
+      descendants_tracker (~> 0.0.4)
+      ice_nine (~> 0.11.0)
+      thread_safe (~> 0.3, >= 0.3.1)
+    builder (3.2.2)
+    coderay (1.1.0)
+    coercible (1.0.0)
+      descendants_tracker (~> 0.0.1)
+    crass (1.0.2)
+    descendants_tracker (0.0.4)
+      thread_safe (~> 0.3, >= 0.3.1)
+    diff-lcs (1.2.5)
+    docile (1.1.5)
+    elasticsearch (1.0.15)
+      elasticsearch-api (= 1.0.15)
+      elasticsearch-transport (= 1.0.15)
+    elasticsearch-api (1.0.15)
+      multi_json
+    elasticsearch-model (0.1.8)
+      activesupport (> 3)
+      elasticsearch (> 0.4)
+      hashie
+    elasticsearch-persistence (0.1.8)
+      activemodel (> 3)
+      activesupport (> 3)
+      elasticsearch (> 0.4)
+      elasticsearch-model (>= 0.1)
+      hashie
+      virtus
+    elasticsearch-transport (1.0.15)
+      faraday
+      multi_json
+    equalizer (0.0.11)
+    ethon (0.8.0)
+      ffi (>= 1.3.0)
+    faraday (0.9.2)
+      multipart-post (>= 1.2, < 3)
+    faraday_middleware (0.10.0)
+      faraday (>= 0.7.4, < 0.10)
+    ffi (1.9.10)
+    formatador (0.2.5)
+    grape (0.14.0)
+      activesupport
+      builder
+      hashie (>= 2.1.0)
+      multi_json (>= 1.3.2)
+      multi_xml (>= 0.5.2)
+      rack (>= 1.3.0)
+      rack-accept
+      rack-mount
+      virtus (>= 1.0.0)
+    guard (2.13.0)
+      formatador (>= 0.2.4)
+      listen (>= 2.7, <= 4.0)
+      lumberjack (~> 1.0)
+      nenv (~> 0.1)
+      notiffany (~> 0.0)
+      pry (>= 0.9.12)
+      shellany (~> 0.0)
+      thor (>= 0.18.1)
+    guard-bundler (2.1.0)
+      bundler (~> 1.0)
+      guard (~> 2.2)
+      guard-compat (~> 1.1)
+    guard-compat (1.2.1)
+    guard-rack (2.1.1)
+      ffi
+      guard (~> 2.3)
+      spoon
+    hashie (3.4.3)
+    i18n (0.7.0)
+    ice_nine (0.11.1)
+    json (1.8.3)
+    kgio (2.10.0)
+    listen (3.0.5)
+      rb-fsevent (>= 0.9.3)
+      rb-inotify (>= 0.9)
+    lumberjack (1.0.9)
+    method_source (0.8.2)
+    mini_portile2 (2.0.0)
+    minitest (5.8.3)
+    multi_json (1.11.2)
+    multi_xml (0.5.5)
+    multipart-post (2.0.0)
+    nenv (0.2.0)
+    nokogiri (1.6.7.1)
+      mini_portile2 (~> 2.0.0.rc2)
+    nokogumbo (1.4.7)
+      nokogiri
+    notiffany (0.0.8)
+      nenv (~> 0.1)
+      shellany (~> 0.0)
+    pry (0.10.3)
+      coderay (~> 1.1.0)
+      method_source (~> 0.8.1)
+      slop (~> 3.4)
+    rack (1.6.4)
+    rack-accept (0.4.5)
+      rack (>= 0.4)
+    rack-console (1.3.1)
+      rack (>= 1.1)
+      rack-test
+    rack-cors (0.4.0)
+    rack-mount (0.8.3)
+      rack (>= 1.0.0)
+    rack-test (0.6.3)
+      rack (>= 1.0)
+    raindrops (0.15.0)
+    rake (10.4.2)
+    rb-fsevent (0.9.6)
+    rb-inotify (0.9.5)
+      ffi (>= 0.5.0)
+    restforce (2.1.2)
+      faraday (~> 0.9.0)
+      faraday_middleware (>= 0.8.8)
+      hashie (>= 1.2.0, < 4.0)
+      json (>= 1.7.5, < 1.9.0)
+    rspec (3.4.0)
+      rspec-core (~> 3.4.0)
+      rspec-expectations (~> 3.4.0)
+      rspec-mocks (~> 3.4.0)
+    rspec-core (3.4.1)
+      rspec-support (~> 3.4.0)
+    rspec-expectations (3.4.0)
+      diff-lcs (>= 1.2.0, < 2.0)
+      rspec-support (~> 3.4.0)
+    rspec-mocks (3.4.0)
+      diff-lcs (>= 1.2.0, < 2.0)
+      rspec-support (~> 3.4.0)
+    rspec-support (3.4.1)
+    sanitize (4.0.1)
+      crass (~> 1.0.2)
+      nokogiri (>= 1.4.4)
+      nokogumbo (~> 1.4.1)
+    shellany (0.0.1)
+    simplecov (0.11.1)
+      docile (~> 1.1.0)
+      json (~> 1.8)
+      simplecov-html (~> 0.10.0)
+    simplecov-html (0.10.0)
+    slop (3.6.0)
+    spoon (0.0.4)
+      ffi
+    thor (0.19.1)
+    thread_safe (0.3.5)
+    typhoeus (0.8.0)
+      ethon (>= 0.8.0)
+    tzinfo (1.2.2)
+      thread_safe (~> 0.1)
+    unicorn (5.0.1)
+      kgio (~> 2.6)
+      rack
+      raindrops (~> 0.7)
+    virtus (1.0.5)
+      axiom-types (~> 0.1)
+      coercible (~> 1.0)
+      descendants_tracker (~> 0.0, >= 0.0.3)
+      equalizer (~> 0.0, >= 0.0.9)
+    yajl-ruby (1.2.1)
+
+PLATFORMS
+  ruby
+
+DEPENDENCIES
+  activesupport
+  elasticsearch-persistence
+  grape
+  guard
+  guard-bundler
+  guard-rack
+  pry
+  rack-console
+  rack-cors
+  rack-test
+  rake
+  restforce
+  rspec
+  sanitize
+  simplecov
+  typhoeus
+  unicorn
+  yajl-ruby
+
+BUNDLED WITH
+   1.10.6

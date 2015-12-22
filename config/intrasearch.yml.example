@@ -1,0 +1,8 @@
+development:
+  article_url_prefix: 'https://example.org/article2?id='
+
+test:
+  article_url_prefix: 'https://example.org/article2?id='
+
+production:
+  article_url_prefix: 'https://example.org/article2?id='

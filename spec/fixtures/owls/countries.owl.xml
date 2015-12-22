@@ -1,0 +1,1876 @@
+<?xml version="1.0"?>
+<rdf:RDF xmlns="http://www.w3.org/2004/02/skos/core#"
+         xml:base="http://www.w3.org/2004/02/skos/core"
+         xmlns:webprotege="http://webprotege.stanford.edu/"
+         xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+         xmlns:terms="http://purl.org/dc/terms/"
+         xmlns:owl="http://www.w3.org/2002/07/owl#"
+         xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+         xmlns:skos="http://www.w3.org/2004/02/skos/core#"
+         xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+         xmlns:dc="http://purl.org/dc/elements/1.1/">
+  <owl:Ontology rdf:about="http://www.w3.org/2004/02/skos/core">
+    <terms:creator>Sean Bechhofer</terms:creator>
+    <terms:creator>Alistair Miles</terms:creator>
+    <terms:description xml:lang="en">An RDF vocabulary for describing the basic structure and content of concept schemes such as thesauri, classification schemes, subject heading lists, taxonomies, &apos;folksonomies&apos;, other types of controlled vocabulary, and also concept schemes embedded in glossaries and terminologies.</terms:description>
+    <terms:contributor>Nikki Rogers</terms:contributor>
+    <terms:contributor>Dave Beckett</terms:contributor>
+    <terms:contributor>Participants in W3C&apos;s Semantic Web Deployment Working Group.</terms:contributor>
+    <terms:title xml:lang="en">SKOS Vocabulary</terms:title>
+    <rdfs:seeAlso rdf:resource="http://www.w3.org/TR/skos-reference/"/>
+  </owl:Ontology>
+
+  <!-- http://webprotege.stanford.edu/RBNKtRqwNgoer4ubUCrN8Ae -->
+
+  <owl:Class rdf:about="http://webprotege.stanford.edu/RBNKtRqwNgoer4ubUCrN8Ae">
+    <rdfs:label>Countries</rdfs:label>
+    <rdfs:subClassOf rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:onProperty rdf:resource="http://www.w3.org/2004/02/skos/core#hasTopConcept"/>
+        <owl:someValuesFrom rdf:resource="http://webprotege.stanford.edu/RjX9UvV4HBCZZDj3GYchVL"/>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:onProperty rdf:resource="http://www.w3.org/2004/02/skos/core#hasTopConcept"/>
+        <owl:someValuesFrom rdf:resource="http://webprotege.stanford.edu/RBw8ndgL3iXtxxTP560v6yZ"/>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:onProperty rdf:resource="http://www.w3.org/2004/02/skos/core#hasTopConcept"/>
+        <owl:someValuesFrom rdf:resource="http://webprotege.stanford.edu/RBAQIDzP6yuHpyVOi7mTOad"/>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:onProperty rdf:resource="http://www.w3.org/2004/02/skos/core#hasTopConcept"/>
+        <owl:someValuesFrom rdf:resource="http://webprotege.stanford.edu/RDjKltimjLU3Bt2imAOOMpz"/>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:onProperty rdf:resource="http://www.w3.org/2004/02/skos/core#hasTopConcept"/>
+        <owl:someValuesFrom rdf:resource="http://webprotege.stanford.edu/RCHQeOnfT0xfDPZJqmPxA8B"/>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:onProperty rdf:resource="http://www.w3.org/2004/02/skos/core#hasTopConcept"/>
+        <owl:someValuesFrom rdf:resource="http://webprotege.stanford.edu/R9i2WoeLmbDaHtDNCyjBY24"/>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:onProperty rdf:resource="http://www.w3.org/2004/02/skos/core#hasTopConcept"/>
+        <owl:someValuesFrom rdf:resource="http://webprotege.stanford.edu/R7wvBhExXvlfil8gIxuhT1A"/>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:onProperty rdf:resource="http://www.w3.org/2004/02/skos/core#hasTopConcept"/>
+        <owl:someValuesFrom rdf:resource="http://webprotege.stanford.edu/RDHEnKcygc3BhrTi0lCku2l"/>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:onProperty rdf:resource="http://www.w3.org/2004/02/skos/core#hasTopConcept"/>
+        <owl:someValuesFrom rdf:resource="http://webprotege.stanford.edu/R8FUKsMCIQ8LqFhPh5GAUHa"/>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:onProperty rdf:resource="http://www.w3.org/2004/02/skos/core#hasTopConcept"/>
+        <owl:someValuesFrom rdf:resource="http://webprotege.stanford.edu/R7Tt3LGkpoNyU6AIOvyhTVF"/>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:onProperty rdf:resource="http://www.w3.org/2004/02/skos/core#hasTopConcept"/>
+        <owl:someValuesFrom rdf:resource="http://webprotege.stanford.edu/RBszX0U6TGg6P1vYxcho8GX"/>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:onProperty rdf:resource="http://www.w3.org/2004/02/skos/core#hasTopConcept"/>
+        <owl:someValuesFrom rdf:resource="http://webprotege.stanford.edu/R7zZQn8uVCa1ZTM1wLina6i"/>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:onProperty rdf:resource="http://www.w3.org/2004/02/skos/core#hasTopConcept"/>
+        <owl:someValuesFrom rdf:resource="http://webprotege.stanford.edu/RDcPCaHm5yHaI3T2BN46SHl"/>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:onProperty rdf:resource="http://www.w3.org/2004/02/skos/core#hasTopConcept"/>
+        <owl:someValuesFrom rdf:resource="http://webprotege.stanford.edu/RCdtaZpf8FFT2evaJuWr9Lx"/>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:onProperty rdf:resource="http://www.w3.org/2004/02/skos/core#hasTopConcept"/>
+        <owl:someValuesFrom rdf:resource="http://webprotege.stanford.edu/RCN2spts7emRf83rPF2KbQw"/>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:onProperty rdf:resource="http://www.w3.org/2004/02/skos/core#hasTopConcept"/>
+        <owl:someValuesFrom rdf:resource="http://webprotege.stanford.edu/RfxpAK7Sx2uspzUqK7lzip"/>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:onProperty rdf:resource="http://www.w3.org/2004/02/skos/core#hasTopConcept"/>
+        <owl:someValuesFrom rdf:resource="http://webprotege.stanford.edu/RB6ARrKUqqClwfBGNR8YLLc"/>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:onProperty rdf:resource="http://www.w3.org/2004/02/skos/core#hasTopConcept"/>
+        <owl:someValuesFrom rdf:resource="http://webprotege.stanford.edu/R44D6VIx7PvKMqSBEykq4i"/>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:onProperty rdf:resource="http://www.w3.org/2004/02/skos/core#hasTopConcept"/>
+        <owl:someValuesFrom rdf:resource="http://webprotege.stanford.edu/R6tX31lokqkABm9HOYhRKK"/>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:onProperty rdf:resource="http://www.w3.org/2004/02/skos/core#hasTopConcept"/>
+        <owl:someValuesFrom rdf:resource="http://webprotege.stanford.edu/RCnNAAeMPteY7EWU1GUOdvN"/>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:onProperty rdf:resource="http://www.w3.org/2004/02/skos/core#hasTopConcept"/>
+        <owl:someValuesFrom rdf:resource="http://webprotege.stanford.edu/RCLWOSEkzZVJv5r09ls8i9A"/>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:onProperty rdf:resource="http://www.w3.org/2004/02/skos/core#hasTopConcept"/>
+        <owl:someValuesFrom rdf:resource="http://webprotege.stanford.edu/RQcVVe7gpJwOXKdZTbjsZ1"/>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:onProperty rdf:resource="http://www.w3.org/2004/02/skos/core#hasTopConcept"/>
+        <owl:someValuesFrom rdf:resource="http://webprotege.stanford.edu/R91qpLTTbKuO9oI9geGqQhv"/>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:onProperty rdf:resource="http://www.w3.org/2004/02/skos/core#hasTopConcept"/>
+        <owl:someValuesFrom rdf:resource="http://webprotege.stanford.edu/RIAp7oIkmdpdfQE0H6FiVG"/>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:onProperty rdf:resource="http://www.w3.org/2004/02/skos/core#hasTopConcept"/>
+        <owl:someValuesFrom rdf:resource="http://webprotege.stanford.edu/R8CwJ8K2v1OQmxDmOcHfgSj"/>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:onProperty rdf:resource="http://www.w3.org/2004/02/skos/core#hasTopConcept"/>
+        <owl:someValuesFrom rdf:resource="http://webprotege.stanford.edu/R8c1pzK1REf00r9nM0kswIj"/>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:onProperty rdf:resource="http://www.w3.org/2004/02/skos/core#hasTopConcept"/>
+        <owl:someValuesFrom rdf:resource="http://webprotege.stanford.edu/R9rVGUHUgufNHYqigEuH1Y1"/>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:onProperty rdf:resource="http://www.w3.org/2004/02/skos/core#hasTopConcept"/>
+        <owl:someValuesFrom rdf:resource="http://webprotege.stanford.edu/RDydxr4mwiekMUnDQpunNaX"/>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:onProperty rdf:resource="http://www.w3.org/2004/02/skos/core#hasTopConcept"/>
+        <owl:someValuesFrom rdf:resource="http://webprotege.stanford.edu/RePmJPALYkhooeQ2wBSlN7"/>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:onProperty rdf:resource="http://www.w3.org/2004/02/skos/core#hasTopConcept"/>
+        <owl:someValuesFrom rdf:resource="http://webprotege.stanford.edu/RDzjXT0GYF9ecQbq6oyxewD"/>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:onProperty rdf:resource="http://www.w3.org/2004/02/skos/core#hasTopConcept"/>
+        <owl:someValuesFrom rdf:resource="http://webprotege.stanford.edu/R72Vq8tvj233V96ZX6FnbkI"/>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:onProperty rdf:resource="http://www.w3.org/2004/02/skos/core#hasTopConcept"/>
+        <owl:someValuesFrom rdf:resource="http://webprotege.stanford.edu/RC198pPnsSx6N3eRmsBONn8"/>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:onProperty rdf:resource="http://www.w3.org/2004/02/skos/core#hasTopConcept"/>
+        <owl:someValuesFrom rdf:resource="http://webprotege.stanford.edu/RDFP2YrvV7b1gJy0iw9zRK8"/>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:onProperty rdf:resource="http://www.w3.org/2004/02/skos/core#hasTopConcept"/>
+        <owl:someValuesFrom rdf:resource="http://webprotege.stanford.edu/RGToHhlWH16JOtsTbBjGkJ"/>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:onProperty rdf:resource="http://www.w3.org/2004/02/skos/core#hasTopConcept"/>
+        <owl:someValuesFrom rdf:resource="http://webprotege.stanford.edu/RjArdMipwFnxJuz6LuJxwK"/>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:onProperty rdf:resource="http://www.w3.org/2004/02/skos/core#hasTopConcept"/>
+        <owl:someValuesFrom rdf:resource="http://webprotege.stanford.edu/RDjGw17VBjBm1pfdtbcTiu7"/>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:onProperty rdf:resource="http://www.w3.org/2004/02/skos/core#hasTopConcept"/>
+        <owl:someValuesFrom rdf:resource="http://webprotege.stanford.edu/R9DFwPx5wirkI29JDccLcyb"/>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:onProperty rdf:resource="http://www.w3.org/2004/02/skos/core#hasTopConcept"/>
+        <owl:someValuesFrom rdf:resource="http://webprotege.stanford.edu/R4hFpPEfwFix7LcYu1r4NZ"/>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:onProperty rdf:resource="http://www.w3.org/2004/02/skos/core#hasTopConcept"/>
+        <owl:someValuesFrom rdf:resource="http://webprotege.stanford.edu/RC89POWcmFspXvpRIOHvjB9"/>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:onProperty rdf:resource="http://webprotege.stanford.edu/RB0fU58xv4MyfH57wfHiFy8"/>
+        <owl:someValuesFrom rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:onProperty rdf:resource="http://www.w3.org/2004/02/skos/core#hasTopConcept"/>
+        <owl:someValuesFrom rdf:resource="http://webprotege.stanford.edu/R7veGbn8GhVQXpxzaXwjXkW"/>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:onProperty rdf:resource="http://www.w3.org/2004/02/skos/core#hasTopConcept"/>
+        <owl:someValuesFrom rdf:resource="http://webprotege.stanford.edu/R7vNVyPoXK033ovmABOlGyI"/>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:onProperty rdf:resource="http://www.w3.org/2004/02/skos/core#hasTopConcept"/>
+        <owl:someValuesFrom rdf:resource="http://webprotege.stanford.edu/RCYYmdELCU9mt8R3RdlNys5"/>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:onProperty rdf:resource="http://www.w3.org/2004/02/skos/core#hasTopConcept"/>
+        <owl:someValuesFrom rdf:resource="http://webprotege.stanford.edu/Rw7Hekma7kZuaIFsa9CoDI"/>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:onProperty rdf:resource="http://www.w3.org/2004/02/skos/core#hasTopConcept"/>
+        <owl:someValuesFrom rdf:resource="http://webprotege.stanford.edu/R75rqUe0eciCtNILDVfD2gL"/>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:onProperty rdf:resource="http://www.w3.org/2004/02/skos/core#hasTopConcept"/>
+        <owl:someValuesFrom rdf:resource="http://webprotege.stanford.edu/R9xQtgJ353gaKE7qCdIDWNH"/>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:onProperty rdf:resource="http://webprotege.stanford.edu/RBocrVwjt3yv3L4Fb2lMOdS"/>
+        <owl:someValuesFrom rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:onProperty rdf:resource="http://www.w3.org/2004/02/skos/core#hasTopConcept"/>
+        <owl:someValuesFrom rdf:resource="http://webprotege.stanford.edu/R8QG05CJoVwkPok7N6Roz1V"/>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:onProperty rdf:resource="http://www.w3.org/2004/02/skos/core#hasTopConcept"/>
+        <owl:someValuesFrom rdf:resource="http://webprotege.stanford.edu/R9trpZrU6PQBfnlotvQyAEC"/>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:onProperty rdf:resource="http://www.w3.org/2004/02/skos/core#hasTopConcept"/>
+        <owl:someValuesFrom rdf:resource="http://webprotege.stanford.edu/R7maTidaiMMeu6GMYE85z8m"/>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:onProperty rdf:resource="http://www.w3.org/2004/02/skos/core#hasTopConcept"/>
+        <owl:someValuesFrom rdf:resource="http://webprotege.stanford.edu/RCMieQgqQN1unvmV8pUQ5Op"/>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:onProperty rdf:resource="http://www.w3.org/2004/02/skos/core#hasTopConcept"/>
+        <owl:someValuesFrom rdf:resource="http://webprotege.stanford.edu/RDf5WqjTEy5LQfo27FVNARN"/>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:onProperty rdf:resource="http://www.w3.org/2004/02/skos/core#hasTopConcept"/>
+        <owl:someValuesFrom rdf:resource="http://webprotege.stanford.edu/R8WEHAxTjAtnbKlMxoPcmwN"/>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:onProperty rdf:resource="http://www.w3.org/2004/02/skos/core#hasTopConcept"/>
+        <owl:someValuesFrom rdf:resource="http://webprotege.stanford.edu/R80bgRjdTG1heyjPL3Oe2zr"/>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:onProperty rdf:resource="http://www.w3.org/2004/02/skos/core#hasTopConcept"/>
+        <owl:someValuesFrom rdf:resource="http://webprotege.stanford.edu/R8HaQNQWHM8w0QKkUn2Fzxb"/>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:onProperty rdf:resource="http://www.w3.org/2004/02/skos/core#hasTopConcept"/>
+        <owl:someValuesFrom rdf:resource="http://webprotege.stanford.edu/RCNTy7vuXjv63jQIKyTl9rQ"/>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:onProperty rdf:resource="http://www.w3.org/2004/02/skos/core#hasTopConcept"/>
+        <owl:someValuesFrom rdf:resource="http://webprotege.stanford.edu/R78yOOm7zRFUaNsmD2hxTa3"/>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:onProperty rdf:resource="http://www.w3.org/2004/02/skos/core#hasTopConcept"/>
+        <owl:someValuesFrom rdf:resource="http://webprotege.stanford.edu/R90YTY2Vg46dJOeTdBr34kn"/>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:onProperty rdf:resource="http://www.w3.org/2004/02/skos/core#hasTopConcept"/>
+        <owl:someValuesFrom rdf:resource="http://webprotege.stanford.edu/RCs75GXTuLFQAa5lGsmBtpi"/>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:onProperty rdf:resource="http://www.w3.org/2004/02/skos/core#hasTopConcept"/>
+        <owl:someValuesFrom rdf:resource="http://webprotege.stanford.edu/RMiPvxUj7AK8KDXPkSSTlb"/>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:onProperty rdf:resource="http://www.w3.org/2004/02/skos/core#hasTopConcept"/>
+        <owl:someValuesFrom rdf:resource="http://webprotege.stanford.edu/R9a1XBPv2yihr1FhKYEROjR"/>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:onProperty rdf:resource="http://www.w3.org/2004/02/skos/core#hasTopConcept"/>
+        <owl:someValuesFrom rdf:resource="http://webprotege.stanford.edu/RhpOZSa8doskNp2XnNNA1X"/>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:onProperty rdf:resource="http://www.w3.org/2004/02/skos/core#hasTopConcept"/>
+        <owl:someValuesFrom rdf:resource="http://webprotege.stanford.edu/RBoMWwBkm6NcT5SqEjqFsbg"/>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:onProperty rdf:resource="http://www.w3.org/2004/02/skos/core#hasTopConcept"/>
+        <owl:someValuesFrom rdf:resource="http://webprotege.stanford.edu/RDWMuIZgkJ15oLm2YFfp3cD"/>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:onProperty rdf:resource="http://www.w3.org/2004/02/skos/core#hasTopConcept"/>
+        <owl:someValuesFrom rdf:resource="http://webprotege.stanford.edu/R6OsGHPcOskVYbghdvcPiw"/>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:onProperty rdf:resource="http://www.w3.org/2004/02/skos/core#hasTopConcept"/>
+        <owl:someValuesFrom rdf:resource="http://webprotege.stanford.edu/RLNkCTY2cc77k9Y1jOW6Xv"/>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:onProperty rdf:resource="http://www.w3.org/2004/02/skos/core#hasTopConcept"/>
+        <owl:someValuesFrom rdf:resource="http://webprotege.stanford.edu/RCPHtbEUDBS78KsYdixLKQb"/>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:onProperty rdf:resource="http://www.w3.org/2004/02/skos/core#hasTopConcept"/>
+        <owl:someValuesFrom rdf:resource="http://webprotege.stanford.edu/RBAkAbT8o3s5MdAnwqzUSfB"/>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:onProperty rdf:resource="http://www.w3.org/2004/02/skos/core#hasTopConcept"/>
+        <owl:someValuesFrom rdf:resource="http://webprotege.stanford.edu/Rk7YeUMMH0RZggunBDxoWg"/>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:onProperty rdf:resource="http://www.w3.org/2004/02/skos/core#hasTopConcept"/>
+        <owl:someValuesFrom rdf:resource="http://webprotege.stanford.edu/R9NI1UPySaTXU7rTIQCDwW7"/>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:onProperty rdf:resource="http://www.w3.org/2004/02/skos/core#hasTopConcept"/>
+        <owl:someValuesFrom rdf:resource="http://webprotege.stanford.edu/RBDe6zGbApwu0lkV1z5aycp"/>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:onProperty rdf:resource="http://www.w3.org/2004/02/skos/core#hasTopConcept"/>
+        <owl:someValuesFrom rdf:resource="http://webprotege.stanford.edu/R8YgscX6GjzSIJRBsyOvC4G"/>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:onProperty rdf:resource="http://www.w3.org/2004/02/skos/core#hasTopConcept"/>
+        <owl:someValuesFrom rdf:resource="http://webprotege.stanford.edu/R8wg4JegCG36uQR9LuomLFg"/>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:onProperty rdf:resource="http://www.w3.org/2004/02/skos/core#hasTopConcept"/>
+        <owl:someValuesFrom rdf:resource="http://webprotege.stanford.edu/RlX503VC9INjKngnUW279O"/>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:onProperty rdf:resource="http://www.w3.org/2004/02/skos/core#hasTopConcept"/>
+        <owl:someValuesFrom rdf:resource="http://webprotege.stanford.edu/R9nHCrUvk1zAfw2LwLGfNPs"/>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:onProperty rdf:resource="http://www.w3.org/2004/02/skos/core#hasTopConcept"/>
+        <owl:someValuesFrom rdf:resource="http://webprotege.stanford.edu/R7S2g1SgmUdzf3pFQmrsR0C"/>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:onProperty rdf:resource="http://www.w3.org/2004/02/skos/core#hasTopConcept"/>
+        <owl:someValuesFrom rdf:resource="http://webprotege.stanford.edu/R762SLDFJ5WfJI48KUhLQq7"/>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:onProperty rdf:resource="http://www.w3.org/2004/02/skos/core#hasTopConcept"/>
+        <owl:someValuesFrom rdf:resource="http://webprotege.stanford.edu/RTCfFG5Oyu3L7ch8KtFJ19"/>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:onProperty rdf:resource="http://www.w3.org/2004/02/skos/core#hasTopConcept"/>
+        <owl:someValuesFrom rdf:resource="http://webprotege.stanford.edu/RDfDY0ur68lqxEDkatxoedV"/>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:onProperty rdf:resource="http://www.w3.org/2004/02/skos/core#hasTopConcept"/>
+        <owl:someValuesFrom rdf:resource="http://webprotege.stanford.edu/RDlckOaeEMnijVCOZyb9ljp"/>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:onProperty rdf:resource="http://www.w3.org/2004/02/skos/core#hasTopConcept"/>
+        <owl:someValuesFrom rdf:resource="http://webprotege.stanford.edu/RWu76sk22Q9pELyys2NKCE"/>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:onProperty rdf:resource="http://www.w3.org/2004/02/skos/core#hasTopConcept"/>
+        <owl:someValuesFrom rdf:resource="http://webprotege.stanford.edu/R8wGcinPPozP0iTxbVwGkCz"/>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:onProperty rdf:resource="http://webprotege.stanford.edu/RBG01sWfrLuYiTHheF5S0Lp"/>
+        <owl:someValuesFrom rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:onProperty rdf:resource="http://www.w3.org/2004/02/skos/core#hasTopConcept"/>
+        <owl:someValuesFrom rdf:resource="http://webprotege.stanford.edu/RDGDAFENxW2wbu7M91LTJPe"/>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:onProperty rdf:resource="http://www.w3.org/2004/02/skos/core#hasTopConcept"/>
+        <owl:someValuesFrom rdf:resource="http://webprotege.stanford.edu/RcoC6hxvjY1WRMKV6cW3US"/>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:onProperty rdf:resource="http://www.w3.org/2004/02/skos/core#hasTopConcept"/>
+        <owl:someValuesFrom rdf:resource="http://webprotege.stanford.edu/ReBrW4erCA9bTkbUVAjWbG"/>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:onProperty rdf:resource="http://www.w3.org/2004/02/skos/core#hasTopConcept"/>
+        <owl:someValuesFrom rdf:resource="http://webprotege.stanford.edu/R8o0I9D8VkL15AsMOG6il2F"/>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:onProperty rdf:resource="http://www.w3.org/2004/02/skos/core#hasTopConcept"/>
+        <owl:someValuesFrom rdf:resource="http://webprotege.stanford.edu/RBFvvyOf0cyqZwuO8ItekQ2"/>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:onProperty rdf:resource="http://www.w3.org/2004/02/skos/core#hasTopConcept"/>
+        <owl:someValuesFrom rdf:resource="http://webprotege.stanford.edu/R8GDAW6Psd3q9iqwPYcN43m"/>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:onProperty rdf:resource="http://www.w3.org/2004/02/skos/core#hasTopConcept"/>
+        <owl:someValuesFrom rdf:resource="http://webprotege.stanford.edu/R9hrHJqhOp9lbi97bq4q1th"/>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:onProperty rdf:resource="http://www.w3.org/2004/02/skos/core#hasTopConcept"/>
+        <owl:someValuesFrom rdf:resource="http://webprotege.stanford.edu/RBPxtBToM2v2kOpsL8Gaifx"/>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:onProperty rdf:resource="http://www.w3.org/2004/02/skos/core#hasTopConcept"/>
+        <owl:someValuesFrom rdf:resource="http://webprotege.stanford.edu/R4xJx4A80SVrtzqB9CTOnE"/>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:onProperty rdf:resource="http://www.w3.org/2004/02/skos/core#hasTopConcept"/>
+        <owl:someValuesFrom rdf:resource="http://webprotege.stanford.edu/RB3H5524QSrToKpT38qyZVb"/>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:onProperty rdf:resource="http://www.w3.org/2004/02/skos/core#hasTopConcept"/>
+        <owl:someValuesFrom rdf:resource="http://webprotege.stanford.edu/RiNaueyJ4af69Stu9VRWaR"/>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:onProperty rdf:resource="http://www.w3.org/2004/02/skos/core#hasTopConcept"/>
+        <owl:someValuesFrom rdf:resource="http://webprotege.stanford.edu/R7oGDoaxnOGm5Km8kttuaVJ"/>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:onProperty rdf:resource="http://www.w3.org/2004/02/skos/core#hasTopConcept"/>
+        <owl:someValuesFrom rdf:resource="http://webprotege.stanford.edu/RDQgpGpIwkyrDvpcP502ud2"/>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:onProperty rdf:resource="http://www.w3.org/2004/02/skos/core#hasTopConcept"/>
+        <owl:someValuesFrom rdf:resource="http://webprotege.stanford.edu/R8fTGfwFBERSngpANw3HP8a"/>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:onProperty rdf:resource="http://www.w3.org/2004/02/skos/core#hasTopConcept"/>
+        <owl:someValuesFrom rdf:resource="http://webprotege.stanford.edu/R8sDBgF7EMZhgZUjx5EUhwi"/>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:onProperty rdf:resource="http://www.w3.org/2004/02/skos/core#hasTopConcept"/>
+        <owl:someValuesFrom rdf:resource="http://webprotege.stanford.edu/RBTBNP5i0kFGFdhQ82AFali"/>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:onProperty rdf:resource="http://www.w3.org/2004/02/skos/core#hasTopConcept"/>
+        <owl:someValuesFrom rdf:resource="http://webprotege.stanford.edu/RD1J4X0UzBKHP5ew30Kwx0t"/>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:onProperty rdf:resource="http://www.w3.org/2004/02/skos/core#hasTopConcept"/>
+        <owl:someValuesFrom rdf:resource="http://webprotege.stanford.edu/RgQUcgf5oVmt7SY8fTPT6Q"/>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:onProperty rdf:resource="http://www.w3.org/2004/02/skos/core#hasTopConcept"/>
+        <owl:someValuesFrom rdf:resource="http://webprotege.stanford.edu/RBqV2ISEKykhw27B5uwrHo"/>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:onProperty rdf:resource="http://www.w3.org/2004/02/skos/core#hasTopConcept"/>
+        <owl:someValuesFrom rdf:resource="http://webprotege.stanford.edu/RLBzlQFAH3nKqqxEcHkJzx"/>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:onProperty rdf:resource="http://www.w3.org/2004/02/skos/core#hasTopConcept"/>
+        <owl:someValuesFrom rdf:resource="http://webprotege.stanford.edu/RZeaZ7bPfl1AYseVBURnsq"/>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:onProperty rdf:resource="http://www.w3.org/2004/02/skos/core#hasTopConcept"/>
+        <owl:someValuesFrom rdf:resource="http://webprotege.stanford.edu/R9XUpyPonBxZAbkMTdCw6wJ"/>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:onProperty rdf:resource="http://www.w3.org/2004/02/skos/core#hasTopConcept"/>
+        <owl:someValuesFrom rdf:resource="http://webprotege.stanford.edu/RBQchbiL0gYuuBJC0Y23rrG"/>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:onProperty rdf:resource="http://www.w3.org/2004/02/skos/core#hasTopConcept"/>
+        <owl:someValuesFrom rdf:resource="http://webprotege.stanford.edu/RCYhjezkcxoy0cLdnLxYOAq"/>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:onProperty rdf:resource="http://www.w3.org/2004/02/skos/core#hasTopConcept"/>
+        <owl:someValuesFrom rdf:resource="http://webprotege.stanford.edu/REUvZKSmFk7Siz6txnDMET"/>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:onProperty rdf:resource="http://www.w3.org/2004/02/skos/core#hasTopConcept"/>
+        <owl:someValuesFrom rdf:resource="http://webprotege.stanford.edu/RBAVlisida7HGDpQBhwirCd"/>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:onProperty rdf:resource="http://webprotege.stanford.edu/R7R7gNqgRThphqI32w7JrRd"/>
+        <owl:someValuesFrom rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:onProperty rdf:resource="http://www.w3.org/2004/02/skos/core#hasTopConcept"/>
+        <owl:someValuesFrom rdf:resource="http://webprotege.stanford.edu/R8YK1KsZR58hwks0ItoTewJ"/>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:onProperty rdf:resource="http://www.w3.org/2004/02/skos/core#hasTopConcept"/>
+        <owl:someValuesFrom rdf:resource="http://webprotege.stanford.edu/RBn7U4nuqEQqKyIqAUzYkZx"/>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:onProperty rdf:resource="http://www.w3.org/2004/02/skos/core#hasTopConcept"/>
+        <owl:someValuesFrom rdf:resource="http://webprotege.stanford.edu/RCJNAo9QHRdLFOVe3bV0HyH"/>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:onProperty rdf:resource="http://www.w3.org/2004/02/skos/core#hasTopConcept"/>
+        <owl:someValuesFrom rdf:resource="http://webprotege.stanford.edu/R5PHA6xVBLvJgQcDWlHFLx"/>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:onProperty rdf:resource="http://www.w3.org/2004/02/skos/core#hasTopConcept"/>
+        <owl:someValuesFrom rdf:resource="http://webprotege.stanford.edu/R8YjT1k5LI01tKofBXDMOlW"/>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:onProperty rdf:resource="http://www.w3.org/2004/02/skos/core#hasTopConcept"/>
+        <owl:someValuesFrom rdf:resource="http://webprotege.stanford.edu/RCFeONxXFzHO4GMg16HylOc"/>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:onProperty rdf:resource="http://www.w3.org/2004/02/skos/core#hasTopConcept"/>
+        <owl:someValuesFrom rdf:resource="http://webprotege.stanford.edu/R8UBTJoenDbXjYBjcyr1LXc"/>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:onProperty rdf:resource="http://www.w3.org/2004/02/skos/core#hasTopConcept"/>
+        <owl:someValuesFrom rdf:resource="http://webprotege.stanford.edu/R9m3IjtfdhzMj2CRE5IqXLw"/>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:onProperty rdf:resource="http://www.w3.org/2004/02/skos/core#hasTopConcept"/>
+        <owl:someValuesFrom rdf:resource="http://webprotege.stanford.edu/R9TP1SSeixUvUGZdM6a4bOa"/>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:onProperty rdf:resource="http://www.w3.org/2004/02/skos/core#hasTopConcept"/>
+        <owl:someValuesFrom rdf:resource="http://webprotege.stanford.edu/Rp13pw0RkLoyvm8ySc6Loo"/>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:onProperty rdf:resource="http://www.w3.org/2004/02/skos/core#hasTopConcept"/>
+        <owl:someValuesFrom rdf:resource="http://webprotege.stanford.edu/RBq6N25HFNZqb0wmSVIDr90"/>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:onProperty rdf:resource="http://www.w3.org/2004/02/skos/core#hasTopConcept"/>
+        <owl:someValuesFrom rdf:resource="http://webprotege.stanford.edu/RL7MjTu8xoASOkoXft8G2E"/>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:onProperty rdf:resource="http://www.w3.org/2004/02/skos/core#hasTopConcept"/>
+        <owl:someValuesFrom rdf:resource="http://webprotege.stanford.edu/R9CtFIsnErVXieIeyj8WCFu"/>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:onProperty rdf:resource="http://www.w3.org/2004/02/skos/core#hasTopConcept"/>
+        <owl:someValuesFrom rdf:resource="http://webprotege.stanford.edu/R8gUoxNgfn27HtwjzHl2Qql"/>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:onProperty rdf:resource="http://www.w3.org/2004/02/skos/core#hasTopConcept"/>
+        <owl:someValuesFrom rdf:resource="http://webprotege.stanford.edu/RUaniez9VTk4Dhk74OgTLc"/>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:onProperty rdf:resource="http://www.w3.org/2004/02/skos/core#hasTopConcept"/>
+        <owl:someValuesFrom rdf:resource="http://webprotege.stanford.edu/RB7ignnZUDxiR47exACJSZ3"/>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:onProperty rdf:resource="http://www.w3.org/2004/02/skos/core#hasTopConcept"/>
+        <owl:someValuesFrom rdf:resource="http://webprotege.stanford.edu/RBtOmYVtZzWV1z2e7AJzGwC"/>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:onProperty rdf:resource="http://www.w3.org/2004/02/skos/core#hasTopConcept"/>
+        <owl:someValuesFrom rdf:resource="http://webprotege.stanford.edu/RB1lLvsuTCcxxkyOA7ZqHv2"/>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:onProperty rdf:resource="http://www.w3.org/2004/02/skos/core#hasTopConcept"/>
+        <owl:someValuesFrom rdf:resource="http://webprotege.stanford.edu/R7tAfn5WOKgOPGoU8fXB1ba"/>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:onProperty rdf:resource="http://www.w3.org/2004/02/skos/core#hasTopConcept"/>
+        <owl:someValuesFrom rdf:resource="http://webprotege.stanford.edu/RCtSs2hsQx9TdF9CfSUHytB"/>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:onProperty rdf:resource="http://www.w3.org/2004/02/skos/core#hasTopConcept"/>
+        <owl:someValuesFrom rdf:resource="http://webprotege.stanford.edu/RC2kPbFaay664IRdHYfk5rK"/>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:onProperty rdf:resource="http://www.w3.org/2004/02/skos/core#hasTopConcept"/>
+        <owl:someValuesFrom rdf:resource="http://webprotege.stanford.edu/R84nw4WNc0fumIPTJgoezSE"/>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:onProperty rdf:resource="http://www.w3.org/2004/02/skos/core#hasTopConcept"/>
+        <owl:someValuesFrom rdf:resource="http://webprotege.stanford.edu/R8Qtz5gNpYmXe1HCkYn5PSI"/>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:onProperty rdf:resource="http://www.w3.org/2004/02/skos/core#hasTopConcept"/>
+        <owl:someValuesFrom rdf:resource="http://webprotege.stanford.edu/R5cLr1RomklAFGRkvK3Bh8"/>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:onProperty rdf:resource="http://www.w3.org/2004/02/skos/core#hasTopConcept"/>
+        <owl:someValuesFrom rdf:resource="http://webprotege.stanford.edu/R9Y3aEXJBcPwvBA8HPd2PbY"/>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:onProperty rdf:resource="http://www.w3.org/2004/02/skos/core#hasTopConcept"/>
+        <owl:someValuesFrom rdf:resource="http://webprotege.stanford.edu/R9B8sYWHJEwlzgvFJsbRyOu"/>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:onProperty rdf:resource="http://www.w3.org/2004/02/skos/core#hasTopConcept"/>
+        <owl:someValuesFrom rdf:resource="http://webprotege.stanford.edu/R8Ej741whxQgjGSm96YKKbA"/>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:onProperty rdf:resource="http://www.w3.org/2004/02/skos/core#hasTopConcept"/>
+        <owl:someValuesFrom rdf:resource="http://webprotege.stanford.edu/RCfB9gXWAQMhJ9dvN4Fk23V"/>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:onProperty rdf:resource="http://www.w3.org/2004/02/skos/core#hasTopConcept"/>
+        <owl:someValuesFrom rdf:resource="http://webprotege.stanford.edu/RDNHjl0ys3bI18phepcvXSJ"/>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:onProperty rdf:resource="http://www.w3.org/2004/02/skos/core#hasTopConcept"/>
+        <owl:someValuesFrom rdf:resource="http://webprotege.stanford.edu/RDfWkx5I0dL3PTBl19wcaRe"/>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:onProperty rdf:resource="http://www.w3.org/2004/02/skos/core#hasTopConcept"/>
+        <owl:someValuesFrom rdf:resource="http://webprotege.stanford.edu/RCmoTnq3LUdBURmzkowDPn3"/>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:onProperty rdf:resource="http://www.w3.org/2004/02/skos/core#hasTopConcept"/>
+        <owl:someValuesFrom rdf:resource="http://webprotege.stanford.edu/Rl94QwB1HNGz6e2R8PX4Re"/>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:onProperty rdf:resource="http://www.w3.org/2004/02/skos/core#hasTopConcept"/>
+        <owl:someValuesFrom rdf:resource="http://webprotege.stanford.edu/RldqiuO40OoJDLS1vbWU6a"/>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:onProperty rdf:resource="http://www.w3.org/2004/02/skos/core#hasTopConcept"/>
+        <owl:someValuesFrom rdf:resource="http://webprotege.stanford.edu/RDWCqOouYpdAQbMAf1gJe8o"/>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:onProperty rdf:resource="http://www.w3.org/2004/02/skos/core#hasTopConcept"/>
+        <owl:someValuesFrom rdf:resource="http://webprotege.stanford.edu/RDGdyJ5jz8VooldQaO7rzOa"/>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:onProperty rdf:resource="http://www.w3.org/2004/02/skos/core#hasTopConcept"/>
+        <owl:someValuesFrom rdf:resource="http://webprotege.stanford.edu/R7i61kUBJ6JzONSuFUU55Sb"/>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:onProperty rdf:resource="http://www.w3.org/2004/02/skos/core#hasTopConcept"/>
+        <owl:someValuesFrom rdf:resource="http://webprotege.stanford.edu/RB00ZwsHRu4SZ30ipWZOIfg"/>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:onProperty rdf:resource="http://www.w3.org/2004/02/skos/core#hasTopConcept"/>
+        <owl:someValuesFrom rdf:resource="http://webprotege.stanford.edu/R7m9slx6ONSwPRXEIXxOUiA"/>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:onProperty rdf:resource="http://www.w3.org/2004/02/skos/core#hasTopConcept"/>
+        <owl:someValuesFrom rdf:resource="http://webprotege.stanford.edu/RDY6RJrEOlJsgDA5f15Um5k"/>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:onProperty rdf:resource="http://www.w3.org/2004/02/skos/core#hasTopConcept"/>
+        <owl:someValuesFrom rdf:resource="http://webprotege.stanford.edu/RCQ11kK8mK2T6LWNJc1S0Dg"/>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:onProperty rdf:resource="http://www.w3.org/2004/02/skos/core#hasTopConcept"/>
+        <owl:someValuesFrom rdf:resource="http://webprotege.stanford.edu/R8PABBaUsSz3PW2TjjoRow5"/>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:onProperty rdf:resource="http://www.w3.org/2004/02/skos/core#hasTopConcept"/>
+        <owl:someValuesFrom rdf:resource="http://webprotege.stanford.edu/RsLniMx9a5oKHxfCkGazF5"/>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:onProperty rdf:resource="http://www.w3.org/2004/02/skos/core#hasTopConcept"/>
+        <owl:someValuesFrom rdf:resource="http://webprotege.stanford.edu/R9ujJECmPDkHsneDYFybxMa"/>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:onProperty rdf:resource="http://www.w3.org/2004/02/skos/core#hasTopConcept"/>
+        <owl:someValuesFrom rdf:resource="http://webprotege.stanford.edu/R7XuvrK5VfzMdy4GGbCkakw"/>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:onProperty rdf:resource="http://www.w3.org/2004/02/skos/core#hasTopConcept"/>
+        <owl:someValuesFrom rdf:resource="http://webprotege.stanford.edu/R8gYR68Qt9xYey7AT63m6yX"/>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:onProperty rdf:resource="http://www.w3.org/2004/02/skos/core#hasTopConcept"/>
+        <owl:someValuesFrom rdf:resource="http://webprotege.stanford.edu/R83drkmUclnyx0hMT21sFID"/>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:onProperty rdf:resource="http://www.w3.org/2004/02/skos/core#hasTopConcept"/>
+        <owl:someValuesFrom rdf:resource="http://webprotege.stanford.edu/R9C7cCcgAygyf72km3kQtgH"/>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:onProperty rdf:resource="http://www.w3.org/2004/02/skos/core#hasTopConcept"/>
+        <owl:someValuesFrom rdf:resource="http://webprotege.stanford.edu/RCHnGGZ8oROz1NPBYEs8ldE"/>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:onProperty rdf:resource="http://www.w3.org/2004/02/skos/core#hasTopConcept"/>
+        <owl:someValuesFrom rdf:resource="http://webprotege.stanford.edu/R8Kjt2UlwrHRliUmGWx7dtW"/>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:onProperty rdf:resource="http://www.w3.org/2004/02/skos/core#hasTopConcept"/>
+        <owl:someValuesFrom rdf:resource="http://webprotege.stanford.edu/R86RlZHwKbp2UCKARvDh9s0"/>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:onProperty rdf:resource="http://webprotege.stanford.edu/R74zMyc0XdTCWha0TBysvM2"/>
+        <owl:someValuesFrom rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:onProperty rdf:resource="http://www.w3.org/2004/02/skos/core#hasTopConcept"/>
+        <owl:someValuesFrom rdf:resource="http://webprotege.stanford.edu/RUtBoSE3VZchBze1rQYCYF"/>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:onProperty rdf:resource="http://www.w3.org/2004/02/skos/core#hasTopConcept"/>
+        <owl:someValuesFrom rdf:resource="http://webprotege.stanford.edu/R7N6OGRePaWPoIlyokdwPtj"/>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:onProperty rdf:resource="http://www.w3.org/2004/02/skos/core#hasTopConcept"/>
+        <owl:someValuesFrom rdf:resource="http://webprotege.stanford.edu/R9fhgPYIx7PUi4vDOZUcjKB"/>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:onProperty rdf:resource="http://www.w3.org/2004/02/skos/core#hasTopConcept"/>
+        <owl:someValuesFrom rdf:resource="http://webprotege.stanford.edu/R7XGr6wjaA0tBmR9Ng2t5Bt"/>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:onProperty rdf:resource="http://www.w3.org/2004/02/skos/core#hasTopConcept"/>
+        <owl:someValuesFrom rdf:resource="http://webprotege.stanford.edu/R8O5bG19BDFwm4TdNc7Qqsv"/>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:onProperty rdf:resource="http://www.w3.org/2004/02/skos/core#hasTopConcept"/>
+        <owl:someValuesFrom rdf:resource="http://webprotege.stanford.edu/RDNdhI1BcyjPXdt9Lz1o1yS"/>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:onProperty rdf:resource="http://www.w3.org/2004/02/skos/core#hasTopConcept"/>
+        <owl:someValuesFrom rdf:resource="http://webprotege.stanford.edu/RhrxH7WnVM0otO9bi1RR7P"/>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:onProperty rdf:resource="http://webprotege.stanford.edu/R0NHRmltyWqcu2NOK36v6x"/>
+        <owl:someValuesFrom rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:onProperty rdf:resource="http://www.w3.org/2004/02/skos/core#hasTopConcept"/>
+        <owl:someValuesFrom rdf:resource="http://webprotege.stanford.edu/R8CEoc8Dnb3VQWUNMTMKvS7"/>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:onProperty rdf:resource="http://www.w3.org/2004/02/skos/core#hasTopConcept"/>
+        <owl:someValuesFrom rdf:resource="http://webprotege.stanford.edu/RB7yUrEq8fdQIprSvFraYIg"/>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:onProperty rdf:resource="http://www.w3.org/2004/02/skos/core#hasTopConcept"/>
+        <owl:someValuesFrom rdf:resource="http://webprotege.stanford.edu/R4jB3XDFF8xKmSt8mqRMNY"/>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:onProperty rdf:resource="http://www.w3.org/2004/02/skos/core#hasTopConcept"/>
+        <owl:someValuesFrom rdf:resource="http://webprotege.stanford.edu/RBjxUaSQ4rQJHg0p6rppxuI"/>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:onProperty rdf:resource="http://www.w3.org/2004/02/skos/core#hasTopConcept"/>
+        <owl:someValuesFrom rdf:resource="http://webprotege.stanford.edu/R93WzzvUmKbe50yyZwfHJNZ"/>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:onProperty rdf:resource="http://www.w3.org/2004/02/skos/core#hasTopConcept"/>
+        <owl:someValuesFrom rdf:resource="http://webprotege.stanford.edu/R84vd2fSNWZmsinYehOK6aG"/>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:onProperty rdf:resource="http://www.w3.org/2004/02/skos/core#hasTopConcept"/>
+        <owl:someValuesFrom rdf:resource="http://webprotege.stanford.edu/R9WFz3qsZWXbKpmEYXE5AOJ"/>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:onProperty rdf:resource="http://www.w3.org/2004/02/skos/core#hasTopConcept"/>
+        <owl:someValuesFrom rdf:resource="http://webprotege.stanford.edu/RqMAEkSI4XmgpCxPe9BlgG"/>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:onProperty rdf:resource="http://www.w3.org/2004/02/skos/core#hasTopConcept"/>
+        <owl:someValuesFrom rdf:resource="http://webprotege.stanford.edu/R91s4wjlHdZS1dGDo3iW97V"/>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:onProperty rdf:resource="http://www.w3.org/2004/02/skos/core#hasTopConcept"/>
+        <owl:someValuesFrom rdf:resource="http://webprotege.stanford.edu/R76AYlil1RKwCEwpWhrfuc"/>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:onProperty rdf:resource="http://www.w3.org/2004/02/skos/core#hasTopConcept"/>
+        <owl:someValuesFrom rdf:resource="http://webprotege.stanford.edu/R59GuwQvYSPrfN4Sspq7J5"/>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:onProperty rdf:resource="http://www.w3.org/2004/02/skos/core#hasTopConcept"/>
+        <owl:someValuesFrom rdf:resource="http://webprotege.stanford.edu/RBrLMfyIQS6WaDBWEPSZyzJ"/>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:onProperty rdf:resource="http://www.w3.org/2004/02/skos/core#hasTopConcept"/>
+        <owl:someValuesFrom rdf:resource="http://webprotege.stanford.edu/RCcV2jUTW6HqBTUJXNWsQJq"/>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:onProperty rdf:resource="http://www.w3.org/2004/02/skos/core#hasTopConcept"/>
+        <owl:someValuesFrom rdf:resource="http://webprotege.stanford.edu/RL6IQk2dPIC5jv4I3vL0G"/>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:onProperty rdf:resource="http://www.w3.org/2004/02/skos/core#hasTopConcept"/>
+        <owl:someValuesFrom rdf:resource="http://webprotege.stanford.edu/R1kyDEAN6yuDq9vHIzWt3Z"/>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:onProperty rdf:resource="http://www.w3.org/2004/02/skos/core#hasTopConcept"/>
+        <owl:someValuesFrom rdf:resource="http://webprotege.stanford.edu/Rzb6FwyhEbIthzTTtaIfrd"/>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:onProperty rdf:resource="http://www.w3.org/2004/02/skos/core#hasTopConcept"/>
+        <owl:someValuesFrom rdf:resource="http://webprotege.stanford.edu/R83RBxX91o3z1pt0cXjXvgN"/>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:onProperty rdf:resource="http://www.w3.org/2004/02/skos/core#hasTopConcept"/>
+        <owl:someValuesFrom rdf:resource="http://webprotege.stanford.edu/RDHGkVtWRlfjWr8PfahIFic"/>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:onProperty rdf:resource="http://www.w3.org/2004/02/skos/core#hasTopConcept"/>
+        <owl:someValuesFrom rdf:resource="http://webprotege.stanford.edu/RC4HD9CwKjvgX8dSybAp3Sk"/>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:onProperty rdf:resource="http://www.w3.org/2004/02/skos/core#hasTopConcept"/>
+        <owl:someValuesFrom rdf:resource="http://webprotege.stanford.edu/RCJ03zgj2yqIKEhwx1oKd9I"/>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:onProperty rdf:resource="http://www.w3.org/2004/02/skos/core#hasTopConcept"/>
+        <owl:someValuesFrom rdf:resource="http://webprotege.stanford.edu/RBCZfwcQSXKcWyaEC0hn62L"/>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:onProperty rdf:resource="http://www.w3.org/2004/02/skos/core#hasTopConcept"/>
+        <owl:someValuesFrom rdf:resource="http://webprotege.stanford.edu/RbYFSx2IpeERenf8qTisQr"/>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:onProperty rdf:resource="http://www.w3.org/2004/02/skos/core#hasTopConcept"/>
+        <owl:someValuesFrom rdf:resource="http://webprotege.stanford.edu/RCpcXB0auhaO45pz8v4h5OT"/>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:onProperty rdf:resource="http://www.w3.org/2004/02/skos/core#hasTopConcept"/>
+        <owl:someValuesFrom rdf:resource="http://webprotege.stanford.edu/RBzym60YIh9lLp8dQYmn66B"/>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:onProperty rdf:resource="http://www.w3.org/2004/02/skos/core#hasTopConcept"/>
+        <owl:someValuesFrom rdf:resource="http://webprotege.stanford.edu/RoiP295qzjzTwDOzRFJdMU"/>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:onProperty rdf:resource="http://www.w3.org/2004/02/skos/core#hasTopConcept"/>
+        <owl:someValuesFrom rdf:resource="http://webprotege.stanford.edu/Rj8HH2U7635ZL772rrJTIp"/>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:onProperty rdf:resource="http://www.w3.org/2004/02/skos/core#hasTopConcept"/>
+        <owl:someValuesFrom rdf:resource="http://webprotege.stanford.edu/RCWSPtOT4fygNsXAGGx2Miq"/>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:onProperty rdf:resource="http://www.w3.org/2004/02/skos/core#hasTopConcept"/>
+        <owl:someValuesFrom rdf:resource="http://webprotege.stanford.edu/R8oFX2wzpWfwf8vvoBkN9wJ"/>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:onProperty rdf:resource="http://www.w3.org/2004/02/skos/core#hasTopConcept"/>
+        <owl:someValuesFrom rdf:resource="http://webprotege.stanford.edu/RWiuUJ5jZPXZvYmM38pwtV"/>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:onProperty rdf:resource="http://www.w3.org/2004/02/skos/core#hasTopConcept"/>
+        <owl:someValuesFrom rdf:resource="http://webprotege.stanford.edu/R7aF0P8k19Yjgqx01edA2b5"/>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:onProperty rdf:resource="http://www.w3.org/2004/02/skos/core#hasTopConcept"/>
+        <owl:someValuesFrom rdf:resource="http://webprotege.stanford.edu/RGaokBKPwCXFwDq7NAVt5e"/>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:onProperty rdf:resource="http://www.w3.org/2004/02/skos/core#hasTopConcept"/>
+        <owl:someValuesFrom rdf:resource="http://webprotege.stanford.edu/R8q2Ky1xZLQT27BUPjjaSxj"/>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:onProperty rdf:resource="http://www.w3.org/2004/02/skos/core#hasTopConcept"/>
+        <owl:someValuesFrom rdf:resource="http://webprotege.stanford.edu/RFGAtVISMZtYzsQZMJHuTA"/>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:onProperty rdf:resource="http://www.w3.org/2004/02/skos/core#hasTopConcept"/>
+        <owl:someValuesFrom rdf:resource="http://webprotege.stanford.edu/R8YAOM56ZC5G6VQ9Y8HVXUu"/>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:onProperty rdf:resource="http://www.w3.org/2004/02/skos/core#hasTopConcept"/>
+        <owl:someValuesFrom rdf:resource="http://webprotege.stanford.edu/RC8osZdeMm2ZJwrziPN80xG"/>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:onProperty rdf:resource="http://www.w3.org/2004/02/skos/core#hasTopConcept"/>
+        <owl:someValuesFrom rdf:resource="http://webprotege.stanford.edu/RBQjtZAMfrlFftSrRJK8LQQ"/>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:onProperty rdf:resource="http://www.w3.org/2004/02/skos/core#hasTopConcept"/>
+        <owl:someValuesFrom rdf:resource="http://webprotege.stanford.edu/RlPRhWsXZGGS1cRKKUnwj4"/>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:onProperty rdf:resource="http://www.w3.org/2004/02/skos/core#hasTopConcept"/>
+        <owl:someValuesFrom rdf:resource="http://webprotege.stanford.edu/RDXjKihUhEKJOVRkiX3V0xz"/>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:onProperty rdf:resource="http://www.w3.org/2004/02/skos/core#hasTopConcept"/>
+        <owl:someValuesFrom rdf:resource="http://webprotege.stanford.edu/R9Zxnfzwd0znkbst2evmiEH"/>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:onProperty rdf:resource="http://www.w3.org/2004/02/skos/core#hasTopConcept"/>
+        <owl:someValuesFrom rdf:resource="http://webprotege.stanford.edu/R8YEdzraPqQu4AYoZI4A9SS"/>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:onProperty rdf:resource="http://www.w3.org/2004/02/skos/core#hasTopConcept"/>
+        <owl:someValuesFrom rdf:resource="http://webprotege.stanford.edu/RTzZNSWvKS91jbBZ63A0bs"/>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:onProperty rdf:resource="http://www.w3.org/2004/02/skos/core#hasTopConcept"/>
+        <owl:someValuesFrom rdf:resource="http://webprotege.stanford.edu/RCQCch6j3ONOsMzuTaTo3rQ"/>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:onProperty rdf:resource="http://www.w3.org/2004/02/skos/core#hasTopConcept"/>
+        <owl:someValuesFrom rdf:resource="http://webprotege.stanford.edu/RCW5Lj0I9gMRAQdOoUiT1Th"/>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:onProperty rdf:resource="http://www.w3.org/2004/02/skos/core#hasTopConcept"/>
+        <owl:someValuesFrom rdf:resource="http://webprotege.stanford.edu/RBZ0PhAPQIWcnmCnUxf8pOE"/>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:onProperty rdf:resource="http://www.w3.org/2004/02/skos/core#hasTopConcept"/>
+        <owl:someValuesFrom rdf:resource="http://webprotege.stanford.edu/R9bmRjeWnoKTfArlEY0ZlVh"/>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:onProperty rdf:resource="http://www.w3.org/2004/02/skos/core#hasTopConcept"/>
+        <owl:someValuesFrom rdf:resource="http://webprotege.stanford.edu/R98iSAeS5TdinsKQ3uhLWYr"/>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:onProperty rdf:resource="http://www.w3.org/2004/02/skos/core#hasTopConcept"/>
+        <owl:someValuesFrom rdf:resource="http://webprotege.stanford.edu/R95rkgXqig6WlNrWUq0J3GU"/>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:onProperty rdf:resource="http://www.w3.org/2004/02/skos/core#hasTopConcept"/>
+        <owl:someValuesFrom rdf:resource="http://webprotege.stanford.edu/RDwmDb245nBhbjmW9OUf14i"/>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:onProperty rdf:resource="http://www.w3.org/2004/02/skos/core#hasTopConcept"/>
+        <owl:someValuesFrom rdf:resource="http://webprotege.stanford.edu/R7y7TyOqyAc5ezFEJuQXLS"/>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:onProperty rdf:resource="http://www.w3.org/2004/02/skos/core#hasTopConcept"/>
+        <owl:someValuesFrom rdf:resource="http://webprotege.stanford.edu/RCXcA3MyPBYPb1z5krWN4s9"/>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:onProperty rdf:resource="http://www.w3.org/2004/02/skos/core#hasTopConcept"/>
+        <owl:someValuesFrom rdf:resource="http://webprotege.stanford.edu/R7bSWMvny6QiHS4juSkcCc0"/>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:onProperty rdf:resource="http://www.w3.org/2004/02/skos/core#hasTopConcept"/>
+        <owl:someValuesFrom rdf:resource="http://webprotege.stanford.edu/RC88gcQj9C5qKRAgVRLOUBn"/>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:onProperty rdf:resource="http://www.w3.org/2004/02/skos/core#hasTopConcept"/>
+        <owl:someValuesFrom rdf:resource="http://webprotege.stanford.edu/R8SuwKujvS5KvRYIsG0kyvi"/>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:onProperty rdf:resource="http://www.w3.org/2004/02/skos/core#hasTopConcept"/>
+        <owl:someValuesFrom rdf:resource="http://webprotege.stanford.edu/RBaHgxjRq1CoqqOli4iXE5t"/>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:onProperty rdf:resource="http://www.w3.org/2004/02/skos/core#hasTopConcept"/>
+        <owl:someValuesFrom rdf:resource="http://webprotege.stanford.edu/R7TGeyus9EJBjfh6BTH3eaC"/>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:onProperty rdf:resource="http://www.w3.org/2004/02/skos/core#hasTopConcept"/>
+        <owl:someValuesFrom rdf:resource="http://webprotege.stanford.edu/R7QvmP6sAzVlggq7oMhG2fh"/>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:onProperty rdf:resource="http://www.w3.org/2004/02/skos/core#hasTopConcept"/>
+        <owl:someValuesFrom rdf:resource="http://webprotege.stanford.edu/RDgLWVpEOxJQaDV8kvJ5UlO"/>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:onProperty rdf:resource="http://www.w3.org/2004/02/skos/core#hasTopConcept"/>
+        <owl:someValuesFrom rdf:resource="http://webprotege.stanford.edu/R8S7wmqghjfsTyamBlkqtPn"/>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:onProperty rdf:resource="http://www.w3.org/2004/02/skos/core#hasTopConcept"/>
+        <owl:someValuesFrom rdf:resource="http://webprotege.stanford.edu/R9mwgkbba3kSDktKpuU76OV"/>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:onProperty rdf:resource="http://www.w3.org/2004/02/skos/core#hasTopConcept"/>
+        <owl:someValuesFrom rdf:resource="http://webprotege.stanford.edu/RnI46ug00TBBy8VIl65MTw"/>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:onProperty rdf:resource="http://www.w3.org/2004/02/skos/core#hasTopConcept"/>
+        <owl:someValuesFrom rdf:resource="http://webprotege.stanford.edu/R7vMoSE3hBWRU2Mk4C7MHWl"/>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:onProperty rdf:resource="http://www.w3.org/2004/02/skos/core#hasTopConcept"/>
+        <owl:someValuesFrom rdf:resource="http://webprotege.stanford.edu/RO7EbjKKfZ1R3mA0ERU0oQ"/>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:onProperty rdf:resource="http://www.w3.org/2004/02/skos/core#hasTopConcept"/>
+        <owl:someValuesFrom rdf:resource="http://webprotege.stanford.edu/RDjZWxpKrbJhv9TUZdq6p2q"/>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:onProperty rdf:resource="http://www.w3.org/2004/02/skos/core#hasTopConcept"/>
+        <owl:someValuesFrom rdf:resource="http://webprotege.stanford.edu/RdnQTB8Nj3DMWYP21jyvb2"/>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:onProperty rdf:resource="http://www.w3.org/2004/02/skos/core#hasTopConcept"/>
+        <owl:someValuesFrom rdf:resource="http://webprotege.stanford.edu/RUXeWvtXzfnZOcThs5oRWn"/>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:onProperty rdf:resource="http://www.w3.org/2004/02/skos/core#hasTopConcept"/>
+        <owl:someValuesFrom rdf:resource="http://webprotege.stanford.edu/RH0aplekawMbqRamY2zHPx"/>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:onProperty rdf:resource="http://www.w3.org/2004/02/skos/core#hasTopConcept"/>
+        <owl:someValuesFrom rdf:resource="http://webprotege.stanford.edu/R7uh1gteNin2ik0peVpg4Cq"/>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:onProperty rdf:resource="http://www.w3.org/2004/02/skos/core#hasTopConcept"/>
+        <owl:someValuesFrom rdf:resource="http://webprotege.stanford.edu/RDFbgSy3LZrH6PRhU3Ah9FK"/>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:onProperty rdf:resource="http://www.w3.org/2004/02/skos/core#hasTopConcept"/>
+        <owl:someValuesFrom rdf:resource="http://webprotege.stanford.edu/R8h5mFnkBFA9y99Ri6YJsbl"/>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:onProperty rdf:resource="http://www.w3.org/2004/02/skos/core#hasTopConcept"/>
+        <owl:someValuesFrom rdf:resource="http://webprotege.stanford.edu/RDpNXGdITZHQxuUWOG2zNRc"/>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:onProperty rdf:resource="http://www.w3.org/2004/02/skos/core#hasTopConcept"/>
+        <owl:someValuesFrom rdf:resource="http://webprotege.stanford.edu/RDAnDd52MXF3rnlUx3OoOGx"/>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:onProperty rdf:resource="http://www.w3.org/2004/02/skos/core#hasTopConcept"/>
+        <owl:someValuesFrom rdf:resource="http://webprotege.stanford.edu/RDxZvpKHZS9YgghvpJw1ftL"/>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:onProperty rdf:resource="http://www.w3.org/2004/02/skos/core#hasTopConcept"/>
+        <owl:someValuesFrom rdf:resource="http://webprotege.stanford.edu/RCi9wQpuzOAexRndBnKzfj0"/>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:onProperty rdf:resource="http://www.w3.org/2004/02/skos/core#hasTopConcept"/>
+        <owl:someValuesFrom rdf:resource="http://webprotege.stanford.edu/RDmEnPaeDKHRTMgjbarbJVz"/>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:onProperty rdf:resource="http://www.w3.org/2004/02/skos/core#hasTopConcept"/>
+        <owl:someValuesFrom rdf:resource="http://webprotege.stanford.edu/R83S6Ct7roENgeokxqgsgc6"/>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:onProperty rdf:resource="http://www.w3.org/2004/02/skos/core#hasTopConcept"/>
+        <owl:someValuesFrom rdf:resource="http://webprotege.stanford.edu/R7QPQeZqeYEzhyDojPQP9fj"/>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:onProperty rdf:resource="http://www.w3.org/2004/02/skos/core#hasTopConcept"/>
+        <owl:someValuesFrom rdf:resource="http://webprotege.stanford.edu/Rwh1Ks6Wk3q5GsSLRVaX4Q"/>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:onProperty rdf:resource="http://www.w3.org/2004/02/skos/core#hasTopConcept"/>
+        <owl:someValuesFrom rdf:resource="http://webprotege.stanford.edu/RhBywiBwlnrwjX9mmegngf"/>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:onProperty rdf:resource="http://www.w3.org/2004/02/skos/core#hasTopConcept"/>
+        <owl:someValuesFrom rdf:resource="http://webprotege.stanford.edu/R9ZT5LLJf5byfiLViWe4t6f"/>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:onProperty rdf:resource="http://www.w3.org/2004/02/skos/core#hasTopConcept"/>
+        <owl:someValuesFrom rdf:resource="http://webprotege.stanford.edu/R8FuN4KWIKHtZBivuLXCad9"/>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:onProperty rdf:resource="http://www.w3.org/2004/02/skos/core#hasTopConcept"/>
+        <owl:someValuesFrom rdf:resource="http://webprotege.stanford.edu/RBL5iAGuoJ3YVTWqtPDpjUQ"/>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:onProperty rdf:resource="http://www.w3.org/2004/02/skos/core#hasTopConcept"/>
+        <owl:someValuesFrom rdf:resource="http://webprotege.stanford.edu/RDWGCNborzo2DRbNKplJ7gb"/>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:onProperty rdf:resource="http://www.w3.org/2004/02/skos/core#hasTopConcept"/>
+        <owl:someValuesFrom rdf:resource="http://webprotege.stanford.edu/R7PoccKticMChFTX3PadnBL"/>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+    <rdfs:comment>The International Standards Organization (ISO) maintains a list of country codes since 1974. Other standards bodies have adopted the ISO 3166 code list.</rdfs:comment>
+  </owl:Class>
+
+  <!-- http://webprotege.stanford.edu/RC4HD9CwKjvgX8dSybAp3Sk -->
+
+  <owl:Class rdf:about="http://webprotege.stanford.edu/RC4HD9CwKjvgX8dSybAp3Sk">
+    <rdfs:label>United States</rdfs:label>
+    <rdfs:subClassOf rdf:resource="http://webprotege.stanford.edu/RBNKtRqwNgoer4ubUCrN8Ae"/>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:onProperty rdf:resource="http://www.w3.org/2004/02/skos/core#related"/>
+        <owl:someValuesFrom rdf:resource="http://webprotege.stanford.edu/RIJ9QDqLBnZb8kAiGKqIyz"/>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:onProperty rdf:resource="http://www.w3.org/2004/02/skos/core#related"/>
+        <owl:someValuesFrom rdf:resource="http://webprotege.stanford.edu/R9jSaucvJw69zgjpG1RSWT8"/>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:onProperty rdf:resource="http://webprotege.stanford.edu/R9ZwVjHAoZAg9TZe1L6SsZz"/>
+        <owl:someValuesFrom rdf:resource="http://webprotege.stanford.edu/R7aF0P8k19Yjgqx01edA2b5"/>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:onProperty rdf:resource="http://www.w3.org/2004/02/skos/core#related"/>
+        <owl:someValuesFrom rdf:resource="http://webprotege.stanford.edu/R8QeCXxFOyplkfg4SI30D6w"/>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:onProperty rdf:resource="http://www.w3.org/2004/02/skos/core#related"/>
+        <owl:someValuesFrom rdf:resource="http://webprotege.stanford.edu/R774vMJw26KCcNMyYG2w2cp"/>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:onProperty rdf:resource="http://www.w3.org/2004/02/skos/core#related"/>
+        <owl:someValuesFrom rdf:resource="http://webprotege.stanford.edu/RNZGitu3RBKIpasiwQxlpK"/>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:onProperty rdf:resource="http://webprotege.stanford.edu/RCVUEJqfOno0O425OlkNYXc"/>
+        <owl:someValuesFrom rdf:resource="http://webprotege.stanford.edu/RhBywiBwlnrwjX9mmegngf"/>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:onProperty rdf:resource="http://www.w3.org/2004/02/skos/core#related"/>
+        <owl:someValuesFrom rdf:resource="http://webprotege.stanford.edu/RCv9Alwp4gohJ7ZYn4BejeG"/>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:onProperty rdf:resource="http://www.w3.org/2004/02/skos/core#related"/>
+        <owl:someValuesFrom rdf:resource="http://webprotege.stanford.edu/R7gaNUzwDUUfgh6TB6PI8fR"/>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:onProperty rdf:resource="http://webprotege.stanford.edu/RCVUEJqfOno0O425OlkNYXc"/>
+        <owl:someValuesFrom rdf:resource="http://webprotege.stanford.edu/RLBzlQFAH3nKqqxEcHkJzx"/>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:onProperty rdf:resource="http://webprotege.stanford.edu/R9ZwVjHAoZAg9TZe1L6SsZz"/>
+        <owl:someValuesFrom rdf:resource="http://webprotege.stanford.edu/RUtBoSE3VZchBze1rQYCYF"/>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:onProperty rdf:resource="http://webprotege.stanford.edu/R9ZwVjHAoZAg9TZe1L6SsZz"/>
+        <owl:someValuesFrom rdf:resource="http://webprotege.stanford.edu/R9rVGUHUgufNHYqigEuH1Y1"/>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:onProperty rdf:resource="http://www.w3.org/2004/02/skos/core#related"/>
+        <owl:someValuesFrom rdf:resource="http://webprotege.stanford.edu/R8PPRoO2npbOfrttbpexuJh"/>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:onProperty rdf:resource="http://www.w3.org/2004/02/skos/core#related"/>
+        <owl:someValuesFrom rdf:resource="http://webprotege.stanford.edu/RDNfMAr4j0BXC1dfLSMEWt4"/>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:onProperty rdf:resource="http://webprotege.stanford.edu/RCVUEJqfOno0O425OlkNYXc"/>
+        <owl:someValuesFrom rdf:resource="http://webprotege.stanford.edu/R7N6OGRePaWPoIlyokdwPtj"/>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:onProperty rdf:resource="http://www.w3.org/2004/02/skos/core#related"/>
+        <owl:someValuesFrom rdf:resource="http://webprotege.stanford.edu/RMWO1fpkJ5LvTSEZyAAl3K"/>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:onProperty rdf:resource="http://www.w3.org/2004/02/skos/core#related"/>
+        <owl:someValuesFrom rdf:resource="http://webprotege.stanford.edu/R9fqK8TUP7Fm02Q6JLgji6I"/>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:onProperty rdf:resource="http://www.w3.org/2004/02/skos/core#related"/>
+        <owl:someValuesFrom rdf:resource="http://webprotege.stanford.edu/R7p7N70b7k0ouyvdI1kuBvA"/>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:onProperty rdf:resource="http://webprotege.stanford.edu/RCVUEJqfOno0O425OlkNYXc"/>
+        <owl:someValuesFrom rdf:resource="http://webprotege.stanford.edu/R8o0I9D8VkL15AsMOG6il2F"/>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:onProperty rdf:resource="http://webprotege.stanford.edu/RCVUEJqfOno0O425OlkNYXc"/>
+        <owl:someValuesFrom rdf:resource="http://webprotege.stanford.edu/R44D6VIx7PvKMqSBEykq4i"/>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:onProperty rdf:resource="http://www.w3.org/2004/02/skos/core#related"/>
+        <owl:someValuesFrom rdf:resource="http://webprotege.stanford.edu/RCgiJNHyAyc3v3EWbXkLwiC"/>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:onProperty rdf:resource="http://www.w3.org/2004/02/skos/core#related"/>
+        <owl:someValuesFrom rdf:resource="http://webprotege.stanford.edu/RD2NstNISZuXoqY8pDT1AFN"/>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:onProperty rdf:resource="http://www.w3.org/2004/02/skos/core#topConceptOf"/>
+        <owl:someValuesFrom rdf:resource="http://webprotege.stanford.edu/RBNKtRqwNgoer4ubUCrN8Ae"/>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:onProperty rdf:resource="http://www.w3.org/2004/02/skos/core#related"/>
+        <owl:someValuesFrom rdf:resource="http://webprotege.stanford.edu/RDfC7Fbo4XNzwzwIPwNrugu"/>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:onProperty rdf:resource="http://www.w3.org/2004/02/skos/core#related"/>
+        <owl:someValuesFrom rdf:resource="http://webprotege.stanford.edu/RDDl6uP7sFEtxKuRM5LsQ2E"/>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+    <prefLabel>United States</prefLabel>
+    <altLabel>United States of America</altLabel>
+    <altLabel>USA</altLabel>
+    <altLabel>U.S.</altLabel>
+    <altLabel>US</altLabel>
+  </owl:Class>
+
+  <!-- http://webprotege.stanford.edu/RBTBNP5i0kFGFdhQ82AFali -->
+
+  <owl:Class rdf:about="http://webprotege.stanford.edu/RBTBNP5i0kFGFdhQ82AFali">
+    <rdfs:label>Canada</rdfs:label>
+    <rdfs:subClassOf rdf:resource="http://webprotege.stanford.edu/RBNKtRqwNgoer4ubUCrN8Ae"/>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:onProperty rdf:resource="http://www.w3.org/2004/02/skos/core#topConceptOf"/>
+        <owl:someValuesFrom rdf:resource="http://webprotege.stanford.edu/RBNKtRqwNgoer4ubUCrN8Ae"/>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:onProperty rdf:resource="http://www.w3.org/2004/02/skos/core#related"/>
+        <owl:someValuesFrom rdf:resource="http://webprotege.stanford.edu/RIJ9QDqLBnZb8kAiGKqIyz"/>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+    <prefLabel>Canada</prefLabel>
+  </owl:Class>
+
+  <!-- http://webprotege.stanford.edu/RBPxtBToM2v2kOpsL8Gaifx -->
+
+  <owl:Class rdf:about="http://webprotege.stanford.edu/RBPxtBToM2v2kOpsL8Gaifx">
+    <rdfs:label>Cayman Islands</rdfs:label>
+    <rdfs:subClassOf rdf:resource="http://webprotege.stanford.edu/RBNKtRqwNgoer4ubUCrN8Ae"/>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:onProperty rdf:resource="http://www.w3.org/2004/02/skos/core#topConceptOf"/>
+        <owl:someValuesFrom rdf:resource="http://webprotege.stanford.edu/RBNKtRqwNgoer4ubUCrN8Ae"/>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:onProperty rdf:resource="http://webprotege.stanford.edu/RCVySeHRLY9EuXK4hzFyvzi"/>
+        <owl:someValuesFrom rdf:resource="http://webprotege.stanford.edu/RCs75GXTuLFQAa5lGsmBtpi"/>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+    <prefLabel>Cayman Islands</prefLabel>
+  </owl:Class>
+
+  <!-- http://webprotege.stanford.edu/RBrLMfyIQS6WaDBWEPSZyzJ -->
+
+  <owl:Class rdf:about="http://webprotege.stanford.edu/RBrLMfyIQS6WaDBWEPSZyzJ">
+    <rdfs:label>Sweden</rdfs:label>
+    <rdfs:subClassOf rdf:resource="http://webprotege.stanford.edu/RBNKtRqwNgoer4ubUCrN8Ae"/>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:onProperty rdf:resource="http://www.w3.org/2004/02/skos/core#topConceptOf"/>
+        <owl:someValuesFrom rdf:resource="http://webprotege.stanford.edu/RBNKtRqwNgoer4ubUCrN8Ae"/>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+    <prefLabel>Sweden</prefLabel>
+  </owl:Class>
+
+  <!-- http://webprotege.stanford.edu/RC7yMOkNtsKp6PxYXaWc3He -->
+
+  <owl:Class rdf:about="http://webprotege.stanford.edu/RC7yMOkNtsKp6PxYXaWc3He">
+    <rdfs:label>South America</rdfs:label>
+    <rdfs:subClassOf rdf:resource="http://webprotege.stanford.edu/RDd8sh765VJIr3FHnmvILPS"/>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:onProperty rdf:resource="http://www.w3.org/2004/02/skos/core#narrower"/>
+        <owl:someValuesFrom rdf:resource="http://webprotege.stanford.edu/RCQCch6j3ONOsMzuTaTo3rQ"/>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:onProperty rdf:resource="http://www.w3.org/2004/02/skos/core#narrower"/>
+        <owl:someValuesFrom rdf:resource="http://webprotege.stanford.edu/RBQjtZAMfrlFftSrRJK8LQQ"/>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:onProperty rdf:resource="http://www.w3.org/2004/02/skos/core#narrower"/>
+        <owl:someValuesFrom rdf:resource="http://webprotege.stanford.edu/RePmJPALYkhooeQ2wBSlN7"/>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:onProperty rdf:resource="http://www.w3.org/2004/02/skos/core#narrower"/>
+        <owl:someValuesFrom rdf:resource="http://webprotege.stanford.edu/RBjxUaSQ4rQJHg0p6rppxuI"/>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:onProperty rdf:resource="http://www.w3.org/2004/02/skos/core#narrower"/>
+        <owl:someValuesFrom rdf:resource="http://webprotege.stanford.edu/R8sDBgF7EMZhgZUjx5EUhwi"/>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:onProperty rdf:resource="http://www.w3.org/2004/02/skos/core#narrower"/>
+        <owl:someValuesFrom rdf:resource="http://webprotege.stanford.edu/R8Kjt2UlwrHRliUmGWx7dtW"/>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:onProperty rdf:resource="http://www.w3.org/2004/02/skos/core#narrower"/>
+        <owl:someValuesFrom rdf:resource="http://webprotege.stanford.edu/RCWSPtOT4fygNsXAGGx2Miq"/>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:onProperty rdf:resource="http://www.w3.org/2004/02/skos/core#topConceptOf"/>
+        <owl:someValuesFrom rdf:resource="http://webprotege.stanford.edu/RDd8sh765VJIr3FHnmvILPS"/>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:onProperty rdf:resource="http://www.w3.org/2004/02/skos/core#narrower"/>
+        <owl:someValuesFrom rdf:resource="http://webprotege.stanford.edu/RL6IQk2dPIC5jv4I3vL0G"/>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:onProperty rdf:resource="http://www.w3.org/2004/02/skos/core#narrower"/>
+        <owl:someValuesFrom rdf:resource="http://webprotege.stanford.edu/R762SLDFJ5WfJI48KUhLQq7"/>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:onProperty rdf:resource="http://www.w3.org/2004/02/skos/core#narrower"/>
+        <owl:someValuesFrom rdf:resource="http://webprotege.stanford.edu/RCHnGGZ8oROz1NPBYEs8ldE"/>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:onProperty rdf:resource="http://www.w3.org/2004/02/skos/core#related"/>
+        <owl:someValuesFrom rdf:resource="http://webprotege.stanford.edu/RB53lPnm186ivFLEXmbWylT"/>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:onProperty rdf:resource="http://www.w3.org/2004/02/skos/core#narrower"/>
+        <owl:someValuesFrom rdf:resource="http://webprotege.stanford.edu/R83RBxX91o3z1pt0cXjXvgN"/>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:onProperty rdf:resource="http://www.w3.org/2004/02/skos/core#related"/>
+        <owl:someValuesFrom rdf:resource="http://webprotege.stanford.edu/Rm2y1xVfel9ehNUZvZKiE1"/>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:onProperty rdf:resource="http://www.w3.org/2004/02/skos/core#narrower"/>
+        <owl:someValuesFrom rdf:resource="http://webprotege.stanford.edu/R8GDAW6Psd3q9iqwPYcN43m"/>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:onProperty rdf:resource="http://www.w3.org/2004/02/skos/core#narrower"/>
+        <owl:someValuesFrom rdf:resource="http://webprotege.stanford.edu/RB00ZwsHRu4SZ30ipWZOIfg"/>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:onProperty rdf:resource="http://www.w3.org/2004/02/skos/core#narrower"/>
+        <owl:someValuesFrom rdf:resource="http://webprotege.stanford.edu/RB6ARrKUqqClwfBGNR8YLLc"/>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+    <dc:source>I&amp;A Trade Database</dc:source>
+    <prefLabel>South America</prefLabel>
+  </owl:Class>
+
+  <!-- http://webprotege.stanford.edu/R8ICjBw981pwx9uC98ESVv1 -->
+
+  <owl:Class rdf:about="http://webprotege.stanford.edu/R8ICjBw981pwx9uC98ESVv1">
+    <rdfs:label>Ohio</rdfs:label>
+    <rdfs:subClassOf rdf:resource="http://webprotege.stanford.edu/RC4HD9CwKjvgX8dSybAp3Sk"/>
+  </owl:Class>
+</rdf:RDF>

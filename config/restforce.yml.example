@@ -1,0 +1,26 @@
+development:
+  api_version: '34.0'
+  client_id:
+  client_secret:
+  host:
+  username:
+  password:
+  security_token:
+
+test:
+  api_version: '34.0'
+  client_id:
+  client_secret:
+  host:
+  username:
+  password:
+  security_token:
+
+production:
+  api_version: '34.0'
+  client_id:
+  client_secret:
+  host:
+  username:
+  password:
+  security_token:

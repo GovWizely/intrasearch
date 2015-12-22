@@ -1,0 +1,34 @@
+- id: industry-R8CoATsjiZSLAZF4Aaz6kK6
+  label: Aerospace and Defense
+  leaf_node: false
+  path: "/Aerospace and Defense"
+
+- id: industry-R3anJjpDBXy092dEyJ0nXU
+  label: Space
+  leaf_node: false
+  path: "/Aerospace and Defense/Space"
+
+- id: industry-RYbXL8shWgdXfnSIFLoUZI
+  label: Satellites
+  leaf_node: true
+  path: "/Aerospace and Defense/Space/Satellites"
+
+- id: industry-RBDqmXn5UkwLCF1ECytDdEW
+  label: Space Launch Equipment
+  leaf_node: true
+  path: "/Aerospace and Defense/Space/Space Launch Equipment"
+
+- id: industry-RYjn03izDTAkhWQLNxqJaJ
+  label: Franchising
+  leaf_node: true
+  path: "/Franchising"
+
+- id: industry-RXNklYQyXhTgvl1opDfECS
+  label: Information and Communication Technology
+  leaf_node: false
+  path: "/Information and Communication Technology"
+
+- id: industry-RyxVdNmlJh6Ct6SOVX4nY5
+  label: eCommerce Industry
+  leaf_node: true
+  path: "/Information and Communication Technology/eCommerce Industry"

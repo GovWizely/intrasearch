@@ -1,0 +1,7 @@
+module Search
+  DEFAULT_LIMIT = 10
+  DEFAULT_OFFSET = 0
+
+  MAX_LIMIT = 20
+  MAX_OFFSET = 999
+end
