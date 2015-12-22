@@ -1,5 +1,9 @@
 # intrasearch
 
+[![Build Status](https://travis-ci.org/GovWizely/intrasearch.svg?branch=travis)](https://travis-ci.org/GovWizely/intrasearch)
+[![Code Climate](https://codeclimate.com/github/GovWizely/intrasearch/badges/gpa.svg)](https://codeclimate.com/github/GovWizely/intrasearch)
+[![Test Coverage](https://codeclimate.com/github/GovWizely/intrasearch/badges/coverage.svg)](https://codeclimate.com/github/GovWizely/intrasearch/coverage)
+
 Provides JSON Search API for Salesforce contents.
 
 ## Dependencies

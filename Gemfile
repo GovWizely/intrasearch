@@ -20,6 +20,7 @@ group :development do
 end
 
 group :test do
+  gem 'codeclimate-test-reporter', require: false
   gem 'rack-test'
   gem 'rspec'
   gem 'simplecov', require: false

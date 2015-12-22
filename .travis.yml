@@ -1,16 +1,18 @@
 language: ruby
-
 rvm:
-  - 2.2.3
-
-bundler_args: --without production
-
+- 2.2.3
+bundler_args: "--without production"
 before_script:
-  - cp config/intrasearch.yml.example config/intrasearch.yml
-  - cp config/restforce.yml.example config/restforce.yml
-
+- cp config/intrasearch.yml.example config/intrasearch.yml
+- cp config/restforce.yml.example config/restforce.yml
 before_install:
-  - curl -O https://download.elastic.co/elasticsearch/elasticsearch/elasticsearch-1.7.4.deb && sudo dpkg -i --force-confnew elasticsearch-1.7.4.deb
-
+- curl -O https://download.elastic.co/elasticsearch/elasticsearch/elasticsearch-1.7.4.deb
+  && sudo dpkg -i --force-confnew elasticsearch-1.7.4.deb
 services:
-  - elasticsearch
+- elasticsearch
+repo_token:
+  secure: sxJDB/oRzmFKn+TEE08jVtTNJ5bwnQSFdnkQ9wW2qJE/pJaDTo2P0XTjSNb9VwNdXJIuBmBkjEOC0g/xTDYUuKmtQzkIZ3AMN6A9mvoVGFKPBhajjGb2qVqOghF2mjl1yEhAnKwT6PgbFDerT6vpToyL4kAeVbxDh7Br9wyf0Y5sY6Nua1oln+FRr9rJwOVLJf9jbHU8/+ZURoFDBgDJTftAEPdQZ0C0XWxQ647cQLuiO7mPo+EbbNozhCwW3n3wXUkzIjX1m4M6a2QLAVhJx0COG6ZLsX6PP3vJO3dMwNvTzLBJPTLmhbv6xqbyTIu8hWzlGjwQSISphWIcDNcz/D4iDQXMIKROPv3aKK1WIQkYG9/KKAXvAmzv8gP8VZtAm27JWF8T4s+k3IpGitIqx8aOhDXVrVyWLUJ+nCVN7EJXK4dANRXKZ4vQdmJTNVlDPu7KQ2Lsas2AMfaDrp/+OnxR6fKtO8yIDQ1lm7NE5eV6PMeJMwN9hZUBu4GdMjJIdPBKfGb4Sy6bdfP8SmXgSVjLKsZ0/JSWX29AYyyMGGkaXP2Y76UvzxhNBqCFO96FShqZaANHDeJFdZZ7LG8YR6vI6OZsNtMCo8snCfUWaoR89+u/6a0DFPmVgl+vwgQr4vP+DsW6RZkuHJ92lr/BA8A+l0gtw5v2VYexigCQXpU=
+addons:
+  code_climate:
+    repo_token:
+      secure: ffRFcJVQ0r2btgEpC9GTYWfLY3vs0KUZuSlpTeRZldopjO6qsuW9JhpzeMby3GmXjNUolUH/A/sx1Za7suPYTbVFa1s/ITycNz6DX90fHIekhdk0rFy5ZGQgwjf/3ANE/LqQXdh+/UPJ6qgx6156fP9Av9Ql6XSi2g6t5KbqhuRtl4h1sv96JS+Xi5LDVQ9COrJtNfBb0XZSxnTEO/8ARpq4n5WB8O0IQxiIFeGsCdbmD1L1Zt66SuYbMto3Novgn/lrAYhE0ke8JuRlebSMsLQuVzjx+hqi/KPljRNGhjXYSDM3/gVWPl9nzcf8uvU4XZt9kCTJWcrmppvHkjFCtevpMPGZIE6+BYAiVxbhO1G4crMwTP/91ijMa1VJSCHqUuF2hp2QiUZqMOWMbZ0q8wyH5xwEl2WvJ9/yqg8+zqeOJyiSg6fGqqo7FiIUlNufc7X+VQ+Ryw7HSeLYzy4bpTV7lZDLltw9INbltDXP1BDl/tu+KWDL9/5gwZsAFF87Szuwryg0uNcXSbv44u5zcvuJnlaK/GRSsfAF15w3vGxX0tM5q0IhbSr6gTWesUzpGhk9hbwpYdhYpLLfNt5inELJLhFwd+S/gz83MJxPQ5r8IBe7MTj2yXGFV1VFxdp6eJub/zPcCTHoM0r/i3pQWFsgy3IFNs7o6UhOI0TvUSs=
