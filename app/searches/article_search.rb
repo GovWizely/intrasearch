@@ -3,12 +3,10 @@ require 'article_search_query'
 require 'article_search_response'
 require 'country_commercial_guide'
 require 'generic'
-require 'industry_search'
 require 'market_insight'
 require 'search'
 require 'state_report'
 require 'top_markets_report'
-require 'topic_search'
 
 class ArticleSearch
   ALL_TYPES = [CountryCommercialGuide,
@@ -24,9 +22,10 @@ class ArticleSearch
               :next_offset,
               :offset,
               :q,
-              :types,
               :topic_paths,
-              :total
+              :total,
+              :trade_regions,
+              :types
 
   def initialize(options)
     @countries = options[:countries].to_s.split(',')
@@ -36,6 +35,7 @@ class ArticleSearch
     @q = options[:q]
     @search_type = options[:search_type] || {}
     @topic_paths = lookup_topic_paths options[:topics]
+    @trade_regions = options[:trade_regions].to_s.split(',')
     @types = detect_types options[:types]
   end
 
@@ -51,7 +51,8 @@ class ArticleSearch
                            limit: @limit,
                            offset: @offset,
                            q: @q,
-                           topic_paths: @topic_paths)
+                           topic_paths: @topic_paths,
+                           trade_regions: @trade_regions)
   end
 
   def search_type_count?
@@ -61,11 +62,11 @@ class ArticleSearch
   private
 
   def lookup_industry_paths(industries_str)
-    IndustrySearch.new(industries_str.to_s.split(',')).run.map(&:path)
+    Industry.search_by_labels(*industries_str.to_s.split(',')).map(&:path)
   end
 
   def lookup_topic_paths(topics_str)
-    TopicSearch.new(topics_str.to_s.split(',')).run.map(&:path)
+    Topic.search_by_labels(*topics_str.to_s.split(',')).map(&:path)
   end
 
   def detect_types(types_str)

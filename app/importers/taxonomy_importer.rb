@@ -1,27 +1,21 @@
 require 'base_importer'
-require 'owl_parser'
 require 'subclassable'
-
+require 'taxonomy_extractor'
 
 class TaxonomyImporter < BaseImporter
   extend Subclassable
+  class_attribute :taxonomy_root_label,
+                  instance_writer: false
 
-  def initialize(resource:, taxonomy_root_label:, id_prefix:, max_depth: nil)
-    @max_depth = max_depth
+  def initialize(resource = Nix.root.join('skos/root.owl.xml'))
     @resource = resource
-    @id_prefix = id_prefix
-    @taxonomy_root_label = taxonomy_root_label
   end
 
   def import
     super do
-      File.open(@resource) do |f|
-        OwlParser.new(file: f,
-                      id_prefix: @id_prefix,
-                      max_depth: @max_depth,
-                      root_label: @taxonomy_root_label).each_class do |class_hash|
-          model_class.create class_hash
-        end
+      TaxonomyExtractor.documents(resource: @resource,
+                                  root_label: taxonomy_root_label).each do |hash|
+        model_class.create hash
       end
     end
   end

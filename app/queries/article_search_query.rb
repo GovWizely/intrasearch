@@ -7,13 +7,14 @@ class ArticleSearchQuery
               :offset,
               :q
 
-  def initialize(countries: [], industry_paths: [], limit:, offset:, q: nil, topic_paths: [])
+  def initialize(countries: [], industry_paths: [], limit:, offset:, q: nil, topic_paths: [], trade_regions: [])
     @countries = countries.map { |l| l.downcase.squish }
     @industry_paths = industry_paths
     @limit = limit
     @offset = offset
     @q = q
     @topic_paths = topic_paths
+    @trade_regions = trade_regions.map { |l| l.downcase.squish }
   end
 
   def to_hash
@@ -38,7 +39,8 @@ class ArticleSearchQuery
     bool_queries = {}
     must_queries = []
     must_queries << multi_match_query if @q.present?
-    must_queries << terms_query if @countries.present?
+    must_queries << terms_query(countries: @countries) if @countries.present?
+    must_queries << terms_query(trade_regions: @trade_regions) if @trade_regions.present?
     bool_queries[:must] = must_queries
 
     should_queries = build_prefix_queries
@@ -53,18 +55,16 @@ class ArticleSearchQuery
   def multi_match_query
     {
       multi_match: {
-        fields: %w(atom title),
+        fields: %w(atom title summary),
         operator: 'and',
         query: @q,
       }
     }
   end
 
-  def terms_query
+  def terms_query(terms)
     {
-      terms: {
-        countries: @countries,
-      }
+      terms: terms
     }
   end
 
@@ -73,8 +73,9 @@ class ArticleSearchQuery
     builder_options = {
       countries: { field: 'countries.raw', terms: @countries },
       industries: { field: 'industry_paths', terms: @industry_paths, use_path_wildcard: true },
+      topics: { field: 'topic_paths', terms: @topic_paths, use_path_wildcard: true },
+      trade_regions: { field: 'trade_regions.raw', terms: @trade_regions },
       types: { field: 'type' },
-      topics: { field: 'topic_paths', terms: @topic_paths, use_path_wildcard: true }
     }
     builder_options.each_with_object({}) do |params, hash|
       hash.merge! builder.build(params.first, **params.last)
@@ -83,7 +84,7 @@ class ArticleSearchQuery
 
   def build_prefix_queries
     prefix_queries = build_prefix_query(@industry_paths, :industry_paths)
-    prefix_queries.push *build_prefix_query(@topic_paths, :topic_paths)
+    prefix_queries.push(*build_prefix_query(@topic_paths, :topic_paths))
     prefix_queries
   end
 

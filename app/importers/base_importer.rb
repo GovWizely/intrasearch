@@ -3,7 +3,8 @@ require 'active_support/core_ext/class/attribute'
 require 'index_manager'
 
 class BaseImporter
-  class_attribute :model_class
+  class_attribute :model_class,
+                  instance_writer: false
 
   def import
     IndexManager.new(model_class).setup_new_index! do

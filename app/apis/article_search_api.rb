@@ -1,3 +1,4 @@
+require 'article_search'
 require 'search'
 
 class ArticleSearchAPI < Grape::API
@@ -8,8 +9,14 @@ class ArticleSearchAPI < Grape::API
     optional :industries, type: String
     optional :q, type: String
     optional :topics, type: String
+    optional :trade_regions, type: String
     optional :types, type: String
-    at_least_one_of :countries, :industries, :q, :types, :topics
+    at_least_one_of :countries,
+                    :industries,
+                    :q,
+                    :topics,
+                    :trade_regions,
+                    :types
 
     optional :limit,
              type: Integer,

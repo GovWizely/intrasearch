@@ -1,64 +1,47 @@
-- id: topic-R91Dng1U47EaYAk2N8v1S3K
-  label: Business Management
-  leaf_node: false
+- label: Business Management
   path: "/Business Management"
 
-- id: topic-R9YOsvzIE1KryZEJIc96KLh
-  label: Advertising
-  leaf_node: true
+- label: Advertising
   path: "/Business Management/Advertising"
 
-- id: topic-RBiSXpV761vpfWqujxnp0zH
-  label: Costing and Pricing
-  leaf_node: false
+- label: Costing and Pricing
   path: "/Business Management/Costing and Pricing"
 
-- id: topic-RB5r4mTSRmptLtIzUtghLOS
-  label: Prices
-  leaf_node: true
+- label: Prices
   path: "/Business Management/Costing and Pricing/Prices"
 
-- id: topic-RuCl6eLrJKKg2pZpFtKgbz
-  label: eCommerce
-  leaf_node: true
+- label: eCommerce
   path: "/Business Management/eCommerce"
 
-- id: topic-RDggmJFvZyv9D2iYTnFSktH
-  label: Economic Development and Investment
-  leaf_node: false
+- label: Economic Development and Investment
   path: "/Economic Development and Investment"
 
-- id: topic-RBqwog0bizLH0tsFkgheIvA
-  label: Capital
-  leaf_node: true
+- label: Capital
   path: "/Economic Development and Investment/Capital"
 
-- id: topic-R7N5f5ivUop6pbBNIf6Ud3Q
-  label: Environment
-  leaf_node: false
+- label: Environment
   path: "/Environment"
 
-- id: topic-RiRbh4J4214H1kogU9TyCH
-  label: Climate
-  leaf_node: true
+- label: Climate
   path: "/Environment/Climate"
 
-- id: topic-RnMRx1ORiHCryGG8eYoLRy
-  label: Market Access
-  leaf_node: false
+- label: Market Access
   path: "/Market Access"
 
-- id: topic-Rxe6uQeredRAyMxXbswm89
-  label: Trade Barriers
-  leaf_node: false
+- label: Export Licenses
+  path: "/Market Access/Export Licenses"
+
+- label: Trade Barriers
   path: "/Market Access/Trade Barriers"
 
-- id: topic-RBhuB31Zfas2NUBW3y3G9CC
-  label: Anti-Dumping
-  leaf_node: true
+- label: Anti-Dumping
   path: "/Market Access/Trade Barriers/Anti-Dumping"
 
-- id: topic-RBN8bCQnOmlXuENUw9zBKNq
-  label: Trade Promotion
-  leaf_node: false
+- label: Trade Promotion
   path: "/Trade Development and Promotion/Trade Promotion"
+
+- label: Transport and Logistics
+  path: "/Transport and Logistics/Trade Documents"
+
+- label: Export Licenses
+  path: "/Transport and Logistics/Trade Documents/Export Licenses"

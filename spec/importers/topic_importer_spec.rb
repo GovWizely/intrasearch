@@ -7,21 +7,13 @@ RSpec.describe TopicImporter do
     end
 
     let(:expected_args) do
-      [{ id: 'topic-R91Dng1U47EaYAk2N8v1S3K',
-         label: 'Business Management',
-         leaf_node: false,
+      [{ label: 'Business Management',
          path: '/Business Management' },
-       { id: 'topic-R9YOsvzIE1KryZEJIc96KLh',
-         label: 'Advertising',
-         leaf_node: true,
+       { label: 'Advertising',
          path: '/Business Management/Advertising' },
-       { id: 'topic-RBiSXpV761vpfWqujxnp0zH',
-         label: 'Costing and Pricing',
-         leaf_node: false,
+       { label: 'Costing and Pricing',
          path: '/Business Management/Costing and Pricing' },
-       { id: 'topic-RB5r4mTSRmptLtIzUtghLOS',
-         label: 'Prices',
-         leaf_node: true,
+       { label: 'Prices',
          path: '/Business Management/Costing and Pricing/Prices' }]
     end
 

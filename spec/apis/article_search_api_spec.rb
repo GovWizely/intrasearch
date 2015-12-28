@@ -20,14 +20,14 @@ RSpec.describe ArticleSearchAPI do
     subject { last_response }
     let(:parsed_body) { JSON.parse(last_response.body, symbolize_names: true) }
 
-    context 'when q parameter is present' do
-      before { get '/v1/articles/search', 'q' => 'commerce', 'limit' => 1 }
+    context 'when searching for articles with matching query term in the title' do
+      before { get '/v1/articles/search', 'q' => 'product', 'limit' => 1 }
 
       it 'returns response' do
         aggregate_failures do
           expect(last_response.status).to eq(200)
 
-          expect(parsed_body[:metadata]).to eq(total: 3,
+          expect(parsed_body[:metadata]).to eq(total: 4,
                                                count: 1,
                                                offset: 0,
                                                next_offset: 1)
@@ -36,18 +36,22 @@ RSpec.describe ArticleSearchAPI do
             industries: [
               { key: '/Aerospace and Defense', doc_count: 2 },
               { key: '/Aerospace and Defense/Space', doc_count: 1 },
+              { key: '/Design and Construction', doc_count: 1 },
+              { key: '/Design and Construction/Building Products', doc_count: 1 },
               { key: '/Information and Communication Technology', doc_count: 2 },
               { key: '/Information and Communication Technology/eCommerce Industry', doc_count: 2 }
             ],
             countries: [
-              { key: 'Cayman Islands', doc_count: 1 },
+              { key: 'Canada', doc_count: 1 },
               { key: 'Czech Republic', doc_count: 1 },
+              { key: 'South Africa', doc_count: 1 },
               { key: 'Sweden', doc_count: 1 }
             ],
             types: [
               { key: 'Country Commercial Guide', doc_count: 1 },
               { key: 'Generic', doc_count: 1 },
-              { key: 'Market Insight', doc_count: 1 }
+              { key: 'Market Insight', doc_count: 1 },
+              { key: 'Top Markets Report', doc_count: 1 }
             ],
             topics: [
               { key: '/Business Management', doc_count: 2 },
@@ -55,7 +59,66 @@ RSpec.describe ArticleSearchAPI do
               { key: '/Business Management/Costing and Pricing/Prices', doc_count: 1 },
               { key: '/Business Management/eCommerce', doc_count: 1 },
               { key: '/Environment', doc_count: 1 },
-              { key: '/Environment/Climate', doc_count: 1 }
+              { key: '/Environment/Climate', doc_count: 1 },
+              { key: '/Trade Development and Promotion', doc_count: 1 },
+              { key: '/Trade Development and Promotion/Export Potential', doc_count: 1 }
+            ],
+            trade_regions:[
+              { key: 'Asia Pacific Economic Cooperation', doc_count: 1 },
+              { key: 'European Union - 28', doc_count: 2 },
+              { key: 'Trans Pacific Partnership', doc_count: 1 }
+            ]
+          }
+          expect(parsed_body[:aggregations]).to eq(expected_aggregations)
+
+          expect(parsed_body[:results].count).to eq(1)
+
+          expected_first_result = {
+            countries: ['Canada'],
+            id: 'ka6t0000000006sAAA',
+            industries: ['Building Products'],
+            snippet: 'Canada ranks first among top export markets for U.S. building <em>product</em> manufacturers due to its proximity, duty-free status under NAFTA, relative lack of non-tariff trade barriers, and ease of commercial relationship establishment.',
+            title: 'Top Markets Building <em>Products</em> and Sustainable Construction Country Case Study Challenges and Barriers - Canada',
+            topics: ['Export Potential'],
+            trade_regions: ['Asia Pacific Economic Cooperation', 'Trans Pacific Partnership'],
+            type: 'Top Markets Report',
+            url: 'https://example.org/article2?id=Top-Markets-Building-Products-and-Sustainable-Construction-Country-Case-Study-Challenges-and-Barriers-Canada' }
+          expect(parsed_body[:results].first).to eq(expected_first_result)
+        end
+      end
+    end
+
+    context 'when searching for articles with matching query term in the summary' do
+      before { get '/v1/articles/search', 'q' => 'retail', 'limit' => 1 }
+
+      it 'returns response' do
+        aggregate_failures do
+          expect(last_response.status).to eq(200)
+
+          expect(parsed_body[:metadata]).to eq(total: 1,
+                                               count: 1,
+                                               offset: 0,
+                                               next_offset: nil)
+
+          expected_aggregations = {
+            industries: [
+              { key: '/Aerospace and Defense', doc_count: 1 },
+              { key: '/Information and Communication Technology', doc_count: 1 },
+              { key: '/Information and Communication Technology/eCommerce Industry', doc_count: 1 }
+            ],
+            countries: [
+              { key: 'Czech Republic', doc_count: 1 }
+            ],
+            types: [
+              { key: 'Country Commercial Guide', doc_count: 1 }
+            ],
+            topics: [
+              { key: '/Business Management', doc_count: 1 },
+              { key: '/Business Management/Costing and Pricing', doc_count: 1 },
+              { key: '/Business Management/Costing and Pricing/Prices', doc_count: 1 }
+            ],
+            trade_regions:[
+              { key: 'European Union - 28', doc_count: 1 }
             ]
           }
           expect(parsed_body[:aggregations]).to eq(expected_aggregations)
@@ -66,9 +129,10 @@ RSpec.describe ArticleSearchAPI do
             countries: ['Czech Republic'],
             id: 'ka0t0000000PCy6AAG',
             industries: ['Aerospace and Defense', 'eCommerce Industry'],
-            snippet: 'Describes how widely e-<em>Commerce</em> is used, the primary sectors that sell through e-<em>commerce</em>, and how much product/service in each sector is sold through e-<em>commerce</em> versus brick-and-mortar retail.',
-            title: 'Czech Republic - E-<em>Commerce</em>',
+            snippet: 'Describes how widely e-Commerce is used, the primary sectors that sell through e-commerce, and how much product/service in each sector is sold through e-commerce versus brick-and-mortar <em>retail</em>.',
+            title: 'Czech Republic - E-Commerce',
             topics: ['Prices'],
+            trade_regions: ['European Union - 28'],
             type: 'Country Commercial Guide',
             url: 'https://example.org/article2?id=Czech-Republic-ECommerce' }
           expect(parsed_body[:results].first).to eq(expected_first_result)
@@ -76,16 +140,68 @@ RSpec.describe ArticleSearchAPI do
       end
     end
 
-    context 'when countries parameter is present' do
-      before { get '/v1/articles/search', countries: ' CaymaN IslandS, Latvia , thailand , canadA, bogus country, sweDen, uniteD stateS' }
+    context 'when searching for articles with matching query term in the atom' do
+      before { get '/v1/articles/search', 'q' => 'household computer', 'limit' => 1 }
+
+      it 'returns response' do
+        aggregate_failures do
+          expect(last_response.status).to eq(200)
+
+          expect(parsed_body[:metadata]).to eq(total: 1,
+                                               count: 1,
+                                               offset: 0,
+                                               next_offset: nil)
+
+          expected_aggregations = {
+            industries: [
+              { key: '/Aerospace and Defense', doc_count: 1 },
+              { key: '/Information and Communication Technology', doc_count: 1 },
+              { key: '/Information and Communication Technology/eCommerce Industry', doc_count: 1 }
+            ],
+            countries: [
+              { key: 'Czech Republic', doc_count: 1 }
+            ],
+            types: [
+              { key: 'Country Commercial Guide', doc_count: 1 }
+            ],
+            topics: [
+              { key: '/Business Management', doc_count: 1 },
+              { key: '/Business Management/Costing and Pricing', doc_count: 1 },
+              { key: '/Business Management/Costing and Pricing/Prices', doc_count: 1 }
+            ],
+            trade_regions:[
+              { key: 'European Union - 28', doc_count: 1 }
+            ]
+          }
+          expect(parsed_body[:aggregations]).to eq(expected_aggregations)
+
+          expect(parsed_body[:results].count).to eq(1)
+
+          expected_first_result = {
+            countries: ['Czech Republic'],
+            id: 'ka0t0000000PCy6AAG',
+            industries: ['Aerospace and Defense', 'eCommerce Industry'],
+            snippet: 'In 2014, more than two-thirds of Czech <em>households</em> had <em>computers</em>.',
+            title: 'Czech Republic - E-Commerce',
+            topics: ['Prices'],
+            trade_regions: ['European Union - 28'],
+            type: 'Country Commercial Guide',
+            url: 'https://example.org/article2?id=Czech-Republic-ECommerce' }
+          expect(parsed_body[:results].first).to eq(expected_first_result)
+        end
+      end
+    end
+
+    context 'when searching for articles with matching countries' do
+      before { get '/v1/articles/search', countries: ' canadA, bogus country, sweDen' }
 
       it 'returns response' do
         aggregate_failures do
           expect(last_response.status).to eq(200)
 
           expected_metadata = {
-            total: 6,
-            count: 6,
+            total: 2,
+            count: 2,
             offset: 0,
             next_offset: nil
           }
@@ -94,45 +210,28 @@ RSpec.describe ArticleSearchAPI do
           expected_aggregations = {
             countries: [
               { key: 'Canada', doc_count: 1 },
-              { key: 'Cayman Islands', doc_count: 1 },
-              { key: 'Latvia', doc_count: 1 },
-              { key: 'Sweden', doc_count: 1 },
-              { key: 'Thailand', doc_count: 1 },
-              { key: 'United States', doc_count: 1 }
+              { key: 'Sweden', doc_count: 1 }
             ],
             industries: [
               { key: '/Aerospace and Defense', doc_count: 1 },
               { key: '/Aerospace and Defense/Space', doc_count: 1 },
-              { key: '/Agribusiness', doc_count: 1 },
-              { key: '/Agribusiness/Forestry Equipment and Machinery', doc_count: 1 },
               { key: '/Design and Construction', doc_count: 1 },
-              { key: '/Design and Construction/Building Products', doc_count: 1 },
-              { key: '/Equipment and Machinery', doc_count: 1 },
-              { key: '/Financial Services', doc_count: 1 },
-              { key: '/Financial Services/Investment Services', doc_count: 1 },
-              { key: '/Franchising', doc_count: 1 },
-              { key: '/Information and Communication Technology', doc_count: 1 },
-              { key: '/Information and Communication Technology/eCommerce Industry', doc_count: 1 }
+              { key: '/Design and Construction/Building Products', doc_count: 1 }
             ],
             types: [
-              { key: 'Country Commercial Guide', doc_count: 2 },
               { key: 'Generic', doc_count: 1 },
-              { key: 'Market Insight', doc_count: 1 },
-              { key: 'State Report', doc_count: 1 },
               { key: 'Top Markets Report', doc_count: 1 }
             ],
             topics: [
-              { key: '/Business Management', doc_count: 1 },
-              { key: '/Business Management/eCommerce', doc_count: 1 },
-              { key: '/Economic Development and Investment', doc_count: 1 },
-              { key: '/Economic Development and Investment/Investment', doc_count: 1 },
-              { key: '/Economic Development and Investment/Investment/Foreign Investment', doc_count: 1 },
               { key: '/Environment', doc_count: 1 },
               { key: '/Environment/Climate', doc_count: 1 },
-              { key: '/Trade Development and Promotion', doc_count: 3 },
-              { key: '/Trade Development and Promotion/Export Potential', doc_count: 1 },
-              { key: '/Trade Development and Promotion/Exports', doc_count: 1 },
-              { key: '/Trade Development and Promotion/Trade Promotion', doc_count: 1 }
+              { key: '/Trade Development and Promotion', doc_count: 1 },
+              { key: '/Trade Development and Promotion/Export Potential', doc_count: 1 }
+            ],
+            trade_regions:[
+              { key: 'Asia Pacific Economic Cooperation', doc_count: 1 },
+              { key: 'European Union - 28', doc_count: 1 },
+              { key: 'Trans Pacific Partnership', doc_count: 1 }
             ]
           }
           expect(parsed_body[:aggregations]).to eq(expected_aggregations)
@@ -140,7 +239,7 @@ RSpec.describe ArticleSearchAPI do
       end
     end
 
-    context 'when industries parameter is present' do
+    context 'when searching for articles with matching industries' do
       before { get '/v1/articles/search', industries: 'eCommerce Industry, spacE ' }
 
       it 'returns results' do
@@ -157,8 +256,8 @@ RSpec.describe ArticleSearchAPI do
 
           expected_aggregations = {
             countries: [
-              { key: 'Cayman Islands', doc_count: 1 },
               { key: 'Czech Republic', doc_count: 1 },
+              { key: 'South Africa', doc_count: 1 },
               { key: 'Sweden', doc_count: 1 }
             ],
             industries: [
@@ -177,6 +276,9 @@ RSpec.describe ArticleSearchAPI do
               { key: '/Business Management/eCommerce', doc_count: 1 },
               { key: '/Environment', doc_count: 1 },
               { key: '/Environment/Climate', doc_count: 1 }
+            ],
+            trade_regions: [
+              { key: 'European Union - 28', doc_count: 2 }
             ]
           }
           expect(parsed_body[:aggregations]).to eq(expected_aggregations)
@@ -184,7 +286,97 @@ RSpec.describe ArticleSearchAPI do
       end
     end
 
-    context 'when types parameter is present' do
+    context 'when searching for articles with matching topics' do
+      before { get '/v1/articles/search', topics: 'priceS , invalid,  climatE ' }
+
+      it 'returns results' do
+        aggregate_failures do
+          expect(last_response.status).to eq(200)
+
+          expected_metadata = {
+            total: 2,
+            count: 2,
+            offset: 0,
+            next_offset: nil
+          }
+          expect(parsed_body[:metadata]).to eq(expected_metadata)
+
+          expected_aggregations = {
+            countries: [
+              { key: 'Czech Republic', doc_count: 1 },
+              { key: 'Sweden', doc_count: 1 }
+            ],
+            industries: [
+              { key: '/Aerospace and Defense', doc_count: 2 },
+              { key: '/Aerospace and Defense/Space', doc_count: 1 },
+              { key: '/Information and Communication Technology', doc_count: 1 },
+              { key: '/Information and Communication Technology/eCommerce Industry', doc_count: 1 }
+            ],
+            types: [
+              { key: 'Country Commercial Guide', doc_count: 1 },
+              { key: 'Generic', doc_count: 1 }
+            ],
+            topics: [
+              { key: '/Business Management/Costing and Pricing/Prices', doc_count: 1 },
+              { key: '/Environment/Climate', doc_count: 1 }
+            ],
+            trade_regions: [
+              { key: 'European Union - 28', doc_count: 2 }
+            ]
+          }
+          expect(parsed_body[:aggregations]).to eq(expected_aggregations)
+        end
+      end
+    end
+
+    context 'when searching for articles with matching trade regions' do
+      before { get '/v1/articles/search', trade_regions: ' invalid  , Trans Pacific PartnershiP, Asia Pacific Economic CooperatioN ' }
+
+      it 'returns results' do
+        aggregate_failures do
+          expect(last_response.status).to eq(200)
+
+          expected_metadata = {
+            total: 2,
+            count: 2,
+            offset: 0,
+            next_offset: nil
+          }
+          expect(parsed_body[:metadata]).to eq(expected_metadata)
+
+          expected_aggregations = {
+            countries: [
+              { key: 'Canada', doc_count: 1 },
+              { key: 'United States', doc_count: 1 }
+            ],
+            industries: [
+              { key: '/Design and Construction', doc_count: 1 },
+              { key: '/Design and Construction/Building Products', doc_count: 1 },
+              { key: '/Financial Services', doc_count: 1 },
+              { key: '/Financial Services/Investment Services', doc_count: 1 }
+            ],
+            types: [
+              { key: 'State Report', doc_count: 1 },
+              { key: 'Top Markets Report', doc_count: 1 }
+            ],
+            topics: [
+              { key: '/Economic Development and Investment', doc_count: 1 },
+              { key: '/Economic Development and Investment/Investment', doc_count: 1 },
+              { key: '/Economic Development and Investment/Investment/Foreign Investment', doc_count: 1 },
+              { key: '/Trade Development and Promotion', doc_count: 1 },
+              { key: '/Trade Development and Promotion/Export Potential', doc_count: 1 }
+            ],
+            trade_regions: [
+              { key: 'Asia Pacific Economic Cooperation', doc_count: 2 },
+              { key: 'Trans Pacific Partnership', doc_count: 1 }
+            ]
+          }
+          expect(parsed_body[:aggregations]).to eq(expected_aggregations)
+        end
+      end
+    end
+
+    context 'when searching for articles with matching types' do
       before { get '/v1/articles/search', types: ' top  markets  REPORT ' }
 
       it 'returns results' do
@@ -213,65 +405,25 @@ RSpec.describe ArticleSearchAPI do
             topics: [
               { key: '/Trade Development and Promotion', doc_count: 1 },
               { key: '/Trade Development and Promotion/Export Potential', doc_count: 1 }
-            ]
+            ],
+            trade_regions: [
+              { key: 'Asia Pacific Economic Cooperation', doc_count: 1 },
+              { key: 'Trans Pacific Partnership', doc_count: 1 }]
           }
           expect(parsed_body[:aggregations]).to eq(expected_aggregations)
         end
       end
     end
 
-    context 'when topics parameter is present' do
-      before { get '/v1/articles/search', topics: 'priceS , capitaL,  climatE ' }
-
-      it 'returns results' do
-        aggregate_failures do
-          expect(last_response.status).to eq(200)
-
-          expected_metadata = {
-            total: 3,
-            count: 3,
-            offset: 0,
-            next_offset: nil
-          }
-          expect(parsed_body[:metadata]).to eq(expected_metadata)
-
-          expected_aggregations = {
-            countries: [
-              { key: 'Czech Republic', doc_count: 1 },
-              { key: 'South Africa', doc_count: 1 },
-              { key: 'Sweden', doc_count: 1 }
-            ],
-            industries: [
-              { key: '/Aerospace and Defense', doc_count: 2 },
-              { key: '/Aerospace and Defense/Space', doc_count: 1 },
-              { key: '/Franchising', doc_count: 1 },
-              { key: '/Information and Communication Technology', doc_count: 1 },
-              { key: '/Information and Communication Technology/eCommerce Industry', doc_count: 1 }
-            ],
-            types: [
-              { key: 'Country Commercial Guide', doc_count: 2 },
-              { key: 'Generic', doc_count: 1 }
-            ],
-            topics: [
-              { key: '/Business Management/Costing and Pricing/Prices', doc_count: 1 },
-              { key: '/Economic Development and Investment/Capital', doc_count: 1 },
-              { key: '/Environment/Climate', doc_count: 1 }
-            ]
-          }
-          expect(parsed_body[:aggregations]).to eq(expected_aggregations)
-        end
-      end
-    end
-
-    context 'when searching with offset' do
-      before { get '/v1/articles/search', q: 'south africa', offset: '1' }
+    context 'when searching for articles with offset' do
+      before { get '/v1/articles/search', offset: 1, q: 'product' }
 
       it 'returns matching CountryCommercial' do
         aggregate_failures do
           expect(last_response.status).to eq(200)
           expected_metadata = {
-            total: 2,
-            count: 1,
+            total: 4,
+            count: 3,
             offset: 1,
             next_offset: nil
           }
@@ -280,7 +432,7 @@ RSpec.describe ArticleSearchAPI do
       end
     end
 
-    context 'when not all query terms are present in the index' do
+    context 'when searching for articles where not all query terms are present in the index' do
       before { get '/v1/articles/search', q: 'atom market' }
 
       it 'returns empty results' do

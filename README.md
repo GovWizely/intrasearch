@@ -10,7 +10,7 @@ Provides JSON Search API for Salesforce contents.
 
 - Ruby 2.2
 - Bundler 1.10.6
-- Elasticsearch 1.7.3
+- Elasticsearch 1.7.4
 - Salesforce API user credentials
 
 ## Setup

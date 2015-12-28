@@ -1,5 +1,10 @@
 require 'uri'
 
+require 'country'
+require 'industry'
+require 'taxonomy_search'
+require 'topic'
+
 class ArticleTransformer
   URL_PREFIX = YAML.load(File.read(Nix.root.join('config/intrasearch.yml')))[Nix.env]['article_url_prefix'].freeze
 
@@ -14,23 +19,26 @@ class ArticleTransformer
   protected
 
   def transform_countries(attributes)
-    valid_countries = CountrySearch.new(attributes[:geographies]).run
+    valid_countries = Country.search_by_labels(*attributes[:geographies])
     attributes[:countries] = valid_countries.map(&:label).sort
+    attributes[:trade_regions] = valid_countries.map(&:trade_regions).sort
     attributes
   end
 
   def transform_industries(attributes)
-    valid_industries = IndustrySearch.new(attributes[:industries]).run
-    attributes[:industries] = valid_industries.map(&:label).sort
-    attributes[:industry_paths] = valid_industries.map(&:path).sort
+    transform_taxonomies Industry, attributes, attributes[:industries]
     attributes
   end
 
   def transform_topics(attributes)
-    topics = attributes.delete(:trade_topics) || []
-    valid_topics = TopicSearch.new(topics).run
-    attributes[:topic_paths] = valid_topics.map(&:path).sort
-    attributes[:topics] = valid_topics.map(&:label).sort
+    labels = attributes.delete(:trade_topics) || []
+    transform_taxonomies Topic, attributes, labels
+  end
+
+  def transform_taxonomies(klass, attributes, labels)
+    taxonomies = klass.search_by_labels(*labels)
+    attributes["#{klass.name.downcase}_paths"] = taxonomies.map(&:path).uniq.sort
+    attributes["#{klass.name.tableize}"] = taxonomies.map(&:label).uniq.sort
     attributes
   end
 

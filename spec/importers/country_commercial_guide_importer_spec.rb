@@ -5,7 +5,8 @@ RSpec.describe CountryCommercialGuideImporter do
   include_context 'shared elastic models',
                   Country,
                   Industry,
-                  Topic
+                  Topic,
+                  TradeRegion
 
   include_examples 'article importer', CountryCommercialGuideExtractor
 end

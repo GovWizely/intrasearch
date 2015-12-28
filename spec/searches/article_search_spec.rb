@@ -54,6 +54,12 @@ RSpec.describe ArticleSearch do
       it { is_expected.to have_attributes(topic_paths: ['/Business Management/Costing and Pricing/Prices',
                                                         '/Trade Development and Promotion/Trade Promotion']) }
     end
+
+    context 'when trade_regions is set' do
+      let(:options) { { trade_regions: ' Trans Pacific PartnershiP ,  European Union - 28 ' } }
+      it { is_expected.to have_attributes(trade_regions: [' Trans Pacific PartnershiP ',
+                                                          '  European Union - 28 ']) }
+    end
   end
 
   describe '#build_query_hash' do
@@ -61,7 +67,9 @@ RSpec.describe ArticleSearch do
       described_class.new industries: 'Franchising, Aerospace and Defense',
                           limit: 1,
                           offset: 3,
-                          q: 'south africa'
+                          q: 'south africa',
+                          topics: 'Costing and Pricing, Environment',
+                          trade_regions: 'NAFTA , Andean Community'
     end
 
     it 'searches using ArticleSearchQuery' do
@@ -71,7 +79,8 @@ RSpec.describe ArticleSearch do
         limit: 1,
         offset: 3,
         q: 'south africa',
-        topic_paths: []
+        topic_paths: ['/Business Management/Costing and Pricing', '/Environment'],
+        trade_regions: ['NAFTA ', ' Andean Community']
       }
       expect(ArticleSearchQuery).to receive(:new).
                                       with(expected_query_params).

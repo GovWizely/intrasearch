@@ -1,3 +1,5 @@
+require 'article_transformer'
+
 class StateReportTransformer < ArticleTransformer
 
   protected

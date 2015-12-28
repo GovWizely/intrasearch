@@ -9,7 +9,6 @@ module Taxonomy
       include Elasticsearch::Persistence::Model
       include BaseModel
       attribute :label, String, mapping: { analyzer: 'keyword_analyzer' }
-      attribute :leaf_node, Axiom::Types::Boolean, mapping: { index: 'not_analyzed' }
       attribute :path, String, mapping: { index: 'not_analyzed' }
 
       self.index_name_fragments = ['nix',
