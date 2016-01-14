@@ -24,12 +24,19 @@ RSpec.describe 'intrasearch.rake' do
     it 'imports taxonomies' do
       tr_importer = instance_double TradeRegionImporter
       expect(TradeRegionImporter).to receive(:new) { tr_importer }
-      expect(tr_importer).to receive(:import)
+      expect(tr_importer).to receive(:import).ordered
 
-      expect(TaxonomyImporter).to receive(:subclasses) { [IndustryImporter] }
-      importer = instance_double IndustryImporter
-      expect(IndustryImporter).to receive(:new) { importer }
-      expect(importer).to receive(:import)
+      country_importer = instance_double CountryImporter
+      expect(CountryImporter).to receive(:new) { country_importer }
+      expect(country_importer).to receive(:import).ordered
+
+      industry_importer = instance_double IndustryImporter
+      expect(IndustryImporter).to receive(:new) { industry_importer }
+      expect(industry_importer).to receive(:import)
+
+      topic_importer = instance_double TopicImporter
+      expect(TopicImporter).to receive(:new) { topic_importer }
+      expect(topic_importer).to receive(:import)
 
       @rake['intrasearch:import_taxonomies'].invoke
     end

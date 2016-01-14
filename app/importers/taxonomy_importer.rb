@@ -1,9 +1,7 @@
 require 'base_importer'
-require 'subclassable'
 require 'taxonomy_extractor'
 
 class TaxonomyImporter < BaseImporter
-  extend Subclassable
   class_attribute :taxonomy_root_label,
                   instance_writer: false
 
