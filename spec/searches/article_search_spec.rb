@@ -19,6 +19,18 @@ RSpec.describe ArticleSearch do
       it { is_expected.to have_attributes(industry_paths: ['/Aerospace and Defense', '/Franchising']) }
     end
 
+    context 'when topics is set' do
+      let(:options) { { topics: ' PriceS , tradE  promotioN ' } }
+      it { is_expected.to have_attributes(topic_paths: ['/Business Management/Costing and Pricing/Prices',
+                                                        '/Trade Development and Promotion/Trade Promotion']) }
+    end
+
+    context 'when trade_regions is set' do
+      let(:options) { { trade_regions: ' Trans Pacific PartnershiP ,  European Union - 28 ' } }
+      it { is_expected.to have_attributes(trade_regions: [' Trans Pacific PartnershiP ',
+                                                          '  European Union - 28 ']) }
+    end
+
     context 'when types is not valid' do
       let(:options) { { types: ' foo bar ' } }
       it { is_expected.to have_attributes(types: [CountryCommercialGuide, Generic, MarketInsight, StateReport, TopMarketsReport]) }
@@ -49,16 +61,11 @@ RSpec.describe ArticleSearch do
       it { is_expected.to have_attributes(types: [TopMarketsReport]) }
     end
 
-    context 'when topics is set' do
-      let(:options) { { topics: ' PriceS , tradE  promotioN ' } }
-      it { is_expected.to have_attributes(topic_paths: ['/Business Management/Costing and Pricing/Prices',
-                                                        '/Trade Development and Promotion/Trade Promotion']) }
-    end
-
-    context 'when trade_regions is set' do
-      let(:options) { { trade_regions: ' Trans Pacific PartnershiP ,  European Union - 28 ' } }
-      it { is_expected.to have_attributes(trade_regions: [' Trans Pacific PartnershiP ',
-                                                          '  European Union - 28 ']) }
+    context 'when world_regions is set' do
+      let(:options) { { world_regions: ' invalid  , pacific  RIM  , westerN Hemisphere ' } }
+      it { is_expected.to have_attributes(world_regions: [' invalid  ',
+                                                          ' pacific  RIM  ',
+                                                          ' westerN Hemisphere ']) }
     end
   end
 
@@ -69,7 +76,8 @@ RSpec.describe ArticleSearch do
                           offset: 3,
                           q: 'south africa',
                           topics: 'Costing and Pricing, Environment',
-                          trade_regions: 'NAFTA , Andean Community'
+                          trade_regions: 'NAFTA , Andean Community',
+                          world_regions: ' pacific  RIM  , westerN Hemisphere '
     end
 
     it 'searches using ArticleSearchQuery' do
@@ -80,7 +88,8 @@ RSpec.describe ArticleSearch do
         offset: 3,
         q: 'south africa',
         topic_paths: ['/Business Management/Costing and Pricing', '/Environment'],
-        trade_regions: ['NAFTA ', ' Andean Community']
+        trade_regions: ['NAFTA ', ' Andean Community'],
+        world_regions: [' pacific  RIM  ', ' westerN Hemisphere ']
       }
       expect(ArticleSearchQuery).to receive(:new).
                                       with(expected_query_params).

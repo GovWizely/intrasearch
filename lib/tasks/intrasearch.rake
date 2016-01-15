@@ -8,17 +8,18 @@ namespace :intrasearch do
   desc 'import taxonomies'
   task import_taxonomies: :environment do
     [TradeRegionImporter,
+     WorldRegionImporter,
      CountryImporter,
      IndustryImporter,
      TopicImporter].each do |klass|
-      klass.new.import
+      klass.import
     end
   end
 
   desc 'import articles'
   task import_articles: :environment do
-    ArticleImporter.subclasses.each do |klass|
-      klass.new.import
+    ArticleImporter.descendants.each do |klass|
+      klass.import
     end
   end
 end

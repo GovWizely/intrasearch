@@ -1,19 +1,23 @@
-require 'base_importer'
+require 'importer'
 require 'taxonomy_extractor'
 
-class TaxonomyImporter < BaseImporter
-  class_attribute :taxonomy_root_label,
-                  instance_writer: false
+module TaxonomyImporter
+  def self.extended(base)
+    class << base
+      attr_accessor :taxonomy_root_label
+    end
 
-  def initialize(resource = Nix.root.join('skos/root.owl.xml'))
-    @resource = resource
+    base.extend Importer
+    base.extend ModuleMethods
   end
 
-  def import
-    super do
-      TaxonomyExtractor.documents(resource: @resource,
-                                  root_label: taxonomy_root_label).each do |hash|
-        model_class.create hash
+  module ModuleMethods
+    def import(resource = Nix.root.join('skos/root.owl.xml'))
+      super() do
+        TaxonomyExtractor.documents(resource: resource,
+                                    root_label: taxonomy_root_label).each do |hash|
+          model_class.create hash
+        end
       end
     end
   end

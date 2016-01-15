@@ -12,6 +12,10 @@
   - "/Economic Development and Investment/Investment/Foreign Investment"
   topics:
   - Foreign Investment
-  url: https://example.org/article2?id=Pennsylvania-Foreign-Investment
   trade_regions:
   - Asia Pacific Economic Cooperation
+  url: https://example.org/article2?id=Pennsylvania-Foreign-Investment
+  world_regions:
+  - North America
+  - Pacific Rim
+  - Western Hemisphere

@@ -1,8 +1,8 @@
 module ArticleJsonSerializer
-  EXCLUDED_JSON_FIELDS = %i(atom created_at industry_paths summary title topic_paths updated_at).freeze
+  INCLUDED_JSON_FIELDS = %i(id snippet title url).freeze
   
   def as_json(options = nil)
-    inject_highlighted_fields super({ except: EXCLUDED_JSON_FIELDS }.merge(options || {}))
+    inject_highlighted_fields super({ only: INCLUDED_JSON_FIELDS }.merge(options || {}))
   end
 
   private

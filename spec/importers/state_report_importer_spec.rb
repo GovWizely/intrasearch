@@ -17,7 +17,7 @@ RSpec.describe StateReportImporter do
     end
 
     it 'imports StateReport' do
-      described_class.new.import
+      described_class.import
       expect(StateReport.count).to eq(1)
 
       expected_attributes = {

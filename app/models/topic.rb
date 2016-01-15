@@ -1,7 +1,6 @@
 require 'taxonomy'
-require 'taxonomy_search'
 
 class Topic
   include Taxonomy
-  extend TaxonomySearch
+  attribute :path, String, mapping: { index: 'not_analyzed' }
 end

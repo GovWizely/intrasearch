@@ -33,6 +33,9 @@ module ArticleAttributes
                 default: self.name.demodulize.titleize,
                 mapping: { index: 'not_analyzed' }
       attribute :url, String, mapping: { index: 'not_analyzed' }
+      attribute :world_regions,
+                String,
+                KEYWORD_ATTRIBUTE_MAPPING.clone
     end
   end
 end

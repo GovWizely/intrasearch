@@ -9,7 +9,7 @@ RSpec.shared_examples 'article importer' do |extractor_class|
     end
 
     it 'imports CountryCommercial' do
-      described_class.new.import
+      described_class.import
       expect(described_class.model_class.count).to eq(3)
 
       expected_attributes = {
@@ -25,6 +25,7 @@ RSpec.shared_examples 'article importer' do |extractor_class|
                          '/Information and Communication Technology/eCommerce Industry',
                          '/Retail Trade/eCommerce Industry'],
         summary: 'item 1 summary',
+        title: 'item 1 title',
         topic_paths: ['/Business Management',
                       '/Environment/Climate',
                       '/Market Access/Export Licenses',
@@ -34,8 +35,9 @@ RSpec.shared_examples 'article importer' do |extractor_class|
                  'Business Management',
                  'Climate',
                  'Export Licenses'],
-        title: 'item 1 title',
+        trade_regions: ['Asia Pacific Economic Cooperation'],
         url: 'https://example.org/article2?id=Space-Business',
+        world_regions: ['Caribbean', 'North America', 'Pacific Rim', 'Western Hemisphere']
       }
       item = described_class.model_class.find(extracted_args[0][:id])
       expect(item).to have_attributes(expected_attributes)

@@ -15,6 +15,8 @@
   - "/Environment/Climate"
   topics:
   - Climate
-  url: https://example.org/article2?id=Elements-of-a-Petition-Like-Product-Determinations-AD-CVD-Petition-Counseling-Unit
   trade_regions:
   - European Union - 28
+  url: https://example.org/article2?id=Elements-of-a-Petition-Like-Product-Determinations-AD-CVD-Petition-Counseling-Unit
+  world_regions:
+  - Europe

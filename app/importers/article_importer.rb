@@ -1,21 +1,34 @@
 require 'article_transformer'
-require 'base_importer'
-require 'subclassable'
+require 'importer'
 
-class ArticleImporter < BaseImporter
-  extend Subclassable
-  class_attribute :extractor_module,
-                  :transformer_class,
-                  instance_writer: false
-  self.transformer_class = ArticleTransformer
+module ArticleImporter
+  class << self
+    attr_accessor :descendants
+  end
 
-  def import
-    super do
-      transformer = transformer_class.new
-      response = extractor_module.extract
-      response.each do |attributes|
-        transformer.transform attributes
-        model_class.new(attributes).save
+  self.descendants = []
+
+  def self.extended(base)
+    self.descendants |= [base]
+
+    class << base
+      attr_accessor :extractor,
+                    :transformer
+    end
+    base.transformer = ArticleTransformer
+
+    base.extend Importer
+    base.extend ModuleMethods
+  end
+
+  module ModuleMethods
+    def import
+      super do
+        response = extractor.extract
+        response.each do |attributes|
+          transformer.transform attributes
+          model_class.new(attributes).save
+        end
       end
     end
   end

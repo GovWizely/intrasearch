@@ -35,5 +35,22 @@ RSpec.describe ArticleSearchQuery do
         expect(query.to_hash[:query][:filtered][:query][:bool][:must]).to eq(expected_query_hash)
       end
     end
+
+    context 'when world_regions is present' do
+      it 'filters on world_regions' do
+        expected_query_hash = [
+          terms: {
+            world_regions: ['north america',
+                            'pacific rim']
+          }
+        ]
+
+        query = described_class.new(limit: 10,
+                                    offset: 0,
+                                    world_regions: [' North  americA',
+                                                    'pacifiC riM '])
+        expect(query.to_hash[:query][:filtered][:query][:bool][:must]).to eq(expected_query_hash)
+      end
+    end
   end
 end

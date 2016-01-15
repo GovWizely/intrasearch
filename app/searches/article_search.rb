@@ -25,7 +25,8 @@ class ArticleSearch
               :topic_paths,
               :total,
               :trade_regions,
-              :types
+              :types,
+              :world_regions
 
   def initialize(options)
     @countries = options[:countries].to_s.split(',')
@@ -37,6 +38,7 @@ class ArticleSearch
     @topic_paths = lookup_topic_paths options[:topics]
     @trade_regions = options[:trade_regions].to_s.split(',')
     @types = detect_types options[:types]
+    @world_regions = options[:world_regions].to_s.split(',')
   end
 
   def run
@@ -52,7 +54,8 @@ class ArticleSearch
                            offset: @offset,
                            q: @q,
                            topic_paths: @topic_paths,
-                           trade_regions: @trade_regions)
+                           trade_regions: @trade_regions,
+                           world_regions: @world_regions)
   end
 
   def search_type_count?

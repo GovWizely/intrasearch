@@ -2,9 +2,7 @@ require 'rack_helper'
 
 RSpec.describe IndustryImporter do
   describe '#import' do
-    let(:subject) do
-      described_class.new(Nix.root.join('spec/fixtures/owls/industries.owl.xml'))
-    end
+    let(:resource) { Nix.root.join('spec/fixtures/owls/industries.owl.xml') }
 
     let(:expected_args) do
       [{ label: 'Aerospace and Defense',
@@ -23,7 +21,7 @@ RSpec.describe IndustryImporter do
       expected_args.each do |industry_hash|
         expect(Industry).to receive(:create).with(industry_hash)
       end
-      subject.import
+      described_class.import resource
     end
   end
 end

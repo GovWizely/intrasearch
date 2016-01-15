@@ -2,37 +2,71 @@ require 'rack_helper'
 
 RSpec.describe CountryImporter do
   include_context 'shared elastic models',
-                  TradeRegion
+                  TradeRegion,
+                  WorldRegion
 
   describe '#import' do
-    let(:subject) do
-      described_class.new Nix.root.join('spec/fixtures/owls/regions.owl.xml')
-    end
+    let(:resource) { Nix.root.join('spec/fixtures/owls/regions.owl.xml') }
 
     let(:expected_args) do
       [{ id: 'http://webprotege.stanford.edu/RUXeWvtXzfnZOcThs5oRWn',
          label: 'Algeria',
          path: '/Algeria',
-         trade_regions: ['Organization of the Petroleum Exporting Countries'] },
+         trade_regions: ['Organization of the Petroleum Exporting Countries'],
+         world_regions: [] },
        { id: 'http://webprotege.stanford.edu/RDGdyJ5jz8VooldQaO7rzOa',
          label: 'Angola',
          path: '/Angola',
-         trade_regions: ['Organization of the Petroleum Exporting Countries'] },
+         trade_regions: ['Organization of the Petroleum Exporting Countries'],
+         world_regions: [] },
+       { id: 'http://webprotege.stanford.edu/RDjGw17VBjBm1pfdtbcTiu7',
+         label: 'Belize',
+         path: '/Belize',
+         trade_regions: [],
+         world_regions: ['Central America'] },
        { id: 'http://webprotege.stanford.edu/RCHnGGZ8oROz1NPBYEs8ldE',
          label: 'Bolivia',
          path: '/Bolivia',
-         trade_regions: ['Andean Community'] },
+         trade_regions: ['Andean Community'],
+         world_regions: [] },
+       { id: 'http://webprotege.stanford.edu/RCFeONxXFzHO4GMg16HylOc',
+         label: 'China',
+         path: '/China',
+         trade_regions: ['Asia Pacific Economic Cooperation'],
+         world_regions: ['East Asia'] },
        { id: 'http://webprotege.stanford.edu/R83RBxX91o3z1pt0cXjXvgN',
          label: 'Colombia',
          path: '/Colombia',
-         trade_regions: ['Andean Community'] }]
+         trade_regions: ['Andean Community'],
+         world_regions: [] },
+       { id: 'http://webprotege.stanford.edu/RcoC6hxvjY1WRMKV6cW3US',
+         label: 'Costa Rica',
+         path: '/Costa Rica',
+         trade_regions: [],
+         world_regions: ['Central America'] },
+       { id: 'http://webprotege.stanford.edu/RC88gcQj9C5qKRAgVRLOUBn',
+         label: 'El Salvador',
+         path: '/El Salvador',
+         trade_regions: [],
+         world_regions: ['Central America'] },
+       { id: 'http://webprotege.stanford.edu/ReBrW4erCA9bTkbUVAjWbG',
+         label: 'Hong Kong',
+         path: '/Hong Kong',
+         trade_regions: [],
+         world_regions: ['East Asia'] },
+       { id: 'http://webprotege.stanford.edu/RDfDY0ur68lqxEDkatxoedV',
+         label: 'Japan',
+         path: '/Japan',
+         trade_regions: ['Asia Pacific Economic Cooperation'],
+         world_regions: ['East Asia'] }
+      ]
     end
 
     it 'creates Country' do
       expected_args.each do |industry_hash|
         expect(Country).to receive(:create).with(industry_hash)
       end
-      subject.import
+      described_class.import resource
     end
   end
 end

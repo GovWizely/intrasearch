@@ -1,4 +1,4 @@
-class TradeRegionSearchByCountryQuery
+class RegionSearchByCountryQuery
   def initialize(countries)
     @countries = countries.map { |l| l.downcase.squish }
   end

@@ -2,9 +2,7 @@ require 'rack_helper'
 
 RSpec.describe TopicImporter do
   describe '#import' do
-    let(:subject) do
-      described_class.new Nix.root.join('spec/fixtures/owls/topics.owl.xml')
-    end
+    let(:resource) { Nix.root.join('spec/fixtures/owls/topics.owl.xml') }
 
     let(:expected_args) do
       [{ label: 'Business Management',
@@ -21,7 +19,7 @@ RSpec.describe TopicImporter do
       expected_args.each do |topic_hash|
         expect(Topic).to receive(:create).with(topic_hash)
       end
-      subject.import
+      described_class.import resource
     end
   end
 end

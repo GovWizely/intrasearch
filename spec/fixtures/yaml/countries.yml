@@ -3,8 +3,15 @@
   path: "/United States"
   trade_regions:
   - Asia Pacific Economic Cooperation
+  world_regions:
+  - North America
+  - Pacific Rim
+  - Western Hemisphere
 
 - id: http://webprotege.stanford.edu/RBPxtBToM2v2kOpsL8Gaifx
   label: Cayman Islands
   path: "/Cayman Islands"
   trade_regions: []
+  world_regions:
+  - Caribbean
+  - Western Hemisphere

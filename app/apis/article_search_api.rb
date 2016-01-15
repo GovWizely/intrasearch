@@ -11,12 +11,14 @@ class ArticleSearchAPI < Grape::API
     optional :topics, type: String
     optional :trade_regions, type: String
     optional :types, type: String
+    optional :world_regions, type: String
     at_least_one_of :countries,
                     :industries,
                     :q,
                     :topics,
                     :trade_regions,
-                    :types
+                    :types,
+                    :world_regions
 
     optional :limit,
              type: Integer,

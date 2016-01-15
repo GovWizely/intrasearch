@@ -2,7 +2,9 @@ require 'article_importer'
 require 'generic'
 require 'generic_extractor'
 
-class GenericImporter < ArticleImporter
-  self.extractor_module = GenericExtractor
+module GenericImporter
+  extend ArticleImporter
+
+  self.extractor = GenericExtractor
   self.model_class = ::Generic
 end

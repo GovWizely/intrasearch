@@ -1,6 +1,8 @@
 require 'article_transformer'
 
-class StateReportTransformer < ArticleTransformer
+module StateReportTransformer
+  extend ArticleTransformer
+  extend self
 
   protected
 

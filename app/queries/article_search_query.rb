@@ -2,12 +2,7 @@ require 'active_support/core_ext/object/blank'
 require 'active_support/core_ext/string/filters'
 
 class ArticleSearchQuery
-  attr_reader :industry_paths,
-              :limit,
-              :offset,
-              :q
-
-  def initialize(countries: [], industry_paths: [], limit:, offset:, q: nil, topic_paths: [], trade_regions: [])
+  def initialize(countries: [], industry_paths: [], limit:, offset:, q: nil, topic_paths: [], trade_regions: [], world_regions: [])
     @countries = countries.map { |l| l.downcase.squish }
     @industry_paths = industry_paths
     @limit = limit
@@ -15,6 +10,7 @@ class ArticleSearchQuery
     @q = q
     @topic_paths = topic_paths
     @trade_regions = trade_regions.map { |l| l.downcase.squish }
+    @world_regions = world_regions.map { |l| l.downcase.squish }
   end
 
   def to_hash
@@ -28,8 +24,8 @@ class ArticleSearchQuery
           title: { number_of_fragments: 0 }
         }
       },
-      from: offset,
-      size: limit
+      from: @offset,
+      size: @limit
     }
   end
 
@@ -41,6 +37,7 @@ class ArticleSearchQuery
     must_queries << multi_match_query if @q.present?
     must_queries << terms_query(countries: @countries) if @countries.present?
     must_queries << terms_query(trade_regions: @trade_regions) if @trade_regions.present?
+    must_queries << terms_query(world_regions: @world_regions) if @world_regions.present?
     bool_queries[:must] = must_queries
 
     should_queries = build_prefix_queries
@@ -76,6 +73,7 @@ class ArticleSearchQuery
       topics: { field: 'topic_paths', terms: @topic_paths, use_path_wildcard: true },
       trade_regions: { field: 'trade_regions.raw', terms: @trade_regions },
       types: { field: 'type' },
+      world_regions: { field: 'world_regions.raw', terms: @world_regions },
     }
     builder_options.each_with_object({}) do |params, hash|
       hash.merge! builder.build(params.first, **params.last)

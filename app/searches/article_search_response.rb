@@ -34,7 +34,7 @@ class ArticleSearchResponse
 
   def build_aggregations
     aggregations = @results.response.aggregations
-    %w(countries industries topics trade_regions types).each do |agg|
+    %w(countries industries topics trade_regions types world_regions).each do |agg|
       aggregations[agg] &&= aggregations[agg]['buckets']
     end
     aggregations

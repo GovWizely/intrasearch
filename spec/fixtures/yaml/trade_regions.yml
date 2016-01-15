@@ -1,13 +1,18 @@
 ---
 - :id: http://webprotege.stanford.edu/RB53lPnm186ivFLEXmbWylT
-  :label: Andean Community
-  :path: "/Andean Community"
   :countries:
   - Bolivia
   - Colombia
+  :label: Andean Community
+
 - :id: http://webprotege.stanford.edu/RColoqFfo8G4Klm60b7QkwU
-  :label: Organization of the Petroleum Exporting Countries
-  :path: "/Organization of the Petroleum Exporting Countries"
   :countries:
   - Algeria
   - Angola
+  :label: Organization of the Petroleum Exporting Countries
+
+- :id: http://webprotege.stanford.edu/R7YQAlNP4iXuBJLBhgPAcIO
+  :countries:
+  - China
+  - Japan
+  :label: Asia Pacific Economic Cooperation

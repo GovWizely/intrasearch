@@ -5,7 +5,9 @@ require 'industry'
 require 'taxonomy_search'
 require 'topic'
 
-class ArticleTransformer
+module ArticleTransformer
+  extend self
+
   URL_PREFIX = YAML.load(File.read(Nix.root.join('config/intrasearch.yml')))[Nix.env]['article_url_prefix'].freeze
 
   def transform(attributes)
@@ -21,7 +23,8 @@ class ArticleTransformer
   def transform_countries(attributes)
     valid_countries = Country.search_by_labels(*attributes[:geographies])
     attributes[:countries] = valid_countries.map(&:label).sort
-    attributes[:trade_regions] = valid_countries.map(&:trade_regions).sort
+    attributes[:trade_regions] = valid_countries.map(&:trade_regions).flatten.uniq.sort
+    attributes[:world_regions] = valid_countries.map(&:world_regions).flatten.uniq.sort
     attributes
   end
 

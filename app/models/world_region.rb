@@ -1,5 +1,5 @@
 require 'region'
 
-class TradeRegion
+class WorldRegion
   include Region
 end

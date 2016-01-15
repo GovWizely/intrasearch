@@ -5,6 +5,7 @@
   industry_paths:
   - "/Aerospace and Defense"
   - "/Information and Communication Technology/eCommerce Industry"
+  - "/Retail Trade/eCommerce Industry"
   industries:
   - Aerospace and Defense
   - eCommerce Industry
@@ -19,3 +20,5 @@
   trade_regions:
   - European Union - 28
   url: https://example.org/article2?id=Czech-Republic-ECommerce
+  world_regions:
+  - Europe

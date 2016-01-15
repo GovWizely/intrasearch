@@ -22,21 +22,11 @@ RSpec.describe 'intrasearch.rake' do
 
   describe 'intrasearch:import_taxonomies' do
     it 'imports taxonomies' do
-      tr_importer = instance_double TradeRegionImporter
-      expect(TradeRegionImporter).to receive(:new) { tr_importer }
-      expect(tr_importer).to receive(:import).ordered
-
-      country_importer = instance_double CountryImporter
-      expect(CountryImporter).to receive(:new) { country_importer }
-      expect(country_importer).to receive(:import).ordered
-
-      industry_importer = instance_double IndustryImporter
-      expect(IndustryImporter).to receive(:new) { industry_importer }
-      expect(industry_importer).to receive(:import)
-
-      topic_importer = instance_double TopicImporter
-      expect(TopicImporter).to receive(:new) { topic_importer }
-      expect(topic_importer).to receive(:import)
+      expect(TradeRegionImporter).to receive(:import).ordered
+      expect(WorldRegionImporter).to receive(:import).ordered
+      expect(CountryImporter).to receive(:import).ordered
+      expect(IndustryImporter).to receive(:import)
+      expect(TopicImporter).to receive(:import)
 
       @rake['intrasearch:import_taxonomies'].invoke
     end
@@ -44,10 +34,11 @@ RSpec.describe 'intrasearch.rake' do
 
   describe 'intrasearch:import_articles' do
     it 'imports articles' do
-      expect(ArticleImporter).to receive(:subclasses) { [GenericImporter] }
-      importer = instance_double GenericImporter
-      expect(GenericImporter).to receive(:new) { importer }
-      expect(importer).to receive(:import)
+      expect(CountryCommercialGuideImporter).to receive(:import)
+      expect(GenericImporter).to receive(:import)
+      expect(MarketInsightImporter).to receive(:import)
+      expect(StateReportImporter).to receive(:import)
+      expect(TopMarketsReportImporter).to receive(:import)
 
       @rake['intrasearch:import_articles'].invoke
     end

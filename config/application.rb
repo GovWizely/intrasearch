@@ -1,5 +1,4 @@
-$LOAD_PATH.unshift(*Dir.glob(File.join(File.dirname(__FILE__), '..', 'app', '**')))
-$LOAD_PATH.unshift(*Dir.glob(File.join(File.dirname(__FILE__), '..', 'lib')))
+$LOAD_PATH.unshift(*Dir.glob(File.join(File.dirname(__FILE__), '..', 'app', '**/')))
 $LOAD_PATH.unshift(File.dirname(__FILE__))
 
 require 'boot'
@@ -8,11 +7,10 @@ require 'grape'
 require 'rack/cors'
 
 require 'base'
-require 'initializer'
+require 'eager_loader'
 
-Nix::Initializer.new(
-  File.expand_path('../initializers/*.rb', __FILE__),
-  File.expand_path('../../app/**/*.rb', __FILE__)).run
+Nix::EagerLoader.load(Nix.root.join('config/initializers'), false)
+Nix::EagerLoader.load(Nix.root.join('app/**'), true)
 
 module Nix
   class Application < Grape::API
