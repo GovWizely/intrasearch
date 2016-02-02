@@ -1,6 +1,5 @@
 require 'rack_helper'
 
-
 RSpec.describe CountryCommercialGuideImporter do
   include_context 'shared elastic models',
                   Country,

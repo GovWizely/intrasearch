@@ -18,11 +18,11 @@ module ArticleAttributes
                 String,
                 KEYWORD_ATTRIBUTE_MAPPING.clone
 
-      attribute :industries, String, mapping: { index: 'not_analyzed' }
+      attribute :industries, String, mapping: { analyzer: 'keyword_analyzer' }
       attribute :industry_paths, String, mapping: { analyzer: 'path_analyzer' }
       attribute :summary, String, mapping: { analyzer: 'english_analyzer' }
       attribute :topic_paths, String, mapping: { analyzer: 'path_analyzer' }
-      attribute :topics, String, mapping: { index: 'not_analyzed' }
+      attribute :topics, String, mapping: { analyzer: 'keyword_analyzer' }
       attribute :title, String, mapping: { analyzer: 'english_analyzer' }
       attribute :trade_regions,
                 String,
@@ -33,6 +33,7 @@ module ArticleAttributes
                 default: self.name.demodulize.titleize,
                 mapping: { index: 'not_analyzed' }
       attribute :url, String, mapping: { index: 'not_analyzed' }
+      attribute :world_region_paths, String, mapping: { analyzer: 'path_analyzer' }
       attribute :world_regions,
                 String,
                 KEYWORD_ATTRIBUTE_MAPPING.clone

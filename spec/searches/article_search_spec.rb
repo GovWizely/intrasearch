@@ -16,13 +16,12 @@ RSpec.describe ArticleSearch do
 
     context 'when industries is set' do
       let(:options) { { industries: ' FranchisinG , AerospacE and DefensE ' } }
-      it { is_expected.to have_attributes(industry_paths: ['/Aerospace and Defense', '/Franchising']) }
+      it { is_expected.to have_attributes(industries: [' FranchisinG ', ' AerospacE and DefensE ']) }
     end
 
     context 'when topics is set' do
       let(:options) { { topics: ' PriceS , tradE  promotioN ' } }
-      it { is_expected.to have_attributes(topic_paths: ['/Business Management/Costing and Pricing/Prices',
-                                                        '/Trade Development and Promotion/Trade Promotion']) }
+      it { is_expected.to have_attributes(topics: [' PriceS ',' tradE  promotioN ']) }
     end
 
     context 'when trade_regions is set' do
@@ -83,11 +82,11 @@ RSpec.describe ArticleSearch do
     it 'searches using ArticleSearchQuery' do
       expected_query_params = {
         countries: [],
-        industry_paths: ['/Aerospace and Defense', '/Franchising'],
+        industries: ['Franchising', ' Aerospace and Defense'],
         limit: 1,
         offset: 3,
         q: 'south africa',
-        topic_paths: ['/Business Management/Costing and Pricing', '/Environment'],
+        topics: ['Costing and Pricing', ' Environment'],
         trade_regions: ['NAFTA ', ' Andean Community'],
         world_regions: [' pacific  RIM  ', ' westerN Hemisphere ']
       }

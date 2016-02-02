@@ -4,8 +4,13 @@ require 'country'
 require 'industry'
 require 'taxonomy_search'
 require 'topic'
+require 'transformer'
 
 module ArticleTransformer
+  def self.extended(base)
+    base.extend Transformer
+  end
+
   extend self
 
   URL_PREFIX = YAML.load(File.read(Nix.root.join('config/intrasearch.yml')))[Nix.env]['article_url_prefix'].freeze
@@ -24,6 +29,7 @@ module ArticleTransformer
     valid_countries = Country.search_by_labels(*attributes[:geographies])
     attributes[:countries] = valid_countries.map(&:label).sort
     attributes[:trade_regions] = valid_countries.map(&:trade_regions).flatten.uniq.sort
+    attributes[:world_region_paths] = valid_countries.map(&:world_region_paths).flatten.uniq.sort
     attributes[:world_regions] = valid_countries.map(&:world_regions).flatten.uniq.sort
     attributes
   end
@@ -40,8 +46,9 @@ module ArticleTransformer
 
   def transform_taxonomies(klass, attributes, labels)
     taxonomies = klass.search_by_labels(*labels)
-    attributes["#{klass.name.downcase}_paths"] = taxonomies.map(&:path).uniq.sort
-    attributes["#{klass.name.tableize}"] = taxonomies.map(&:label).uniq.sort
+    paths = taxonomies.map(&:path).uniq.sort
+    attributes["#{klass.name.downcase}_paths"] = paths
+    attributes["#{klass.name.tableize}"] = paths_to_labels paths
     attributes
   end
 

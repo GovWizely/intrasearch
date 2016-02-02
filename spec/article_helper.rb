@@ -17,7 +17,11 @@ RSpec.shared_examples 'article importer' do |extractor_class|
         atom: 'item 1 atom',
         countries: ['Cayman Islands',
                     'United States'],
-        industries: ['Satellites',
+        industries: ['Aerospace and Defense',
+                     'Information and Communication Technology',
+                     'Retail Trade',
+                     'Satellites',
+                     'Space',
                      'Space Launch Equipment',
                      'eCommerce Industry'],
         industry_paths: ['/Aerospace and Defense/Space/Satellites',
@@ -34,10 +38,22 @@ RSpec.shared_examples 'article importer' do |extractor_class|
         topics: ['Anti-Dumping',
                  'Business Management',
                  'Climate',
-                 'Export Licenses'],
+                 'Environment',
+                 'Export Licenses',
+                 'Market Access',
+                 'Trade Barriers',
+                 'Trade Documents',
+                 'Transport and Logistics'],
         trade_regions: ['Asia Pacific Economic Cooperation'],
         url: 'https://example.org/article2?id=Space-Business',
-        world_regions: ['Caribbean', 'North America', 'Pacific Rim', 'Western Hemisphere']
+        world_region_paths: ['/Caribbean',
+                             '/North America',
+                             '/Pacific Rim',
+                             '/Western Hemisphere'],
+        world_regions: ['Caribbean',
+                        'North America',
+                        'Pacific Rim',
+                        'Western Hemisphere']
       }
       item = described_class.model_class.find(extracted_args[0][:id])
       expect(item).to have_attributes(expected_attributes)

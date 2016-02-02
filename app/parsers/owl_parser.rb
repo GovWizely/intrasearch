@@ -9,11 +9,11 @@ class OwlParser
     @xml = xml
   end
 
-  def subnodes(root_label)
+  def subnodes(root_label, starting_path = nil)
     root_node = extract_root_node root_label
     Enumerator.new do |y|
       process_subnodes y,
-                       extract_node_hash(root_node).merge(path: nil)
+                       extract_node_hash(root_node).merge(path: starting_path)
     end
   end
 

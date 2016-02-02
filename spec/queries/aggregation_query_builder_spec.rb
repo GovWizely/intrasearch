@@ -46,7 +46,7 @@ RSpec.describe AggregationQueryBuilder do
             terms: {
               field: 'industry_paths',
               include: {
-                pattern: '.*(/Foo|/Bar)(/?.*)',
+                pattern: '.*/(foo|bar)(/.+)?',
                 flags: 'CASE_INSENSITIVE'
               },
               order: { _term: 'asc' },
@@ -56,7 +56,7 @@ RSpec.describe AggregationQueryBuilder do
         }
         expect(described_class.new.build(:industries,
                                          field: 'industry_paths',
-                                         terms: %w(/Foo /Bar),
+                                         terms: %w(foo bar),
                                          use_path_wildcard: true)).to eq(expected_hash)
       end
     end

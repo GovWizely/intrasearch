@@ -28,6 +28,6 @@ class AggregationQueryBuilder
 
   def aggregation_pattern(terms, use_path_wildcard = false)
     terms_str = terms.join('|')
-    use_path_wildcard ? ".*(#{terms_str})(/?.*)" : terms_str
+    use_path_wildcard ? ".*/(#{terms_str})(/.+)?" : terms_str
   end
 end

@@ -91,11 +91,12 @@ RSpec.describe ArticleSearchAPI do
 
       it 'returns world_regions aggregation' do
         expected_world_regions = [
-          { key: 'Europe', doc_count: 2 },
-          { key: 'North America', doc_count: 1 },
-          { key: 'Pacific Rim', doc_count: 1 },
-          { key: 'Sub-Saharan Africa', doc_count: 1 },
-          { key: 'Western Hemisphere', doc_count: 1 }
+          { key: '/Africa', doc_count: 1 },
+          { key: '/Africa/Sub-Saharan Africa', doc_count: 1 },
+          { key: '/Europe', doc_count: 2 },
+          { key: '/North America', doc_count: 1 },
+          { key: '/Pacific Rim', doc_count: 1 },
+          { key: '/Western Hemisphere', doc_count: 1 }
         ]
         expect(parsed_body[:aggregations][:world_regions]).to eq(expected_world_regions)
       end
@@ -167,7 +168,7 @@ RSpec.describe ArticleSearchAPI do
 
       it 'returns world_regions aggregation' do
         expected_world_regions = [
-          { key: 'Europe', doc_count: 1 }
+          { key: '/Europe', doc_count: 1 }
         ]
         expect(parsed_body[:aggregations][:world_regions]).to eq(expected_world_regions)
       end
@@ -239,7 +240,7 @@ RSpec.describe ArticleSearchAPI do
 
       it 'returns world_regions aggregation' do
         expected_world_regions = [
-          { key: 'Europe', doc_count: 1 }
+          { key: '/Europe', doc_count: 1 }
         ]
         expect(parsed_body[:aggregations][:world_regions]).to eq(expected_world_regions)
       end
@@ -334,8 +335,8 @@ RSpec.describe ArticleSearchAPI do
 
       it 'returns world_regions aggregation' do
         expected_world_regions = [
-          { key: 'Pacific Rim', doc_count: 2 },
-          { key: 'Western Hemisphere', doc_count: 2 }
+          { key: '/Pacific Rim', doc_count: 2 },
+          { key: '/Western Hemisphere', doc_count: 2 }
         ]
         expect(parsed_body[:aggregations][:world_regions]).to eq(expected_world_regions)
       end

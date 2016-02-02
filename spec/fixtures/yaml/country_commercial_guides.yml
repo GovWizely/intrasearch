@@ -20,5 +20,7 @@
   trade_regions:
   - European Union - 28
   url: https://example.org/article2?id=Czech-Republic-ECommerce
+  world_region_paths:
+  - "/Europe"
   world_regions:
   - Europe

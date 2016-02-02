@@ -18,5 +18,8 @@
   topics:
   - eCommerce
   url: https://example.org/article2?id=South-Africa-franchising-best
+  world_region_paths:
+  - "/Africa/Sub-Saharan Africa"
   world_regions:
+  - Africa
   - Sub-Saharan Africa

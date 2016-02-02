@@ -5,14 +5,18 @@ RSpec.describe WorldRegionImporter do
     let(:resource) { Nix.root.join('spec/fixtures/owls/regions.owl.xml') }
 
     let(:expected_args) do
-      [{ countries: ['Belize', 'Costa Rica', 'El Salvador'],
+      [{ countries: [],
+         id: 'http://webprotege.stanford.edu/R91fGuW6GPOnb7XSylIPwR5',
+         label: 'Asia',
+         path: '/Asia' },
+       { countries: ['Belize', 'Costa Rica', 'El Salvador'],
          id: 'http://webprotege.stanford.edu/RSdD0vStFEjovpmpaEuydN',
          label: 'Central America',
          path: '/Central America' },
        { countries: ['China', 'Hong Kong', 'Japan'],
          id: 'http://webprotege.stanford.edu/RDAklO0LFVtjIoIUYj4Dg4M',
          label: 'East Asia',
-         path: '/East Asia' }]
+         path: '/Asia/East Asia' }]
     end
 
     it 'creates World Region' do

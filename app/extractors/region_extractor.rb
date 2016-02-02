@@ -16,17 +16,28 @@ module RegionExtractor
     def documents(resource)
       File.open(resource) do |f|
         xml = Nokogiri::XML f
-        member_parser = UneskosMemberParser.new xml
-        country_parser = OwlRegionCountryParser.new xml
+        parsers = parser_hash xml
 
         Enumerator.new do |y|
-          member_parser.subnodes(taxonomy_root_label).each do |region_hash|
-            countries = country_parser.subnodes region_hash[:label]
-            region_hash[:countries] = countries.map { |c| c[:label] }.sort
-            y << region_hash
+          parsers[:member].subnodes(taxonomy_root_label).each do |region_hash|
+            process_region y, parsers, region_hash
           end
         end
       end
+    end
+
+    def parser_hash(xml)
+      {
+        member: UneskosMemberParser.new(xml),
+        country: OwlRegionCountryParser.new(xml)
+      }
+    end
+
+    def process_region(yielder, parsers, region_hash)
+      countries = parsers[:country].subnodes region_hash[:label]
+      region_hash[:countries] = countries.map { |c| c[:label] }.sort
+      yielder << region_hash
+      yield region_hash if block_given?
     end
   end
 end

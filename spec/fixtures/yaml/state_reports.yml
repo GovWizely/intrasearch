@@ -15,6 +15,10 @@
   trade_regions:
   - Asia Pacific Economic Cooperation
   url: https://example.org/article2?id=Pennsylvania-Foreign-Investment
+  world_region_paths:
+  - "/North America"
+  - "/Pacific Rim"
+  - "/Western Hemisphere"
   world_regions:
   - North America
   - Pacific Rim

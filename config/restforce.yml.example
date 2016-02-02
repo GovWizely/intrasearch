@@ -5,7 +5,6 @@ development:
   host:
   username:
   password:
-  security_token:
 
 test:
   api_version: '34.0'
@@ -14,7 +13,6 @@ test:
   host:
   username:
   password:
-  security_token:
 
 production:
   api_version: '34.0'
@@ -23,4 +21,3 @@ production:
   host:
   username:
   password:
-  security_token:

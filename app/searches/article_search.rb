@@ -17,12 +17,12 @@ class ArticleSearch
 
   attr_reader :count,
               :countries,
-              :industry_paths,
+              :industries,
               :limit,
               :next_offset,
               :offset,
               :q,
-              :topic_paths,
+              :topics,
               :total,
               :trade_regions,
               :types,
@@ -30,12 +30,12 @@ class ArticleSearch
 
   def initialize(options)
     @countries = options[:countries].to_s.split(',')
-    @industry_paths = lookup_industry_paths options[:industries]
+    @industries = options[:industries].to_s.split(',')
     @limit = options[:limit] || Search::DEFAULT_LIMIT
     @offset = options[:offset] || Search::DEFAULT_OFFSET
     @q = options[:q]
     @search_type = options[:search_type] || {}
-    @topic_paths = lookup_topic_paths options[:topics]
+    @topics = options[:topics].to_s.split(',')
     @trade_regions = options[:trade_regions].to_s.split(',')
     @types = detect_types options[:types]
     @world_regions = options[:world_regions].to_s.split(',')
@@ -49,11 +49,11 @@ class ArticleSearch
 
   def build_query
     ArticleSearchQuery.new(countries: @countries,
-                           industry_paths: @industry_paths,
+                           industries: @industries,
                            limit: @limit,
                            offset: @offset,
                            q: @q,
-                           topic_paths: @topic_paths,
+                           topics: @topics,
                            trade_regions: @trade_regions,
                            world_regions: @world_regions)
   end
@@ -63,14 +63,6 @@ class ArticleSearch
   end
 
   private
-
-  def lookup_industry_paths(industries_str)
-    Industry.search_by_labels(*industries_str.to_s.split(',')).map(&:path)
-  end
-
-  def lookup_topic_paths(topics_str)
-    Topic.search_by_labels(*topics_str.to_s.split(',')).map(&:path)
-  end
 
   def detect_types(types_str)
     @types = []

@@ -3,6 +3,10 @@
   path: "/United States"
   trade_regions:
   - Asia Pacific Economic Cooperation
+  world_region_paths:
+  - "/North America"
+  - "/Pacific Rim"
+  - "/Western Hemisphere"
   world_regions:
   - North America
   - Pacific Rim
@@ -12,6 +16,9 @@
   label: Cayman Islands
   path: "/Cayman Islands"
   trade_regions: []
+  world_region_paths:
+  - "/Caribbean"
+  - "/Western Hemisphere"
   world_regions:
   - Caribbean
   - Western Hemisphere
