@@ -7,9 +7,9 @@ module CountryImporter
 
   self.model_class = Country
 
-  def self.import(resource = Nix.root.join('skos/regions.owl.xml'))
+  def self.import(resource = Nix.root.join('owl/regions.owl'))
     super() do
-      CountryExtractor.documents(resource).each do |country_hash|
+      CountryExtractor.extract(resource).each do |country_hash|
         CountryTransformer.transform country_hash
         model_class.create country_hash
       end

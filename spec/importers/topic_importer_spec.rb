@@ -2,7 +2,7 @@ require 'rack_helper'
 
 RSpec.describe TopicImporter do
   describe '#import' do
-    let(:resource) { Nix.root.join('spec/fixtures/owls/topics.owl.xml') }
+    let(:resource) { Nix.root.join('spec/fixtures/owl/topics.owl') }
 
     let(:expected_args) do
       [{ label: 'Business Management',

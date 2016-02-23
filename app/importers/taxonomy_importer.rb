@@ -12,10 +12,10 @@ module TaxonomyImporter
   end
 
   module ModuleMethods
-    def import(resource = Nix.root.join('skos/root.owl.xml'))
+    def import(resource = Nix.root.join('owl/root.owl'))
       super() do
-        TaxonomyExtractor.documents(resource: resource,
-                                    root_label: taxonomy_root_label).each do |hash|
+        TaxonomyExtractor.extract(resource: resource,
+                                  root_label: taxonomy_root_label).each do |hash|
           model_class.create hash
         end
       end

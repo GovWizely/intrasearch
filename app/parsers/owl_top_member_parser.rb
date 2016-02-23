@@ -1,8 +1,13 @@
 require 'owl_parser'
 
-class UneskosMemberParser < OwlParser
-  SUBNODE_PATH_TEMPLATE = <<-template
+class OwlTopMemberParser
+  include OwlParser
+
+  self.subnode_path_template = <<-template
     //owl:Class
+        [rdfs:subClassOf
+          [@rdf:resource='http://www.w3.org/2004/02/skos/core#Concept']
+        ]
         [rdfs:subClassOf
           [owl:Restriction
             [owl:onProperty
@@ -14,9 +19,4 @@ class UneskosMemberParser < OwlParser
           ]
         ]
   template
-
-  def initialize(xml)
-    super subnode_path_template: SUBNODE_PATH_TEMPLATE,
-          xml: xml
-  end
 end

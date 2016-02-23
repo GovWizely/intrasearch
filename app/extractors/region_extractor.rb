@@ -1,7 +1,7 @@
 require 'nokogiri'
 
-require 'owl_region_country_parser'
-require 'uneskos_member_parser'
+require 'owl_member_narrower_parser'
+require 'owl_member_parser'
 
 module RegionExtractor
   def self.extended(base)
@@ -13,7 +13,7 @@ module RegionExtractor
   end
 
   module ModuleMethods
-    def documents(resource)
+    def extract(resource)
       File.open(resource) do |f|
         xml = Nokogiri::XML f
         parsers = parser_hash xml
@@ -26,10 +26,13 @@ module RegionExtractor
       end
     end
 
+    protected
+
     def parser_hash(xml)
       {
-        member: UneskosMemberParser.new(xml),
-        country: OwlRegionCountryParser.new(xml)
+        country: OwlMemberNarrowerParser.new(member_label: 'Countries',
+                                             xml: xml),
+        member: OwlMemberParser.new(xml)
       }
     end
 

@@ -11,10 +11,10 @@ module RegionImporter
   end
 
   module ModuleMethods
-    def import(resource = Nix.root.join('skos/regions.owl.xml'))
+    def import(resource = Nix.root.join('owl/regions.owl'))
       super() do
-        extractor.documents(resource).each do |trade_region_hash|
-          model_class.create trade_region_hash
+        extractor.extract(resource).each do |region_hash|
+          model_class.create region_hash
         end
       end
     end

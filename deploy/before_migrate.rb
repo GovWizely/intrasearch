@@ -12,8 +12,7 @@ node['deploy'].each do |_application, deploy|
               client_secret: env_vars['sfdc_client_secret'],
               host: env_vars['sfdc_host'],
               username: env_vars['sfdc_username'],
-              password: env_vars['sfdc_password'],
-              security_token: env_vars['sfdc_security_token'])
+              password: env_vars['sfdc_password'])
 
     only_if do
       env_vars['sfdc_password'].present?

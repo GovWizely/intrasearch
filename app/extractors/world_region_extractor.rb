@@ -1,3 +1,6 @@
+require 'owl_member_narrower_parser'
+require 'owl_subclass_parser'
+require 'owl_top_member_parser'
 require 'region_extractor'
 
 module WorldRegionExtractor
@@ -6,11 +9,14 @@ module WorldRegionExtractor
 
   self.taxonomy_root_label = 'World Regions'.freeze
 
+  protected
+
   def parser_hash(xml)
     {
-      member: UneskosTopMemberParser.new(xml),
-      country: OwlRegionCountryParser.new(xml),
-      subregion: OwlSubclassParser.new(xml)
+      country: OwlMemberNarrowerParser.new(member_label: 'Countries',
+                                           xml: xml),
+      subregion: OwlSubclassParser.new(xml),
+      member: OwlTopMemberParser.new(xml)
     }
   end
 

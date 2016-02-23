@@ -1,7 +1,8 @@
 require 'owl_parser'
 
-class OwlRegionCountryParser < OwlParser
-  SUBNODE_PATH_TEMPLATE = <<-template
+class OwlMemberNarrowerParser
+  include OwlParser
+  self.subnode_path_template = <<-template
     //owl:Class
         [rdfs:subClassOf
           [owl:Restriction
@@ -9,7 +10,7 @@ class OwlRegionCountryParser < OwlParser
               [@rdf:resource='http://purl.org/umu/uneskos#memberOf']
             ]
             [owl:someValuesFrom
-              [@rdf:resource='%{countries}']
+              [@rdf:resource='%{member_subject}']
             ]
           ]
         ]
@@ -25,13 +26,12 @@ class OwlRegionCountryParser < OwlParser
         ]
   template
 
-  def initialize(xml)
-    super subnode_path_template: SUBNODE_PATH_TEMPLATE,
-          xml: xml
-    @countries_subject = extract_subject extract_root_node('Countries')
+  def initialize(member_label:, xml:)
+    super xml
+    @member_subject = extract_subject extract_root_node member_label
   end
 
-  def subnode_path(subject)
-    @subnode_path_template % { countries: @countries_subject, subject: subject }
+  def template_format_args(subject)
+    { member_subject: @member_subject, subject: subject }
   end
 end

@@ -1,11 +1,17 @@
-class OwlParser
+module OwlParser
   NAMESPACE_HASH = {
     owl: 'http://www.w3.org/2002/07/owl#',
     rdf: 'http://www.w3.org/1999/02/22-rdf-syntax-ns#',
     rdfs: 'http://www.w3.org/2000/01/rdf-schema#' }.freeze
 
-  def initialize(subnode_path_template:, xml:)
-    @subnode_path_template = subnode_path_template
+  def self.included(base)
+    base.class_eval do
+      class_attribute :subnode_path_template,
+                      instance_writer: false
+    end
+  end
+
+  def initialize(xml)
     @xml = xml
   end
 
@@ -59,10 +65,14 @@ class OwlParser
 
   def extract_subnodes(node)
     subject = extract_subject node
-    @xml.xpath subnode_path(subject)
+    @xml.xpath subnode_path(subject), NAMESPACE_HASH
   end
 
   def subnode_path(subject)
-    @subnode_path_template % subject
+    subnode_path_template % template_format_args(subject)
+  end
+
+  def template_format_args(subject)
+    subject
   end
 end

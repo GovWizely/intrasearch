@@ -6,7 +6,7 @@ RSpec.describe CountryImporter do
                   WorldRegion
 
   describe '#import' do
-    let(:resource) { Nix.root.join('spec/fixtures/owls/regions.owl.xml') }
+    let(:resource) { Nix.root.join('spec/fixtures/owl/regions.owl') }
 
     let(:expected_args) do
       [{ id: 'http://webprotege.stanford.edu/RUXeWvtXzfnZOcThs5oRWn',

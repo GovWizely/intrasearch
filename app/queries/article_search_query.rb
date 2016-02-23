@@ -76,12 +76,20 @@ class ArticleSearchQuery
   def aggregations
     builder = AggregationQueryBuilder.new
     builder_options = {
-      countries: { field: 'countries.raw', terms: @countries },
-      industries: { field: 'industry_paths', terms: @industries, use_path_wildcard: true },
-      topics: { field: 'topic_paths', terms: @topics, use_path_wildcard: true },
-      trade_regions: { field: 'trade_regions.raw', terms: @trade_regions },
+      countries: { field: 'countries.raw',
+                   terms: @countries },
+      industries: { field: 'industry_paths',
+                    terms: @industries,
+                    use_path_wildcard: true },
+      topics: { field: 'topic_paths',
+                terms: @topics,
+                use_path_wildcard: true },
+      trade_regions: { field: 'trade_regions.raw',
+                       terms: @trade_regions },
       types: { field: 'type' },
-      world_regions: { field: 'world_region_paths', terms: @world_regions, use_path_wildcard: true },
+      world_regions: { field: 'world_region_paths',
+                       terms: @world_regions,
+                       use_path_wildcard: true },
     }
     builder_options.each_with_object({}) do |params, hash|
       hash.merge! builder.build(params.first, **params.last)

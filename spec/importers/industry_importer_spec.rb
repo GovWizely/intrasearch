@@ -2,7 +2,7 @@ require 'rack_helper'
 
 RSpec.describe IndustryImporter do
   describe '#import' do
-    let(:resource) { Nix.root.join('spec/fixtures/owls/industries.owl.xml') }
+    let(:resource) { Nix.root.join('spec/fixtures/owl/industries.owl') }
 
     let(:expected_args) do
       [{ label: 'Aerospace and Defense',

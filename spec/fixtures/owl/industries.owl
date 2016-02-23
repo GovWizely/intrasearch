@@ -1,0 +1,357 @@
+<?xml version="1.0"?>
+<rdf:RDF xmlns="http://purl.org/umu/uneskos#"
+         xml:base="http://purl.org/umu/uneskos"
+         xmlns:webprotege="http://webprotege.stanford.edu/"
+         xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+         xmlns:terms="http://purl.org/dc/terms/"
+         xmlns:owl="http://www.w3.org/2002/07/owl#"
+         xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+         xmlns:skos="http://www.w3.org/2004/02/skos/core#"
+         xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+         xmlns:uneskos="http://purl.org/umu/uneskos#"
+         xmlns:dc="http://purl.org/dc/elements/1.1/">
+  <owl:Ontology rdf:about="http://purl.org/umu/uneskos">
+    <terms:created rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2014-05-23</terms:created>
+    <terms:modified rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2015-09-10</terms:modified>
+    <dc:date rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2015-09-10</dc:date>
+    <terms:creator></terms:creator>
+    <terms:description xml:lang="en">An RDF vocabulary for extending some SKOS and ISO-THES functions in order to improve the linked data consumption of SKOS datasets</terms:description>
+    <terms:title xml:lang="en">UNESKOS Vocabulary</terms:title>
+    <owl:imports rdf:resource="http://purl.org/iso25964/skos-thes"/>
+    <rdfs:seeAlso rdf:resource="http://skos.um.es/TR/uneskos"/>
+    <rdfs:seeAlso rdf:resource="http://skos.um.es/TR/uneskos-reference/"/>
+    <owl:imports rdf:resource="http://www.w3.org/2004/02/skos/core"/>
+  </owl:Ontology>
+
+  <!-- http://webprotege.stanford.edu/R79uIjoQaQ9KzvJfyB1H7Ru -->
+
+  <owl:Class rdf:about="http://webprotege.stanford.edu/R79uIjoQaQ9KzvJfyB1H7Ru">
+    <rdfs:label xml:lang="en">Industries</rdfs:label>
+    <rdfs:subClassOf rdf:resource="http://purl.org/iso25964/skos-thes#ConceptGroup"/>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:onProperty rdf:resource="http://www.w3.org/2004/02/skos/core#member"/>
+        <owl:someValuesFrom rdf:resource="http://webprotege.stanford.edu/R8avQ7EVuRt7SLthCF7e4Lq"/>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:onProperty rdf:resource="http://www.w3.org/2004/02/skos/core#member"/>
+        <owl:someValuesFrom rdf:resource="http://webprotege.stanford.edu/RCn8ngxUpyUpCDQ4QEv3ecn"/>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:onProperty rdf:resource="http://www.w3.org/2004/02/skos/core#member"/>
+        <owl:someValuesFrom rdf:resource="http://webprotege.stanford.edu/R7fKcF3Y1oc2rV1XkQf5jo8"/>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:onProperty rdf:resource="http://www.w3.org/2004/02/skos/core#member"/>
+        <owl:someValuesFrom rdf:resource="http://webprotege.stanford.edu/R70ud2xUGmsLz7LIxxSQ5B0"/>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:onProperty rdf:resource="http://www.w3.org/2004/02/skos/core#member"/>
+        <owl:someValuesFrom rdf:resource="http://webprotege.stanford.edu/R9zaGPZ9yjWv1UeRtk8gzKh"/>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:onProperty rdf:resource="http://purl.org/iso25964/skos-thes#microThesaurusOf"/>
+        <owl:someValuesFrom rdf:resource="http://webprotege.stanford.edu/RC7BwiZbq5uJvqujC7p9NAy"/>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:onProperty rdf:resource="http://www.w3.org/2004/02/skos/core#member"/>
+        <owl:someValuesFrom rdf:resource="http://webprotege.stanford.edu/RRtZ3Nz5qiadJCD7ymQoKI"/>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:onProperty rdf:resource="http://www.w3.org/2004/02/skos/core#member"/>
+        <owl:someValuesFrom rdf:resource="http://webprotege.stanford.edu/R9u5vLXS4JNQFPMdjGHghE3"/>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:onProperty rdf:resource="http://www.w3.org/2004/02/skos/core#member"/>
+        <owl:someValuesFrom rdf:resource="http://webprotege.stanford.edu/R931063KTJDmZzB8UFcU4RE"/>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:onProperty rdf:resource="http://www.w3.org/2004/02/skos/core#member"/>
+        <owl:someValuesFrom rdf:resource="http://webprotege.stanford.edu/RWew4WD4YTj3Kkv5aTpN5e"/>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:onProperty rdf:resource="http://www.w3.org/2004/02/skos/core#member"/>
+        <owl:someValuesFrom rdf:resource="http://webprotege.stanford.edu/RDe7w1uWBJKRO0S1z5j0yMa"/>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:onProperty rdf:resource="http://www.w3.org/2004/02/skos/core#member"/>
+        <owl:someValuesFrom rdf:resource="http://webprotege.stanford.edu/RXNklYQyXhTgvl1opDfECS"/>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:onProperty rdf:resource="http://www.w3.org/2004/02/skos/core#member"/>
+        <owl:someValuesFrom rdf:resource="http://webprotege.stanford.edu/RB09qLH5aNGPju1PBmmetXL"/>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:onProperty rdf:resource="http://www.w3.org/2004/02/skos/core#member"/>
+        <owl:someValuesFrom rdf:resource="http://webprotege.stanford.edu/R9HvvsELVcu8mEDwMsvKaSg"/>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:onProperty rdf:resource="http://www.w3.org/2004/02/skos/core#member"/>
+        <owl:someValuesFrom rdf:resource="http://webprotege.stanford.edu/R8CoATsjiZSLAZF4Aaz6kK6"/>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:onProperty rdf:resource="http://www.w3.org/2004/02/skos/core#member"/>
+        <owl:someValuesFrom rdf:resource="http://webprotege.stanford.edu/R8FMWDa8xtTFM7PYVPAHNRo"/>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:onProperty rdf:resource="http://www.w3.org/2004/02/skos/core#member"/>
+        <owl:someValuesFrom rdf:resource="http://webprotege.stanford.edu/RuR88TU55jqds0r58R9jJK"/>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:onProperty rdf:resource="http://www.w3.org/2004/02/skos/core#member"/>
+        <owl:someValuesFrom rdf:resource="http://webprotege.stanford.edu/R8EUGBr6eW4UdRXRY2HpE49"/>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:onProperty rdf:resource="http://www.w3.org/2004/02/skos/core#member"/>
+        <owl:someValuesFrom rdf:resource="http://webprotege.stanford.edu/RPKCOizTu2M4Qr7uMv8DsE"/>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:onProperty rdf:resource="http://www.w3.org/2004/02/skos/core#member"/>
+        <owl:someValuesFrom rdf:resource="http://webprotege.stanford.edu/RcLCin3PUe26tSDvI7dXDh"/>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:onProperty rdf:resource="http://www.w3.org/2004/02/skos/core#member"/>
+        <owl:someValuesFrom rdf:resource="http://webprotege.stanford.edu/RPxUK7R9Y5t6XxoUOapJut"/>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:onProperty rdf:resource="http://www.w3.org/2004/02/skos/core#member"/>
+        <owl:someValuesFrom rdf:resource="http://webprotege.stanford.edu/Rr5qeVAB4hyFgHYSrNYxSs"/>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:onProperty rdf:resource="http://www.w3.org/2004/02/skos/core#member"/>
+        <owl:someValuesFrom rdf:resource="http://webprotege.stanford.edu/R7jKFUb3Wkm5WHoXcVe7PI7"/>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:onProperty rdf:resource="http://www.w3.org/2004/02/skos/core#member"/>
+        <owl:someValuesFrom rdf:resource="http://webprotege.stanford.edu/RYjn03izDTAkhWQLNxqJaJ"/>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:onProperty rdf:resource="http://www.w3.org/2004/02/skos/core#member"/>
+        <owl:someValuesFrom rdf:resource="http://webprotege.stanford.edu/RCdX9tmNWXCfJuuQYeAAAJs"/>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:onProperty rdf:resource="http://purl.org/iso25964/skos-thes#subGroup"/>
+        <owl:someValuesFrom rdf:resource="http://webprotege.stanford.edu/RwdbpCsGlOI2iwaG4UqDl0"/>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:onProperty rdf:resource="http://www.w3.org/2004/02/skos/core#member"/>
+        <owl:someValuesFrom rdf:resource="http://webprotege.stanford.edu/R8FTTB2AJ9DoSpvx9H2Pc5k"/>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:onProperty rdf:resource="http://www.w3.org/2004/02/skos/core#member"/>
+        <owl:someValuesFrom rdf:resource="http://webprotege.stanford.edu/R8lDshhZ30qQxTEDQTALxvb"/>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+    <dc:source>ITA</dc:source>
+    <skos:prefLabel>Industries</skos:prefLabel>
+  </owl:Class>
+
+  <!-- http://webprotege.stanford.edu/R8CoATsjiZSLAZF4Aaz6kK6 -->
+
+  <owl:Class rdf:about="http://webprotege.stanford.edu/R8CoATsjiZSLAZF4Aaz6kK6">
+    <rdfs:label xml:lang="en">Aerospace and Defense</rdfs:label>
+    <rdfs:subClassOf rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:onProperty rdf:resource="http://www.w3.org/2004/02/skos/core#narrower"/>
+        <owl:someValuesFrom rdf:resource="http://webprotege.stanford.edu/RDBsKPGzqliWT5godmR5PDV"/>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:onProperty rdf:resource="http://www.w3.org/2004/02/skos/core#narrower"/>
+        <owl:someValuesFrom rdf:resource="http://webprotege.stanford.edu/R3anJjpDBXy092dEyJ0nXU"/>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:onProperty rdf:resource="http://purl.org/umu/uneskos#memberOf"/>
+        <owl:someValuesFrom rdf:resource="http://webprotege.stanford.edu/R79uIjoQaQ9KzvJfyB1H7Ru"/>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:onProperty rdf:resource="http://www.w3.org/2004/02/skos/core#topConceptOf"/>
+        <owl:someValuesFrom rdf:resource="http://webprotege.stanford.edu/RC7BwiZbq5uJvqujC7p9NAy"/>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:onProperty rdf:resource="http://www.w3.org/2004/02/skos/core#narrower"/>
+        <owl:someValuesFrom rdf:resource="http://webprotege.stanford.edu/R9lHhOo010EPhoajnKC2Lvg"/>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+    <dc:source>ITA</dc:source>
+    <skos:altLabel xml:lang="en">Aerospace Industry</skos:altLabel>
+    <skos:prefLabel xml:lang="en">Aerospace and Defense</skos:prefLabel>
+    <skos:altLabel xml:lang="en">Defense Industry</skos:altLabel>
+  </owl:Class>
+
+  <!-- http://webprotege.stanford.edu/R3anJjpDBXy092dEyJ0nXU -->
+
+  <owl:Class rdf:about="http://webprotege.stanford.edu/R3anJjpDBXy092dEyJ0nXU">
+    <rdfs:label>Space</rdfs:label>
+    <rdfs:subClassOf rdf:resource="http://webprotege.stanford.edu/R8CoATsjiZSLAZF4Aaz6kK6"/>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:onProperty rdf:resource="http://www.w3.org/2004/02/skos/core#broader"/>
+        <owl:someValuesFrom rdf:resource="http://webprotege.stanford.edu/R8CoATsjiZSLAZF4Aaz6kK6"/>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:onProperty rdf:resource="http://www.w3.org/2004/02/skos/core#narrower"/>
+        <owl:someValuesFrom rdf:resource="http://webprotege.stanford.edu/RYbXL8shWgdXfnSIFLoUZI"/>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:onProperty rdf:resource="http://www.w3.org/2004/02/skos/core#inScheme"/>
+        <owl:someValuesFrom rdf:resource="http://webprotege.stanford.edu/RC7BwiZbq5uJvqujC7p9NAy"/>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:onProperty rdf:resource="http://purl.org/umu/uneskos#memberOf"/>
+        <owl:someValuesFrom rdf:resource="http://webprotege.stanford.edu/RwdbpCsGlOI2iwaG4UqDl0"/>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:onProperty rdf:resource="http://www.w3.org/2004/02/skos/core#narrower"/>
+        <owl:someValuesFrom rdf:resource="http://webprotege.stanford.edu/RBDqmXn5UkwLCF1ECytDdEW"/>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+    <skos:altLabel>Space Industry</skos:altLabel>
+    <skos:altLabel>Space Products</skos:altLabel>
+    <skos:prefLabel>Space</skos:prefLabel>
+    <dc:source>ITA</dc:source>
+  </owl:Class>
+
+  <!-- http://webprotege.stanford.edu/RBDqmXn5UkwLCF1ECytDdEW -->
+
+  <owl:Class rdf:about="http://webprotege.stanford.edu/RBDqmXn5UkwLCF1ECytDdEW">
+    <rdfs:label>Space Launch Equipment</rdfs:label>
+    <rdfs:subClassOf rdf:resource="http://webprotege.stanford.edu/R3anJjpDBXy092dEyJ0nXU"/>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:onProperty rdf:resource="http://www.w3.org/2004/02/skos/core#broader"/>
+        <owl:someValuesFrom rdf:resource="http://webprotege.stanford.edu/R3anJjpDBXy092dEyJ0nXU"/>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:onProperty rdf:resource="http://purl.org/umu/uneskos#memberOf"/>
+        <owl:someValuesFrom rdf:resource="http://webprotege.stanford.edu/RCSUVZOLMw17ZnTq4SY2JcX"/>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+    <dc:source>ITA</dc:source>
+    <skos:prefLabel>Space Launch Equipment</skos:prefLabel>
+    <skos:altLabel>Space Launch</skos:altLabel>
+  </owl:Class>
+
+  <!-- http://webprotege.stanford.edu/RYbXL8shWgdXfnSIFLoUZI -->
+
+  <owl:Class rdf:about="http://webprotege.stanford.edu/RYbXL8shWgdXfnSIFLoUZI">
+    <rdfs:label>Satellites</rdfs:label>
+    <rdfs:subClassOf rdf:resource="http://webprotege.stanford.edu/R3anJjpDBXy092dEyJ0nXU"/>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:onProperty rdf:resource="http://www.w3.org/2004/02/skos/core#broader"/>
+        <owl:someValuesFrom rdf:resource="http://webprotege.stanford.edu/R3anJjpDBXy092dEyJ0nXU"/>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:onProperty rdf:resource="http://purl.org/umu/uneskos#memberOf"/>
+        <owl:someValuesFrom rdf:resource="http://webprotege.stanford.edu/RCSUVZOLMw17ZnTq4SY2JcX"/>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+    <dc:source>ITA</dc:source>
+    <skos:prefLabel>Satellites</skos:prefLabel>
+  </owl:Class>
+
+  <!-- http://webprotege.stanford.edu/R9lHhOo010EPhoajnKC2Lvg -->
+
+  <owl:Class rdf:about="http://webprotege.stanford.edu/R9lHhOo010EPhoajnKC2Lvg">
+    <rdfs:label>Defense Equipment</rdfs:label>
+    <rdfs:subClassOf rdf:resource="http://webprotege.stanford.edu/R8CoATsjiZSLAZF4Aaz6kK6"/>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:onProperty rdf:resource="http://purl.org/umu/uneskos#memberOf"/>
+        <owl:someValuesFrom rdf:resource="http://webprotege.stanford.edu/RCSUVZOLMw17ZnTq4SY2JcX"/>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:onProperty rdf:resource="http://www.w3.org/2004/02/skos/core#broader"/>
+        <owl:someValuesFrom rdf:resource="http://webprotege.stanford.edu/R8CoATsjiZSLAZF4Aaz6kK6"/>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:onProperty rdf:resource="http://www.w3.org/2004/02/skos/core#inScheme"/>
+        <owl:someValuesFrom rdf:resource="http://webprotege.stanford.edu/RC7BwiZbq5uJvqujC7p9NAy"/>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+    <skos:definition>The industry sector that manufactures and supplies equipment to the military and defense industries</skos:definition>
+    <skos:altLabel>Defense Equipment Machinery</skos:altLabel>
+    <dc:source>ITA</dc:source>
+    <skos:prefLabel>Defense Equipment</skos:prefLabel>
+  </owl:Class>
+
+</rdf:RDF>

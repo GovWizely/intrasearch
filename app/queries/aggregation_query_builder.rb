@@ -12,6 +12,7 @@ class AggregationQueryBuilder
       order: { _term: 'asc' },
       size: 0
     }
+
     if terms.present?
       terms_agg[:include] = {
         pattern: aggregation_pattern(terms, use_path_wildcard),
