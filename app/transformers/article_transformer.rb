@@ -13,7 +13,7 @@ module ArticleTransformer
 
   extend self
 
-  URL_PREFIX = YAML.load(File.read(Nix.root.join('config/intrasearch.yml')))[Nix.env]['article_url_prefix'].freeze
+  URL_PREFIX = YAML.load(Nix.root.join('config/intrasearch.yml').read)[Nix.env]['article_url_prefix'].freeze
 
   def transform(attributes)
     transform_countries attributes

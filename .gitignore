@@ -1,4 +1,5 @@
 .ruby-gemset
+/config/airbrake.yml
 /config/intrasearch.yml
 /config/restforce.yml
 /coverage/

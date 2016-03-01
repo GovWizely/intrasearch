@@ -27,5 +27,6 @@ group :test do
 end
 
 group :production do
+  gem 'airbrake', '~> 5.1'
   gem 'unicorn'
 end

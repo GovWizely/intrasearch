@@ -20,33 +20,19 @@ module Nix
     logger_instance
   end
 
-  @default_middlewares = begin
-    m = Hash.new {|h,k| h[k] = []}
-    non_production_middlewares = [
-      [Rack::ContentLength],
-      [Rack::Chunked],
-      [Rack::CommonLogger, @logger],
-      [Rack::ShowExceptions],
-      [Rack::Lint],
-      [Rack::TempfileReaper]
-    ]
-
-    m['development'] = non_production_middlewares
-    m['test'] = non_production_middlewares
-    m['production'] = [
-        [Rack::ContentLength],
-        [Rack::Chunked],
-        [Rack::CommonLogger, @logger],
-        [Rack::TempfileReaper]
-      ]
-    m
-  end
-
-  @middlewares = begin
-    @default_middlewares[@env]
-  end
+  @middlewares = [
+    [Rack::ContentLength],
+    [Rack::Chunked],
+    [Rack::CommonLogger, @logger],
+    [Rack::ShowExceptions],
+    [Rack::Lint],
+    [Rack::TempfileReaper]
+  ]
 
   class << self
     attr_reader :env, :logger, :middlewares, :root
   end
 end
+
+require_relative 'configurator'
+require_relative "environments/#{Nix.env}"

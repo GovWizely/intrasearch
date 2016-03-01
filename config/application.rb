@@ -1,13 +1,13 @@
 $LOAD_PATH.unshift(*Dir.glob(File.join(File.dirname(__FILE__), '..', 'app', '**/')))
 $LOAD_PATH.unshift(File.dirname(__FILE__))
 
-require 'boot'
+require_relative 'boot'
 
 require 'grape'
 require 'rack/cors'
 
-require 'base'
-require 'eager_loader'
+require_relative 'base'
+require_relative 'eager_loader'
 
 Nix::EagerLoader.load(Nix.root.join('config/initializers'), false)
 Nix::EagerLoader.load(Nix.root.join('app/**'), true)
