@@ -1,12 +1,10 @@
-require 'taxonomy_search_query'
+require 'repository'
 
 module TaxonomySearch
-  def search_by_labels(*labels)
-    if labels.present?
-      query = TaxonomySearchQuery.new labels
-      self.search query.to_hash
-    else
-      []
-    end
+  def search_for_labels_within_input(types, input)
+    repository = Repository.new types
+    repository.search MatchLabelWithinInputQuery.new(input)
   end
+
+  extend self
 end

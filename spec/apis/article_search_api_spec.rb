@@ -8,13 +8,15 @@ RSpec.describe ArticleSearchAPI do
   end
 
   include_context 'shared elastic models',
+                  Country,
                   CountryCommercialGuide,
                   Generic,
                   Industry,
                   MarketInsight,
                   StateReport,
                   TopMarketsReport,
-                  Topic
+                  Topic,
+                  WorldRegion
 
   describe '/v1/articles/search' do
     subject { last_response }
@@ -371,6 +373,19 @@ RSpec.describe ArticleSearchAPI do
           expect(parsed_body[:metadata]).to eq(expected_metadata)
           expect(parsed_body[:results]).to be_empty
         end
+      end
+    end
+
+    context 'when query contains geo names' do
+      before { get '/v1/articles/search', q: 'europe product' }
+
+      it_behaves_like 'API response'
+
+      it 'returns metadata' do
+        expect(parsed_body[:metadata]).to eq(total: 2,
+                                             count: 2,
+                                             offset: 0,
+                                             next_offset: nil)
       end
     end
   end

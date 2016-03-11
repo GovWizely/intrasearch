@@ -1,9 +1,9 @@
 require 'elasticsearch/persistence'
 
-class ArticleRepository < Elasticsearch::Persistence::Repository::Class
-  def initialize(options = {})
-    self.index_name = options[:types].map(&:index_name).join(',')
-    self.document_type = options[:types].map(&:document_type).join(',')
+class Repository < Elasticsearch::Persistence::Repository::Class
+  def initialize(types)
+    self.index_name = types.map(&:index_name).join(',')
+    self.document_type = types.map(&:document_type).join(',')
   end
 
   def deserialize(document)

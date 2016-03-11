@@ -15,11 +15,11 @@ RSpec.describe IndexManager do
       before { subject.setup_new_index! }
 
       it 'creates new index' do
-        expect(client.indices.exists? index: 'nix-test-taxonomies-countries-20151011_121314_000').to be true
+        expect(client.indices.exists? index: 'nix-test-taxonomies-v2-countries-20151011_121314_000').to be true
         subject.setup_new_index!
         expect(client.indices.exists? index: 'nix-test-taxonomies-countries-current').to be true
-        expect(client.indices.exists? index: 'nix-test-taxonomies-countries-20151011_151617_000').to be true
-        expect(client.indices.exists? index: 'nix-test-taxonomies-countries-20151011_121314_000').to be false
+        expect(client.indices.exists? index: 'nix-test-taxonomies-v2-countries-20151011_151617_000').to be true
+        expect(client.indices.exists? index: 'nix-test-taxonomies-v2-countries-20151011_121314_000').to be false
       end
     end
   end
@@ -49,6 +49,26 @@ RSpec.describe IndexManager do
 
         expect(client.indices.exists? index: 'nix-test-taxonomies-countries-current').to be true
         expect(subject.get_current_index_names).to eq(current_index_names)
+      end
+    end
+
+    context 'when an older version index is present' do
+      let(:older_version_index_name_fragment) do
+        ['nix',
+         Nix.env,
+         'taxonomies',
+         'v1',
+         described_class.name.tableize]
+      end
+
+      before { subject.setup_new_index! older_version_index_name_fragment }
+
+      it 'creates new index' do
+        current_index_names = subject.get_current_index_names
+        subject.setup_new_index_when_missing
+
+        expect(client.indices.exists? index: 'nix-test-taxonomies-countries-current').to be true
+        expect(subject.get_current_index_names).not_to eq(current_index_names)
       end
     end
   end

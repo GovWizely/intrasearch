@@ -1,9 +1,9 @@
-require 'article_repository'
 require 'article_search_query'
 require 'article_search_response'
 require 'country_commercial_guide'
 require 'generic'
 require 'market_insight'
+require 'repository'
 require 'search'
 require 'state_report'
 require 'top_markets_report'
@@ -42,7 +42,7 @@ class ArticleSearch
   end
 
   def run
-    repository = ArticleRepository.new types: @types
+    repository = Repository.new @types
     results = repository.search build_query, search_type: @search_type
     ArticleSearchResponse.new self, results
   end

@@ -13,8 +13,8 @@ RSpec.describe AggregationQueryBuilder do
             }
           }
         }
-        expect(described_class.new.build(:countries,
-                                         field: 'countries.raw')).to eq(expected_hash)
+        expect(described_class.build(:countries,
+                                     field: 'countries.raw')).to eq(expected_hash)
       end
     end
 
@@ -33,9 +33,9 @@ RSpec.describe AggregationQueryBuilder do
             }
           }
         }
-        expect(described_class.new.build(:countries,
-                                         field: 'countries.raw',
-                                         terms: %w(foo bar))).to eq(expected_hash)
+        expect(described_class.build(:countries,
+                                     field: 'countries.raw',
+                                     terms: %w(foo bar))).to eq(expected_hash)
       end
     end
 
@@ -54,10 +54,10 @@ RSpec.describe AggregationQueryBuilder do
             }
           }
         }
-        expect(described_class.new.build(:industries,
-                                         field: 'industry_paths',
-                                         terms: %w(foo bar),
-                                         use_path_wildcard: true)).to eq(expected_hash)
+        expect(described_class.build(:industries,
+                                     field: 'industry_paths',
+                                     terms: %w(foo bar),
+                                     use_path_wildcard: true)).to eq(expected_hash)
       end
     end
   end

@@ -2,7 +2,6 @@ require 'uri'
 
 require 'country'
 require 'industry'
-require 'taxonomy_search'
 require 'topic'
 require 'transformer'
 

@@ -1239,6 +1239,81 @@
         <dc:source>ITA</dc:source>
     </owl:Class>
 
+    <!-- http://webprotege.stanford.edu/R9pQ9NO7LyXj7vL7WbTAVVA -->
+
+    <owl:Class rdf:about="http://webprotege.stanford.edu/R9pQ9NO7LyXj7vL7WbTAVVA">
+        <rdfs:label>Central Asia</rdfs:label>
+        <rdfs:subClassOf rdf:resource="http://webprotege.stanford.edu/R91fGuW6GPOnb7XSylIPwR5"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.w3.org/2004/02/skos/core#narrower"/>
+                <owl:someValuesFrom rdf:resource="http://webprotege.stanford.edu/RDWMuIZgkJ15oLm2YFfp3cD"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.w3.org/2004/02/skos/core#related"/>
+                <owl:someValuesFrom rdf:resource="http://webprotege.stanford.edu/RDrX1xLUDh7oA05RQ3JXshC"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.w3.org/2004/02/skos/core#narrower"/>
+                <owl:someValuesFrom rdf:resource="http://webprotege.stanford.edu/RCfB9gXWAQMhJ9dvN4Fk23V"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.w3.org/2004/02/skos/core#narrower"/>
+                <owl:someValuesFrom rdf:resource="http://webprotege.stanford.edu/RCJNAo9QHRdLFOVe3bV0HyH"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.w3.org/2004/02/skos/core#narrower"/>
+                <owl:someValuesFrom rdf:resource="http://webprotege.stanford.edu/RCYYmdELCU9mt8R3RdlNys5"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.w3.org/2004/02/skos/core#inScheme"/>
+                <owl:someValuesFrom rdf:resource="http://webprotege.stanford.edu/RC7BwiZbq5uJvqujC7p9NAy"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://purl.org/umu/uneskos#memberOf"/>
+                <owl:someValuesFrom rdf:resource="http://webprotege.stanford.edu/R8cndKa2D8NuNg7djwJcXxB"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.w3.org/2004/02/skos/core#narrower"/>
+                <owl:someValuesFrom rdf:resource="http://webprotege.stanford.edu/RBw8ndgL3iXtxxTP560v6yZ"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.w3.org/2004/02/skos/core#related"/>
+                <owl:someValuesFrom rdf:resource="http://webprotege.stanford.edu/RBVtSvNA1oiRIdyxG4yQW2U"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.w3.org/2004/02/skos/core#narrower"/>
+                <owl:someValuesFrom rdf:resource="http://webprotege.stanford.edu/RDzjXT0GYF9ecQbq6oyxewD"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.w3.org/2004/02/skos/core#broader"/>
+                <owl:someValuesFrom rdf:resource="http://webprotege.stanford.edu/R91fGuW6GPOnb7XSylIPwR5"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <skos:prefLabel>Central Asia</skos:prefLabel>
+        <dc:source>ITA</dc:source>
+    </owl:Class>
+
     <!-- http://webprotege.stanford.edu/RDAklO0LFVtjIoIUYj4Dg4M -->
 
     <owl:Class rdf:about="http://webprotege.stanford.edu/RDAklO0LFVtjIoIUYj4Dg4M">
@@ -1314,7 +1389,76 @@
         <skos:prefLabel>East Asia</skos:prefLabel>
     </owl:Class>
 
-     <!-- http://webprotege.stanford.edu/RCFeONxXFzHO4GMg16HylOc -->
+    <!-- http://webprotege.stanford.edu/RDzjXT0GYF9ecQbq6oyxewD -->
+
+    <owl:Class rdf:about="http://webprotege.stanford.edu/RDzjXT0GYF9ecQbq6oyxewD">
+        <rdfs:label>Afghanistan</rdfs:label>
+        <rdfs:subClassOf rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://webprotege.stanford.edu/RBocrVwjt3yv3L4Fb2lMOdS"/>
+                <owl:hasValue>Afghanistan</owl:hasValue>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.w3.org/2004/02/skos/core#broader"/>
+                <owl:someValuesFrom rdf:resource="http://webprotege.stanford.edu/RDkKRunNIRFsKUYmLHwIMyM"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.w3.org/2004/02/skos/core#broader"/>
+                <owl:someValuesFrom rdf:resource="http://webprotege.stanford.edu/R9pQ9NO7LyXj7vL7WbTAVVA"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://webprotege.stanford.edu/RBG01sWfrLuYiTHheF5S0Lp"/>
+                <owl:hasValue>AFG</owl:hasValue>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.w3.org/2004/02/skos/core#topConceptOf"/>
+                <owl:someValuesFrom rdf:resource="http://webprotege.stanford.edu/RC7BwiZbq5uJvqujC7p9NAy"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.w3.org/2004/02/skos/core#broader"/>
+                <owl:someValuesFrom rdf:resource="http://webprotege.stanford.edu/RGHFvv0EAkgVEEklFu0O23"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://purl.org/umu/uneskos#memberOf"/>
+                <owl:someValuesFrom rdf:resource="http://webprotege.stanford.edu/R8W91u35GBegWcXXFflYE4"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://webprotege.stanford.edu/RB0fU58xv4MyfH57wfHiFy8"/>
+                <owl:hasValue rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">4</owl:hasValue>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://webprotege.stanford.edu/R0NHRmltyWqcu2NOK36v6x"/>
+                <owl:hasValue>AF</owl:hasValue>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.w3.org/2004/02/skos/core#broader"/>
+                <owl:someValuesFrom rdf:resource="http://webprotege.stanford.edu/RDrX1xLUDh7oA05RQ3JXshC"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <skos:prefLabel>Afghanistan</skos:prefLabel>
+        <dc:source>ISO 3166</dc:source>
+    </owl:Class>
+
+    <!-- http://webprotege.stanford.edu/RCFeONxXFzHO4GMg16HylOc -->
 
     <owl:Class rdf:about="http://webprotege.stanford.edu/RCFeONxXFzHO4GMg16HylOc">
         <rdfs:label>China</rdfs:label>
@@ -1464,6 +1608,51 @@
             </owl:Restriction>
         </rdfs:subClassOf>
         <skos:prefLabel>Japan</skos:prefLabel>
+        <dc:source>ISO 3166</dc:source>
+    </owl:Class>
+
+    <!-- http://webprotege.stanford.edu/RBw8ndgL3iXtxxTP560v6yZ -->
+
+    <owl:Class rdf:about="http://webprotege.stanford.edu/RBw8ndgL3iXtxxTP560v6yZ">
+        <rdfs:label>Kazakhstan</rdfs:label>
+        <rdfs:subClassOf rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.w3.org/2004/02/skos/core#broader"/>
+                <owl:someValuesFrom rdf:resource="http://webprotege.stanford.edu/R9pQ9NO7LyXj7vL7WbTAVVA"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.w3.org/2004/02/skos/core#topConceptOf"/>
+                <owl:someValuesFrom rdf:resource="http://webprotege.stanford.edu/RC7BwiZbq5uJvqujC7p9NAy"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.w3.org/2004/02/skos/core#broader"/>
+                <owl:someValuesFrom rdf:resource="http://webprotege.stanford.edu/RCpdyDrySS7LfsAk9JvjWfd"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.w3.org/2004/02/skos/core#broader"/>
+                <owl:someValuesFrom rdf:resource="http://webprotege.stanford.edu/RBVtSvNA1oiRIdyxG4yQW2U"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.w3.org/2004/02/skos/core#broader"/>
+                <owl:someValuesFrom rdf:resource="http://webprotege.stanford.edu/RDrX1xLUDh7oA05RQ3JXshC"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://purl.org/umu/uneskos#memberOf"/>
+                <owl:someValuesFrom rdf:resource="http://webprotege.stanford.edu/R8W91u35GBegWcXXFflYE4"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <skos:prefLabel>Kazakhstan</skos:prefLabel>
         <dc:source>ISO 3166</dc:source>
     </owl:Class>
 

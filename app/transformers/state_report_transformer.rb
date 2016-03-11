@@ -7,7 +7,7 @@ module StateReportTransformer
   protected
 
   def transform_countries(attributes)
-    attributes[:countries] = ['United States']
-    attributes
+    attributes[:geographies] = ['United States']
+    super
   end
 end

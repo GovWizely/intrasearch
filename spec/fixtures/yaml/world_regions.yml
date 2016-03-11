@@ -1,4 +1,9 @@
 ---
+- id: http://webprotege.stanford.edu/R91fGuW6GPOnb7XSylIPwR5
+  label: Asia
+  countries: []
+  path: /Asia
+
 - :id: http://webprotege.stanford.edu/RDAklO0LFVtjIoIUYj4Dg4M
   :countries:
    - China
@@ -23,3 +28,9 @@
    - Panama
   :label: Central America
   :path: /Central America
+
+- :id: http://webprotege.stanford.edu/RCdAtPyF8RRyB9AuFgtFJo
+  :label: Europe
+  :countries:
+  - Czech Republic
+  - Sweden

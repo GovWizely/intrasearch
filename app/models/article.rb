@@ -13,11 +13,19 @@ module Article
       include ArticleAttributes
       include ArticleJsonSerializer
 
-      self.index_name_fragments = ['nix',
-                                   Nix.env,
-                                   'articles',
-                                   self.name.tableize,
+      self.index_name_prefix = ['nix',
+                                Nix.env,
+                                'articles',
+                                self.name.tableize].join('-').freeze
+
+      self.index_name_fragments = [index_name_prefix,
                                    'current'].freeze
+
+      self.index_alias_name = ['nix',
+                               Nix.env,
+                               'articles',
+                               self.name.tableize,
+                               'current'].join('-').freeze
 
       self.reset_index_name!
 

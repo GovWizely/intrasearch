@@ -1,4 +1,4 @@
-class AggregationQueryBuilder
+module AggregationQueryBuilder
   def build(name, field: nil, terms: nil, use_path_wildcard: false)
     field ||= name
     build_aggregations(name, field, terms, use_path_wildcard)
@@ -31,4 +31,6 @@ class AggregationQueryBuilder
     terms_str = terms.join('|')
     use_path_wildcard ? ".*/(#{terms_str})(/.+)?" : terms_str
   end
+
+  extend self
 end

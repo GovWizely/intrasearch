@@ -7,16 +7,16 @@ class ArticlesSettingsTemplate
           analyzer: {
             english_analyzer: {
               tokenizer: 'standard',
-              filter: %w(standard asciifolding lowercase english_stemmer)
+              filter: %w(standard asciifolding lowercase stop english_stemmer)
             },
             keyword_analyzer: {
               tokenizer: 'keyword',
-              filter: %w(lowercase)
+              filter: %w(lowercase asciifolding)
             },
             path_analyzer: {
               tokenizer: 'path_hierarchy',
               filter: %w(asciifolding)
-            },
+            }
           },
           filter: {
             english_stemmer: {

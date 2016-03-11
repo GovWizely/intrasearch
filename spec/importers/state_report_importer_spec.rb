@@ -36,8 +36,15 @@ RSpec.describe StateReportImporter do
         topics: ['Business Management',
                  'Climate',
                  'Environment'],
+        trade_regions: ['Asia Pacific Economic Cooperation'],
         title: 'item 1 title',
         url: 'https://example.org/article2?id=Space-Business',
+        world_region_paths: ['/North America',
+                             '/Pacific Rim',
+                             '/Western Hemisphere'],
+        world_regions: ['North America',
+                        'Pacific Rim',
+                        'Western Hemisphere']
       }
       item = StateReport.find(extracted_args[0][:id])
       expect(item).to have_attributes(expected_attributes)

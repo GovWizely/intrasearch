@@ -1,6 +1,5 @@
 - id: http://webprotege.stanford.edu/RC4HD9CwKjvgX8dSybAp3Sk
   label: United States
-  path: "/United States"
   trade_regions:
   - Asia Pacific Economic Cooperation
   world_region_paths:
@@ -14,7 +13,6 @@
 
 - id: http://webprotege.stanford.edu/RBPxtBToM2v2kOpsL8Gaifx
   label: Cayman Islands
-  path: "/Cayman Islands"
   trade_regions: []
   world_region_paths:
   - "/Caribbean"
@@ -22,3 +20,21 @@
   world_regions:
   - Caribbean
   - Western Hemisphere
+
+- id: http://webprotege.stanford.edu/RGaokBKPwCXFwDq7NAVt5e
+  label: Bosnia and Herzegovina
+  trade_regions: []
+  world_region_paths: []
+  world_regions: []
+
+- id: http://webprotege.stanford.edu/RDFP2YrvV7b1gJy0iw9zRK8
+  label: Congo-Brazzaville
+  trade_regions: []
+  world_region_paths: []
+  world_regions: []
+
+- id: http://webprotege.stanford.edu/R7ZPpf5xWtCQtss1SpwR9P
+  label: Palestine, State of
+  trade_regions: []
+  world_region_paths: []
+  world_regions: []

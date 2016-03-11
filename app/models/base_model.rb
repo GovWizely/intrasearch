@@ -3,16 +3,18 @@ require 'active_support/core_ext/class/attribute'
 module BaseModel
   def self.included(base)
     base.class_eval do
-      class_attribute :index_name_fragments,
+      class_attribute :index_alias_name,
+                      :index_name_fragments,
+                      :index_name_prefix,
                       instance_writer: false
 
       class << self
-        def default_index_name
-          @default_index_name ||= index_name_fragments.join('-').freeze
-        end
+        # def default_index_name
+        #   @default_index_name ||= index_name_fragments.join('-').freeze
+        # end
 
         def reset_index_name!
-          self.index_name = default_index_name
+          self.index_name = index_alias_name
         end
       end
     end

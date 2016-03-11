@@ -25,6 +25,8 @@ module WorldRegionExtractor
       parsers[:subregion].subnodes(region_hash[:label],
                                    region_hash[:path]).each do |subregion_hash|
         process_region yielder, parsers, subregion_hash
+        region_hash[:countries] |= subregion_hash[:countries]
+        region_hash[:countries].sort!
       end
     end
   end

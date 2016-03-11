@@ -1,26 +1,10 @@
 require 'rack_helper'
 
-RSpec.describe TaxonomySearch do
+RSpec.describe Topic do
   include_context 'shared elastic models',
-                  Country,
-                  Industry,
                   Topic
 
-  describe '#search_by_labels' do
-    context 'when searching for a Country by label' do
-      it 'returns matching Country' do
-        results = Country.search_by_labels 'CAYMAN  ISLANDS'
-        expect(results.first.label).to eq('Cayman Islands')
-      end
-    end
-
-    context 'when searching for an Industry by label' do
-      it 'returns matching Industry' do
-        results = Industry.search_by_labels 'SPACE Launch Equipment'
-        expect(results.first.label).to eq('Space Launch Equipment')
-      end
-    end
-
+  describe '.search_by_labels' do
     context 'when searching for a Topic by label' do
       it 'returns matching Topic' do
         results = Topic.search_by_labels 'BUSINESS MANAGEMENt'

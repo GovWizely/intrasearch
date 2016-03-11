@@ -39,8 +39,8 @@ module RegionExtractor
     def process_region(yielder, parsers, region_hash)
       countries = parsers[:country].subnodes region_hash[:label]
       region_hash[:countries] = countries.map { |c| c[:label] }.sort
-      yielder << region_hash
       yield region_hash if block_given?
+      yielder << region_hash
     end
   end
 end
