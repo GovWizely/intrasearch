@@ -1,7 +1,6 @@
 require 'article_search_query'
 require 'article_search_response'
 require 'country_commercial_guide'
-require 'generic'
 require 'market_insight'
 require 'repository'
 require 'search'
@@ -10,7 +9,6 @@ require 'top_markets_report'
 
 class ArticleSearch
   ALL_TYPES = [CountryCommercialGuide,
-               Generic,
                MarketInsight,
                StateReport,
                TopMarketsReport].freeze
@@ -68,7 +66,6 @@ class ArticleSearch
     @types = []
     normalized_type_str = types_str.to_s.gsub(/\s+/, '').downcase
     @types << CountryCommercialGuide if normalized_type_str =~ /\bcountrycommercialguide\b/
-    @types << Generic if normalized_type_str =~ /\bgeneric\b/
     @types << MarketInsight if normalized_type_str =~ /\bmarketinsight\b/
     @types << StateReport if normalized_type_str =~ /\bstatereport\b/
     @types << TopMarketsReport if normalized_type_str =~ /\btopmarketsreport\b/

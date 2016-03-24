@@ -32,17 +32,12 @@ RSpec.describe ArticleSearch do
 
     context 'when types is not valid' do
       let(:options) { { types: ' foo bar ' } }
-      it { is_expected.to have_attributes(types: [CountryCommercialGuide, Generic, MarketInsight, StateReport, TopMarketsReport]) }
+      it { is_expected.to have_attributes(types: [CountryCommercialGuide, MarketInsight, StateReport, TopMarketsReport]) }
     end
 
     context 'when types parameter contains countrycommercialguide' do
       let(:options) { { types: ' CountrY  CommerciaL  GuidE  ' } }
       it { is_expected.to have_attributes(types: [CountryCommercialGuide]) }
-    end
-
-    context 'when types parameter contains generic' do
-      let(:options) { { types: ' generiC  ' } }
-      it { is_expected.to have_attributes(types: [Generic]) }
     end
 
     context 'when types parameter contains marketinsight' do

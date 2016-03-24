@@ -10,7 +10,6 @@ RSpec.describe ArticleSearchAPI do
   include_context 'shared elastic models',
                   Country,
                   CountryCommercialGuide,
-                  Generic,
                   Industry,
                   MarketInsight,
                   StateReport,
@@ -28,7 +27,7 @@ RSpec.describe ArticleSearchAPI do
       it_behaves_like 'API response'
 
       it 'returns metadata' do
-        expect(parsed_body[:metadata]).to eq(total: 4,
+        expect(parsed_body[:metadata]).to eq(total: 3,
                                              count: 1,
                                              offset: 0,
                                              next_offset: 1)
@@ -38,16 +37,14 @@ RSpec.describe ArticleSearchAPI do
         expected_countries = [
           { key: 'Canada', doc_count: 1 },
           { key: 'Czech Republic', doc_count: 1 },
-          { key: 'South Africa', doc_count: 1 },
-          { key: 'Sweden', doc_count: 1 }
+          { key: 'South Africa', doc_count: 1 }
         ]
         expect(parsed_body[:aggregations][:countries]).to eq(expected_countries)
       end
 
       it 'returns industries aggregation' do
         expected_industries = [
-          { key: '/Aerospace and Defense', doc_count: 2 },
-          { key: '/Aerospace and Defense/Space', doc_count: 1 },
+          { key: '/Aerospace and Defense', doc_count: 1 },
           { key: '/Design and Construction', doc_count: 1 },
           { key: '/Design and Construction/Building Products', doc_count: 1 },
           { key: '/Information and Communication Technology', doc_count: 2 },
@@ -64,8 +61,6 @@ RSpec.describe ArticleSearchAPI do
           { key: '/Business Management/Costing and Pricing', doc_count: 1 },
           { key: '/Business Management/Costing and Pricing/Prices', doc_count: 1 },
           { key: '/Business Management/eCommerce', doc_count: 1 },
-          { key: '/Environment', doc_count: 1 },
-          { key: '/Environment/Climate', doc_count: 1 },
           { key: '/Trade Development and Promotion', doc_count: 1 },
           { key: '/Trade Development and Promotion/Export Potential', doc_count: 1 }
         ]
@@ -75,7 +70,7 @@ RSpec.describe ArticleSearchAPI do
       it 'returns trade_regions aggregation' do
         expected_trade_regions = [
           { key: 'Asia Pacific Economic Cooperation', doc_count: 1 },
-          { key: 'European Union - 28', doc_count: 2 },
+          { key: 'European Union - 28', doc_count: 1 },
           { key: 'Trans Pacific Partnership', doc_count: 1 }
         ]
         expect(parsed_body[:aggregations][:trade_regions]).to eq(expected_trade_regions)
@@ -84,7 +79,6 @@ RSpec.describe ArticleSearchAPI do
       it 'returns types aggregation' do
         expected_types = [
           { key: 'Country Commercial Guide', doc_count: 1 },
-          { key: 'Generic', doc_count: 1 },
           { key: 'Market Insight', doc_count: 1 },
           { key: 'Top Markets Report', doc_count: 1 }
         ]
@@ -95,7 +89,7 @@ RSpec.describe ArticleSearchAPI do
         expected_world_regions = [
           { key: '/Africa', doc_count: 1 },
           { key: '/Africa/Sub-Saharan Africa', doc_count: 1 },
-          { key: '/Europe', doc_count: 2 },
+          { key: '/Europe', doc_count: 1 },
           { key: '/North America', doc_count: 1 },
           { key: '/Pacific Rim', doc_count: 1 },
           { key: '/Western Hemisphere', doc_count: 1 }
@@ -260,14 +254,14 @@ RSpec.describe ArticleSearchAPI do
     end
 
     context 'when searching for articles with countries' do
-      before { get '/v1/articles/search', countries: ' canadA, bogus country, sweDen' }
+      before { get '/v1/articles/search', countries: ' canadA, bogus country, czech republiC' }
 
       it_behaves_like 'API response'
 
       it 'returns matching countries aggregation' do
         expected_countries = [
           { key: 'Canada', doc_count: 1 },
-          { key: 'Sweden', doc_count: 1 }
+          { key: 'Czech Republic', doc_count: 1 }
         ]
         expect(parsed_body[:aggregations][:countries]).to eq(expected_countries)
       end
@@ -280,7 +274,6 @@ RSpec.describe ArticleSearchAPI do
 
       it 'returns matching industries aggregation' do
         expected_industries = [
-          { key: '/Aerospace and Defense/Space', doc_count: 1 },
           { key: '/Information and Communication Technology/eCommerce Industry', doc_count: 2 },
           { key: '/Retail Trade/eCommerce Industry', doc_count: 2 }
         ]
@@ -289,14 +282,13 @@ RSpec.describe ArticleSearchAPI do
     end
 
     context 'when searching for articles with topics' do
-      before { get '/v1/articles/search', topics: 'priceS , invalid,  climatE ' }
+      before { get '/v1/articles/search', topics: 'priceS , invalid ' }
 
       it_behaves_like 'API response'
 
       it 'returns matching topics aggregation' do
         expected_topics = [
-          { key: '/Business Management/Costing and Pricing/Prices', doc_count: 1 },
-          { key: '/Environment/Climate', doc_count: 1 }
+          { key: '/Business Management/Costing and Pricing/Prices', doc_count: 1 }
         ]
         expect(parsed_body[:aggregations][:topics]).to eq(expected_topics)
       end
@@ -345,15 +337,15 @@ RSpec.describe ArticleSearchAPI do
     end
 
     context 'when searching for articles with limit and offset' do
-      before { get '/v1/articles/search', limit: 2, offset: 1, q: 'product' }
+      before { get '/v1/articles/search', limit: 1, offset: 1, q: 'product' }
 
       it_behaves_like 'API response'
 
       it 'returns metadata' do
-        expect(parsed_body[:metadata]).to eq(total: 4,
-                                             count: 2,
+        expect(parsed_body[:metadata]).to eq(total: 3,
+                                             count: 1,
                                              offset: 1,
-                                             next_offset: 3)
+                                             next_offset: 2)
       end
     end
 
@@ -377,7 +369,7 @@ RSpec.describe ArticleSearchAPI do
     end
 
     context 'when query contains geo names' do
-      before { get '/v1/articles/search', q: 'europe product' }
+      before { get '/v1/articles/search', q: 'north america' }
 
       it_behaves_like 'API response'
 

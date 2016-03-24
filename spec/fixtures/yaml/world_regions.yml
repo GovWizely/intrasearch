@@ -34,3 +34,12 @@
   :countries:
   - Czech Republic
   - Sweden
+
+- :id: http://webprotege.stanford.edu/RKn0x8BGb8udkb77NaE1ch
+  :label: North America
+  :countries:
+  - Canada
+  - Mexico
+  - U.S. Virgin Islands
+  - United States
+  :path: "/North America"

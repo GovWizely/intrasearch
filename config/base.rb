@@ -20,15 +20,6 @@ module Nix
     logger_instance
   end
 
-  @middlewares = [
-    [Rack::ContentLength],
-    [Rack::Chunked],
-    [Rack::CommonLogger, @logger],
-    [Rack::ShowExceptions],
-    [Rack::Lint],
-    [Rack::TempfileReaper]
-  ]
-
   class << self
     attr_reader :env, :logger, :middlewares, :root
   end
