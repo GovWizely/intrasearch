@@ -80,14 +80,14 @@ RSpec.describe ArticleSearchQuery do
               },
               {
                 multi_match: {
-                  fields: %w(atom countries title summary),
+                  fields: %w(atom countries^3 title summary),
                   operator: 'and',
                   query: 'Congo-Brazzaville',
                 }
               },
               {
                 multi_match: {
-                  fields: %w(atom countries title summary),
+                  fields: %w(atom countries^3 title summary),
                   operator: 'and',
                   query: 'United States',
                 }
@@ -126,37 +126,10 @@ RSpec.describe ArticleSearchQuery do
                 }
               },
               {
-                bool: {
-                  should: [
-                    {
-                      multi_match: {
-                        fields: %w(atom title summary world_regions),
-                        operator: 'and',
-                        query: 'North America',
-                      }
-                    },
-                    {
-                      multi_match: {
-                        fields: %w(atom countries title summary),
-                        operator: 'and',
-                        query: 'Canada',
-                      }
-                    },
-                    {
-                      multi_match: {
-                        fields: %w(atom countries title summary),
-                        operator: 'and',
-                        query: 'Mexico',
-                      }
-                    },
-                    {
-                      multi_match: {
-                        fields: %w(atom countries title summary),
-                        operator: 'and',
-                        query: 'United States',
-                      }
-                    }
-                  ]
+                multi_match: {
+                  fields: %w(atom title summary world_regions^3),
+                  operator: 'and',
+                  query: 'North America',
                 }
               }
             ]
