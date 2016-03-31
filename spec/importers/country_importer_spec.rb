@@ -28,6 +28,12 @@ RSpec.describe CountryImporter do
           trade_regions: ['Organization of the Petroleum Exporting Countries'],
           world_region_paths: [],
           world_regions: [] },
+        { id: 'http://webprotege.stanford.edu/RDXjKihUhEKJOVRkiX3V0xz',
+          label: 'Aruba',
+          path: '/Aruba',
+          trade_regions: [],
+          world_region_paths: [],
+          world_regions: [] },
         { id: 'http://webprotege.stanford.edu/RDjGw17VBjBm1pfdtbcTiu7',
           label: 'Belize',
           path: '/Belize',
@@ -82,6 +88,13 @@ RSpec.describe CountryImporter do
           trade_regions: [],
           world_region_paths: [],
           world_regions: [] },
+        { id: 'http://webprotege.stanford.edu/R7tAfn5WOKgOPGoU8fXB1ba',
+          label: 'Netherlands',
+          path: '/Netherlands',
+          trade_regions: [],
+          world_region_paths: [],
+          world_regions: []
+        }
       ]
     end
 

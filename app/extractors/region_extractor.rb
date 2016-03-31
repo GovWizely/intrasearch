@@ -1,8 +1,5 @@
 require 'nokogiri'
 
-require 'owl_member_narrower_parser'
-require 'owl_member_parser'
-
 module RegionExtractor
   def self.extended(base)
     class << base
@@ -27,14 +24,6 @@ module RegionExtractor
     end
 
     protected
-
-    def parser_hash(xml)
-      {
-        country: OwlMemberNarrowerParser.new(member_label: 'Countries',
-                                             xml: xml),
-        member: OwlMemberParser.new(xml)
-      }
-    end
 
     def process_region(yielder, parsers, region_hash)
       countries = parsers[:country].subnodes region_hash[:label]

@@ -11,13 +11,12 @@ module RegionImporter
   end
 
   module ModuleMethods
-    def import(resource = Nix.root.join('owl/regions.owl'))
+    def import(resource = Nix.root.join('owl/root.owl'))
       super() do
         extractor.extract(resource).each do |region_hash|
           model_class.create region_hash
         end
       end
     end
-
   end
 end

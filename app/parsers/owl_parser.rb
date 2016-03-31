@@ -11,7 +11,8 @@ module OwlParser
     end
   end
 
-  def initialize(xml)
+  def initialize(xml, max_depth = nil)
+    @max_depth = max_depth
     @xml = xml
   end
 
@@ -19,7 +20,8 @@ module OwlParser
     root_node = extract_root_node root_label
     Enumerator.new do |y|
       process_subnodes y,
-                       extract_node_hash(root_node).merge(path: starting_path)
+                       extract_node_hash(root_node).merge(path: starting_path),
+                       0
     end
   end
 
@@ -29,12 +31,13 @@ module OwlParser
     @xml.xpath("//owl:Class[rdfs:label[.='#{root_label}']]", NAMESPACE_HASH).first
   end
 
-  def process_subnodes(yielder, node_hash)
+  def process_subnodes(yielder, node_hash, depth)
     node_hash[:subnodes].each do |subnode|
       subnode_hash = extract_node_hash subnode, node_hash[:path]
       yielder << subnode_hash.except(:subnodes, :subject)
 
-      process_subnodes yielder, subnode_hash
+      depth += 1
+      process_subnodes(yielder, subnode_hash, depth) if within_max_depth?(depth)
     end
   end
 
@@ -74,5 +77,9 @@ module OwlParser
 
   def template_format_args(subject)
     subject
+  end
+
+  def within_max_depth?(current_depth)
+    @max_depth.nil? || current_depth < @max_depth
   end
 end
