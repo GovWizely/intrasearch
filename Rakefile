@@ -17,3 +17,11 @@ end
 Dir[File.expand_path('../lib/tasks/*.rake', __FILE__)].each do |f|
   Rake.load_rakefile f
 end
+
+task routes: :environment do
+  Intrasearch::Application.routes.each do |route|
+    method = route.route_method.ljust(10)
+    path = route.route_path
+    puts "     #{method} #{path}"
+  end
+end

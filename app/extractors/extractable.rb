@@ -1,5 +1,3 @@
-require 'active_support/core_ext/class/attribute'
-
 module Extractable
   def self.extended(base)
     class << base

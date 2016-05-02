@@ -1,4 +1,4 @@
-module Nix
+module Intrasearch
   module EagerLoader
     def self.load(path, in_load_path)
       Dir[File.join(path, '*.rb')].each do |f|

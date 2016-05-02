@@ -1,0 +1,38 @@
+- id: kaAt00000004CTsEAM
+  atom: The NAFTA establishes special preferential tariff treatment for goods originating
+    in and traded among NAFTA countries.
+  countries:
+  - Canada
+  - Mexico
+  - United States
+  industries: []
+  industry_paths: []
+  summary:
+  title: What issues are commonly misunderstood about the NAFTA?
+  topic_paths:
+  - "/Trade Policy and Agreements/Trade Agreements/Free Trade Agreements"
+  - "/Transport and Logistics/Trade Documents/Certificate of Origin"
+  topics:
+  - Certificate of Origin
+  - Free Trade Agreements
+  - Trade Agreements
+  - Trade Documents
+  - Trade Policy and Agreements
+  - Transport and Logistics
+  trade_regions:
+  - Asia Pacific Economic Cooperation
+  - CAFTA-DR
+  - Global System of Trade Preferences among Developing Countries
+  - NAFTA
+  - Trans Pacific Partnership
+  url: https://example.org/article2?id=What-issues-are-commonly
+  world_region_paths:
+  - "/Latin America"
+  - "/North America"
+  - "/Pacific Rim"
+  - "/Western Hemisphere"
+  world_regions:
+  - Latin America
+  - North America
+  - Pacific Rim
+  - Western Hemisphere

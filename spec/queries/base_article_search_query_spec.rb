@@ -1,6 +1,6 @@
 require 'rack_helper'
 
-RSpec.describe ArticleSearchQuery do
+RSpec.describe BaseArticleSearchQuery do
   describe '#to_hash' do
     context 'when countries is present' do
       it 'filters on countries' do

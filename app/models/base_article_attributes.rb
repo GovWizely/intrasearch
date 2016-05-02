@@ -1,4 +1,4 @@
-module ArticleAttributes
+module BaseArticleAttributes
   KEYWORD_ATTRIBUTE_MAPPING = {
     mapping: {
       analyzer: 'keyword_analyzer',
@@ -30,7 +30,7 @@ module ArticleAttributes
 
       attribute :type,
                 String,
-                default: self.name.demodulize.titleize,
+                default: name.demodulize.titleize,
                 mapping: { index: 'not_analyzed' }
       attribute :url, String, mapping: { index: 'not_analyzed' }
       attribute :world_region_paths, String, mapping: { analyzer: 'path_analyzer' }

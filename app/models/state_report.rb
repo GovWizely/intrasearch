@@ -1,5 +1,5 @@
-require 'article'
+require 'base_article'
 
 class StateReport
-  include Article
+  include BaseArticle
 end

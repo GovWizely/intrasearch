@@ -1,6 +1,6 @@
 require 'rack_helper'
 
-RSpec.describe ArticleSearch do
+RSpec.describe BaseArticleSearch do
   include_context 'shared elastic models',
                   Country,
                   Industry,
@@ -28,31 +28,6 @@ RSpec.describe ArticleSearch do
       let(:options) { { trade_regions: ' Trans Pacific PartnershiP ,  European Union - 28 ' } }
       it { is_expected.to have_attributes(trade_regions: [' Trans Pacific PartnershiP ',
                                                           '  European Union - 28 ']) }
-    end
-
-    context 'when types is not valid' do
-      let(:options) { { types: ' foo bar ' } }
-      it { is_expected.to have_attributes(types: [CountryCommercialGuide, MarketInsight, StateReport, TopMarketsReport]) }
-    end
-
-    context 'when types parameter contains countrycommercialguide' do
-      let(:options) { { types: ' CountrY  CommerciaL  GuidE  ' } }
-      it { is_expected.to have_attributes(types: [CountryCommercialGuide]) }
-    end
-
-    context 'when types parameter contains marketinsight' do
-      let(:options) { { types: ' markeT insighT  ' } }
-      it { is_expected.to have_attributes(types: [MarketInsight]) }
-    end
-
-    context 'when types parameter contains statereport' do
-      let(:options) { { types: ' statE reporT  ' } }
-      it { is_expected.to have_attributes(types: [StateReport]) }
-    end
-
-    context 'when types parameter contains topmarketsreport' do
-      let(:options) { { types: ' toP markeTs  reporT  ' } }
-      it { is_expected.to have_attributes(types: [TopMarketsReport]) }
     end
 
     context 'when world_regions is set' do
@@ -85,7 +60,7 @@ RSpec.describe ArticleSearch do
         trade_regions: ['NAFTA ', ' Andean Community'],
         world_regions: [' pacific  RIM  ', ' westerN Hemisphere ']
       }
-      expect(ArticleSearchQuery).to receive(:new).
+      expect(BaseArticleSearchQuery).to receive(:new).
                                       with(expected_query_params).
                                       and_return(foo: 'bar')
 

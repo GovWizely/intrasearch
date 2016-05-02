@@ -11,7 +11,7 @@ module RegionImporter
   end
 
   module ModuleMethods
-    def import(resource = Nix.root.join('owl/root.owl'))
+    def import(resource = Intrasearch.root.join('owl/root.owl'))
       super() do
         extractor.extract(resource).each do |region_hash|
           model_class.create region_hash

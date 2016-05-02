@@ -1,4 +1,4 @@
-class ArticleSearchResponse
+class BaseArticleSearchResponse
   def initialize(search, results)
     @search = search
     @results = results
@@ -13,7 +13,7 @@ class ArticleSearchResponse
       metadata: build_metadata_hash,
       aggregations: build_aggregations,
     }
-    run_results[:results] = @results.results unless @search.search_type_count?
+    run_results[:results] = @results.results unless @search.limit.zero?
     run_results.as_json options
   end
 
@@ -21,7 +21,7 @@ class ArticleSearchResponse
 
   def build_metadata_hash
     @total = @results.total
-    return { total: @total } if @search.search_type_count?
+    return { total: @total } if @search.limit.zero?
 
     @count = @results.count
     @next_offset = calculate_next_offset

@@ -10,6 +10,6 @@ class ElasticSettingsTemplate
   end
 
   def template_pattern
-    ['nix', Nix.env, '*'].join('-')
+    ['intrasearch', Intrasearch.env, '*'].join('-')
   end
 end

@@ -8,7 +8,7 @@ require 'match_world_region_query_builder'
 require 'query_parser'
 require 'world_region'
 
-class ArticleSearchQuery
+class BaseArticleSearchQuery
   def initialize(countries: [], industries: [], limit:, offset:, q: nil, topics: [], trade_regions: [], world_regions: [])
     @countries = normalize_array_of_str countries
     @industries = normalize_array_of_str industries

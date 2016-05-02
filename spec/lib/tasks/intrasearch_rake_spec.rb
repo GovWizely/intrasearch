@@ -34,7 +34,10 @@ RSpec.describe 'intrasearch.rake' do
 
   describe 'intrasearch:import_articles' do
     it 'imports articles' do
+      expect(ArticleImporter).to receive(:import)
+      expect(BasicGuideToExportingImporter).to receive(:import)
       expect(CountryCommercialGuideImporter).to receive(:import)
+      expect(FaqImporter).to receive(:import)
       expect(MarketInsightImporter).to receive(:import)
       expect(StateReportImporter).to receive(:import)
       expect(TopMarketsReportImporter).to receive(:import)

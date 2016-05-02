@@ -1,10 +1,10 @@
 require 'rack_helper'
 
-RSpec.describe ArticleCountAPI do
+RSpec.describe MarketIntelligenceCountAPI do
   include Rack::Test::Methods
 
   def app
-    Nix::Application
+    Intrasearch::Application
   end
 
   include_context 'shared elastic models',

@@ -1,6 +1,6 @@
-module ArticleJsonSerializer
+module BaseArticleJsonSerializer
   INCLUDED_JSON_FIELDS = %i(id snippet title url).freeze
-  
+
   def as_json(options = nil)
     inject_highlighted_fields super({ only: INCLUDED_JSON_FIELDS }.merge(options || {}))
   end

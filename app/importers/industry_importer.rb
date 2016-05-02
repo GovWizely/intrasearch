@@ -1,7 +1,7 @@
 require 'industry'
 require 'taxonomy_importer'
 
-class IndustryImporter
+module IndustryImporter
   extend TaxonomyImporter
 
   self.model_class = Industry

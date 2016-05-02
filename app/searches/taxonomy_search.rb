@@ -1,3 +1,4 @@
+require 'match_label_within_input_query'
 require 'repository'
 
 module TaxonomySearch

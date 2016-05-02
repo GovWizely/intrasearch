@@ -1,3 +1,3 @@
 require 'ethon'
 
-Ethon.logger = Nix.logger
+Ethon.logger = Intrasearch.logger

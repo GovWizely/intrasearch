@@ -9,7 +9,7 @@ RSpec.describe StateReportImporter do
 
   describe '#import' do
     let(:extracted_args) do
-      YAML.load Nix.root.join('spec/fixtures/yaml/extracted_state_reports.yml').read
+      YAML.load Intrasearch.root.join('spec/fixtures/yaml/extracted_state_reports.yml').read
     end
 
     before do

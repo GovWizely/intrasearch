@@ -1,0 +1,100 @@
+- id: ka8t0000000Gn7mAAC
+  atom: Trust in online sellers is reasonably high everywhere except Asia, according
+    to a study sponsored by UPS, the logistics company.
+  countries: []
+  industries:
+  - Information and Communication Technology
+  - Retail Trade
+  - eCommerce Industry
+  industry_paths:
+  - "/Information and Communication Technology/eCommerce Industry"
+  - "/Retail Trade/eCommerce Industry"
+  summary: Preparing Your Business for Global ecommerce - by Doug Barry
+  title: Duties &amp; Taxes
+  topic_paths:
+  - "/Business Management/eCommerce"
+  topics:
+  - Business Management
+  - eCommerce
+  trade_regions: []
+  url: https://example.org/article2?id=Duties-and-Taxes-eCommerce-Guide-2
+  world_region_paths: []
+  world_regions: []
+
+- id: ka8t0000000GnCrAAK
+  atom: General Information As a result of the U.S.-Australia Free Trade Agreement,
+    tariffs that averaged 4.3 percent were eliminated on more than 99% of the tariff
+    lines for U.S. manufactured goods exports to Australia.
+  countries:
+  - Australia
+  industries: []
+  industry_paths: []
+  summary: Free Trade Agreement between US and Australia
+  title: US-Australia FTA
+  topic_paths:
+  - "/Trade Policy and Agreements/Trade Agreements/Free Trade Agreements"
+  topics:
+  - Free Trade Agreements
+  - Trade Agreements
+  - Trade Policy and Agreements
+  trade_regions:
+  - Asia Pacific Economic Cooperation
+  - Trans Pacific Partnership
+  url: https://success.export.gov/article2?id=U-S-Australia-FTA
+  world_region_paths:
+  - "/Asia Pacific"
+  - "/Oceania"
+  - "/Pacific Rim"
+  world_regions:
+  - Asia Pacific
+  - Oceania
+  - Pacific Rim
+
+- id: ka8t0000000GnHmAAK
+  atom: General Information The North American Free Trade Agreement (NAFTA), which was
+    enacted in 1994 and created a free trade zone for Mexico, Canada, and the United
+    States, is the most important feature in the U.S.-Mexico bilateral commercial relationship.
+    As of January 1, 2008, all tariffs and quotas were eliminated on U.S. exports to
+    Mexico and Canada under the North American Free Trade Agreement (NAFTA). Mexico
+    is the United States’ third largest trading partner and second largest export market
+    for U.S. products. U.S-Mexico bilateral trade in goods increased from $88 billion
+    in 1993, the year prior to the implementation of NAFTA, to $535 billion in 2014,
+    an increase of 508 percent, or 9.8 percent per year. The NAFTA provides coverage
+    to services with the exception of aviation transport, maritime, and basic telecommunications.
+    The agreement also provides intellectual property rights protection in a variety
+    of areas including patent, trademark, and copyrighted material. The government procurement
+    provisions of the NAFTA apply not only to goods but to contracts for services and
+    construction at the federal level. Additionally, U.S. investors are guaranteed equal
+    treatment to domestic investors in Mexico and Canada. Additional Information - NAFTA
+    legal text - What's My Tariff - FAQs - Rules of Origin - Documenting Origin - NAFTA
+    COO when exporter not manufacturer - Textiles - U.S. Commercial Office in Mexico
+    - U.S. Commercial Office in Canada
+  countries:
+  - Canada
+  - Mexico
+  industries: []
+  industry_paths: []
+  summary: An overview of the North American Free Trade Agreement.
+  title: NAFTA
+  topic_paths:
+  - "/Trade Policy and Agreements/Trade Agreements/Free Trade Agreements"
+  topics:
+  - Free Trade Agreements
+  - Trade Agreements
+  - Trade Policy and Agreements
+  trade_regions:
+  - Asia Pacific Economic Cooperation
+  - Global System of Trade Preferences among Developing Countries
+  - NAFTA
+  - Trans Pacific Partnership
+  url: https://example.org/article2?id=North-American-Free-Trade-Agreement
+  world_region_paths:
+  - "/Latin America"
+  - "/North America"
+  - "/Pacific Rim"
+  - "/Western Hemisphere"
+  world_regions:
+  - Latin America
+  - North America
+  - Pacific Rim
+  - Western Hemisphere

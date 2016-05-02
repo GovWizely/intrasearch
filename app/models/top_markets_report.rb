@@ -1,5 +1,5 @@
-require 'article'
+require 'base_article'
 
 class TopMarketsReport
-  include Article
+  include BaseArticle
 end

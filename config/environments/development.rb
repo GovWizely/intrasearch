@@ -1,4 +1,4 @@
-module Nix
+module Intrasearch
   @middlewares = [
     [Rack::ContentLength],
     [Rack::Chunked],

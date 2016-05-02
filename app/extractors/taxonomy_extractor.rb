@@ -33,9 +33,8 @@ module TaxonomyExtractor
                                     member_hash[:path]).each do |sub_member_hash|
         yielder << sub_member_hash.except(:id)
       end
-
     end
   end
 
-  self.extend ModuleMethods
+  extend ModuleMethods
 end

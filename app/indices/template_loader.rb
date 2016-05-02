@@ -12,17 +12,17 @@ class TemplateLoader
   end
 
   def delete_templates
-    @client.indices.delete_template(name: "nix-#{Nix.env}-*") if templates_exist?
+    @client.indices.delete_template(name: "intrasearch-#{Intrasearch.env}-*") if templates_exist?
   end
 
   private
 
   def templates_exist?
-    @client.indices.exists_template?(name: "nix-#{Nix.env}-*")
+    @client.indices.exists_template?(name: "intrasearch-#{Intrasearch.env}-*")
   end
 
   def each_template_name
-    Dir["#{Nix.root}/app/indices/templates/[0-9][0-9]*.rb"].each do |path|
+    Dir["#{Intrasearch.root}/app/indices/templates/[0-9][0-9]*.rb"].each do |path|
       template_filename = File.basename path, '.rb'
       yield template_filename
     end
@@ -38,13 +38,13 @@ class TemplateLoader
 
   def load_template(template_filename)
     numberless_template_filename = template_filename.gsub(/\A\d{2}\_/, '')
-    template_name = ['nix',
-                     Nix.env,
+    template_name = ['intrasearch',
+                     Intrasearch.env,
                      numberless_template_filename].join('-')
     template_order = extract_order_from_template_filename template_filename
     template = instantiate_template_class numberless_template_filename
 
-    Nix.logger.debug "loading: template_name: #{template_name}\ntemplate_hash: #{template.to_hash}"
+    Intrasearch.logger.debug "loading: template_name: #{template_name}\ntemplate_hash: #{template.to_hash}"
 
     @client.indices.put_template name: template_name,
                                  order: template_order,

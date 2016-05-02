@@ -5,14 +5,14 @@ require 'industry'
 require 'topic'
 require 'transformer'
 
-module ArticleTransformer
+module BaseArticleTransformer
   def self.extended(base)
     base.extend Transformer
   end
 
   extend self
 
-  URL_PREFIX = YAML.load(Nix.root.join('config/intrasearch.yml').read)[Nix.env]['article_url_prefix'].freeze
+  URL_PREFIX = YAML.load(Intrasearch.root.join('config/intrasearch.yml').read)[Intrasearch.env]['article_url_prefix'].freeze
 
   def transform(attributes)
     transform_countries attributes
@@ -47,7 +47,7 @@ module ArticleTransformer
     taxonomies = klass.search_by_labels(*labels)
     paths = taxonomies.map(&:path).uniq.sort
     attributes["#{klass.name.downcase}_paths"] = paths
-    attributes["#{klass.name.tableize}"] = paths_to_labels paths
+    attributes[klass.name.tableize] = paths_to_labels paths
     attributes
   end
 

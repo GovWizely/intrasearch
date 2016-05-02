@@ -1,7 +1,7 @@
-require 'article_transformer'
+require 'base_article_transformer'
 
 module StateReportTransformer
-  extend ArticleTransformer
+  extend BaseArticleTransformer
   extend self
 
   protected

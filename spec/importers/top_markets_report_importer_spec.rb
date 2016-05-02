@@ -6,5 +6,5 @@ RSpec.describe TopMarketsReportImporter do
                   Industry,
                   Topic
 
-  include_examples 'article importer', TopMarketsReportExtractor
+  include_examples 'base article importer', TopMarketsReportExtractor
 end

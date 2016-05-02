@@ -2,6 +2,7 @@ require 'owl_parser'
 
 class OwlMemberNarrowerParser
   include OwlParser
+
   self.subnode_path_template = <<-template
     //owl:Class
         [rdfs:subClassOf

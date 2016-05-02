@@ -13,19 +13,19 @@ module Taxonomy
 
       attribute :label, String, mapping: { analyzer: 'keyword_analyzer' }
 
-      self.index_name_prefix = ['nix',
-                                Nix.env,
+      self.index_name_prefix = ['intrasearch',
+                                Intrasearch.env,
                                 'taxonomies',
                                 'v2',
-                                self.name.tableize].join('-').freeze
+                                name.tableize].join('-').freeze
 
       self.index_name_fragments = [index_name_prefix,
                                    'current'].freeze
 
-      self.index_alias_name = ['nix',
-                               Nix.env,
+      self.index_alias_name = ['intrasearch',
+                               Intrasearch.env,
                                'taxonomies',
-                               self.name.tableize,
+                               name.tableize,
                                'current'].join('-').freeze
 
       self.reset_index_name!

@@ -46,8 +46,8 @@ class TaxonomiesSettingsTemplate
   end
 
   def template_pattern
-    ['nix',
-     Nix.env,
+    ['intrasearch',
+     Intrasearch.env,
      'taxonomies', '*'].join('-')
   end
 end

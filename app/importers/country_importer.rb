@@ -7,7 +7,7 @@ module CountryImporter
 
   self.model_class = Country
 
-  def self.import(resource = Nix.root.join('owl/root.owl'))
+  def self.import(resource = Intrasearch.root.join('owl/root.owl'))
     super() do
       CountryExtractor.extract(resource).each do |country_hash|
         CountryTransformer.transform country_hash

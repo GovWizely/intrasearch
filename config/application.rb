@@ -9,10 +9,10 @@ require 'rack/cors'
 require_relative 'base'
 require_relative 'eager_loader'
 
-Nix::EagerLoader.load(Nix.root.join('config/initializers'), false)
-Nix::EagerLoader.load(Nix.root.join('app/**'), true)
+Intrasearch::EagerLoader.load(Intrasearch.root.join('config/initializers'), false)
+Intrasearch::EagerLoader.load(Intrasearch.root.join('app/**'), true)
 
-module Nix
+module Intrasearch
   class Application < Grape::API
     use ::Rack::Cors do
       allow do
@@ -22,7 +22,9 @@ module Nix
     end
 
     format :json
-    mount ArticleCountAPI
-    mount ArticleSearchAPI
+    mount HowToArticleCountAPI
+    mount HowToArticleSearchAPI
+    mount MarketIntelligenceCountAPI
+    mount MarketIntelligenceSearchAPI
   end
 end

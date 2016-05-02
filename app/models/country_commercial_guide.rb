@@ -1,5 +1,5 @@
-require 'article'
+require 'base_article'
 
 class CountryCommercialGuide
-  include Article
+  include BaseArticle
 end

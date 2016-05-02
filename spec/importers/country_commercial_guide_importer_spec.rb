@@ -6,5 +6,5 @@ RSpec.describe CountryCommercialGuideImporter do
                   Industry,
                   Topic
 
-  include_examples 'article importer', CountryCommercialGuideExtractor
+  include_examples 'base article importer', CountryCommercialGuideExtractor
 end

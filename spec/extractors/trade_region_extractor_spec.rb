@@ -2,7 +2,7 @@ require 'rack_helper'
 
 RSpec.describe TradeRegionExtractor do
   describe '.extract' do
-    let(:resource) { Nix.root.join('spec/fixtures/owl/regions.owl') }
+    let(:resource) { Intrasearch.root.join('spec/fixtures/owl/regions.owl') }
 
     it 'parses only immediate skos:related countries' do
       trade_regions = TradeRegionExtractor.extract(resource)

@@ -7,7 +7,8 @@ class ArticlesSettingsTemplate
           analyzer: {
             english_analyzer: {
               tokenizer: 'standard',
-              filter: %w(standard asciifolding lowercase stop english_stemmer)
+              filter: %w(standard asciifolding lowercase stop english_stemmer),
+              char_filter: %w(html_strip)
             },
             keyword_analyzer: {
               tokenizer: 'keyword',
@@ -30,6 +31,6 @@ class ArticlesSettingsTemplate
   end
 
   def template_pattern
-    ['nix', Nix.env, 'articles', '*'].join('-')
+    ['intrasearch', Intrasearch.env, 'articles', '*'].join('-')
   end
 end

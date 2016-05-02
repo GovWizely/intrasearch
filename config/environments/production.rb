@@ -1,11 +1,11 @@
 require 'airbrake'
 
 Airbrake.configure do |config|
-  Nix::Configurator.configure config, 'airbrake.yml'
-  config.logger = Nix.logger
+  Intrasearch::Configurator.configure config, 'airbrake.yml'
+  config.logger = Intrasearch.logger
 end
 
-module Nix
+module Intrasearch
   @middlewares = [
     [Rack::ContentLength],
     [Rack::Chunked],

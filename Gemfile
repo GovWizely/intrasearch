@@ -11,7 +11,6 @@ gem 'sanitize'
 gem 'typhoeus'
 gem 'yajl-ruby', require: 'yajl'
 
-
 group :development do
   gem 'guard'
   gem 'guard-bundler', require: false

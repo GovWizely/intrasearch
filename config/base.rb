@@ -2,7 +2,7 @@ require 'active_support/logger'
 require 'active_support/string_inquirer'
 require 'pathname'
 
-module Nix
+module Intrasearch
   @env = ActiveSupport::StringInquirer.new ENV['RACK_ENV']
 
   @root = Pathname.new File.expand_path('../../', __FILE__)
@@ -26,4 +26,4 @@ module Nix
 end
 
 require_relative 'configurator'
-require_relative "environments/#{Nix.env}"
+require_relative "environments/#{Intrasearch.env}"

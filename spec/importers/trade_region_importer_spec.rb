@@ -2,7 +2,7 @@ require 'rack_helper'
 
 RSpec.describe TradeRegionImporter do
   describe '#import' do
-    let(:resource) { Nix.root.join('spec/fixtures/owl/regions.owl') }
+    let(:resource) { Intrasearch.root.join('spec/fixtures/owl/regions.owl') }
 
     let(:expected_args) do
       [

@@ -6,5 +6,5 @@ RSpec.describe MarketInsightImporter do
                   Industry,
                   Topic
 
-  include_examples 'article importer', MarketInsightExtractor
+  include_examples 'base article importer', MarketInsightExtractor
 end

@@ -7,7 +7,7 @@ require 'base_model'
 class IndexManager
   def self.setup_indices
     BaseModel.model_classes.each do |klass|
-      self.new(klass).setup_new_index_when_missing
+      new(klass).setup_new_index_when_missing
     end
   end
 

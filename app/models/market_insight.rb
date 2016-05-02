@@ -1,5 +1,5 @@
-require 'article'
+require 'base_article'
 
 class MarketInsight
-  include Article
+  include BaseArticle
 end

@@ -11,15 +11,11 @@ namespace :intrasearch do
      WorldRegionImporter,
      CountryImporter,
      IndustryImporter,
-     TopicImporter].each do |klass|
-      klass.import
-    end
+     TopicImporter].each(&:import)
   end
 
   desc 'import articles'
   task import_articles: :environment do
-    ArticleImporter.descendants.each do |klass|
-      klass.import
-    end
+    BaseArticleImporter.descendants.each(&:import)
   end
 end
