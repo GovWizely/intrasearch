@@ -1,38 +1,37 @@
-node['deploy'].each do |_application, deploy|
-  env_vars = deploy['environment']
+deploy = new_resource
+env_vars = new_resource.environment
 
-  template "#{deploy['deploy_to']}/shared/config/airbrake.yml" do
-    source "#{release_path}/config/airbrake.yml.erb"
-    local true
-    mode '0600'
-    group deploy['group']
-    owner deploy['user']
-    variables(environment: env_vars['RACK_ENV'],
-              airbrake_project_id: env_vars['airbrake_project_id'],
-              airbrake_project_key: env_vars['airbrake_project_key'])
-  end
+template "#{deploy.deploy_to}/shared/config/airbrake.yml" do
+  source "#{release_path}/config/airbrake.yml.erb"
+  local true
+  mode '0400'
+  group deploy.group
+  owner deploy.user
+  variables(environment: env_vars['RACK_ENV'],
+            airbrake_project_id: env_vars['airbrake_project_id'],
+            airbrake_project_key: env_vars['airbrake_project_key'])
+end
 
-  template "#{deploy['deploy_to']}/shared/config/restforce.yml" do
-    source "#{release_path}/config/restforce.yml.erb"
-    local true
-    mode '0600'
-    group deploy['group']
-    owner deploy['user']
-    variables(environment: env_vars['RACK_ENV'],
-              client_id: env_vars['sfdc_client_id'],
-              client_secret: env_vars['sfdc_client_secret'],
-              host: env_vars['sfdc_host'],
-              username: env_vars['sfdc_username'],
-              password: env_vars['sfdc_password'])
-  end
+template "#{deploy.deploy_to}/shared/config/restforce.yml" do
+  source "#{release_path}/config/restforce.yml.erb"
+  local true
+  mode '0400'
+  group deploy.group
+  owner deploy.user
+  variables(environment: env_vars['RACK_ENV'],
+            client_id: env_vars['sfdc_client_id'],
+            client_secret: env_vars['sfdc_client_secret'],
+            host: env_vars['sfdc_host'],
+            username: env_vars['sfdc_username'],
+            password: env_vars['sfdc_password'])
+end
 
-  template "#{deploy['deploy_to']}/shared/config/intrasearch.yml" do
-    source "#{release_path}/config/intrasearch.yml.erb"
-    local true
-    mode '0600'
-    group deploy['group']
-    owner deploy['user']
-    variables(environment: env_vars['RACK_ENV'],
-              article_url_prefix: deploy['config_data']['article_url_prefix'])
-  end
+template "#{deploy.deploy_to}/shared/config/intrasearch.yml" do
+  source "#{release_path}/config/intrasearch.yml.erb"
+  local true
+  mode '0400'
+  group deploy.group
+  owner deploy.user
+  variables(environment: env_vars['RACK_ENV'],
+            article_url_prefix: node['intrasearch_data']['base_article_url_prefix'])
 end

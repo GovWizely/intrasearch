@@ -272,9 +272,19 @@ RSpec.describe ArticleSearchAPI do
 
       it_behaves_like 'API response'
 
-      it 'returns matching industries aggregation' do
+      it 'returns metadata' do
+        expect(parsed_body[:metadata]).to eq(total: 2,
+                                             count: 2,
+                                             offset: 0,
+                                             next_offset: nil)
+      end
+
+      it 'returns industries aggregation' do
         expected_industries = [
+          { key: '/Aerospace and Defense', doc_count: 1 },
+          { key: '/Information and Communication Technology', doc_count: 2 },
           { key: '/Information and Communication Technology/eCommerce Industry', doc_count: 2 },
+          { key: '/Retail Trade', doc_count: 2 },
           { key: '/Retail Trade/eCommerce Industry', doc_count: 2 }
         ]
         expect(parsed_body[:aggregations][:industries]).to eq(expected_industries)
@@ -286,8 +296,17 @@ RSpec.describe ArticleSearchAPI do
 
       it_behaves_like 'API response'
 
+      it 'returns metadata' do
+        expect(parsed_body[:metadata]).to eq(total: 1,
+                                             count: 1,
+                                             offset: 0,
+                                             next_offset: nil)
+      end
+
       it 'returns matching topics aggregation' do
         expected_topics = [
+          { key: '/Business Management', doc_count: 1 },
+          { key: '/Business Management/Costing and Pricing', doc_count: 1 },
           { key: '/Business Management/Costing and Pricing/Prices', doc_count: 1 }
         ]
         expect(parsed_body[:aggregations][:topics]).to eq(expected_topics)
@@ -327,8 +346,16 @@ RSpec.describe ArticleSearchAPI do
 
       it_behaves_like 'API response'
 
+      it 'returns metadata' do
+        expect(parsed_body[:metadata]).to eq(total: 2,
+                                             count: 2,
+                                             offset: 0,
+                                             next_offset: nil)
+      end
+
       it 'returns world_regions aggregation' do
         expected_world_regions = [
+          { key: '/North America', doc_count: 2 },
           { key: '/Pacific Rim', doc_count: 2 },
           { key: '/Western Hemisphere', doc_count: 2 }
         ]

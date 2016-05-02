@@ -2,7 +2,6 @@ require 'active_support/core_ext/object/blank'
 require 'active_support/core_ext/string/filters'
 
 require 'country'
-require 'highlight_field_builder'
 require 'match_country_query_builder'
 require 'match_non_geo_name_query_builder'
 require 'match_world_region_query_builder'
@@ -73,35 +72,21 @@ class ArticleSearchQuery
 
   def build_term_queries(terms)
     terms.map do |field, values|
-      terms_query(field => values) if values.present?
+      { terms: { field => values } } if values.present?
     end.compact
   end
 
-  def terms_query(terms)
-    {
-      terms: terms
-    }
-  end
-
   def aggregations
-    builder_options = {
-      countries: { field: 'countries.raw',
-                   terms: @countries },
-      industries: { field: 'industry_paths',
-                    terms: @industries,
-                    use_path_wildcard: true },
-      topics: { field: 'topic_paths',
-                terms: @topics,
-                use_path_wildcard: true },
-      trade_regions: { field: 'trade_regions.raw',
-                       terms: @trade_region_filters },
-      types: { field: 'type' },
-      world_regions: { field: 'world_region_paths',
-                       terms: @world_region_filters,
-                       use_path_wildcard: true },
+    aggregation_options = {
+      countries: 'countries.raw',
+      industries: 'industry_paths',
+      topics: 'topic_paths',
+      trade_regions: 'trade_regions.raw',
+      types: 'type',
+      world_regions: 'world_region_paths'
     }
-    builder_options.each_with_object({}) do |params, hash|
-      hash.merge! AggregationQueryBuilder.build(params.first, **params.last)
+    aggregation_options.each_with_object({}) do |params, hash|
+      hash.merge! AggregationQueryBuilder.build(params.first, params.last)
     end
   end
 
@@ -110,9 +95,9 @@ class ArticleSearchQuery
 
     {
       fields: {
-        atom: HighlightFieldBuilder.build(:atom, @original_query),
-        summary: HighlightFieldBuilder.build(:summary, @original_query),
-        title: HighlightFieldBuilder.build(:title, @original_query, 0)
+        atom: { fragment_size: 255, number_of_fragments: 1 },
+        summary: { fragment_size: 255, number_of_fragments: 1 },
+        title: { number_of_fragments: 0 }
       }
     }
   end

@@ -9,8 +9,8 @@ Provides JSON Search API for Salesforce contents.
 ## Dependencies
 
 - Ruby 2.2
-- Bundler 1.10.6
-- Elasticsearch 1.7.4
+- Bundler 1.11.2
+- Elasticsearch 2.2.2
 - Salesforce API user credentials
 
 ## Setup
