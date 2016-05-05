@@ -27,5 +27,6 @@ end
 
 group :production do
   gem 'airbrake', '~> 5.1'
+  gem 'newrelic_rpm'
   gem 'unicorn'
 end

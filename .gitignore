@@ -1,6 +1,7 @@
 .ruby-gemset
 /config/airbrake.yml
 /config/intrasearch.yml
+/config/newrelic.yml
 /config/restforce.yml
 /coverage/
 /log/

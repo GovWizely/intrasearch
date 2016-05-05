@@ -35,3 +35,12 @@ template "#{deploy.deploy_to}/shared/config/intrasearch.yml" do
   variables(environment: env_vars['RACK_ENV'],
             article_url_prefix: node['intrasearch_data']['base_article_url_prefix'])
 end
+
+template "#{deploy.deploy_to}/shared/config/newrelic.yml" do
+  source "#{release_path}/config/newrelic.yml.erb"
+  local true
+  mode '0400'
+  group deploy.group
+  owner deploy.user
+  variables newrelic_license_key: env_vars['newrelic_license_key']
+end

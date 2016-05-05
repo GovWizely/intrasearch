@@ -1,4 +1,5 @@
 require 'airbrake'
+require 'newrelic_rpm'
 
 Airbrake.configure do |config|
   Intrasearch::Configurator.configure config, 'airbrake.yml'
@@ -14,3 +15,5 @@ module Intrasearch
     [Airbrake::Rack::Middleware]
   ]
 end
+
+NewRelic::Agent.manual_start YAML.load(Intrasearch.root.join('config/newrelic.yml').read)
