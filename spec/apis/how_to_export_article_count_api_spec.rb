@@ -1,6 +1,6 @@
 require 'rack_helper'
 
-RSpec.describe HowToArticleCountAPI do
+RSpec.describe HowToExportArticleCountAPI do
   include Rack::Test::Methods
 
   def app
@@ -8,7 +8,7 @@ RSpec.describe HowToArticleCountAPI do
   end
 
   def endpoint
-    '/v1/how_to_articles/count'
+    '/v1/how_to_export_articles/count'
   end
 
   include_context 'shared elastic models',
@@ -18,8 +18,8 @@ RSpec.describe HowToArticleCountAPI do
                   Faq,
                   WorldRegion
 
-  describe '/v1/how_to_articles/count' do
-    before { get '/v1/how_to_articles/count' }
+  describe '/v1/how_to_export_articles/count' do
+    before { get '/v1/how_to_export_articles/count' }
     subject { last_response }
 
     let(:parsed_body) { JSON.parse(last_response.body, symbolize_names: true) }

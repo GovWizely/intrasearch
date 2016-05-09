@@ -22,8 +22,8 @@ module Intrasearch
     end
 
     format :json
-    mount HowToArticleCountAPI
-    mount HowToArticleSearchAPI
+    mount HowToExportArticleCountAPI
+    mount HowToExportArticleSearchAPI
     mount MarketIntelligenceCountAPI
     mount MarketIntelligenceSearchAPI
   end

@@ -1,6 +1,6 @@
 require 'rack_helper'
 
-RSpec.describe HowToArticleSearchAPI do
+RSpec.describe HowToExportArticleSearchAPI do
   include Rack::Test::Methods
 
   def app
@@ -14,8 +14,8 @@ RSpec.describe HowToArticleSearchAPI do
                   Faq,
                   WorldRegion
 
-  describe '/v1/how_to_articles/search' do
-    let(:endpoint) { '/v1/how_to_articles/search' }
+  describe '/v1/how_to_export_articles/search' do
+    let(:endpoint) { '/v1/how_to_export_articles/search' }
 
     subject { last_response }
     let(:parsed_body) { JSON.parse(last_response.body, symbolize_names: true) }
