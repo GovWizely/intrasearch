@@ -1,7 +1,7 @@
-require 'rack_helper'
+require 'support/elastic_model_shared_contexts'
 
 RSpec.describe Topic do
-  include_context 'shared elastic models',
+  include_context 'elastic models',
                   Topic
 
   describe '.search_by_labels' do

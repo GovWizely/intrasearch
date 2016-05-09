@@ -1,0 +1,119 @@
+{
+  "total": 1,
+  "offset": 0,
+  "sources_used": [
+    {
+      "source": "ITA",
+      "source_last_updated": "2016-05-15T17:08:15+00:00",
+      "last_imported": "2016-05-15T17:08:15+00:00"
+    }
+  ],
+  "search_performed_at": "2016-05-15T17:10:42+00:00",
+  "aggregations": {
+    "sources": [
+      {
+        "key": "ITA",
+        "doc_count": 1
+      }
+    ],
+    "trade_regions": [
+      {
+        "key": "Asia Pacific Economic Cooperation",
+        "doc_count": 1
+      },
+      {
+        "key": "CAFTA-DR",
+        "doc_count": 1
+      },
+      {
+        "key": "NAFTA",
+        "doc_count": 1
+      },
+      {
+        "key": "Trans Pacific Partnership",
+        "doc_count": 1
+      }
+    ],
+    "countries": [
+      {
+        "key": "US",
+        "doc_count": 1
+      }
+    ],
+    "world_regions": [
+      {
+        "key": "North America",
+        "doc_count": 1
+      },
+      {
+        "key": "Pacific Rim",
+        "doc_count": 1
+      },
+      {
+        "key": "Western Hemisphere",
+        "doc_count": 1
+      }
+    ]
+  },
+  "results": [
+    {
+      "id": "36282",
+      "event_name": "Trade Event 36282",
+      "event_type": "Trade Mission",
+      "start_date": "2016-05-15",
+      "end_date": "2016-05-24",
+      "cost": 4400.0,
+      "registration_link": "https://ita.trade.event.example.org/registration/36282",
+      "registration_title": "Event 36282 title",
+      "description": "Event 36282 description",
+      "industries": [
+        "eCommerce",
+        "Retail"
+      ],
+      "ita_industries": [
+        "Franchising",
+        "eCommerce Industry"
+      ],
+      "url": "https://ita.trade.event.example.org/event/36282",
+      "venues": [
+        {
+          "city": "San Francisco",
+          "country": "US",
+          "state": "CA",
+          "venue": "Moscone Center, San Francisco",
+          "country_name": "United States"
+        }
+      ],
+      "contacts": [
+        {
+          "email": "John.Doe@example.gov",
+          "first_name": "John",
+          "last_name": "Doe",
+          "person_title": "Commercial Officer",
+          "phone": "886-2-1111-2222",
+          "post": "Taipei"
+        },
+        {
+          "email": "Jane.Doe@example.gov",
+          "first_name": "Jane",
+          "last_name": "Doe",
+          "person_title": "Trade Specialist",
+          "phone": "82-2-333-4444",
+          "post": "Seoul"
+        }
+      ],
+      "source": "ITA",
+      "trade_regions": [
+        "Asia Pacific Economic Cooperation",
+        "CAFTA-DR",
+        "NAFTA",
+        "Trans Pacific Partnership"
+      ],
+      "world_regions": [
+        "Pacific Rim",
+        "North America",
+        "Western Hemisphere"
+      ]
+    }
+  ]
+}

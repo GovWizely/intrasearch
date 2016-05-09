@@ -1,3 +1,6 @@
+require 'support/api_shared_examples'
+require 'support/elastic_model_shared_contexts'
+
 RSpec.describe WebDocumentCountAPI do
   include Rack::Test::Methods
 
@@ -5,7 +8,7 @@ RSpec.describe WebDocumentCountAPI do
     Intrasearch::Application
   end
 
-  include_context 'shared elastic models',
+  include_context 'elastic models',
                   WebDocument
 
   describe '/v1/web_documents/count' do

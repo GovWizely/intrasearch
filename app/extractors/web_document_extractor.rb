@@ -26,12 +26,8 @@ module WebDocumentExtractor
     end
 
     def extract_document(document)
-      document.each do |k, v|
-        document[k] = sanitize_value v
-      end
-
       fields = %i(content description title url).map do |field_symbol|
-        [field_symbol, document[field_symbol.to_s]]
+        [field_symbol, sanitize_value(document[field_symbol.to_s])]
       end
       Hash[fields]
     end

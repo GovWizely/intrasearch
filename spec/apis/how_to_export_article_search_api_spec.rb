@@ -1,3 +1,6 @@
+require 'support/api_shared_examples'
+require 'support/elastic_model_shared_contexts'
+
 RSpec.describe HowToExportArticleSearchAPI do
   include Rack::Test::Methods
 
@@ -5,7 +8,7 @@ RSpec.describe HowToExportArticleSearchAPI do
     Intrasearch::Application
   end
 
-  include_context 'shared elastic models',
+  include_context 'elastic models',
                   Article,
                   BasicGuideToExporting,
                   Country,

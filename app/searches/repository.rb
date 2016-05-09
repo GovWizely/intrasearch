@@ -7,7 +7,7 @@ class Repository < Elasticsearch::Persistence::Repository::Class
   end
 
   def deserialize(document)
-    klass = __get_klass_from_type(document['_type'])
+    klass = get_klass_from_type(document['_type'])
     object = klass.new document['_source']
 
     object.instance_variable_set :@_id, document['_id']
@@ -20,5 +20,12 @@ class Repository < Elasticsearch::Persistence::Repository::Class
 
     object.instance_variable_set(:@persisted, true)
     object
+  end
+
+  protected
+
+  def get_klass_from_type(type)
+    klass = type.classify
+    klass.constantize
   end
 end

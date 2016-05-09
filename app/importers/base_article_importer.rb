@@ -2,16 +2,13 @@ require 'active_support/core_ext/string/inflections'
 
 require 'base_article_transformer'
 require 'importer'
+require 'importer_descendants_tracker'
 
 module BaseArticleImporter
-  class << self
-    attr_accessor :descendants
-  end
-
-  self.descendants = []
+  extend ImporterDescendantsTracker
 
   def self.extended(base)
-    self.descendants |= [base]
+    self.track_descendant base
     base.extend Importer
 
     class << base
@@ -33,7 +30,7 @@ module BaseArticleImporter
         response = extractor.extract
         response.each do |attributes|
           transformer.transform attributes
-          model_class.new(attributes).save
+          model_class.create attributes
         end
       end
     end

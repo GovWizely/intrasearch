@@ -1,5 +1,6 @@
-$LOAD_PATH.unshift(*Dir.glob(File.join(File.dirname(__FILE__), '..', 'app', '**/')))
-$LOAD_PATH.unshift(File.dirname(__FILE__))
+$LOAD_PATH.unshift(*Dir.glob(File.join(File.dirname(__FILE__), '..', 'app', 'indices/templates')))
+$LOAD_PATH.unshift(*Dir.glob(File.join(File.dirname(__FILE__), '..', 'app', '**')))
+$LOAD_PATH.unshift(*Dir.glob(File.join(File.dirname(__FILE__), '..', 'lib')))
 
 require_relative 'boot'
 
@@ -9,8 +10,17 @@ require 'rack/cors'
 require_relative 'base'
 require_relative 'eager_loader'
 
-Intrasearch::EagerLoader.load(Intrasearch.root.join('config/initializers'), false)
-Intrasearch::EagerLoader.load(Intrasearch.root.join('app/**'), true)
+Intrasearch.eager_load Intrasearch.root.join('lib')
+Intrasearch.eager_load Intrasearch.root.join('config'),
+                       'initializers/*.rb',
+                       false
+Intrasearch.eager_load Intrasearch.root.join('app', '*')
+Intrasearch.eager_load Intrasearch.root.join('app', 'indices', 'templates')
+
+%w(extractors models transformers importers).each do |dir_name|
+Intrasearch.eager_load Intrasearch.root.join('app', dir_name),
+                       '*/*.rb'
+end
 
 module Intrasearch
   class Application < Grape::API
@@ -27,6 +37,9 @@ module Intrasearch
     mount HowToExportArticleSearchAPI
     mount MarketIntelligenceCountAPI
     mount MarketIntelligenceSearchAPI
+    mount TradeEventCountAPI
+    mount TradeEventSearchAPI
+    mount TradeEventFindByIdAPI
     mount WebDocumentCountAPI
     mount WebDocumentSearchAPI
   end

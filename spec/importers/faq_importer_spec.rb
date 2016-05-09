@@ -1,7 +1,8 @@
-require 'rack_helper'
+require 'support/base_article_importer_shared_examples'
+require 'support/elastic_model_shared_contexts'
 
 RSpec.describe FaqImporter do
-  include_context 'shared elastic models',
+  include_context 'elastic models',
                   Country,
                   Industry,
                   Topic

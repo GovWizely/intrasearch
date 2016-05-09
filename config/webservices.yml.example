@@ -1,0 +1,11 @@
+development:
+  api_key: 'webservices_api_key'
+  host_url: 'https://webservices.example.org'
+
+test:
+  api_key: 'webservices_api_key'
+  host_url: 'https://webservices.example.org'
+
+production:
+  api_key: 'webservices_api_key'
+  host_url: 'https://webservices.example.org'

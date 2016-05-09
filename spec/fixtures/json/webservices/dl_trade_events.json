@@ -1,0 +1,32 @@
+{
+  "total": 1,
+  "offset": 0,
+  "sources_used": [
+    {
+      "source": "ITA",
+      "source_last_updated": "2016-05-15T17:08:15+00:00",
+      "last_imported": "2016-05-15T17:08:15+00:00"
+    }
+  ],
+  "search_performed_at": "2016-05-15T17:10:42+00:00",
+  "aggregations": {
+    "sources": [
+      {
+        "key": "DL",
+        "doc_count": 1
+      }
+    ],
+    "trade_regions": [],
+    "countries": [],
+    "world_regions": []
+  },
+  "results": [
+    {
+      "id": "22346b67a36ab6acb9980bfefde51d2db041b5ed",
+      "event_name": "Trade Event 1",
+      "description": "Trade Event 1 Description",
+      "url": "http://dl.trade.event.example.org/1",
+      "source": "DL"
+    }
+  ]
+}

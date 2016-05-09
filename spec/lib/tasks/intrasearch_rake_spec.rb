@@ -45,6 +45,17 @@ RSpec.describe 'intrasearch.rake' do
     end
   end
 
+  describe 'intrasearch:import_trade_events' do
+    it 'imports trade events' do
+      expect(TradeEvent::DlTradeEventImporter).to receive(:import)
+      expect(TradeEvent::ItaTradeEventImporter).to receive(:import)
+      expect(TradeEvent::SbaTradeEventImporter).to receive(:import)
+      expect(TradeEvent::UstdaTradeEventImporter).to receive(:import)
+
+      @rake['intrasearch:import_trade_events'].invoke
+    end
+  end
+
   describe 'intrasearch:import_web_documents' do
     it 'imports web documents' do
       expect(WebDocumentImporter).to receive(:import)

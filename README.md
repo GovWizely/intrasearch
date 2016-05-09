@@ -18,6 +18,7 @@ Provides JSON Search API for Salesforce contents.
 - Start elasticsearch
 - Copy `config/intrasearch.yml.example` to `config/intrasearch.yml`
 - Copy `config/restforce.yml.example` to `config/restforce.yml` and fill out the attributes
+- Copy `config/webservices.yml.example` to `config/webservices.yml` and update the attributes
 - Run `bundle`
 - Setup indices: `bundle exec rake intrasearch:setup_indices`
 - Import taxonomies: `bundle exec rake intrasearch:import_taxonomies`
@@ -27,7 +28,13 @@ Provides JSON Search API for Salesforce contents.
 
 ## Endpoints
 
-- [localhost:9292/v1/articles/count](http://localhost:9292/v1/articles/count)
-- [localhost:9292/v1/articles/search?q=trade](http://localhost:9292/v1/articles/search?q=trade)
+- [localhost:9292/v1/how_to_export_articles/count](http://localhost:9292/v1/how_to_export_articles/count)
+- [localhost:9292/v1/how_to_export_articles/search?q=trade](http://localhost:9292/v1/how_to_export_articles/search?q=trade)
+- [localhost:9292/v1/market_intelligence_articles/count](http://localhost:9292/v1/market_intelligence_articles/count)
+- [localhost:9292/v1/market_intelligence_articles/search?q=trade](http://localhost:9292/v1/market_intelligence_articles/search?q=trade)
+- [localhost:9292/v1/trade_events/count](http://localhost:9292/v1/trade_events/count)
+- [localhost:9292/v1/trade_events/search](http://localhost:9292/v1/trade_events/search?q=trade)
+- [localhost:9292/v1/web_documents/count](http://localhost:9292/v1/web_documents/count)
+- [localhost:9292/v1/web_documents/search?q=trade](http://localhost:9292/v1/web_documents/search?domain=CHANGEME&q=trade)
 
 Cheers!

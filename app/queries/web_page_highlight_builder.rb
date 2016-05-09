@@ -1,11 +1,11 @@
 module WebPageHighlightBuilder
-  def highlight(query_str, snippet_field_sym)
+  def self.build(query_str, title_field: :title, snippet_field:)
     return {} if query_str.blank?
 
     {
       fields: {
-        snippet_field_sym => { fragment_size: 255, number_of_fragments: 1 },
-        title: { number_of_fragments: 0 }
+        snippet_field => { fragment_size: 255, number_of_fragments: 1 },
+        title_field => { number_of_fragments: 0 }
       }
     }
   end

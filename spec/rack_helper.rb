@@ -17,6 +17,4 @@ require File.expand_path('../../config/environment', __FILE__)
 require 'rack/test'
 require 'rspec'
 require 'spec_helper'
-require 'elastic_helper'
-require 'base_article_helper'
-require 'api_spec_helper'
+require 'support/elastic_hooks'

@@ -1,0 +1,37 @@
+- :id: f0e2598dbc76ce55cd0a557746375bd911808bac
+  :cost:
+  :countries:
+  - Taiwan
+  - United States
+  :description: USTDA Trade Event f0e259 description.
+  :end_date: 2016-05-24
+  :event_url: http://ustda.trade.events.example.org/event/f0e259
+  :industries:
+  - Information and Communication Technology
+  - Retail Trade
+  - eCommerce Industry
+  :industry_paths:
+  - "/Information and Communication Technology/eCommerce Industry"
+  - "/Retail Trade/eCommerce Industry"
+  :name: USTDA Trade Event Summit f0e259
+  :registration_title: USTDA Awesome Trade Event Summit
+  :registration_url: http://ustda.trade.events.example.org/registration/f0e259
+  :source: USTDA
+  :start_date: 2016-05-17
+  :url: https://example.org/trade_event?id=f0e2598dbc76ce55cd0a557746375bd911808bac
+  :trade_regions:
+  - Asia Pacific Economic Cooperation
+  :venues:
+  - Hotel TW
+  - Washington, D.C.
+  :world_region_paths:
+  - "/Asia/East Asia"
+  - "/North America"
+  - "/Pacific Rim"
+  - "/Western Hemisphere"
+  :world_regions:
+  - Asia
+  - East Asia
+  - North America
+  - Pacific Rim
+  - Western Hemisphere

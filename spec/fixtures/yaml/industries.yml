@@ -19,5 +19,8 @@
 - label: eCommerce Industry
   path: "/Information and Communication Technology/eCommerce Industry"
 
+- label: Retail Trade
+  path: "/Retail Trade"
+
 - label: eCommerce Industry
   path: "/Retail Trade/eCommerce Industry"

@@ -1,7 +1,7 @@
-require 'rack_helper'
+require 'support/elastic_model_shared_contexts'
 
 RSpec.describe Country do
-  include_context 'shared elastic models',
+  include_context 'elastic models',
                   Country
 
   describe '.search_by_labels' do

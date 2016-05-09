@@ -1,3 +1,6 @@
+require 'support/api_shared_examples'
+require 'support/elastic_model_shared_contexts'
+
 RSpec.describe MarketIntelligenceSearchAPI do
   include Rack::Test::Methods
 
@@ -5,7 +8,7 @@ RSpec.describe MarketIntelligenceSearchAPI do
     Intrasearch::Application
   end
 
-  include_context 'shared elastic models',
+  include_context 'elastic models',
                   Country,
                   CountryCommercialGuide,
                   Industry,

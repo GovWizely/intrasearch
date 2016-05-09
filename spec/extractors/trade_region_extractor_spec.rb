@@ -1,5 +1,3 @@
-require 'rack_helper'
-
 RSpec.describe TradeRegionExtractor do
   describe '.extract' do
     let(:resource) { Intrasearch.root.join('spec/fixtures/owl/regions.owl') }

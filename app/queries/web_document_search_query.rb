@@ -4,7 +4,6 @@ require 'web_page_highlight_builder'
 
 class WebDocumentSearchQuery
   include QueryBuilder
-  include WebPageHighlightBuilder
 
   FULL_TEXT_FIELDS = %w(content description title).freeze
 
@@ -24,7 +23,7 @@ class WebDocumentSearchQuery
           filter: filter_clauses
         }
       },
-      highlight: highlight(@q, :content),
+      highlight: highlight_clause,
       from: @offset,
       size: @limit
     }
@@ -42,7 +41,11 @@ class WebDocumentSearchQuery
     @domains.present? ? [{ terms: { domain: @domains } }] : []
   end
 
+  def highlight_clause
+    WebPageHighlightBuilder.build @q, snippet_field: :content
+  end
+
   def aggregations
-    AggregationQueryBuilder.build :domains, :domain
+    AggregationQueryBuilder.build domains: :domain
   end
 end

@@ -1,6 +1,12 @@
 require 'search'
 
 module SearchResponse
+  def self.included(base)
+    class << base
+      attr_accessor :serializer
+    end
+  end
+
   def initialize(search, results)
     @search = search
     @results = results
@@ -14,7 +20,7 @@ module SearchResponse
     run_results = {
       metadata: build_metadata_hash,
     }
-    run_results[:results] = @results.results unless @search.search_type_count?
+    run_results[:results] = as_json_results unless @search.search_type_count?
     yield run_results if block_given?
 
     run_results.as_json options
@@ -39,6 +45,12 @@ module SearchResponse
     next_offset_candidate = @count + @search.offset
     if next_offset_candidate < @total && next_offset_candidate <= Search::MAX_OFFSET
       next_offset_candidate
+    end
+  end
+
+  def as_json_results
+    @results.results.map do |result|
+      self.class.serializer.serialize result
     end
   end
 

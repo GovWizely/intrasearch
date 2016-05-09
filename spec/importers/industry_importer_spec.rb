@@ -1,5 +1,3 @@
-require 'rack_helper'
-
 RSpec.describe IndustryImporter do
   describe '#import' do
     let(:resource) { Intrasearch.root.join('spec/fixtures/owl/industries.owl') }

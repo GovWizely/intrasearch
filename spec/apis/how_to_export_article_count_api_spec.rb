@@ -1,3 +1,6 @@
+require 'support/api_shared_examples'
+require 'support/elastic_model_shared_contexts'
+
 RSpec.describe HowToExportArticleCountAPI do
   include Rack::Test::Methods
 
@@ -9,7 +12,7 @@ RSpec.describe HowToExportArticleCountAPI do
     '/v1/how_to_export_articles/count'
   end
 
-  include_context 'shared elastic models',
+  include_context 'elastic models',
                   Article,
                   BasicGuideToExporting,
                   Country,

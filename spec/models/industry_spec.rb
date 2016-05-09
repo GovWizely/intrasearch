@@ -1,7 +1,7 @@
-require 'rack_helper'
+require 'support/elastic_model_shared_contexts'
 
 RSpec.describe Industry do
-  include_context 'shared elastic models',
+  include_context 'elastic models',
                   Industry
 
   describe '.search_by_labels' do

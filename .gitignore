@@ -3,6 +3,7 @@
 /config/intrasearch.yml
 /config/newrelic.yml
 /config/restforce.yml
+/config/webservices.yml
 /coverage/
 /log/
 /spec/examples.txt

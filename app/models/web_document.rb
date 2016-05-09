@@ -1,13 +1,9 @@
 require 'active_support/core_ext/string/inflections'
 
 require 'base_model'
-require 'web_page_json_serializer'
 
 class WebDocument
   include BaseModel
-  include WebPageJSONSerializer
-
-  self.snippet_field = :content
 
   attribute :content, String, mapping: { analyzer: 'english_analyzer' }
   attribute :description, String, mapping: { analyzer: 'english_analyzer' }

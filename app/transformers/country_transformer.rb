@@ -1,12 +1,11 @@
+require 'taxonomy_attributes_transformer'
 require 'trade_region'
-require 'transformer'
 require 'world_region'
 
 module CountryTransformer
-  extend Transformer
-  extend self
+  extend TaxonomyAttributesTransformer
 
-  def transform(country_hash)
+  def self.transform(country_hash)
     trade_regions = TradeRegion.search_by_countries country_hash[:label]
     country_hash[:trade_regions] = trade_regions.map(&:label).sort
 

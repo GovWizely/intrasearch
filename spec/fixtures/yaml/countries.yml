@@ -38,3 +38,18 @@
   trade_regions: []
   world_region_paths: []
   world_regions: []
+
+- :id: http://webprotege.stanford.edu/R8UBTJoenDbXjYBjcyr1LXc
+  :label: Taiwan
+  :trade_regions:
+  - Asia Pacific Economic Cooperation
+  :world_region_paths:
+  - "/Asia"
+  - "/Asia Pacific"
+  - "/Asia/East Asia"
+  - "/Pacific Rim"
+  :world_regions:
+  - Asia
+  - Asia Pacific
+  - East Asia
+  - Pacific Rim
