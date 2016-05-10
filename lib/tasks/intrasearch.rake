@@ -18,4 +18,9 @@ namespace :intrasearch do
   task import_articles: :environment do
     BaseArticleImporter.descendants.each(&:import)
   end
+
+  desc 'import web documents'
+  task import_web_documents: :environment do
+    WebDocumentImporter.import
+  end
 end

@@ -1,10 +1,8 @@
-require 'rack_helper'
-
 RSpec.describe IndexManager do
   let(:client) { Elasticsearch::Persistence::Repository.new.client }
   let(:subject) { described_class.new(Country) }
 
-  describe '#prepare_new_index!' do
+  describe '#setup_new_index!' do
     before do
       expect(DateTime).to receive(:current).
                             and_return(DateTime.new(2015, 10, 11, 12, 13, 14),
@@ -15,11 +13,12 @@ RSpec.describe IndexManager do
       before { subject.setup_new_index! }
 
       it 'creates new index' do
-        expect(client.indices.exists? index: 'intrasearch-test-taxonomies-v2-countries-20151011_121314_000').to be true
+        expect(client.indices.exists? index: 'intrasearch-test-taxonomies-countries-v1-20151011_121314_000').to be true
         subject.setup_new_index!
         expect(client.indices.exists? index: 'intrasearch-test-taxonomies-countries-current').to be true
-        expect(client.indices.exists? index: 'intrasearch-test-taxonomies-v2-countries-20151011_151617_000').to be true
-        expect(client.indices.exists? index: 'intrasearch-test-taxonomies-v2-countries-20151011_121314_000').to be false
+        expect(client.indices.exists? index: 'intrasearch-test-taxonomies-countries-v1-20151011_151617_000').to be true
+        expect(subject.get_current_index_names).to eq(%w(intrasearch-test-taxonomies-countries-v1-20151011_151617_000))
+        expect(client.indices.exists? index: 'intrasearch-test-taxonomies-countries-v1-20151011_121314_000').to be false
       end
     end
   end
@@ -53,15 +52,16 @@ RSpec.describe IndexManager do
     end
 
     context 'when an older version index is present' do
-      let(:older_version_index_name_fragment) do
+      let(:older_version_index_name_prefix) do
         ['intrasearch',
          Intrasearch.env,
          'taxonomies',
-         'v1',
-         described_class.name.tableize]
+         'countries',
+         'v0',
+         'current'].join('-')
       end
 
-      before { subject.setup_new_index! older_version_index_name_fragment }
+      before { subject.setup_new_index! older_version_index_name_prefix }
 
       it 'creates new index' do
         current_index_names = subject.get_current_index_names

@@ -7,7 +7,8 @@ class HowToArticleSearch < BaseArticleSearch
   TYPES = [
     Article,
     BasicGuideToExporting,
-    Faq].freeze
+    Faq
+  ].freeze
 
   def initialize(options)
     options[:types] = TYPES

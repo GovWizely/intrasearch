@@ -1,5 +1,3 @@
-require 'rack_helper'
-
 RSpec.describe MarketIntelligenceCountAPI do
   include Rack::Test::Methods
 
@@ -21,7 +19,7 @@ RSpec.describe MarketIntelligenceCountAPI do
 
     before { get '/v1/articles/count' }
 
-    it_behaves_like 'API response'
+    it_behaves_like 'a successful API response'
 
     it 'returns metadata' do
       expect(parsed_body[:metadata]).to eq(total: 4)

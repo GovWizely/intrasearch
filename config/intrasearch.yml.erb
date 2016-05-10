@@ -1,2 +1,3 @@
 <%= @environment %>:
   article_url_prefix: '<%= @article_url_prefix %>'
+  web_document_domains: [<%= @web_document_domains.map { |d| "'#{d}'" }.join(', ') %>]

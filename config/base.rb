@@ -7,6 +7,8 @@ module Intrasearch
 
   @root = Pathname.new File.expand_path('../../', __FILE__)
 
+  @config = YAML.load(@root.join('config/intrasearch.yml').read)[@env]
+
   @logger = begin
     logger_file = ::File.new(@root.join("log/#{@env}.log"), 'a+')
     logger_file.sync = true
@@ -21,7 +23,7 @@ module Intrasearch
   end
 
   class << self
-    attr_reader :env, :logger, :middlewares, :root
+    attr_reader :config, :env, :logger, :middlewares, :root
   end
 end
 

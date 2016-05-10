@@ -1,5 +1,4 @@
 require 'active_support/core_ext/string/inflections'
-require 'elasticsearch/persistence/model'
 
 require 'base_model'
 require 'taxonomy_search_methods'
@@ -7,7 +6,6 @@ require 'taxonomy_search_methods'
 module Taxonomy
   def self.included(base)
     base.class_eval do
-      include Elasticsearch::Persistence::Model
       include BaseModel
       extend TaxonomySearchMethods
 
@@ -16,11 +14,8 @@ module Taxonomy
       self.index_name_prefix = ['intrasearch',
                                 Intrasearch.env,
                                 'taxonomies',
-                                'v2',
-                                name.tableize].join('-').freeze
-
-      self.index_name_fragments = [index_name_prefix,
-                                   'current'].freeze
+                                name.tableize,
+                                'v1'].join('-').freeze
 
       self.index_alias_name = ['intrasearch',
                                Intrasearch.env,

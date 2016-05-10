@@ -2,34 +2,41 @@ require 'active_support/core_ext/object/blank'
 require 'active_support/core_ext/string/filters'
 
 require 'country'
-require 'match_country_query_builder'
-require 'match_non_geo_name_query_builder'
-require 'match_world_region_query_builder'
+require 'query_builder'
 require 'query_parser'
+require 'web_page_highlight_builder'
 require 'world_region'
 
 class BaseArticleSearchQuery
+  include QueryBuilder
+  include WebPageHighlightBuilder
+
   def initialize(countries: [], industries: [], limit:, offset:, q: nil, topics: [], trade_regions: [], world_regions: [])
-    @countries = normalize_array_of_str countries
-    @industries = normalize_array_of_str industries
+    @countries = countries.map(&:squish)
+    @industries = industries.map(&:squish)
     @limit = limit
     @offset = offset
-    @topics = normalize_array_of_str topics
-    @trade_region_filters = normalize_array_of_str trade_regions
-    @world_region_filters = normalize_array_of_str world_regions
+    @topics = topics.map(&:squish)
+    @trade_regions = trade_regions.map(&:squish)
+    @world_regions = world_regions.map(&:squish)
 
-    @original_query = q
+    @q = q
 
-    query_parser_results = QueryParser.parse(@original_query)
-    @q = query_parser_results[:non_geo_name_query]
+    query_parser_results = QueryParser.parse(@q)
+    @non_geo_name_query = query_parser_results[:non_geo_name_query]
     @taxonomies = query_parser_results[:taxonomies]
   end
 
   def to_hash
     {
-      query: filtered_query,
+      query: {
+        bool: {
+          must: must_clauses,
+          filter: filter_clauses
+        }
+      },
       aggs: aggregations,
-      highlight: highlight,
+      highlight: highlight(@q, :atom),
       from: @offset,
       size: @limit
     }
@@ -37,67 +44,48 @@ class BaseArticleSearchQuery
 
   private
 
-  def normalize_array_of_str(array)
-    array.map { |l| l.downcase.squish }
-  end
-
-  def filtered_query
-    must_queries = []
-    must_queries << MatchNonGeoNameQueryBuilder.build(@q) if @q.present?
-
-    must_queries.push(*build_taxonomy_queries)
-
-    terms = {
-      countries: @countries,
-      industries: @industries,
-      topics: @topics,
-      trade_regions: @trade_region_filters,
-      world_regions: @world_region_filters
-    }
-    must_queries.push(*build_term_queries(terms))
-
-    { filtered: { query: { bool: { must: must_queries } } } }
+  def must_clauses
+    must_clauses = []
+    must_clauses << multi_match(%w(atom title summary), @non_geo_name_query) if @non_geo_name_query.present?
+    must_clauses.push(*build_taxonomy_queries)
   end
 
   def build_taxonomy_queries
     @taxonomies.map do |taxonomy|
       case taxonomy
       when Country
-        MatchCountryQueryBuilder.build taxonomy.label
+        multi_match %w(atom countries^3 title summary), taxonomy.label
       when WorldRegion
-        MatchWorldRegionQueryBuilder.build taxonomy
+        multi_match %w(atom title summary world_regions^3), taxonomy.label
       end
     end
   end
 
-  def build_term_queries(terms)
-    terms.map do |field, values|
+  def filter_clauses
+    filters = {
+      countries: @countries,
+      industries: @industries,
+      topics: @topics,
+      trade_regions: @trade_regions,
+      world_regions: @world_regions
+    }
+
+    filters.map do |field, values|
       { terms: { field => values } } if values.present?
     end.compact
   end
 
   def aggregations
     aggregation_options = {
-      countries: 'countries.raw',
+      countries: 'countries',
       industries: 'industry_paths',
       topics: 'topic_paths',
-      trade_regions: 'trade_regions.raw',
+      trade_regions: 'trade_regions',
       types: 'type',
       world_regions: 'world_region_paths'
     }
     aggregation_options.each_with_object({}) do |params, hash|
       hash.merge! AggregationQueryBuilder.build(params.first, params.last)
     end
-  end
-
-  def highlight
-    return {} if @original_query.blank?
-
-    {
-      fields: {
-        atom: { fragment_size: 255, number_of_fragments: 1 },
-        title: { number_of_fragments: 0 }
-      }
-    }
   end
 end

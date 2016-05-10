@@ -1,4 +1,3 @@
-require 'rack_helper'
 require 'rake'
 
 RSpec.describe 'intrasearch.rake' do
@@ -43,6 +42,14 @@ RSpec.describe 'intrasearch.rake' do
       expect(TopMarketsReportImporter).to receive(:import)
 
       @rake['intrasearch:import_articles'].invoke
+    end
+  end
+
+  describe 'intrasearch:import_web_documents' do
+    it 'imports web documents' do
+      expect(WebDocumentImporter).to receive(:import)
+
+      @rake['intrasearch:import_web_documents'].invoke
     end
   end
 end

@@ -1,2 +1,2 @@
-require 'yajl'
+require 'yajl/json_gem'
 

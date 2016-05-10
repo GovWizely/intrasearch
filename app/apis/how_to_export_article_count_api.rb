@@ -4,6 +4,6 @@ class HowToExportArticleCountAPI < Grape::API
   version 'v1'
 
   get '/how_to_export_articles/count' do
-    HowToArticleSearch.new(limit: 0).run
+    HowToArticleSearch.new(search_type: :count).run
   end
 end

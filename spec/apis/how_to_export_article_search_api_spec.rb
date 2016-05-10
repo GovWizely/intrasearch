@@ -1,5 +1,3 @@
-require 'rack_helper'
-
 RSpec.describe HowToExportArticleSearchAPI do
   include Rack::Test::Methods
 
@@ -23,7 +21,7 @@ RSpec.describe HowToExportArticleSearchAPI do
     context 'when searching for articles with matching query term in the title' do
       before { get endpoint, 'q' => 'nafta', 'limit' => 1 }
 
-      it_behaves_like 'API response'
+      it_behaves_like 'a successful API response'
 
       it 'returns metadata' do
         expect(parsed_body[:metadata]).to eq(total: 3,
@@ -102,7 +100,7 @@ RSpec.describe HowToExportArticleSearchAPI do
     context 'when searching for articles with matching query term in the summary' do
       before { get endpoint, 'q' => 'overview', 'limit' => 1 }
 
-      it_behaves_like 'API response'
+      it_behaves_like 'a successful API response'
 
       it 'returns metadata' do
         expect(parsed_body[:metadata]).to eq(total: 1,
@@ -126,7 +124,7 @@ RSpec.describe HowToExportArticleSearchAPI do
     context 'when searching for articles with matching query term in the atom' do
       before { get endpoint, 'q' => 'trademark', 'limit' => 1 }
 
-      it_behaves_like 'API response'
+      it_behaves_like 'a successful API response'
 
       it 'returns metadata' do
         expect(parsed_body[:metadata]).to eq(total: 1,
@@ -148,9 +146,9 @@ RSpec.describe HowToExportArticleSearchAPI do
     end
 
     context 'when searching for articles with countries' do
-      before { get endpoint, countries: ' canadA, bogus country, czech republiC' }
+      before { get endpoint, countries: 'Canada, bogus country' }
 
-      it_behaves_like 'API response'
+      it_behaves_like 'a successful API response'
 
       it 'returns matching countries aggregation' do
         expected_countries = [
@@ -163,9 +161,9 @@ RSpec.describe HowToExportArticleSearchAPI do
     end
 
     context 'when searching for articles with industries' do
-      before { get endpoint, industries: 'eCommerce Industry, spacE ' }
+      before { get endpoint, industries: 'eCommerce Industry, bogus industry ' }
 
-      it_behaves_like 'API response'
+      it_behaves_like 'a successful API response'
 
       it 'returns metadata' do
         expect(parsed_body[:metadata]).to eq(total: 1,
@@ -186,9 +184,9 @@ RSpec.describe HowToExportArticleSearchAPI do
     end
 
     context 'when searching for articles with topics' do
-      before { get endpoint, topics: 'Free TradE AgreementS , invalid ' }
+      before { get endpoint, topics: 'Free Trade Agreements , invalid ' }
 
-      it_behaves_like 'API response'
+      it_behaves_like 'a successful API response'
 
       it 'returns metadata' do
         expect(parsed_body[:metadata]).to eq(total: 3,
@@ -211,9 +209,9 @@ RSpec.describe HowToExportArticleSearchAPI do
     end
 
     context 'when searching for articles with trade regions' do
-      before { get endpoint, trade_regions: ' invalid  , Trans Pacific PartnershiP, Asia Pacific Economic CooperatioN ' }
+      before { get endpoint, trade_regions: ' invalid  , Trans Pacific Partnership, Asia Pacific Economic Cooperation ' }
 
-      it_behaves_like 'API response'
+      it_behaves_like 'a successful API response'
 
       it 'returns trade_regions aggregation' do
         expected_trade_regions = [
@@ -228,9 +226,9 @@ RSpec.describe HowToExportArticleSearchAPI do
     end
 
     context 'when searching for articles with world regions' do
-      before { get endpoint, world_regions: ' invalid  , pacific RIM  , westerN Hemisphere ' }
+      before { get endpoint, world_regions: ' invalid  , Pacific Rim  , Western Hemisphere ' }
 
-      it_behaves_like 'API response'
+      it_behaves_like 'a successful API response'
 
       it 'returns metadata' do
         expect(parsed_body[:metadata]).to eq(total: 3,
@@ -255,7 +253,7 @@ RSpec.describe HowToExportArticleSearchAPI do
     context 'when searching for articles with limit and offset' do
       before { get endpoint, limit: 1, offset: 1, q: 'nafta' }
 
-      it_behaves_like 'API response'
+      it_behaves_like 'a successful API response'
 
       it 'returns metadata' do
         expect(parsed_body[:metadata]).to eq(total: 3,
@@ -268,7 +266,7 @@ RSpec.describe HowToExportArticleSearchAPI do
     context 'when searching for articles where not all query terms are present in the index' do
       before { get endpoint, q: 'atom nafta' }
 
-      it_behaves_like 'API response'
+      it_behaves_like 'a successful API response'
 
       it 'returns empty results' do
         aggregate_failures do
@@ -287,7 +285,7 @@ RSpec.describe HowToExportArticleSearchAPI do
     context 'when query contains geo names' do
       before { get endpoint, q: 'north america' }
 
-      it_behaves_like 'API response'
+      it_behaves_like 'a successful API response'
 
       it 'returns metadata' do
         expect(parsed_body[:metadata]).to eq(total: 2,
@@ -300,7 +298,7 @@ RSpec.describe HowToExportArticleSearchAPI do
     context 'when query contains HTML entity name' do
       before { get endpoint, q: 'amp' }
 
-      it_behaves_like 'API response'
+      it_behaves_like 'a successful API response'
 
       it 'returns empty results' do
         expect(parsed_body[:results]).to be_empty

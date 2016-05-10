@@ -1,5 +1,3 @@
-require 'rack_helper'
-
 RSpec.describe HowToExportArticleCountAPI do
   include Rack::Test::Methods
 
@@ -24,7 +22,7 @@ RSpec.describe HowToExportArticleCountAPI do
 
     let(:parsed_body) { JSON.parse(last_response.body, symbolize_names: true) }
 
-    it_behaves_like 'API response'
+    it_behaves_like 'a successful API response'
 
     it 'returns metadata' do
       expect(parsed_body[:metadata]).to eq(total: 5)

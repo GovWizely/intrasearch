@@ -33,7 +33,8 @@ template "#{deploy.deploy_to}/shared/config/intrasearch.yml" do
   group deploy.group
   owner deploy.user
   variables(environment: env_vars['RACK_ENV'],
-            article_url_prefix: node['intrasearch_data']['base_article_url_prefix'])
+            article_url_prefix: node['intrasearch_data']['base_article_url_prefix'],
+            web_document_domains: node['intrasearch_data']['web_document_domains'])
 end
 
 template "#{deploy.deploy_to}/shared/config/newrelic.yml" do

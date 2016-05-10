@@ -27,5 +27,7 @@ module Intrasearch
     mount HowToExportArticleSearchAPI
     mount MarketIntelligenceCountAPI
     mount MarketIntelligenceSearchAPI
+    mount WebDocumentCountAPI
+    mount WebDocumentSearchAPI
   end
 end

@@ -5,9 +5,8 @@ module OwlParser
     rdfs: 'http://www.w3.org/2000/01/rdf-schema#' }.freeze
 
   def self.included(base)
-    base.class_eval do
-      class_attribute :subnode_path_template,
-                      instance_writer: false
+    class << base
+      attr_accessor :subnode_path_template
     end
   end
 
@@ -72,7 +71,7 @@ module OwlParser
   end
 
   def subnode_path(subject)
-    subnode_path_template % template_format_args(subject)
+    self.class.subnode_path_template % template_format_args(subject)
   end
 
   def template_format_args(subject)

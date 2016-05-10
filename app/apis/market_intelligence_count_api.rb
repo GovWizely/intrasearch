@@ -5,7 +5,7 @@ class MarketIntelligenceCountAPI < Grape::API
 
   %w(/market_intelligence_articles/count /articles/count).each do |path|
     get path do
-      MarketIntelligenceSearch.new(limit: 0).run
+      MarketIntelligenceSearch.new(search_type: :count).run
     end
   end
 end

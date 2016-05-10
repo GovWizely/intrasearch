@@ -3,7 +3,7 @@ require 'repository'
 
 module TaxonomySearch
   def search_for_labels_within_input(types, input)
-    repository = Repository.new types
+    repository = Repository.new(*types)
     repository.search MatchLabelWithinInputQuery.new(input)
   end
 

@@ -1,20 +1,18 @@
-require 'rack_helper'
-
 RSpec.describe BaseArticleSearchQuery do
   describe '#to_hash' do
     context 'when countries is present' do
       it 'filters on countries' do
         expected_query_hash = [
           terms: {
-            countries: %w(mexico macedonia)
+            countries: %w(Mexico Macedonia)
           }
         ]
 
         query = described_class.new(limit: 10,
                                     offset: 0,
                                     countries: ['Mexico',
-                                                ' MacedoniA '])
-        expect(query.to_hash[:query][:filtered][:query][:bool][:must]).to eq(expected_query_hash)
+                                                ' Macedonia '])
+        expect(query.to_hash[:query][:bool][:filter]).to eq(expected_query_hash)
       end
     end
 
@@ -22,16 +20,16 @@ RSpec.describe BaseArticleSearchQuery do
       it 'filters on trade_regions' do
         expected_query_hash = [
           terms: {
-            trade_regions: ['european free trade association',
-                            'association of southeast asian nations']
+            trade_regions: ['European Free Trade Association',
+                            'Association of Southeast Asian Nations']
           }
         ]
 
         query = described_class.new(limit: 10,
                                     offset: 0,
-                                    trade_regions: ['European Free Trade Association',
-                                                    'Association of Southeast Asian NationS'])
-        expect(query.to_hash[:query][:filtered][:query][:bool][:must]).to eq(expected_query_hash)
+                                    trade_regions: ['European  Free  Trade  Association ',
+                                                    ' Association  of  Southeast  Asian  Nations '])
+        expect(query.to_hash[:query][:bool][:filter]).to eq(expected_query_hash)
       end
     end
 
@@ -39,16 +37,16 @@ RSpec.describe BaseArticleSearchQuery do
       it 'filters on world_regions' do
         expected_query_hash = [
           terms: {
-            world_regions: ['north america',
-                            'pacific rim']
+            world_regions: ['North America',
+                            'Pacific Rim']
           }
         ]
 
         query = described_class.new(limit: 10,
                                     offset: 0,
-                                    world_regions: [' North  americA',
-                                                    'pacifiC riM '])
-        expect(query.to_hash[:query][:filtered][:query][:bool][:must]).to eq(expected_query_hash)
+                                    world_regions: [' North  America',
+                                                    'Pacific  Rim '])
+        expect(query.to_hash[:query][:bool][:filter]).to eq(expected_query_hash)
       end
     end
 
@@ -68,37 +66,33 @@ RSpec.describe BaseArticleSearchQuery do
         query = described_class.new(limit: 10,
                                     offset: 0,
                                     q: 'healthcare united states Congo Brazzaville')
-        expected_query_hash = {
-          bool: {
-            must: [
-              {
-                multi_match: {
-                  fields: %w(atom title summary),
-                  operator: 'and',
-                  query: 'healthcare',
-                  type: 'cross_fields'
-                }
-              },
-              {
-                multi_match: {
-                  fields: %w(atom countries^3 title summary),
-                  operator: 'and',
-                  query: 'Congo-Brazzaville',
-                  type: 'cross_fields'
-                }
-              },
-              {
-                multi_match: {
-                  fields: %w(atom countries^3 title summary),
-                  operator: 'and',
-                  query: 'United States',
-                  type: 'cross_fields'
-                }
-              }
-            ]
+        expected_query_hash = [
+          {
+            multi_match: {
+              fields: %w(atom title summary),
+              operator: 'and',
+              query: 'healthcare',
+              type: 'cross_fields'
+            }
+          },
+          {
+            multi_match: {
+              fields: %w(atom countries^3 title summary),
+              operator: 'and',
+              query: 'Congo-Brazzaville',
+              type: 'cross_fields'
+            }
+          },
+          {
+            multi_match: {
+              fields: %w(atom countries^3 title summary),
+              operator: 'and',
+              query: 'United States',
+              type: 'cross_fields'
+            }
           }
-        }
-        expect(query.to_hash[:query][:filtered][:query]).to eq(expected_query_hash)
+        ]
+        expect(query.to_hash[:query][:bool][:must]).to eq(expected_query_hash)
       end
     end
 
@@ -118,29 +112,25 @@ RSpec.describe BaseArticleSearchQuery do
         query = described_class.new(limit: 10,
                                     offset: 0,
                                     q: 'healthcare north america')
-        expected_query_hash = {
-          bool: {
-            must: [
-              {
-                multi_match: {
-                  fields: %w(atom title summary),
-                  operator: 'and',
-                  query: 'healthcare',
-                  type: 'cross_fields'
-                }
-              },
-              {
-                multi_match: {
-                  fields: %w(atom title summary world_regions^3),
-                  operator: 'and',
-                  query: 'North America',
-                  type: 'cross_fields'
-                }
-              }
-            ]
+        expected_query_hash = [
+          {
+            multi_match: {
+              fields: %w(atom title summary),
+              operator: 'and',
+              query: 'healthcare',
+              type: 'cross_fields'
+            }
+          },
+          {
+            multi_match: {
+              fields: %w(atom title summary world_regions^3),
+              operator: 'and',
+              query: 'North America',
+              type: 'cross_fields'
+            }
           }
-        }
-        expect(query.to_hash[:query][:filtered][:query]).to eq(expected_query_hash)
+        ]
+        expect(query.to_hash[:query][:bool][:must]).to eq(expected_query_hash)
       end
     end
   end

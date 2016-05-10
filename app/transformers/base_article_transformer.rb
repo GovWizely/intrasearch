@@ -12,7 +12,7 @@ module BaseArticleTransformer
 
   extend self
 
-  URL_PREFIX = YAML.load(Intrasearch.root.join('config/intrasearch.yml').read)[Intrasearch.env]['article_url_prefix'].freeze
+  URL_PREFIX = Intrasearch.config['article_url_prefix'].freeze
 
   def transform(attributes)
     transform_countries attributes

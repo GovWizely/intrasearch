@@ -1,7 +1,7 @@
 require 'elasticsearch/persistence'
 
 class Repository < Elasticsearch::Persistence::Repository::Class
-  def initialize(types)
+  def initialize(*types)
     self.index_name = types.map(&:index_name).join(',')
     self.document_type = types.map(&:document_type).join(',')
   end

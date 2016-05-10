@@ -1,14 +1,14 @@
-require 'active_support/core_ext/class/attribute'
+require 'elasticsearch/persistence/model'
 
 module BaseModel
   def self.included(base)
     base.class_eval do
-      class_attribute :index_alias_name,
-                      :index_name_fragments,
-                      :index_name_prefix,
-                      instance_writer: false
+      include Elasticsearch::Persistence::Model
 
       class << self
+        attr_accessor :index_alias_name,
+                      :index_name_prefix
+
         def reset_index_name!
           self.index_name = index_alias_name
         end

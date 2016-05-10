@@ -16,10 +16,10 @@ class IndexManager
     @client = Elasticsearch::Client.new
   end
 
-  def setup_new_index!(index_name_fragments = nil)
+  def setup_new_index!(index_name_prefix = nil)
     current_index_names = get_current_index_names
-    index_name_fragments ||= Array.new @model_class.index_name_fragments
-    new_index_name = create_new_index! index_name_fragments
+    index_name_prefix ||= @model_class.index_name_prefix
+    new_index_name = create_new_index! index_name_prefix
     yield if block_given?
     swap_indices current_index_names, new_index_name
     @model_class.reset_index_name!
@@ -41,8 +41,8 @@ class IndexManager
     @client.indices.delete index: current_index_names if current_index_names.present?
   end
 
-  def create_new_index!(index_name_fragments)
-    new_index_name = build_timestamped_index_name index_name_fragments
+  def create_new_index!(index_name_prefix)
+    new_index_name = build_timestamped_index_name index_name_prefix
     @model_class.index_name = new_index_name
     @model_class.create_index!
     new_index_name
@@ -60,10 +60,8 @@ class IndexManager
 
   private
 
-  def build_timestamped_index_name(namespace_fragments)
-    index_name_fragments = Array.new namespace_fragments
-    index_name_fragments.pop
-    index_name_fragments.push DateTime.current.strftime('%Y%m%d_%H%M%S_%L')
-    index_name_fragments.join('-')
+  def build_timestamped_index_name(index_name_prefix)
+    [index_name_prefix,
+     DateTime.current.strftime('%Y%m%d_%H%M%S_%L')].join('-')
   end
 end

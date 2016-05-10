@@ -1,0 +1,41 @@
+- domain: foo.example.org
+  url: https://foo.example.org/home
+  title: Foo Home page title
+  description: Home page description
+  content: Home page content.
+
+- domain: foo.example.org
+  url: https://foo.example.org/welcome
+  title: Welcome
+  description: Welcome page lorem ipsum description
+  content: "Welcome to the United States Success in the U.S. market can help drive success
+    globally. With an annual GDP of $18 trillion and population of over 320 million,
+    the United States is the world’s most attractive consumer market, offering unmatched
+    diversity, a thriving culture of innovation, and the most productive workforce.
+    Companies of all sizes – from startups to multinationals – can find the ideas, resources,
+    and market to succeed and grow. Featured Events SelectUSA uses the convening power
+    of the U.S. government to showcase investment opportunities and bring investors
+    and U.S. locations together. SelectUSA Investment Summit The SelectUSA Investment
+    Summit is the highest-profile event promoting foreign direct investment (FDI) in
+    the United States. Upcoming Events SelectUSA hosts a wide range of events -- from
+    trade and road shows to seminars and special events -- in the United States and
+    around the world. See what's coming up. News and Releases Investment Council New
+    Investment Advisory Council recruiting candidates to advise on FDI attraction. President
+    Leads Summit President Barack Obama to deliver address at the 2016 SelectUSA Investment
+    Summit in June. FDI Creates Good Jobs Study shows 12 million jobs (8.5 percent of
+    U.S. labor force) can be attributed to FDI. How Can We Help? We are here to help
+    you access and make the most of our services. Looking to Invest? Looking to Attract
+    Investment?"
+
+- domain: foo.example.org
+  url: https://foo.example.org/about
+  title: Foo About page title
+  description: About page description
+  content: About page content.
+
+- domain: bar.example.org
+  url: https://bar.example.org/home
+  title: Home page
+  description: Home page description
+  content: Home page content.
+
