@@ -100,7 +100,7 @@ RSpec.describe HowToExportArticleSearchAPI do
     end
 
     context 'when searching for articles with matching query term in the summary' do
-      before { get endpoint, 'q' => 'overview', 'limit' => 1 }
+      before { get endpoint, 'q' => 'general overview', 'limit' => 1 }
 
       it_behaves_like 'API response'
 
@@ -116,7 +116,7 @@ RSpec.describe HowToExportArticleSearchAPI do
 
         expected_first_result = {
           id: 'ka8t0000000GnHmAAK',
-          snippet: 'General Information The North American Free Trade Agreement (NAFTA), which was enacted in 1994 and created a free trade zone for Mexico, Canada, and the United States, is the most important feature in the U.S.-Mexico bilateral commercial relationship. As ...',
+          snippet: '<em>General</em> Information The North American Free Trade Agreement (NAFTA), which was enacted in 1994 and created a free trade zone for Mexico, Canada, and the United States, is the most important feature in the U.S.-Mexico bilateral commercial relationship ...',
           title: 'NAFTA',
           url: 'https://example.org/article2?id=North-American-Free-Trade-Agreement' }
         expect(parsed_body[:results].first).to eq(expected_first_result)

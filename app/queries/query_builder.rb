@@ -4,7 +4,8 @@ module QueryBuilder
       multi_match: {
         fields: fields,
         operator: 'and',
-        query: query
+        query: query,
+        type: 'cross_fields'
       }
     }
   end

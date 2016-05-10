@@ -75,7 +75,8 @@ RSpec.describe BaseArticleSearchQuery do
                 multi_match: {
                   fields: %w(atom title summary),
                   operator: 'and',
-                  query: 'healthcare'
+                  query: 'healthcare',
+                  type: 'cross_fields'
                 }
               },
               {
@@ -83,6 +84,7 @@ RSpec.describe BaseArticleSearchQuery do
                   fields: %w(atom countries^3 title summary),
                   operator: 'and',
                   query: 'Congo-Brazzaville',
+                  type: 'cross_fields'
                 }
               },
               {
@@ -90,6 +92,7 @@ RSpec.describe BaseArticleSearchQuery do
                   fields: %w(atom countries^3 title summary),
                   operator: 'and',
                   query: 'United States',
+                  type: 'cross_fields'
                 }
               }
             ]
@@ -122,7 +125,8 @@ RSpec.describe BaseArticleSearchQuery do
                 multi_match: {
                   fields: %w(atom title summary),
                   operator: 'and',
-                  query: 'healthcare'
+                  query: 'healthcare',
+                  type: 'cross_fields'
                 }
               },
               {
@@ -130,6 +134,7 @@ RSpec.describe BaseArticleSearchQuery do
                   fields: %w(atom title summary world_regions^3),
                   operator: 'and',
                   query: 'North America',
+                  type: 'cross_fields'
                 }
               }
             ]
