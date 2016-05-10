@@ -96,7 +96,6 @@ class BaseArticleSearchQuery
     {
       fields: {
         atom: { fragment_size: 255, number_of_fragments: 1 },
-        summary: { fragment_size: 255, number_of_fragments: 1 },
         title: { number_of_fragments: 0 }
       }
     }

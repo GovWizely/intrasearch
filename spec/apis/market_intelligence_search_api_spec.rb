@@ -103,7 +103,7 @@ RSpec.describe MarketIntelligenceSearchAPI do
 
         expected_first_result = {
           id: 'ka6t0000000006sAAA',
-          snippet: 'Canada ranks first among top export markets for U.S. building <em>product</em> manufacturers due to its proximity, duty-free status under NAFTA, relative lack of non-tariff trade barriers, and ease of commercial relationship establishment.',
+          snippet: 'The 2015 Top Markets Report for Building <em>Products</em> and Sustainable Construction ranked 75 exports markets.',
           title: 'Top Markets Building <em>Products</em> &amp; Sustainable Construction Country Case Study Challenges and Barriers - Canada',
           url: 'https://example.org/article2?id=Top-Markets-Building-Products-and-Sustainable-Construction-Country-Case-Study-Challenges-and-Barriers-Canada' }
         expect(parsed_body[:results].first).to eq(expected_first_result)
@@ -170,12 +170,12 @@ RSpec.describe MarketIntelligenceSearchAPI do
         expect(parsed_body[:aggregations][:world_regions]).to eq(expected_world_regions)
       end
 
-      it 'highlights matching terms from the summary' do
+      it 'renders truncated atom in the snippet' do
         expect(parsed_body[:results].count).to eq(1)
 
         expected_first_result = {
           id: 'ka0t0000000PCy6AAG',
-          snippet: 'Describes how widely e-Commerce is used, the primary sectors that sell through e-commerce, and how much product/service in each sector is sold through e-commerce versus brick-and-mortar <em>retail</em>.',
+          snippet: 'In 2014, more than two-thirds of Czech households had computers. Over 78 percent of the population had access to the Internet and 76 percent of households had broadband internet connections (according to Eurostat). The number of Czech consumers shopping ...',
           title: 'Czech Republic - E-Commerce',
           url: 'https://example.org/article2?id=Czech-Republic-ECommerce' }
         expect(parsed_body[:results].first).to eq(expected_first_result)
@@ -247,7 +247,7 @@ RSpec.describe MarketIntelligenceSearchAPI do
 
         expected_first_result = {
           id: 'ka0t0000000PCy6AAG',
-          snippet: 'In 2014, more than two-thirds of Czech <em>households</em> had <em>computers</em>.',
+          snippet: 'In 2014, more than two-thirds of Czech <em>households</em> had <em>computers</em>. Over 78 percent of the population had access to the Internet and 76 percent of <em>households</em> had broadband internet connections (according to Eurostat). The number of Czech consumers shopping ...',
           title: 'Czech Republic - E-Commerce',
           url: 'https://example.org/article2?id=Czech-Republic-ECommerce' }
         expect(parsed_body[:results].first).to eq(expected_first_result)
@@ -403,7 +403,6 @@ RSpec.describe MarketIntelligenceSearchAPI do
       it 'returns empty results' do
         expect(parsed_body[:results]).to be_empty
       end
-
     end
   end
 end

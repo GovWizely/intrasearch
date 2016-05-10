@@ -22,6 +22,7 @@ module Intrasearch
     end
 
     format :json
+    content_type :json, 'application/json; charset=utf-8'
     mount HowToExportArticleCountAPI
     mount HowToExportArticleSearchAPI
     mount MarketIntelligenceCountAPI

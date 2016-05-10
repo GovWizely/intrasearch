@@ -1,5 +1,9 @@
 - id: ka0t0000000PCy6AAG
-  atom: In 2014, more than two-thirds of Czech households had computers.
+  atom: In 2014, more than two-thirds of Czech households had computers. Over 78 percent
+    of the population had access to the Internet and 76 percent of households had broadband
+    internet connections (according to Eurostat). The number of Czech consumers shopping
+    online reached almost six million, which is over 50 percent of the country’s population.
+    Only two percent of individuals use the internet to buy or order online content.
   countries:
   - Czech Republic
   industry_paths:

@@ -111,12 +111,12 @@ RSpec.describe HowToExportArticleSearchAPI do
                                              next_offset: nil)
       end
 
-      it 'highlights matching terms from the summary' do
+      it 'renders truncated atom in the snippet' do
         expect(parsed_body[:results].count).to eq(1)
 
         expected_first_result = {
           id: 'ka8t0000000GnHmAAK',
-          snippet: 'An <em>overview</em> of the North American Free Trade Agreement.',
+          snippet: 'General Information The North American Free Trade Agreement (NAFTA), which was enacted in 1994 and created a free trade zone for Mexico, Canada, and the United States, is the most important feature in the U.S.-Mexico bilateral commercial relationship. As ...',
           title: 'NAFTA',
           url: 'https://example.org/article2?id=North-American-Free-Trade-Agreement' }
         expect(parsed_body[:results].first).to eq(expected_first_result)
@@ -305,7 +305,6 @@ RSpec.describe HowToExportArticleSearchAPI do
       it 'returns empty results' do
         expect(parsed_body[:results]).to be_empty
       end
-
     end
   end
 end
