@@ -111,7 +111,7 @@ RSpec.describe MarketIntelligenceSearchAPI do
     end
 
     context 'when searching for articles with matching query term in the summary' do
-      before { get endpoint, 'q' => 'retail computers', 'limit' => 1 }
+      before { get endpoint, 'q' => 'retail', 'limit' => 1 }
 
       it_behaves_like 'API response'
 
@@ -170,12 +170,12 @@ RSpec.describe MarketIntelligenceSearchAPI do
         expect(parsed_body[:aggregations][:world_regions]).to eq(expected_world_regions)
       end
 
-      it 'renders truncated atom in the snippet' do
+      it 'renders truncated atom without highlighting in the snippet' do
         expect(parsed_body[:results].count).to eq(1)
 
         expected_first_result = {
           id: 'ka0t0000000PCy6AAG',
-          snippet: 'In 2014, more than two-thirds of Czech households had <em>computers</em>. Over 78 percent of the population had access to the Internet and 76 percent of households had broadband internet connections (according to Eurostat). The number of Czech consumers shopping ...',
+          snippet: 'In 2014, more than two-thirds of Czech households had computers. Over 78 percent of the population had access to the Internet and 76 percent of households had broadband internet connections (according to Eurostat). The number of Czech consumers shopping ...',
           title: 'Czech Republic - E-Commerce',
           url: 'https://example.org/article2?id=Czech-Republic-ECommerce' }
         expect(parsed_body[:results].first).to eq(expected_first_result)
