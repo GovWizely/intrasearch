@@ -1,4 +1,5 @@
 .ruby-gemset
+/.bundle
 /config/airbrake.yml
 /config/intrasearch.yml
 /config/newrelic.yml

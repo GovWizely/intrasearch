@@ -1,9 +1,8 @@
 require 'shared_params'
-require 'trade_event_search'
+require 'trade_event'
 
 class TradeEventSearchAPI < Grape::API
   helpers SharedParams
-  version 'v1'
 
   params do
     use :pagination
@@ -20,6 +19,6 @@ class TradeEventSearchAPI < Grape::API
   end
 
   get '/trade_events/search' do
-    TradeEventSearch.new(declared(params)).run
+    TradeEvent.search declared(params)
   end
 end

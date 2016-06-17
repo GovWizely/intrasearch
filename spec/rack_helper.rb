@@ -4,6 +4,7 @@ require 'simplecov'
 
 SimpleCov.minimum_coverage 100
 SimpleCov.start do
+  add_filter '.bundle'
   add_filter '/config/initializers/server.rb'
   add_filter '/spec/'
   track_files '{app,lib}/**/*.rb'

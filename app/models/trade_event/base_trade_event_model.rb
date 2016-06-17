@@ -7,6 +7,13 @@ module TradeEvent
     def self.included(base)
       base.include BaseModel
 
+      base.attribute :start_date,
+                     Date,
+                     mapping: {
+                       format: 'strict_date',
+                       index: 'not_analyzed'
+                     }
+
       base.module_eval do
         self.append_index_namespace parent.name.tableize,
                                     name.demodulize.tableize

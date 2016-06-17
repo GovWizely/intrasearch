@@ -1,7 +1,3 @@
-require 'trade_event/dl_trade_event'
-require 'trade_event/ita_trade_event'
-require 'trade_event/sba_trade_event'
-require 'trade_event/ustda_trade_event'
 require 'trade_event_search_query'
 require 'trade_event_search_response'
 require 'repository'
@@ -9,13 +5,6 @@ require 'search'
 
 class TradeEventSearch
   include Search
-
-  TYPES = [
-    TradeEvent::DlTradeEvent,
-    TradeEvent::ItaTradeEvent,
-    TradeEvent::SbaTradeEvent,
-    TradeEvent::UstdaTradeEvent
-  ].freeze
 
   def initialize(options)
     super
@@ -26,7 +15,7 @@ class TradeEventSearch
   end
 
   def run
-    repository = TradeEventRepository.new(*TYPES)
+    repository = TradeEventRepository.new
     results = repository.search build_query
     TradeEventSearchResponse.new self, results
   end

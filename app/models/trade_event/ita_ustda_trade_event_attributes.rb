@@ -17,12 +17,6 @@ module TradeEvent
       base.attribute :registration_title, String, mapping: { analyzer: 'english_analyzer' }
       base.attribute :registration_url, String, mapping: { index: 'not_analyzed' }
       base.attribute :source, String, mapping: { index: 'not_analyzed' }
-      base.attribute :start_date,
-                Date,
-                mapping: {
-                  format: 'strict_date',
-                  index: 'not_analyzed'
-                }
       base.attribute :trade_regions, String, mapping: { index: 'not_analyzed' }
       base.attribute :url, String, mapping: { index: 'not_analyzed' }
       base.attribute :venues, String, mapping: { analyzer: 'english_analyzer' }

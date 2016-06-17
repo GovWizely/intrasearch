@@ -1,6 +1,11 @@
 require 'repository'
+require 'trade_event'
 
 class TradeEventRepository < Repository
+  def initialize
+    super(*TradeEvent.models)
+  end
+
   private
 
   def get_klass_from_type(type)

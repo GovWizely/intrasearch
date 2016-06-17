@@ -1,6 +1,6 @@
-require 'search'
+require 'search_response'
 
-module SearchResponse
+module ListResponse
   def self.included(base)
     class << base
       attr_accessor :serializer
@@ -19,20 +19,16 @@ module SearchResponse
   def as_json(options = nil)
     run_results = {
       metadata: build_metadata_hash,
+      results: as_json_results
     }
-    run_results[:results] = as_json_results unless @search.search_type_count?
-    yield run_results if block_given?
-
-    run_results
+    run_results.as_json options
   end
 
   private
 
   def build_metadata_hash
-    @total = @results.total
-    return { total: @total } if @search.search_type_count?
-
     @count = @results.count
+    @total = @results.total
     @next_offset = calculate_next_offset
 
     { total: @total,
@@ -43,22 +39,12 @@ module SearchResponse
 
   def calculate_next_offset
     next_offset_candidate = @count + @search.offset
-    if next_offset_candidate < @total && next_offset_candidate <= Search::MAX_OFFSET
-      next_offset_candidate
-    end
+    next_offset_candidate if next_offset_candidate < @total
   end
 
   def as_json_results
     @results.results.map do |result|
       self.class.serializer.serialize result
     end
-  end
-
-  def build_aggregations
-    aggregations = @results.response.aggregations
-    aggregations.keys.each do |agg|
-      aggregations[agg] &&= aggregations[agg]['buckets']
-    end
-    aggregations
   end
 end

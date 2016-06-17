@@ -13,7 +13,6 @@ gem 'yajl-ruby', require: 'yajl'
 
 group :development do
   gem 'guard'
-  gem 'guard-bundler', require: false
   gem 'guard-rack'
   gem 'pry'
 end

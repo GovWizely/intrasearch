@@ -28,12 +28,15 @@ Provides JSON Search API for Salesforce contents.
 
 ## Endpoints
 
+- [localhost:9292/admin/trade_events](http://localhost:9292/admin/trade_events)
+- [localhost:9292/admin/trade_events/:id](http://localhost:9292/admin/trade_events/:id)
 - [localhost:9292/v1/how_to_export_articles/count](http://localhost:9292/v1/how_to_export_articles/count)
 - [localhost:9292/v1/how_to_export_articles/search?q=trade](http://localhost:9292/v1/how_to_export_articles/search?q=trade)
 - [localhost:9292/v1/market_intelligence_articles/count](http://localhost:9292/v1/market_intelligence_articles/count)
 - [localhost:9292/v1/market_intelligence_articles/search?q=trade](http://localhost:9292/v1/market_intelligence_articles/search?q=trade)
 - [localhost:9292/v1/trade_events/count](http://localhost:9292/v1/trade_events/count)
 - [localhost:9292/v1/trade_events/search](http://localhost:9292/v1/trade_events/search?q=trade)
+- [localhost:9292/v1/trade_events/:id](http://localhost:9292/v1/trade_events/:id)
 - [localhost:9292/v1/web_documents/count](http://localhost:9292/v1/web_documents/count)
 - [localhost:9292/v1/web_documents/search?q=trade](http://localhost:9292/v1/web_documents/search?domain=CHANGEME&q=trade)
 

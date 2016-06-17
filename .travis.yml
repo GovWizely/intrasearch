@@ -1,12 +1,13 @@
 language: ruby
 rvm:
-- 2.2.4
+- 2.2.5
 bundler_args: "--without production"
 env:
 - ES_VERSION=2.2.2
 before_install:
-- curl -s https://download.elasticsearch.org/elasticsearch/release/org/elasticsearch/distribution/tar/elasticsearch/${ES_VERSION}/elasticsearch-${ES_VERSION}.tar.gz | tar xz -C /tmp || true
-- /tmp/elasticsearch-${ES_VERSION}/bin/elasticsearch -d
+- curl -s https://download.elasticsearch.org/elasticsearch/release/org/elasticsearch/distribution/tar/elasticsearch/${ES_VERSION}/elasticsearch-${ES_VERSION}.tar.gz
+  | tar xz -C /tmp || true
+- "/tmp/elasticsearch-${ES_VERSION}/bin/elasticsearch -d"
 before_script:
 - cp config/intrasearch.yml.example config/intrasearch.yml
 - cp config/restforce.yml.example config/restforce.yml

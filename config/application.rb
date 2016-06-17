@@ -17,7 +17,7 @@ Intrasearch.eager_load Intrasearch.root.join('config'),
 Intrasearch.eager_load Intrasearch.root.join('app', '*')
 Intrasearch.eager_load Intrasearch.root.join('app', 'indices', 'templates')
 
-%w(extractors models transformers importers).each do |dir_name|
+%w(apis extractors models transformers importers).each do |dir_name|
 Intrasearch.eager_load Intrasearch.root.join('app', dir_name),
                        '*/*.rb'
 end
@@ -33,14 +33,14 @@ module Intrasearch
 
     format :json
     content_type :json, 'application/json; charset=utf-8'
+
     mount HowToExportArticleCountAPI
     mount HowToExportArticleSearchAPI
     mount MarketIntelligenceCountAPI
     mount MarketIntelligenceSearchAPI
-    mount TradeEventCountAPI
-    mount TradeEventSearchAPI
-    mount TradeEventFindByIdAPI
+    mount TradeEventsAPI
     mount WebDocumentCountAPI
     mount WebDocumentSearchAPI
+    mount Admin::TradeEventsAPI
   end
 end
