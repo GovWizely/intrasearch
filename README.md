@@ -28,8 +28,13 @@ Provides JSON Search API for Salesforce contents.
 
 ## Endpoints
 
+- [localhost:9292/admin/users](http://localhost:9292/admin/users)
+- [POST localhost:9292/admin/users](http://localhost:9292/admin/users)
+- [localhost:9292/admin/users/:id](http://localhost:9292/admin/users/:id)
+- [PATCH localhost:9292/admin/users/:id](http://localhost:9292/admin/users/:id)
 - [localhost:9292/admin/trade_events](http://localhost:9292/admin/trade_events)
 - [localhost:9292/admin/trade_events/:id](http://localhost:9292/admin/trade_events/:id)
+- [PATCH localhost:9292/admin/trade_events/:id](http://localhost:9292/admin/trade_events/:id)
 - [localhost:9292/v1/how_to_export_articles/count](http://localhost:9292/v1/how_to_export_articles/count)
 - [localhost:9292/v1/how_to_export_articles/search?q=trade](http://localhost:9292/v1/how_to_export_articles/search?q=trade)
 - [localhost:9292/v1/market_intelligence_articles/count](http://localhost:9292/v1/market_intelligence_articles/count)

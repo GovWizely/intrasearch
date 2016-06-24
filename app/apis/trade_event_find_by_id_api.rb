@@ -1,5 +1,4 @@
 require 'trade_event'
-require 'trade_event_show_json_serializer'
 
 module TradeEventFindByIdAPI
   def self.extended(base)
@@ -10,7 +9,7 @@ module TradeEventFindByIdAPI
 
       get '/trade_events/:id' do
         trade_event = TradeEvent.find_by_id params.id
-        trade_event ? TradeEventShowJSONSerializer.serialize(trade_event) : status(:not_found)
+        trade_event ? serializer.serialize(trade_event) : status(:not_found)
       end
     end
   end

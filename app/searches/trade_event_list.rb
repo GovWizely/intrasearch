@@ -17,11 +17,23 @@ class TradeEventList
   def run
     repository = TradeEventRepository.new
     results = repository.search build_query
+    assign_extras results
     TradeEventListResponse.new self, results
   end
 
   def build_query
     TradeEventMatchAllQuery.new limit: @limit,
                                 offset: @offset
+  end
+
+  def assign_extras(results)
+    ids = results.results.map(&:id)
+    return if ids.blank?
+
+    extras = TradeEvent::TradeEventExtra.find ids
+    results.results.each_with_index do |result, index|
+      extra = extras[index] || TradeEvent::TradeEventExtra.new
+      result.instance_variable_set :@extra, extra
+    end
   end
 end

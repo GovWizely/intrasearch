@@ -1,0 +1,11 @@
+- id: 22346b67a36ab6acb9980bfefde51d2db041b5ed
+  event_name: Trade Event 1
+  description: Trade Event 1 Description
+  url: http://trade.event.example.org/1
+  source: DL
+
+- id: 94c68284a1b7698becdcdaa69dda29bb2d76051c
+  event_name: Trade Event 2
+  description: Trade Event 2 Description
+  url: http://trade.event.example.org/2
+  source: DL

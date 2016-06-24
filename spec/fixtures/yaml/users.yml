@@ -1,0 +1,30 @@
+---
+- :id: AVV-WR5f1r3iRzHwsCgc
+  :email: admin@example.org
+  :encrypted_password: "$encrypted"
+  :reset_password_token: "$reset_password_token"
+  :reset_password_sent_at:
+  :remember_created_at:
+  :sign_in_count: 2
+  :current_sign_in_at:
+  :last_sign_in_at:
+  :current_sign_in_ip:
+  :last_sign_in_ip:
+  :failed_attempts: 0
+  :unlock_token: "$unlock_token"
+  :locked_at:
+
+- :id: AVV-Zgpz1r3iRzHwsCge
+  :email: other@example.org
+  :encrypted_password: "$other_encrypted"
+  :reset_password_token: "$other_reset_password_token"
+  :reset_password_sent_at:
+  :remember_created_at:
+  :sign_in_count: 2
+  :current_sign_in_at:
+  :last_sign_in_at:
+  :current_sign_in_ip:
+  :last_sign_in_ip:
+  :failed_attempts: 0
+  :unlock_token: "$other_unlock_token"
+  :locked_at:

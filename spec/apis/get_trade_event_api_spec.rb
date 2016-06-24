@@ -1,7 +1,7 @@
 require 'support/api_shared_examples'
 require 'support/elastic_model_shared_contexts'
 
-RSpec.describe TradeEventFindByIdAPI do
+RSpec.describe GetTradeEventAPI do
   include Rack::Test::Methods
 
   def app
@@ -10,6 +10,7 @@ RSpec.describe TradeEventFindByIdAPI do
 
   include_context 'elastic models',
                   TradeEvent::DlTradeEvent,
+                  TradeEvent::TradeEventExtra,
                   TradeEvent::ItaTradeEvent,
                   TradeEvent::SbaTradeEvent,
                   TradeEvent::UstdaTradeEvent
@@ -59,7 +60,7 @@ RSpec.describe TradeEventFindByIdAPI do
         url: 'https://example.org/trade_event?id=36282',
         source: 'ITA',
         event_url: 'https://ita.trade.event.example.org/event/36282',
-        description: 'Event 36282 description.',
+        description: '<h1>Event 36282 description.</h1>',
         cost: '4400.0',
         registration_title: 'Event 36282 title',
         registration_url: 'https://ita.trade.event.example.org/registration/36282',
@@ -96,7 +97,7 @@ RSpec.describe TradeEventFindByIdAPI do
         url: 'https://example.org/trade_event?id=730226ea901d6c4bf7e4e4f5ef12ebec8c482a2b',
         source: 'SBA',
         event_url: nil,
-        description: 'SBA Trade Event 73022 description.',
+        description: '<h1>SBA Trade Event 73022 description.</h1>',
         cost: '35.00',
         registration_title: nil,
         registration_url: 'https://sba.trade.event.example.org/registration/73022',

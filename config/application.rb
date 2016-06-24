@@ -42,5 +42,6 @@ module Intrasearch
     mount WebDocumentCountAPI
     mount WebDocumentSearchAPI
     mount Admin::TradeEventsAPI
+    mount Admin::UsersAPI
   end
 end
