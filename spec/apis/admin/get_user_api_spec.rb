@@ -4,7 +4,6 @@ require 'support/api_spec_helpers'
 require 'support/elastic_model_shared_contexts'
 
 RSpec.describe Admin::GetUserAPI, endpoint: '/admin/users/%{id}' do
-  include Rack::Test::Methods
   include APISpecHelpers
 
   include_context 'elastic models',

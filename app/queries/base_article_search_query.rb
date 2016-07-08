@@ -5,7 +5,7 @@ require 'geo_name_search_query'
 class BaseArticleSearchQuery
   include GeoNameSearchQuery
 
-  self.full_text_search_fields = %w(atom title summary).freeze
+  append_full_text_search_fields %w(atom title summary).freeze
 
   self.aggregation_options = {
     countries: 'countries',

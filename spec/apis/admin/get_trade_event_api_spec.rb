@@ -4,7 +4,6 @@ require 'support/api_spec_helpers'
 require 'support/elastic_model_shared_contexts'
 
 RSpec.describe Admin::GetTradeEventAPI do
-  include Rack::Test::Methods
   include APISpecHelpers
 
   include_context 'elastic models',
@@ -18,7 +17,7 @@ RSpec.describe Admin::GetTradeEventAPI do
 
   include_context 'API response'
 
-  describe 'find a trade event by id', endpoint: '/admin/trade_events/94c68284a1b7698becdcdaa69dda29bb2d76051c' do
+  describe 'find a DL trade event by id', endpoint: '/admin/trade_events/94c68284a1b7698becdcdaa69dda29bb2d76051c' do
     before { get described_endpoint }
 
     it_behaves_like 'a successful API response'
@@ -47,7 +46,7 @@ RSpec.describe Admin::GetTradeEventAPI do
     end
   end
 
-  describe 'find a trade event by id', endpoint: '/admin/trade_events/36282' do
+  describe 'find an ITA trade event by id', endpoint: '/admin/trade_events/36282' do
     before { get described_endpoint }
 
     it_behaves_like 'a successful API response'

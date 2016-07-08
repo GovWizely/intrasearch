@@ -4,7 +4,6 @@ require 'support/api_spec_helpers'
 require 'support/elastic_model_shared_contexts'
 
 RSpec.describe Admin::UpdateTradeEventAPI, endpoint: '/admin/trade_events' do
-  include Rack::Test::Methods
   include APISpecHelpers
 
   include_context 'elastic models',

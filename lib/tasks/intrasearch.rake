@@ -28,4 +28,7 @@ namespace :intrasearch do
   task import_web_documents: :environment do
     WebDocumentImporter.import
   end
+
+  desc 'import all types of content'
+  task import_all: %i(import_taxonomies import_trade_events import_web_documents import_articles)
 end

@@ -3,6 +3,7 @@ require 'support/elastic_model_shared_contexts'
 RSpec.describe QueryParser do
   include_context 'elastic models',
                   Country,
+                  TradeRegion,
                   WorldRegion
 
   describe '.parse' do
@@ -21,7 +22,7 @@ RSpec.describe QueryParser do
     end
 
     context 'when query contains multiple geo names' do
-      let(:q) { 'healthcare Asia East Asia United States foo bar' }
+      let(:q) { 'healthcare Asia East Asia United States foo bar Asia Pacific Economic Cooperation' }
 
       subject(:parsed_query_hash) { QueryParser.parse q }
 
@@ -31,6 +32,7 @@ RSpec.describe QueryParser do
 
       it 'returns taxonomies' do
         expected_labels = [
+          'Asia Pacific Economic Cooperation',
           'United States',
           'East Asia',
           'Asia'

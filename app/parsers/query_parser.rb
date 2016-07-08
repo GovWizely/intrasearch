@@ -3,10 +3,11 @@ require 'active_support/core_ext/string/filters'
 
 require 'country'
 require 'taxonomy_search'
+require 'trade_region'
 require 'world_region'
 
 module QueryParser
-  GEO_MODEL_TYPES = [Country, WorldRegion].freeze
+  GEO_MODEL_TYPES = [Country, TradeRegion, WorldRegion].freeze
 
   def parse(q)
     return build_parsed_hash(q) if q.blank?

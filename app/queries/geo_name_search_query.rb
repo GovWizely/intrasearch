@@ -11,6 +11,7 @@ module GeoNameSearchQuery
   def self.included(base)
     base.module_eval do
       @countries_search_fields = %w(countries^3)
+      @trade_regions_search_fields = %w(trade_regions^3)
       @world_regions_search_fields = %w(world_regions^3)
 
       class << base
@@ -18,11 +19,13 @@ module GeoNameSearchQuery
                       :highlight_options
         attr_reader :countries_search_fields,
                     :full_text_search_fields,
+                    :trade_regions_search_fields,
                     :world_regions_search_fields
 
-        def full_text_search_fields=(fields)
+        def append_full_text_search_fields(fields)
           @full_text_search_fields = fields
           @countries_search_fields |= fields
+          @trade_regions_search_fields |= fields
           @world_regions_search_fields |= fields
         end
       end
@@ -80,6 +83,8 @@ module GeoNameSearchQuery
       case taxonomy
       when Country
         multi_match self.class.countries_search_fields, taxonomy.label
+      when TradeRegion
+        multi_match self.class.trade_regions_search_fields, taxonomy.label
       when WorldRegion
         multi_match self.class.world_regions_search_fields, taxonomy.label
       end

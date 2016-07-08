@@ -21,7 +21,7 @@ Provides JSON Search API for Salesforce contents.
 - Copy `config/webservices.yml.example` to `config/webservices.yml` and update the attributes
 - Run `bundle`
 - Setup indices: `bundle exec rake intrasearch:setup_indices`
-- Import taxonomies: `bundle exec rake intrasearch:import_taxonomies`
+- Import all types of content: `bundle exec rake intrasearch:import_all`
 - Import articles: `bundle exec rake intrasearch:import_articles`
 - Start the app: `bundle exec guard`
 - Access the console: `bundle exec rack-console`

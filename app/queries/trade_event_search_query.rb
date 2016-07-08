@@ -3,7 +3,7 @@ require 'geo_name_search_query'
 class TradeEventSearchQuery
   include GeoNameSearchQuery
 
-  self.full_text_search_fields = %w(description name venues).freeze
+  append_full_text_search_fields %w(description name venues).freeze
 
   self.aggregation_options = {
     countries: 'countries',

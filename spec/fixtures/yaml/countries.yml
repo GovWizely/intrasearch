@@ -33,6 +33,24 @@
   world_region_paths: []
   world_regions: []
 
+- :id: http://webprotege.stanford.edu/R8CwJ8K2v1OQmxDmOcHfgSj
+  :label: Mexico
+  :trade_regions:
+  - Asia Pacific Economic Cooperation
+  - Global System of Trade Preferences among Developing Countries
+  - NAFTA
+  - Trans Pacific Partnership
+  :world_region_paths:
+  - "/Latin America"
+  - "/North America"
+  - "/Pacific Rim"
+  - "/Western Hemisphere"
+  :world_regions:
+  - Latin America
+  - North America
+  - Pacific Rim
+  - Western Hemisphere
+
 - id: http://webprotege.stanford.edu/R7ZPpf5xWtCQtss1SpwR9P
   label: Palestine, State of
   trade_regions: []
