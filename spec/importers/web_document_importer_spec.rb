@@ -21,7 +21,7 @@ RSpec.describe WebDocumentImporter do
         description: 'description of this document',
         domain: 'foo.example.org',
         title: 'Welcome Page',
-        url: 'http://foo.example.org/welcome'
+        url: 'https://foo.example.org/welcome'
       }
       expect(document).to have_attributes(expected_attributes)
     end
