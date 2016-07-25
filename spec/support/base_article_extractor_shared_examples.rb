@@ -22,7 +22,6 @@ RSpec.shared_examples 'base article extractor' do |api_name|
         summary: 'item summary &amp; more summary',
         title: 'Item - Openness to &amp; Restriction on Foreign Investment',
         url_name: 'Item-Openness-to-Foreign-Investment',
-        published_date: DateTime.parse('2015-10-23T20:23:00.000+0000'),
         geographies: ['United States', 'Nicaragua'],
         industries: ['Satellites',
                      'Space Launch Equipment'],

@@ -1,0 +1,45 @@
+---
+- Atom__c: '<span style="font-size: 12px;">item atom &amp; more atom</span>'
+  DataCategorySelections:
+  - attributes:
+      type: Country_Commercial__DataCategorySelection
+      url: "/services/data/v34.0/sobjects/Country_Commercial__DataCategorySelection/02ot00000004RsjAAE"
+    Id: ka0t0000000PEieAAG
+    DataCategoryName: United_States
+    DataCategoryGroupName: Geographies
+  - attributes:
+      type: Country_Commercial__DataCategorySelection
+      url: "/services/data/v34.0/sobjects/Country_Commercial__DataCategorySelection/02ot00000004Rk1AAE"
+    Id: 02ot00000004Rk1AAE
+    DataCategoryName: Nicaragua
+    DataCategoryGroupName: Geographies
+  - attributes:
+      type: Country_Commercial__DataCategorySelection
+      url: "/services/data/v34.0/sobjects/Country_Commercial__DataCategorySelection/02ot00000004Rk7AAE"
+    Id: 02ot00000004Rk7AAE
+    DataCategoryName: Satellites
+    DataCategoryGroupName: Industries
+  - attributes:
+      type: Country_Commercial__DataCategorySelection
+      url: "/services/data/v34.0/sobjects/Country_Commercial__DataCategorySelection/02ot00000004RjZAAU"
+    Id: 02ot00000004RjZAAU
+    DataCategoryName: Space_Launch_Equipment
+    DataCategoryGroupName: Industries
+  - attributes:
+      type: Country_Commercial__DataCategorySelection
+      url: "/services/data/v34.0/sobjects/Country_Commercial__DataCategorySelection/02ot00000004RplAAE"
+    Id: 02ot00000004RplAAE
+    DataCategoryName: Trade_Development_and_Promotion
+    DataCategoryGroupName: Trade_Topics
+  - attributes:
+      type: Country_Commercial__DataCategorySelection
+      url: "/services/data/v34.0/sobjects/Country_Commercial__DataCategorySelection/02ot00000004RpkAAE"
+    Id: 02ot00000004RpkAAE
+    DataCategoryName: Law
+    DataCategoryGroupName: Trade_Topics
+  Guide__c: STOPfakes
+  Id: ka0t0000000PEieAAG
+  LastPublishedDate: '2015-10-23T20:23:00.000+0000'
+  Summary: item summary & more summary
+  Title: Item - Openness to &amp; Restriction on Foreign Investment
+  UrlName: Item-Openness-to-Foreign-Investment

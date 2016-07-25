@@ -1,6 +1,7 @@
+require 'uri'
+
 require 'taxonomy_attributes_transformer'
 require 'topic'
-require 'url_transformer'
 
 module BaseArticleTransformer
   def self.extended(base)
@@ -16,9 +17,8 @@ module BaseArticleTransformer
     transform_countries_and_regions attributes, countries
     transform_industries attributes
     transform_topics attributes
-    UrlTransformer.transform attributes,
-                             URL_PREFIX,
-                             attributes[:url_name]
+    transform_url_name attributes
+    transform_url attributes
     attributes
   end
 
@@ -27,5 +27,13 @@ module BaseArticleTransformer
   def transform_topics(attributes)
     labels = attributes.delete(:trade_topics) || []
     transform_taxonomies Topic, attributes, labels
+  end
+
+  def transform_url_name(attributes)
+    attributes[:url_name] &&= URI.encode_www_form_component attributes[:url_name]
+  end
+
+  def transform_url(attributes)
+    attributes[:url] = "#{URL_PREFIX}#{attributes[:url_name]}"
   end
 end

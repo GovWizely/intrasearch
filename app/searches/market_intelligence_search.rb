@@ -4,7 +4,9 @@ require 'market_insight'
 require 'state_report'
 require 'top_markets_report'
 
-class MarketIntelligenceSearch < BaseArticleSearch
+class MarketIntelligenceSearch
+  include BaseArticleSearch
+
   TYPES = [
     CountryCommercialGuide,
     MarketInsight,

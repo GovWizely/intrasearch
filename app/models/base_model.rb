@@ -6,12 +6,13 @@ module BaseModel
       include Elasticsearch::Persistence::Model
 
       class << self
+        attr_reader :base_index_namespace
         attr_accessor :index_alias_name,
                       :index_name_prefix,
                       :index_version
       end
-      @index_namespace = ['intrasearch',
-                          Intrasearch.env].join('-')
+      @base_index_namespace = ['intrasearch',
+                               Intrasearch.env].join('-')
       @index_version = 'v1'
 
       extend ModuleMethods
@@ -35,7 +36,7 @@ module BaseModel
     protected
 
     def append_index_namespace(*namespaces)
-      @index_namespace = [@index_namespace,
+      @index_namespace = [@base_index_namespace,
                           namespaces].join('-').freeze
       @index_name_prefix = [@index_namespace,
                             @index_version].join('-').freeze

@@ -43,3 +43,9 @@
   - U.S. Virgin Islands
   - United States
   :path: "/North America"
+
+- :id: http://webprotege.stanford.edu/R9jQGVCde409dLI33OeiaA2
+  :label: Oceania
+  :countries:
+  - Australia
+  :path: "/Oceania"

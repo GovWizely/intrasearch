@@ -2,6 +2,7 @@
   atom: Trust in online sellers is reasonably high everywhere except Asia, according
     to a study sponsored by UPS, the logistics company.
   countries: []
+  guide: STOPfakes
   industries:
   - Information and Communication Technology
   - Retail Trade
@@ -18,19 +19,21 @@
   - eCommerce
   trade_regions: []
   url: https://example.org/article2?id=Duties-and-Taxes-eCommerce-Guide-2
+  url_name: Duties-and-Taxes-eCommerce-Guide-2
   world_region_paths: []
   world_regions: []
 
 - id: ka8t0000000GnCrAAK
-  atom: General Information As a result of the U.S.-Australia Free Trade Agreement,
+  atom: General Business Information As a result of the U.S.-Australia Free Trade Agreement,
     tariffs that averaged 4.3 percent were eliminated on more than 99% of the tariff
     lines for U.S. manufactured goods exports to Australia.
   countries:
   - Australia
+  guide: STOPfakes
   industries: []
   industry_paths: []
   summary: Free Trade Agreement between US and Australia
-  title: US-Australia FTA
+  title: Goods US-Australia FTA
   topic_paths:
   - "/Trade Policy and Agreements/Trade Agreements/Free Trade Agreements"
   topics:
@@ -40,7 +43,8 @@
   trade_regions:
   - Asia Pacific Economic Cooperation
   - Trans Pacific Partnership
-  url: https://success.export.gov/article2?id=U-S-Australia-FTA
+  url: https://example.org/article2?id=U-S-Australia-FTA
+  url_name: U-S-Australia-FTA
   world_region_paths:
   - "/Asia Pacific"
   - "/Oceania"
@@ -72,6 +76,7 @@
   countries:
   - Canada
   - Mexico
+  guide: How to Export
   industries: []
   industry_paths: []
   summary: An overview of the North American Free Trade Agreement.
@@ -88,6 +93,7 @@
   - NAFTA
   - Trans Pacific Partnership
   url: https://example.org/article2?id=North-American-Free-Trade-Agreement
+  url_name: North-American-Free-Trade-Agreement
   world_region_paths:
   - "/Latin America"
   - "/North America"

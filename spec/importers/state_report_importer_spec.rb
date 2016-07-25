@@ -37,7 +37,7 @@ RSpec.describe StateReportImporter do
                  'Environment'],
         trade_regions: ['Asia Pacific Economic Cooperation'],
         title: 'item 1 title',
-        url: 'https://example.org/article2?id=Space-Business',
+        url: 'https://example.org/article?id=Space-Business',
         world_region_paths: ['/North America',
                              '/Pacific Rim',
                              '/Western Hemisphere'],

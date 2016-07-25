@@ -1,7 +1,7 @@
 RSpec.shared_examples 'base article importer' do |extractor_class|
   describe '#import' do
     let(:extracted_args) do
-      YAML.load Intrasearch.root.join('spec/fixtures/yaml/extracted_articles.yml').read
+      YAML.load Intrasearch.root.join('spec/fixtures/yaml/extracted_base_articles.yml').read
     end
 
     before do
@@ -45,7 +45,7 @@ RSpec.shared_examples 'base article importer' do |extractor_class|
                  'Trade Documents',
                  'Transport and Logistics'],
         trade_regions: ['Asia Pacific Economic Cooperation'],
-        url: 'https://example.org/article2?id=Space-Business',
+        url: 'https://example.org/article?id=Space-Business',
         world_region_paths: ['/Caribbean',
                              '/North America',
                              '/Pacific Rim',
@@ -59,5 +59,4 @@ RSpec.shared_examples 'base article importer' do |extractor_class|
       expect(item).to have_attributes(expected_attributes)
     end
   end
-
 end

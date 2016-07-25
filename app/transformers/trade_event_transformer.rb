@@ -1,6 +1,7 @@
+require 'uri'
+
 require 'industry'
 require 'taxonomy_attributes_transformer'
-require 'url_transformer'
 
 module TradeEventTransformer
   extend TaxonomyAttributesTransformer
@@ -13,9 +14,7 @@ module TradeEventTransformer
       transform_countries_and_regions attributes,
                                       attributes[:countries]
       transform_industries attributes
-      UrlTransformer.transform attributes,
-                               URL_PREFIX,
-                               attributes[:id]
+      transform_url attributes
       attributes
     end
 
@@ -29,6 +28,11 @@ module TradeEventTransformer
         attributes[:countries] = []
         attributes[:venues] = []
       end
+    end
+
+    def transform_url(attributes)
+      encoded_id = URI.encode_www_form_component attributes[:id]
+      attributes[:url] = "#{URL_PREFIX}#{encoded_id}"
     end
   end
 

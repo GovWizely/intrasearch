@@ -3,7 +3,9 @@ require 'base_article_search'
 require 'basic_guide_to_exporting'
 require 'faq'
 
-class HowToArticleSearch < BaseArticleSearch
+class HowToExportArticleSearch
+  include BaseArticleSearch
+
   TYPES = [
     Article,
     BasicGuideToExporting,

@@ -1,14 +1,17 @@
 development:
-  article_url_prefix: 'https://example.org/article2?id='
+  article_url_prefix: 'https://example.org/article?id='
+  stop_fakes_article_url_prefix: 'https://stopfakes.example.org/article?id='
   trade_event_url_prefix: 'https://example.org/trade_event?id='
   web_document_domains: ['foo.example.org', 'bar.example.org']
 
 test:
-  article_url_prefix: 'https://example.org/article2?id='
+  article_url_prefix: 'https://example.org/article?id='
+  stop_fakes_article_url_prefix: 'https://stopfakes.example.org/article?id='
   trade_event_url_prefix: 'https://example.org/trade_event?id='
   web_document_domains: ['foo.example.org']
 
 production:
-  article_url_prefix: 'https://example.org/article2?id='
+  article_url_prefix: 'https://example.org/article?id='
+  stop_fakes_article_url_prefix: 'https://stopfakes.example.org/article?id='
   trade_event_url_prefix: 'https://example.org/trade_event?id='
   web_document_domains: ['foo.example.org', 'bar.example.org']

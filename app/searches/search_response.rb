@@ -1,9 +1,12 @@
+require 'active_support/core_ext/class/attribute'
+
 require 'search'
 
 module SearchResponse
   def self.included(base)
-    class << base
-      attr_accessor :serializer
+    base.module_eval do
+      base.class_attribute :serializer,
+                           instance_writer: false
     end
   end
 

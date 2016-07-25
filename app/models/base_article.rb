@@ -9,19 +9,10 @@ module BaseArticle
       include BaseModel
       include BaseArticleAttributes
 
-      self.index_name_prefix = ['intrasearch',
-                                Intrasearch.env,
-                                'articles',
-                                name.tableize,
-                                'v1'].join('-').freeze
-
-      self.index_alias_name = ['intrasearch',
-                               Intrasearch.env,
-                               'articles',
-                               name.tableize,
-                               'current'].join('-').freeze
-
-      self.reset_index_name!
+      base.class_eval do
+        append_index_namespace 'articles',
+                               name.tableize
+      end
     end
   end
 end

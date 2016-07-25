@@ -1,3 +1,17 @@
+- :id: http://webprotege.stanford.edu/RDmEnPaeDKHRTMgjbarbJVz
+  :label: Australia
+  :trade_regions:
+  - Asia Pacific Economic Cooperation
+  - Trans Pacific Partnership
+  :world_region_paths:
+  - "/Asia Pacific"
+  - "/Oceania"
+  - "/Pacific Rim"
+  :world_regions:
+  - Asia Pacific
+  - Oceania
+  - Pacific Rim
+
 - id: http://webprotege.stanford.edu/RC4HD9CwKjvgX8dSybAp3Sk
   label: United States
   trade_regions:

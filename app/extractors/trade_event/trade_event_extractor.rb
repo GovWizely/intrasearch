@@ -11,14 +11,13 @@ module TradeEvent
     def self.extended(base)
       base.module_eval do
         @attribute_mapping = {}
+        @source = base.name.demodulize.sub(/TradeEventExtractor$/, '').upcase
       end
 
       class << base
-        attr_accessor :source
-        attr_reader :attribute_mapping
+        attr_reader :attribute_mapping, :source
       end
 
-      base.source = base.name.demodulize.sub(/TradeEventExtractor$/, '').upcase
       base.extend ModuleMethods
     end
 

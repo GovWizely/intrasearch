@@ -4,33 +4,38 @@ require 'restforce'
 require 'sanitize'
 
 module BaseArticleExtractor
-  QUERY_TEMPLATE = <<-SOQL
-    SELECT Atom__c,
-           (SELECT Id, DataCategoryName, DataCategoryGroupName FROM DataCategorySelections),
-           Id,
-           LastPublishedDate,
-           Summary,
-           Title,
-           UrlName
-    FROM %{api_name}
-    WHERE PublishStatus = 'Online'
-    AND Language = 'en_US'
-    AND IsLatestVersion=true
-    AND IsVisibleInPkb=true
-  SOQL
+  def self.extended(base)
+    class << base
+      attr_accessor :column_mapping, :query_template
+    end
 
-  COLUMN_MAPPING = {
-    atom: 'Atom__c',
-    id: 'Id',
-    summary: 'Summary',
-    title: 'Title',
-    url_name: 'UrlName'
-  }.freeze
+    base.query_template = <<-SOQL
+      SELECT Atom__c,
+             (SELECT Id, DataCategoryName, DataCategoryGroupName FROM DataCategorySelections),
+             Id,
+             Summary,
+             Title,
+             UrlName
+      FROM %{api_name}
+      WHERE PublishStatus = 'Online'
+      AND Language = 'en_US'
+      AND IsLatestVersion=true
+      AND IsVisibleInPkb=true
+    SOQL
+
+    base.column_mapping = {
+      atom: 'Atom__c',
+      id: 'Id',
+      summary: 'Summary',
+      title: 'Title',
+      url_name: 'UrlName'
+    }.freeze
+  end
 
   DATA_CATEGORY_GROUP_NAMES = %w(Geographies Industries Trade_Topics).freeze
 
   def query
-    @query ||= (QUERY_TEMPLATE % ({ api_name: api_name })).squish
+    @query ||= (query_template % ({ api_name: api_name })).squish
   end
 
   def extract
@@ -45,8 +50,7 @@ module BaseArticleExtractor
   private
 
   def extract_record(record)
-    hash = extract_columns record, COLUMN_MAPPING
-    hash.merge! extract_published_date record['LastPublishedDate']
+    hash = extract_columns record, column_mapping
     hash.merge! extract_taxonomies record['DataCategorySelections']
   end
 
@@ -60,11 +64,6 @@ module BaseArticleExtractor
 
   def sanitize_value(value)
     Sanitize.fragment(value).squish if value
-  end
-
-  def extract_published_date(last_published_date)
-    published_date = DateTime.parse(last_published_date) rescue nil
-    { published_date: published_date }
   end
 
   def extract_taxonomies(data_categories)
