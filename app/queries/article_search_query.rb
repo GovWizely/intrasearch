@@ -2,10 +2,8 @@ require 'active_support/core_ext/string/filters'
 
 require 'geo_name_search_query'
 
-class StopFakesArticleSearchQuery
+class ArticleSearchQuery
   include GeoNameSearchQuery
-
-  STOP_FAKES_GUIDES = %w(stopfakes)
 
   append_full_text_search_fields %w(atom title summary).freeze
 
@@ -21,7 +19,7 @@ class StopFakesArticleSearchQuery
     snippet_field: :atom
   }
 
-  def initialize(countries: [], industries: [], limit:, offset:, q: nil, topics: [], trade_regions: [], world_regions: [])
+  def initialize(countries: [], guides: [], industries: [], limit:, offset:, q: nil, topics: [], trade_regions: [], world_regions: [])
     super countries: countries,
           limit: limit,
           offset: offset,
@@ -34,7 +32,7 @@ class StopFakesArticleSearchQuery
 
     @filter_options = {
       countries: @countries,
-      guide: STOP_FAKES_GUIDES,
+      guide: guides,
       industries: @industries,
       topics: @topics,
       trade_regions: @trade_regions,

@@ -104,3 +104,37 @@
   - North America
   - Pacific Rim
   - Western Hemisphere
+
+- :id: ka8t0000000KzT5AAK
+  :atom: Cost and Benefits of the program.
+  :countries: []
+  :industries: []
+  :industry_paths: []
+  :summary:
+  :topic_paths: []
+  :topics: []
+  :title: Privacy Shield Program
+  :trade_regions: []
+  :type: Article
+  :url: https://www.export.gov/article?id=Privacy-Shield-Program
+  :world_region_paths: []
+  :world_regions: []
+  :guide: Privacy Shield Program
+  :url_name: Privacy-Shield-Program
+
+- :id: ka8t0000000KyxiAAC
+  :atom: An introduction to the Privacy Shield.
+  :countries: []
+  :industries: []
+  :industry_paths: []
+  :summary:
+  :topic_paths: []
+  :topics: []
+  :title: Privacy Shield Framework
+  :trade_regions: []
+  :type: Article
+  :url: https://www.export.gov/article?id=Privacy-Shield-Framework
+  :world_region_paths: []
+  :world_regions: []
+  :guide: Privacy Shield Framework
+  :url_name: Privacy-Shield-Framework

@@ -34,14 +34,20 @@ module BaseArticleSearch
     end
 
     def build_query
-      self.class.query_class.new countries: @countries,
-                                 industries: @industries,
-                                 limit: @limit,
-                                 offset: @offset,
-                                 q: @q,
-                                 topics: @topics,
-                                 trade_regions: @trade_regions,
-                                 world_regions: @world_regions
+      self.class.query_class.new query_params
+    end
+
+    def query_params
+      {
+        countries: @countries,
+        industries: @industries,
+        limit: @limit,
+        offset: @offset,
+        q: @q,
+        topics: @topics,
+        trade_regions: @trade_regions,
+        world_regions: @world_regions
+      }
     end
   end
 end

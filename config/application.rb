@@ -38,6 +38,8 @@ module Intrasearch
     mount HowToExportArticleSearchAPI
     mount MarketIntelligenceCountAPI
     mount MarketIntelligenceSearchAPI
+    mount PrivacyShieldArticleCountAPI
+    mount PrivacyShieldArticleSearchAPI
     mount StopFakesArticleCountAPI
     mount StopFakesArticleSearchAPI
     mount TradeEventsAPI

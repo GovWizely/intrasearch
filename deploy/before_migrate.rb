@@ -10,6 +10,7 @@ template_config = {
   'intrasearch.yml' => {
     environment: env_vars['RACK_ENV'],
     article_url_prefix: node['intrasearch_data']['base_article_url_prefix'],
+    privacy_shield_article_url_prefix: node['intrasearch_data']['privacy_shield_article_url_prefix'],
     stop_fakes_article_url_prefix: node['intrasearch_data']['stop_fakes_article_url_prefix'],
     trade_event_url_prefix: node['intrasearch_data']['trade_event_url_prefix'],
     web_document_domains: node['intrasearch_data']['web_document_domains']

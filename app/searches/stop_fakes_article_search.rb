@@ -1,20 +1,11 @@
 require 'article'
-require 'base_article_search'
-require 'stop_fakes_article_search_query'
+require 'article_search'
 require 'stop_fakes_article_search_response'
 
 class StopFakesArticleSearch
-  include BaseArticleSearch
+  include ArticleSearch
 
-  TYPES = [
-    Article
-  ].freeze
+  self.guides = %w(stopfakes).freeze
 
-  self.query_class = StopFakesArticleSearchQuery
   self.search_response_class = StopFakesArticleSearchResponse
-
-  def initialize(options)
-    options[:types] = TYPES
-    super
-  end
 end

@@ -1,5 +1,6 @@
 <%= @environment %>:
   article_url_prefix: '<%= @article_url_prefix %>'
+  privacy_shield_article_url_prefix: '<%= @privacy_shield_article_url_prefix %>'
   stop_fakes_article_url_prefix: '<%= @stop_fakes_article_url_prefix %>'
   trade_event_url_prefix: '<%= @trade_event_url_prefix %>'
   web_document_domains: [<%= @web_document_domains.map { |d| "'#{d}'" }.join(', ') %>]

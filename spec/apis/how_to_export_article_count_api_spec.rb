@@ -18,7 +18,7 @@ RSpec.describe HowToExportArticleCountAPI, endpoint: '/v1/how_to_export_articles
   it_behaves_like 'a successful API response'
 
   it 'returns metadata' do
-    expect(parsed_body[:metadata]).to eq(total: 5)
+    expect(parsed_body[:metadata]).to eq(total: 7)
   end
 
   it 'returns countries aggregation' do
@@ -68,7 +68,7 @@ RSpec.describe HowToExportArticleCountAPI, endpoint: '/v1/how_to_export_articles
 
   it 'returns types aggregation' do
     expected_types = [
-      { key: 'Article', doc_count: 3 },
+      { key: 'Article', doc_count: 5 },
       { key: 'Basic Guide To Exporting', doc_count: 1 },
       { key: 'Faq', doc_count: 1 }
     ]
