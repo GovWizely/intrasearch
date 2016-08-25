@@ -10,6 +10,12 @@
 - label: Space Launch Equipment
   path: "/Aerospace and Defense/Space/Space Launch Equipment"
 
+- label: Business and Professional Services/
+  path: "/Business and Professional Services"
+
+- label: Scientific and Technical Services
+  path: "/Business and Professional Services/Scientific and Technical Services"
+
 - label: Franchising
   path: "/Franchising"
 

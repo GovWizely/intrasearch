@@ -1,6 +1,6 @@
 # intrasearch
 
-[![Build Status](https://travis-ci.org/GovWizely/intrasearch.svg?branch=travis)](https://travis-ci.org/GovWizely/intrasearch)
+[![Build Status](https://travis-ci.org/GovWizely/intrasearch.svg?branch=master)](https://travis-ci.org/GovWizely/intrasearch)
 [![Code Climate](https://codeclimate.com/github/GovWizely/intrasearch/badges/gpa.svg)](https://codeclimate.com/github/GovWizely/intrasearch)
 [![Test Coverage](https://codeclimate.com/github/GovWizely/intrasearch/badges/coverage.svg)](https://codeclimate.com/github/GovWizely/intrasearch/coverage)
 
@@ -46,6 +46,9 @@ Provides JSON Search API for Salesforce contents.
 - [localhost:9292/v1/trade_events/count](http://localhost:9292/v1/trade_events/count)
 - [localhost:9292/v1/trade_events/search](http://localhost:9292/v1/trade_events/search?q=trade)
 - [localhost:9292/v1/trade_events/:id](http://localhost:9292/v1/trade_events/:id)
+- [localhost:9292/v1/trade_leads/count](http://localhost:9292/v1/trade_leads/count)
+- [localhost:9292/v1/trade_leads/search](http://localhost:9292/v1/trade_leads/search?q=trade)
+- [localhost:9292/v1/trade_leads/:id](http://localhost:9292/v1/trade_leads/:id)
 - [localhost:9292/v1/web_documents/count](http://localhost:9292/v1/web_documents/count)
 - [localhost:9292/v1/web_documents/search?q=trade](http://localhost:9292/v1/web_documents/search?domain=CHANGEME&q=trade)
 

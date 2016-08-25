@@ -1,0 +1,43 @@
+- :id: c118cb6ed4345bb33980b2dfb77303e2a561866a
+  :borrowing_entity: Not Applicable
+  :click_url: http://goo.gl/state1
+  :comments: The value stated is not the correct value it is only for uploading purposes.
+  :contact: NSB Fund Management
+  :countries:
+  - Taiwan
+  :description: Expression of Interest
+  :end_at: '2016-08-24T00:00:00+00:00'
+  :funding_source: Other
+  :hosted_url: https://example.org/trade_lead?id=c118cb6ed4345bb33980b2dfb77303e2a561866a
+  :industries:
+  - Retail Trade
+  :industry_paths:
+  - "/Retail Trade"
+  :lead_source: Post Identified Project
+  :procurement_organization: Ministry of Transport and Civil Aviation
+  :project_number: NSB/SL/1601
+  :project_size: 3240000000
+  :published_at: '2016-07-06T00:00:00+00:00'
+  :record_id: DATATABLE.1667
+  :source: STATE
+  :specific_location: Western Province
+  :status: Pipeline
+  :submitting_officer: Jane Doe
+  :submitting_officer_contact: jane@example.org
+  :tags:
+  - A tag with extra spaces
+  :title: Taiwan Lead
+  :trade_regions:
+  - Asia Pacific Economic Cooperation
+  :url: http://www.example.org/state
+  :world_region_paths:
+  - "/Asia"
+  - "/Asia Pacific"
+  - "/Asia/East Asia"
+  - "/Pacific Rim"
+  :world_regions:
+  - Asia
+  - Asia Pacific
+  - East Asia
+  - Pacific Rim
+

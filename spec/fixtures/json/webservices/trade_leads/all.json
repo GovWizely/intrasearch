@@ -1,0 +1,332 @@
+{
+  "total": 7,
+  "offset": 0,
+  "sources_used": [
+    {
+      "source": "Canada Trade Leads",
+      "source_last_updated": "2016-08-10T02:13:40+00:00",
+      "last_imported": "2016-08-10T02:13:40+00:00"
+    },
+    {
+      "source": "FBO Trade Leads",
+      "source_last_updated": "2016-08-10T02:13:31+00:00",
+      "last_imported": "2016-08-10T02:13:31+00:00"
+    },
+    {
+      "source": "USTDA Trade Leads",
+      "source_last_updated": "2016-08-10T02:13:26+00:00",
+      "last_imported": "2016-08-10T02:13:26+00:00"
+    },
+    {
+      "source": "Australia Trade Leads",
+      "source_last_updated": "2016-07-26T02:27:49+00:00",
+      "last_imported": "2016-08-10T02:23:12+00:00"
+    },
+    {
+      "source": "MCA Trade Leads",
+      "source_last_updated": "2016-08-08T02:13:25+00:00",
+      "last_imported": "2016-08-10T02:13:17+00:00"
+    },
+    {
+      "source": "State Trade Leads",
+      "source_last_updated": "2016-07-28T02:13:08+00:00",
+      "last_imported": "2016-08-10T02:13:22+00:00"
+    },
+    {
+      "source": "UK Trade Leads",
+      "source_last_updated": "2016-08-10T02:11:10+00:00",
+      "last_imported": "2016-08-10T02:11:10+00:00"
+    }
+  ],
+  "search_performed_at": "2016-08-10T15:27:01+00:00",
+  "results": [
+    {
+      "id": "5f3228ae816a796acc3642f6500efc27c9580ab6",
+      "uuid": "31566E17-C5E8-A988-9ECB72C4F193456D",
+      "agency": "Department of Foreign Affairs and Trade - Australian Aid Program",
+      "description": "Technical Assistance for Education System Strengthening (TASS) - Indonesia.\nThe Services to be delivered are the provision of high-level technical advice and strategic direction in a range of high-priority education policy and practice areas including: learning assessment, family (parental) education (including early childhood education), curriculum reform, principals’ and teachers’ professional development, private sector engagement, the management and oversight of school construction, professional development for high-level staff and supporting MoRA’s agenda to improve the quality of Madrasah education. \nWorking primarily at the national level and in line with its Sector Investment Plan , DFAT anticipates that the assistance provide through the proposed TA program will contribute to meeting four GoI needs: (i) the provision of rapid analyses, each designed to contribute to ongoing policy dialogue; (ii) short-term revolving TA to assist Government in those areas where it urgently needs technical support; (iii) the professional development of senior management personnel in key skills; and (iv) pilot activities that test new strategies for improved quality of schooling.",
+      "source_industry": "86000000 - Education and Training Services",
+      "industry": [
+        "Education",
+        "Training"
+      ],
+      "title": "Technical Assistance for Education System Strengthening (TASS)",
+      "lodgement_address": "Responses must be lodged electronically via Austender.",
+      "phone": "000",
+      "multi_agency_access": "No",
+      "delivery_timeframe": "In accordance with the DFAT-137 AAS RFQ documentation.",
+      "contact_officer": "DFAT RFQ Contact Officer",
+      "email": "technicalassistanceforeducation@dfat.gov.au",
+      "other_instructions": "The DFAT-137 approach to market is being conducted under the Aid Advisory Services Standing Offer, Category 18 (Education).",
+      "publish_date": "2016-06-17T00:00:00+00:00",
+      "end_date": "2016-07-20T00:00:00+00:00",
+      "location": "ACT, Overseas\nCanberra",
+      "url": "https://www.tenders.gov.au/?event=public.atm.show\u0026ATMUUID=31566E17-C5E8-A988-9ECB72C4F193456D",
+      "click_url": "https://goo.gl/tQKAyn",
+      "atm_id": "DFAT-137",
+      "panel_arrangement": "No",
+      "conditions_for_participation": "The DFAT-137 approach to market is being conducted under the Aid Advisory Services Standing Offer, Category 18 (Education).",
+      "country": "AU",
+      "country_name": "Australia",
+      "source": "AUSTRALIA",
+      "trade_region": [
+        "Trans Pacific Partnership",
+        "Asia Pacific Economic Cooperation"
+      ],
+      "world_region": [
+        "Asia Pacific",
+        "Pacific Rim",
+        "Oceania"
+      ]
+    },
+    {
+      "id": "eb075954c15a338b13cf21b56be3d62657a50b99",
+      "publish_date": "2016-08-08T00:00:00+00:00",
+      "end_date": "2016-09-02T00:00:00+00:00",
+      "publish_date_amended": null,
+      "source_industry": [
+        "N2590 - Vehicular Components, Miscellaneous"
+      ],
+      "industry": [
+        "Vehicle Electronics"
+      ],
+      "url": [
+        "https://fbuyandsell.gc.ca/cds/public/2016/08/08/6ae0d9da58616d248275ea6169628702/ABES.PROD.PW__BL.B266.F25935.EBSU000.PDF",
+        "https://buyandsell.gc.ca/cds/public/2016/08/08/fa08f81738849c9ea4304f629571e436/ABES.PROD.PW__BL.B266.E25935.EBSU000.PDF"
+      ],
+      "click_url": [
+        "https://goo.gl/Bnt6Rr",
+        "https://goo.gl/FuKV8z"
+      ],
+      "title": "Adjustable Tow Bar (W8476-175502/A)",
+      "reference_number": "PW-$$BL-266-25935",
+      "contract_number": "W8476-175502/A",
+      "amendment_number": "000",
+      "publishing_status": "Active",
+      "specific_location": "Alberta, Quebec",
+      "notice_type": "LI-DR-LOI-RFI",
+      "trade_agreement": "World Trade Organization-Agreement on Government Procurement (WTO-AGP), Canada-Panama Free Trade Agreement, Agreement on Internal Trade (AIT), Canada-Colombia Free Trade Agreement, Canada-Peru Free Trade Agreement (CPFTA), North American Free Trade Agreement (NAFTA)",
+      "bid_type": "All interested suppliers may submit a bid",
+      "competitive_procurement_strategy": null,
+      "procurement_organization": "Public Works and Government Services Canada",
+      "implementing_entity": "Department of National Defence",
+      "description": "Trade Agreement: WTO-AGP/NAFTA/AIT/Canada FTAs with Peru/Colombia/Panama Tendering Procedures: All interested suppliers may submit a bid Competitive Procurement Strategy:  Comprehensive Land Claim Agreement: No Nature of Requirements:    Public Works and Government Services Canada (PWGSC) is requesting Industry feedback regarding the procurement for the Adjustable Tow Bar (ATB) for the Department of National Defence (DND).   The purpose of this Request for Information (RFI) is to advise industry of this forthcoming requirement and provide industry with general information on the ATB requirement.  There is an immediate need to procure adjustable tow bars to replace the existing rigid A-frame tow bars that do not have the capacity totow the new, heavier Light Armoured Vehicle Upgrade (LAV UP) Family of Vehicles (FOV).  The adjustable functionality will eliminate the need for movement of the recovery vehicle with personnel supporting the tow bar in the crush zone (to permit hook-up of the casualty vehicle), which will reduce the safety risk to personnel during operation.  This RFI is neither a call for tender nor a Request for Proposal (RFP).  No agreement or contract will be entered into based on this RFI.  The issuance of this RFI is not to be considered in any way a commitment by the Government of Canada, nor as authority to potential respondents to undertake any work that could be charged to Canada.  This RFI is not to be considered as a commitment to issue a subsequent solicitation or award contract(s) for the work described herein.  Participation in this RFI is encouraged, but is not mandatory.  There will be no short-listing of potential suppliers for the purposes of undertaking any future work as a result of this RFI. Similarly, participation in this RFI is not a condition or prerequisite for the participation in any potential subsequent solicitation. Respondents will not be reimbursed for any cost incurred by participating in this RFI.  The RFI closing date published herein is not the deadline for comments or input. Comments and input will be accepted any time up to the time when/if a follow-on solicitation is published.   Enquiries:  All enquiries are to be submitted to the Contracting Authority, Jessica Cormier, by telephone (873) 469-4774, facsimile (819-956-0648) or by email at Jessica.Cormier@pwgsc-tpsgc.gc.ca.       Delivery Date: Above-mentioned  The Crown retains the right to negotiate with suppliers on any procurement.  Documents may be submitted in either official language of Canada.",
+      "contact": "Cormier, Jessica, (873) 469-4774 ( ), (819) 956-0648, 11 Laurier St./11, rue Laurier Place du Portage Phase III 6C1 Gatineau Québec K1A 0S5, 11 Laurier St./11, rue Laurier Place du Portage Phase III 6C1 Gatineau Québec K1A 0S5",
+      "country": "CA",
+      "country_name": "Canada",
+      "source": "CANADA",
+      "trade_region": [
+        "Asia Pacific Economic Cooperation",
+        "Trans Pacific Partnership",
+        "NAFTA"
+      ],
+      "world_region": [
+        "Pacific Rim",
+        "Western Hemisphere",
+        "North America"
+      ]
+    },
+    {
+      "id": "3a5bd00c8bab5741fb89721c02c3e8aeb8c61ec3",
+      "source": "FBO",
+      "contract_number": "sp0600-15-r-0210",
+      "url": "https://www.fbo.gov/spg/DLA/J3/DESC/SP0600-15-R-0210/listing.html",
+      "click_url": "https://goo.gl/pQz1PY",
+      "source_industry": "324110: Petroleum Refineries",
+      "industry": [
+        "Petroleum Refineries"
+      ],
+      "publish_date": "2015-03-17T00:00:00+00:00",
+      "end_date": "2020-03-31T00:00:00+00:00",
+      "notice_type": "PRESOL",
+      "procurement_organization": "Defense Logistics Agency",
+      "procurement_office": "DLA Acquisition Locations",
+      "procurement_organization_address": "DLA Energy",
+      "classification_code": "91",
+      "procurement_office_address": "8725 John J. Kingman Road Fort Belvoir VA 22060-6222",
+      "title": "Basic Ordering Agreement (BOA) for Fuel in Iraq, Jordan, and Turkey",
+      "contact": "Heather M. Bushouse, Contract Specialist, Phone 7037679517, Fax 7037678506, Email heather.bushouse@dla.mil - Pamela Barber, Contracting Officer, Phone 7037678481, Fax 7037678506, Email Pamela.Barber@dla.mil",
+      "description": "DLA Energy - Direct Delivery Fuels (FEPDA) intends to establish Basic Ordering Agreements (BOAs) with contractors, to supply and deliver Diesel, Gasoline, Aviation Jet Fuel, and AVGAS to various locations within Iraq, Jordan, and Turkey. A Basic Ordering Agreement is a written instrument of understanding, which contains the terms and agreements under which future requirements will be solicited, evaluated, awarded and performed. A BOA is not a contract. The parties enter into a binding contract only via the issuance of a delivery order against the BOA based upon the acceptance of the agreement holder's proposal for a specific requirement. Each delivery order will be considered a unique and separate contract or purchase order. The purpose of this BOA is to negotiate in advance any exceptions your company may have to the non-price related terms and conditions contained in this solicitation. Once negotiated, these terms and conditions will be incorporated into any supply contract awarded under the BOA. Companies with BOAs will be able to respond to future solicitations for fuel requirements in Iraq, Jordan, and Turkey. As requirements are received, BOA holders will be given the opportunity to compete based on price and any other criteria as required for performance. Non-BOA holders may compete for orders, which will be publicly posted on FedBizOpps.Gov. However, non-BOA-holders will have to respond to the base Solicitation for entering the BOA, as well as to the solicitations for placement of orders under the BOA. In cases where mission requirements would be jeopardized by holding up award for evaluation of non-price factors of non-BOA holders, DLA Energy will consider whether a BOA can be established with that contractor, and proceed to award the order to a contractor that can meet the Government's requirement. Additionally, as noted on page 2, DLA Energy will consider any contractor for evaluation to become a BOA holder over the five-year period through continually accepting proposals in response to the base Solicitation for this BOA. The period of the BOA is five (5) years from 15 April 2015 to 31 March 2020. The BOA(s) will be reviewed annually to determine if any updates are necessary. BOAs can be terminated by either party with 30 days' written notice. To be eligible for award of a BOA, proposals must provide the following: 1)Signed SF 1449 2)Certifications and Representations (See Section K under Offeror Submission Package (OSP) OR CompletedOfferor Submission Package (OSP) ) 3)A list of any exceptions to the terms and conditions of this solicitation",
+      "competitive_procurement_strategy": null,
+      "country": "IQ",
+      "trade_region": [
+        "Organization of the Petroleum Exporting Countries",
+        "Global System of Trade Preferences among Developing Countries"
+      ],
+      "world_region": [
+        "Persian Gulf Region",
+        "Middle East"
+      ],
+      "country_name": "Iraq",
+      "specific_address": "Various locations in Iraq, Jordan, and Turkey"
+    },
+    {
+      "id": "f3a40a7987cd049cbf093079bbef65b1df387d00",
+      "guid": "http://www.dgmarket.com/tenders/np-notice.do?noticeId=14114655",
+      "country": "BJ",
+      "country_name": "Benin",
+      "publish_date": "2016-06-18T21:10:41-04:00",
+      "url": "http://www.dgmarket.com/tenders/np-notice.do?noticeId=14114655",
+      "click_url": "http://goo.gl/z4DX12",
+      "categories": [
+        "type/spn",
+        "CPV/30236000",
+        "CPV/30000000",
+        "deadline/2017/Jun/09"
+      ],
+      "title": "Purchase of Computer Equipment",
+      "description": "Buyer: \u003Ca href=\"http://www.dgmarket.com/tenders/adminShowBuyer.do?buyerId=7041575\"\u003EMILLENNIUM CHALLENGE ACCOUNT BENIN II\u003C/a\u003E",
+      "funding_source": "Millennium Challenge Account (MCA)",
+      "source": "MCA",
+      "trade_region": [
+        "African Growth and Opportunity Act",
+        "West African Economic and Monetary Union",
+        "Global System of Trade Preferences among Developing Countries"
+      ],
+      "world_region": [
+        "Sub-Saharan Africa",
+        "Africa",
+        "West Africa"
+      ]
+    },
+    {
+      "id": "c118cb6ed4345bb33980b2dfb77303e2a561866a",
+      "record_id": "DATATABLE.1667",
+      "lead_source": "Post Identified Project",
+      "country_name": "Sri Lanka",
+      "country": "LK",
+      "specific_location": "Western Province",
+      "title": "EOI Sri Lankan Airlines and Mihin Lanka",
+      "project_number": "NSB/SL/1601",
+      "source_industry": "Transportation and Warehousing",
+      "industry": [
+        "Transport and Logistics",
+        "Distribution and Logistics"
+      ],
+      "project_size": 50000000,
+      "description": "Expression of Interest – for a Strategic Investor for Sri Lankan Airlines and Mihin Lanka NSB Fund Management Col. Ltd. (NSBFMC) is calling for Expression of Interest (EOI) for a Strategic Investor for the reorientation of Sri Lanka Airlines Limited (National Carrier) and Mihin Lanka (Private) Limited (Budget Carrier). EOI documents will be issued on a non-refundable payment of USD 5,000, on production of a written request, on a letter head by a person’s identified as being an authorized representative of the organization seeking to obtain the documents. The request letter can be sent either electronically or by mail. The EOI is not transferable. Only the party collecting the invitation for the EOI is entitled to submit the EOI. If an agent is applying to collect the EOI documents, the name of the principal it represents must be disclosed and its application signed by the person identified as being the authorized representative of the agent. EOI (soft copy) should be sent by e-mail by August 24, 2016 on or before 1600 hours (Sri Lanka Time). The EOI (hard copy) to be delivered to the address given below in an envelope clearly marked “EOI for reorientation of Sri Lankan Airlines Ltd., and Mihin Lanka Pvt Ltd.” Non-refundable payment can be remitted to the credit of A/C No. 36246344 of NSB with Citibank NY or A/C No. 909112300087 vis SWIFT - NSBALKLX Financial and Transaction advisors are BNP Paribas and KPMG. Any clarifications and EOI should be directed to: Project Office, NSB Fund Management Col. Ltd. National Savings Bank Head Office, 255 Galle Road, Colombo 3, Sri Lanka Phone: +94-11-257-3179; fax: +94-11-246-7618; e-mail: sl@nsb.lk",
+      "tags": [
+        "Airlines"
+      ],
+      "publish_date": "2016-07-06T00:00:00+00:00",
+      "end_date": "2016-08-24T00:00:00+00:00",
+      "funding_source": "Other",
+      "borrowing_entity": "Not Applicable",
+      "procurement_organization": "Ministry of Transport and Civil Aviation",
+      "contact": "NSB Fund Management Col. Ltd. National Savings Bank Head Office, 255 Galle Road, Colombo 3, Sri Lanka Phone: +94-11-257-3179; fax: +94-11-246-7618; e-mail: sl@nsb.lk",
+      "comments": "The value stated is not the correct value it is only for uploading purposes.",
+      "submitting_officer": "William Humnicky",
+      "submitting_officer_contact": "HumnickyWP@state.gov",
+      "url": "http://www.nsb.lk",
+      "click_url": "http://goo.gl/9YTq4z",
+      "status": "Pipeline",
+      "source": "STATE",
+      "trade_region": [
+        "South Asian Association for Regional Cooperation",
+        "Global System of Trade Preferences among Developing Countries"
+      ],
+      "world_region": [
+        "South Asia",
+        "Asia"
+      ]
+    },
+    {
+      "id": "d292a188d7ce8dd13419de8c0da4ce7b29c79899",
+      "source": "UK",
+      "country": "GB",
+      "country_name": "United Kingdom",
+      "record_id": "355c8432-d59c-46d4-bd3e-015e3fd9fdd4",
+      "reference_number": "PR16098",
+      "publish_date": "2016-08-15T09:21:36+00:00",
+      "deadline_date": "2016-09-19T00:00:00+00:00",
+      "contract_start_date": "2017-03-14T00:00:00+00:00",
+      "contract_end_date": "2022-03-13T00:00:00+00:00",
+      "min_contract_value": 0.0,
+      "max_contract_value": 6000000.0,
+      "url": "www.uksbs.co.uk",
+      "click_url": "http://goo.gl/MMvXMn",
+      "status": "Open",
+      "procurement_organization": "UK SHARED BUSINESS SERVICES LIMITED",
+      "contact": "Elizabeth.gage@uksbs.co.uk",
+      "title": "UKSBS PR16098  Advanced Electron Microscopy (AdvEM)",
+      "description": "UK Shared Business Services Ltd as the Contracting\nAuthority is putting in place a Contract on behalf of\nthe Engineering and Physical Sciences Research\nCouncil (EPSRC).\n\nEPSRC is looking for a supplier who can provide a mid-range  research facility in Advance Electron Microscopy for three years with an option to extend to five years. The range of provision will be on a national level and will include research into the nanoscale assessment (including that of atomic and electronic structure) of materials in support of materials science, chemistry and life sciences.\n\nThe successful bidder will have a costed access plan, risk management and staff training model covering any subcontractors. The facility must be able to offer internationally leading quality for this service, clear and effective access protocols for users accessing the service,  and provision in training and/or assisting new users. The facility will be an integral part of the research needs of the Engineering and Physical Sciences community.\n\nThe total cost range shown in the OJEU notice and Contracts finder is shown not including VAT. Whereas within the RFP document the cost range includes VAT to indicate the maximum amount in the range.",
+      "notice_type": "Contract",
+      "specific_location": "Any region",
+      "trade_region": [
+        "European Union - 28"
+      ],
+      "world_region": [
+        "Europe"
+      ],
+      "source_industry": [
+        "Research and Development"
+      ],
+      "industry": [
+        "Research and Development"
+      ]
+    },
+    {
+      "id": "26252346bf5f16c1a9a9b2dfa2762bbe2c99b8ae",
+      "source": "USTDA",
+      "title": "Trade Lead: South Africa: Global Logistics Service Provider for Container Terminal Project",
+      "publish_date": "2016-06-13T00:00:00+00:00",
+      "end_date": "2016-09-30T00:00:00+00:00",
+      "description": "Background: Transnet, a South African state-owned freight logistics company, recently issued a request for proposals for the design, financing, construction, operation, maintenance and eventual handover of an inland container terminal in Tambo-Springs. The objective of the project is to migrate rail-friendly cargo off the country’s road network. The Tambo-Springs terminal will be located east of Johannesburg, in Ekurhuleni along the N3 motorway, near the Johannesburg-to-Durban rail corridor. The proposed terminal is an integral part of the Presidential Infrastructure Coordinating Committee’s Strategic Integrated Project 2, which aims to advance the country’s industrial development while boosting export capability. The project is designed to complement Transnet’s five existing inland container-handling terminals in the province. The concession will be for a 20 year period and features the greatest participation from the private sector that Transnet has ever seen. Transnet is seeking a global logistics service provider that can demonstrate technical expertise, maintain a minimum of Level 4 broad-based black economic-empowerment status with a commitment to reach Level 2 by the third year of operation, and abide by the requirements for supplier development and skills transfer. Link for more information: http://www.transnetfreightrail.co.za/Website/tender_pdf/RFQ-CRAC-KGG-21543-ADVERT.pdf Compulsory Briefing Session: July 6, 2016 in Johannesburg Proposal Deadline: September 30, 2016 Transnet Points of Contact: Khathutshelo Tshamano +27 11 584-0625 Khathutshelo.tshamano@transnet.net Sarah Assegaai Sara.assegaai@transnet.net U.S. Government Point of Contact: Johan van Rensburg Senior Commercial Specialist U.S. Consulate - Commercial Section Johannesburg, South Africa Tel: (+27) 011 290-3208 Email: Johan.vanRensburg@trade.gov http://export.gov/southafrica/index.asp",
+      "url": "https://www.ustda.gov/business-opportunities/trade-leads/trade-lead-south-africa-global-logistics-service-provider",
+      "click_url": "https://goo.gl/ZqJ5ZM",
+      "country_name": "South Africa",
+      "country": "ZA",
+      "trade_region": [
+        "African Growth and Opportunity Act",
+        "South African Development Community",
+        "South African Customs Union"
+      ],
+      "world_region": [
+        "Sub-Saharan Africa",
+        "Africa"
+      ]
+    }
+  ],
+  "aggregations": {
+    "sources": [
+      {
+        "key": "CANADA",
+        "doc_count": 812
+      }
+    ],
+    "trade_regions": [
+      {
+        "key": "Asia Pacific Economic Cooperation",
+        "doc_count": 812
+      },
+      {
+        "key": "NAFTA",
+        "doc_count": 812
+      },
+      {
+        "key": "Trans Pacific Partnership",
+        "doc_count": 812
+      }
+    ],
+    "world_regions": [
+      {
+        "key": "North America",
+        "doc_count": 812
+      },
+      {
+        "key": "Pacific Rim",
+        "doc_count": 812
+      },
+      {
+        "key": "Western Hemisphere",
+        "doc_count": 812
+      }
+    ],
+    "countries": [
+      {
+        "key": "CA",
+        "doc_count": 812
+      }
+    ]
+  }
+}

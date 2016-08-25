@@ -43,6 +43,7 @@ module Intrasearch
     mount StopFakesArticleCountAPI
     mount StopFakesArticleSearchAPI
     mount TradeEventsAPI
+    mount TradeLeadsAPI
     mount WebDocumentCountAPI
     mount WebDocumentSearchAPI
     mount Admin::TradeEventsAPI

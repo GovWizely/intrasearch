@@ -3,14 +3,13 @@ RSpec.describe IndexManager do
   let(:subject) { described_class.new(Country) }
 
   describe '#setup_new_index!' do
-    before do
-      expect(DateTime).to receive(:current).
-                            and_return(DateTime.new(2015, 10, 11, 12, 13, 14),
-                                       DateTime.new(2015, 10, 11, 15, 16, 17))
-    end
-
     context 'when there is an existing index' do
-      before { subject.setup_new_index! }
+      before do
+        expect(DateTime).to receive(:current).
+                              and_return(DateTime.new(2015, 10, 11, 12, 13, 14),
+                                         DateTime.new(2015, 10, 11, 15, 16, 17))
+        subject.setup_new_index!
+      end
 
       it 'creates new index' do
         expect(client.indices.exists? index: 'intrasearch-test-taxonomies-countries-v1-20151011_121314_000').to be true
@@ -19,6 +18,23 @@ RSpec.describe IndexManager do
         expect(client.indices.exists? index: 'intrasearch-test-taxonomies-countries-v1-20151011_151617_000').to be true
         expect(subject.get_current_index_names).to eq(%w(intrasearch-test-taxonomies-countries-v1-20151011_151617_000))
         expect(client.indices.exists? index: 'intrasearch-test-taxonomies-countries-v1-20151011_121314_000').to be false
+      end
+    end
+
+    context 'when the block raises an exception' do
+      before do
+        expect(DateTime).to receive(:current).
+          and_return(DateTime.new(2015, 1, 11, 12, 13, 14),
+                     DateTime.new(2015, 1, 11, 15, 16, 17))
+        subject.setup_new_index!
+      end
+
+      it 'cleans up new index' do
+        expect { subject.setup_new_index! { 1/0 } }.to raise_error(ZeroDivisionError)
+
+        expect(client.indices.exists? index: 'intrasearch-test-taxonomies-countries-current').to be true
+        expect(subject.get_current_index_names).to eq(%w(intrasearch-test-taxonomies-countries-v1-20150111_121314_000))
+        expect(client.indices.exists? index: 'intrasearch-test-taxonomies-countries-v1-20150111_151617_000').to be false
       end
     end
   end

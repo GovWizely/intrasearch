@@ -1,5 +1,5 @@
-require 'get_trade_event_api'
 require 'trade_event_count_api'
+require 'trade_event_find_by_id_api'
 require 'trade_event_search_api'
 
 class TradeEventsAPI < Grape::API
@@ -7,5 +7,5 @@ class TradeEventsAPI < Grape::API
 
   mount TradeEventCountAPI
   mount TradeEventSearchAPI
-  mount GetTradeEventAPI
+  mount TradeEventFindByIdAPI
 end

@@ -1,0 +1,93 @@
+{
+  "total": 1,
+  "offset": 0,
+  "sources_used": [
+    {
+      "source": "Australia Trade Leads",
+      "source_last_updated": "2016-07-26T02:27:49+00:00",
+      "last_imported": "2016-08-10T02:23:12+00:00"
+    }
+  ],
+  "search_performed_at": "2016-08-10T15:27:01+00:00",
+  "results": [
+    {
+      "id": "62d753fee98294cab8d66d1bcb501cff1a4f6670",
+      "uuid": "B15D8DFA-08DD-A7F1-9A4525609F5D3337",
+      "agency": "Department of Industry, Innovation and Science",
+      "description": "The Board of Innovation Australia (Board) is an independent statutory board charged with providing advice to government on all innovation, science and research matters. With the passage of legislation by the new parliament, Innovation Australia will change to become Innovation and Science Australia. The Office of Innovation and Science Australia (OISA) has been established within the Department of Industry, Innovation and Science (Department) to support the work of the Board. The Board is developing a long term strategic plan to maximise Australia’s innovation potential, positioning Australia to seize the next wave of economic prosperity and ensuring Australia’s wellbeing and economic growth in the future (Plan). To inform the Plan, the Board has commenced a performance audit (Audit) of Australia’s innovation, science and research system (System). The Audit will be delivered to government in December 2016 and will provide baseline data and analysis about the System.Accordingly, the Department invites suitably qualified consultants/contractors, including consortia to submit a tender for consultancy services.",
+      "source_industry": "80100000 - Management advisory services",
+      "industry": [
+        "eCommerce Industry",
+        "Franchising"
+      ],
+      "title": "Professional Advice on Innovation System Strategic Planning",
+      "lodgement_address": "Tenderers must be lodged electronically using AusTender",
+      "phone": "$phone",
+      "multi_agency_access": "$multi_agency_access",
+      "delivery_timeframe": "The anticipated timeframe for completing work under the contract is six months.",
+      "contact_officer": "Project Officer",
+      "email": "email@example.au",
+      "other_instructions": "$other_instructions",
+      "publish_date": "2016-08-12T00:00:00+10:00",
+      "end_date": "2016-09-06T15:00:00+10:00",
+      "location": "ACT",
+      "app_reference": "$app_reference",
+      "url": "https://www.tenders.gov.au/?event=public.ATM.show\u0026ATMUUID=B15D8DFA-08DD-A7F1-9A4525609F5D3337",
+      "click_url": "$click_url",
+      "atm_id": "PRI-00003629",
+      "panel_arrangement": "$panel_arrangement",
+      "conditions_for_participation": "The tenderer and any subcontractors proposed in the tender must not be named as not complying with the Workplace Gender Equality Act 2012 (Cth).The tenderer confirms that in dealing with its employees and independent contractors, the tenderer has due regard to Commonwealth policies on the engagement of workers, comply with Commonwealth policies on the engagement of workers, including the obligations under the Work Health and Safety Act 2011 (Cth) and relevant work health and safety laws.The tenderer and any subcontractors proposed in the tender are not insolvent, bankrupt, in liquidation, or under administration or receivership.",
+      "country": "AU",
+      "country_name": "Australia",
+      "source": "AUSTRALIA",
+      "trade_region": [
+        "Trans Pacific Partnership",
+        "Asia Pacific Economic Cooperation"
+      ],
+      "world_region": [
+        "Asia Pacific",
+        "Pacific Rim",
+        "Oceania"
+      ],
+      "atm_type": "Request for Tender"
+    }
+  ],
+  "aggregations": {
+    "sources": [
+      {
+        "key": "AUSTRALIA",
+        "doc_count": 12
+      }
+    ],
+    "trade_regions": [
+      {
+        "key": "Asia Pacific Economic Cooperation",
+        "doc_count": 12
+      },
+      {
+        "key": "Trans Pacific Partnership",
+        "doc_count": 12
+      }
+    ],
+    "world_regions": [
+      {
+        "key": "Asia Pacific",
+        "doc_count": 12
+      },
+      {
+        "key": "Oceania",
+        "doc_count": 12
+      },
+      {
+        "key": "Pacific Rim",
+        "doc_count": 12
+      }
+    ],
+    "countries": [
+      {
+        "key": "AU",
+        "doc_count": 12
+      }
+    ]
+  }
+}

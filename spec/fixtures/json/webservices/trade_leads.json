@@ -1,0 +1,65 @@
+{
+  "total": 1,
+  "offset": 0,
+  "sources_used": [
+    {
+      "source": "CANADA",
+      "source_last_updated": "2016-07-08T15:05:26+00:00",
+      "last_imported": "2016-07-08T15:05:26+00:00"
+    }
+  ],
+  "search_performed_at": "2016-07-08T15:27:01+00:00",
+  "aggregations": {
+    "sources": [
+      {
+        "key": "CANADA",
+        "doc_count": 1
+      }
+    ],
+    "trade_regions": [],
+    "countries": [
+      {
+        "key": "CA",
+        "doc_count": 56
+      }
+    ],
+    "world_regions": []
+  },
+  "results": [
+    {
+      "id": "AAA111",
+      "country": "CA",
+      "country_name": "Canada",
+      "title": "Services Trade Lead",
+      "reference_number": "$reference_number",
+      "contract_number": "$contract_number",
+      "publish_date": "2016-07-08",
+      "end_date": "2016-08-04",
+      "publish_date_amended": "2016-07-11",
+      "status": "Active",
+      "industry": [
+        "C211D - Architect and Engineering Services - Buildings"
+      ],
+      "ita_industries": [
+        "eCommerce Industry"
+      ],
+      "specific_location": "Manitoba",
+      "notice_type": "APM-NPP",
+      "trade_agreement": "Agreement on Internal Trade (AIT), Land Claim Set Asides (LCSA)",
+      "bid_type": "All interested suppliers may submit a bid",
+      "competitive_procurement_strategy": "Best Overall Proposal",
+      "non_competitive_procurement_strategy": "Exclusive Rights",
+      "procurement_organization": "Public Works and Government Services Canada",
+      "implementing_entity": "Public Works and Government Services Canada",
+      "description": "Trade lead description",
+      "contact": "Doe, John, (111) 222-3333",
+      "urls": [
+        "https://canada.example.org/trade_leads/AAA.PDF",
+        "https://canada.example.org/trade_leads/BBB.PDF"
+      ],
+      "source": "CANADA",
+      "trade_regions": [],
+      "world_regions": []
+    }
+  ]
+}

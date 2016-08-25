@@ -1,0 +1,733 @@
+{
+  "total": 1,
+  "offset": 0,
+  "sources_used": [
+    {
+      "source": "State Trade Leads",
+      "source_last_updated": "2016-07-28T02:13:08+00:00",
+      "last_imported": "2016-08-10T02:13:22+00:00"
+    }
+  ],
+  "search_performed_at": "2016-08-10T23:34:17+00:00",
+  "results": [
+    {
+      "id": "c118cb6ed4345bb33980b2dfb77303e2a561866a",
+      "record_id": "DATATABLE.1667",
+      "lead_source": "Post Identified Project",
+      "country_name": "Taiwan",
+      "country": "TW",
+      "specific_location": "Western Province",
+      "title": "Taiwan Lead",
+      "project_number": "NSB/SL/1601",
+      "source_industry": "Transportation and Warehousing",
+      "industry": [
+        "Retail Trade"
+      ],
+      "project_size": 3240000000,
+      "description": "Expression of Interest",
+      "tags": [
+        "A tag  with extra  spaces"
+      ],
+      "publish_date": "2016-07-06T00:00:00+00:00",
+      "end_date": "2016-08-24T00:00:00+00:00",
+      "funding_source": "Other",
+      "borrowing_entity": "Not Applicable",
+      "procurement_organization": "Ministry of Transport and Civil Aviation",
+      "contact": "NSB Fund Management",
+      "comments": "The value stated is not the correct value it is only for uploading purposes.",
+      "submitting_officer": "Jane Doe",
+      "submitting_officer_contact": "jane@example.org",
+      "url": "http://www.example.org/state",
+      "click_url": "http://goo.gl/state1",
+      "status": "Pipeline",
+      "source": "STATE",
+      "trade_region": [
+        "Asia Pacific Economic Cooperation"
+      ],
+      "world_region": [
+        "Asia",
+        "Asia Pacific",
+        "East Asia",
+        "Pacific Rim"
+      ]
+    }
+  ],
+  "aggregations": {
+    "sources": [
+      {
+        "key": "STATE",
+        "doc_count": 654
+      }
+    ],
+    "trade_regions": [
+      {
+        "key": "Global System of Trade Preferences among Developing Countries",
+        "doc_count": 272
+      },
+      {
+        "key": "Asia Pacific Economic Cooperation",
+        "doc_count": 118
+      },
+      {
+        "key": "African Growth and Opportunity Act",
+        "doc_count": 111
+      },
+      {
+        "key": "South Asian Association for Regional Cooperation",
+        "doc_count": 107
+      },
+      {
+        "key": "Commonwealth of Independent States",
+        "doc_count": 89
+      },
+      {
+        "key": "Economic Cooperation Organization",
+        "doc_count": 61
+      },
+      {
+        "key": "Association of Southeast Asian Nations",
+        "doc_count": 59
+      },
+      {
+        "key": "Trans Pacific Partnership",
+        "doc_count": 58
+      },
+      {
+        "key": "Common Market for Eastern and Southern Africa",
+        "doc_count": 48
+      },
+      {
+        "key": "South African Development Community",
+        "doc_count": 38
+      },
+      {
+        "key": "European Union - 28",
+        "doc_count": 32
+      },
+      {
+        "key": "CAFTA-DR",
+        "doc_count": 31
+      },
+      {
+        "key": "Andean Community",
+        "doc_count": 29
+      },
+      {
+        "key": "Organization of the Petroleum Exporting Countries",
+        "doc_count": 29
+      },
+      {
+        "key": "Southern Common Market",
+        "doc_count": 26
+      },
+      {
+        "key": "West African Economic and Monetary Union",
+        "doc_count": 26
+      },
+      {
+        "key": "Eurasian Economic Union",
+        "doc_count": 25
+      },
+      {
+        "key": "Caribbean Community and Common Market",
+        "doc_count": 21
+      },
+      {
+        "key": "Economic and Monetary Community of Central Africa",
+        "doc_count": 9
+      },
+      {
+        "key": "South African Customs Union",
+        "doc_count": 9
+      },
+      {
+        "key": "Gulf Cooperation Council",
+        "doc_count": 7
+      },
+      {
+        "key": "NAFTA",
+        "doc_count": 7
+      }
+    ],
+    "world_regions": [
+      {
+        "key": "Asia",
+        "doc_count": 243
+      },
+      {
+        "key": "Asia Pacific",
+        "doc_count": 183
+      },
+      {
+        "key": "Africa",
+        "doc_count": 139
+      },
+      {
+        "key": "Pacific Rim",
+        "doc_count": 132
+      },
+      {
+        "key": "Western Hemisphere",
+        "doc_count": 124
+      },
+      {
+        "key": "Sub-Saharan Africa",
+        "doc_count": 121
+      },
+      {
+        "key": "South Asia",
+        "doc_count": 107
+      },
+      {
+        "key": "Europe",
+        "doc_count": 106
+      },
+      {
+        "key": "Latin America",
+        "doc_count": 106
+      },
+      {
+        "key": "Southeast Asia",
+        "doc_count": 63
+      },
+      {
+        "key": "South America",
+        "doc_count": 62
+      },
+      {
+        "key": "West Africa",
+        "doc_count": 46
+      },
+      {
+        "key": "Caucasus",
+        "doc_count": 44
+      },
+      {
+        "key": "East Asia",
+        "doc_count": 41
+      },
+      {
+        "key": "Central Asia",
+        "doc_count": 35
+      },
+      {
+        "key": "Central America",
+        "doc_count": 31
+      },
+      {
+        "key": "Caribbean",
+        "doc_count": 24
+      },
+      {
+        "key": "Oceania",
+        "doc_count": 23
+      },
+      {
+        "key": "North Africa",
+        "doc_count": 18
+      },
+      {
+        "key": "Middle East",
+        "doc_count": 15
+      },
+      {
+        "key": "Persian Gulf Region",
+        "doc_count": 13
+      },
+      {
+        "key": "North America",
+        "doc_count": 7
+      },
+      {
+        "key": "Levant",
+        "doc_count": 2
+      }
+    ],
+    "countries": [
+      {
+        "key": "IO",
+        "doc_count": 60
+      },
+      {
+        "key": "GE",
+        "doc_count": 35
+      },
+      {
+        "key": "CN",
+        "doc_count": 32
+      },
+      {
+        "key": "VN",
+        "doc_count": 22
+      },
+      {
+        "key": "CR",
+        "doc_count": 17
+      },
+      {
+        "key": "PK",
+        "doc_count": 16
+      },
+      {
+        "key": "BR",
+        "doc_count": 15
+      },
+      {
+        "key": "BD",
+        "doc_count": 14
+      },
+      {
+        "key": "CO",
+        "doc_count": 14
+      },
+      {
+        "key": "UZ",
+        "doc_count": 13
+      },
+      {
+        "key": "ID",
+        "doc_count": 10
+      },
+      {
+        "key": "TZ",
+        "doc_count": 10
+      },
+      {
+        "key": "AU",
+        "doc_count": 9
+      },
+      {
+        "key": "KG",
+        "doc_count": 8
+      },
+      {
+        "key": "RU",
+        "doc_count": 8
+      },
+      {
+        "key": "AR",
+        "doc_count": 7
+      },
+      {
+        "key": "AZ",
+        "doc_count": 7
+      },
+      {
+        "key": "CL",
+        "doc_count": 7
+      },
+      {
+        "key": "EC",
+        "doc_count": 7
+      },
+      {
+        "key": "HR",
+        "doc_count": 7
+      },
+      {
+        "key": "KZ",
+        "doc_count": 7
+      },
+      {
+        "key": "MA",
+        "doc_count": 7
+      },
+      {
+        "key": "MX",
+        "doc_count": 7
+      },
+      {
+        "key": "PH",
+        "doc_count": 7
+      },
+      {
+        "key": "SS",
+        "doc_count": 7
+      },
+      {
+        "key": "UG",
+        "doc_count": 7
+      },
+      {
+        "key": "BB",
+        "doc_count": 6
+      },
+      {
+        "key": "IQ",
+        "doc_count": 6
+      },
+      {
+        "key": "KH",
+        "doc_count": 6
+      },
+      {
+        "key": "KW",
+        "doc_count": 6
+      },
+      {
+        "key": "LT",
+        "doc_count": 6
+      },
+      {
+        "key": "MN",
+        "doc_count": 6
+      },
+      {
+        "key": "NG",
+        "doc_count": 6
+      },
+      {
+        "key": "SN",
+        "doc_count": 6
+      },
+      {
+        "key": "HU",
+        "doc_count": 5
+      },
+      {
+        "key": "KE",
+        "doc_count": 5
+      },
+      {
+        "key": "LK",
+        "doc_count": 5
+      },
+      {
+        "key": "ML",
+        "doc_count": 5
+      },
+      {
+        "key": "NE",
+        "doc_count": 5
+      },
+      {
+        "key": "TN",
+        "doc_count": 5
+      },
+      {
+        "key": "BF",
+        "doc_count": 4
+      },
+      {
+        "key": "BI",
+        "doc_count": 4
+      },
+      {
+        "key": "BN",
+        "doc_count": 4
+      },
+      {
+        "key": "BO",
+        "doc_count": 4
+      },
+      {
+        "key": "BT",
+        "doc_count": 4
+      },
+      {
+        "key": "BW",
+        "doc_count": 4
+      },
+      {
+        "key": "CD",
+        "doc_count": 4
+      },
+      {
+        "key": "CF",
+        "doc_count": 4
+      },
+      {
+        "key": "DO",
+        "doc_count": 4
+      },
+      {
+        "key": "EG",
+        "doc_count": 4
+      },
+      {
+        "key": "GB",
+        "doc_count": 4
+      },
+      {
+        "key": "LA",
+        "doc_count": 4
+      },
+      {
+        "key": "MD",
+        "doc_count": 4
+      },
+      {
+        "key": "MM",
+        "doc_count": 4
+      },
+      {
+        "key": "MZ",
+        "doc_count": 4
+      },
+      {
+        "key": "NP",
+        "doc_count": 4
+      },
+      {
+        "key": "PE",
+        "doc_count": 4
+      },
+      {
+        "key": "SB",
+        "doc_count": 4
+      },
+      {
+        "key": "TJ",
+        "doc_count": 4
+      },
+      {
+        "key": "TL",
+        "doc_count": 4
+      },
+      {
+        "key": "XK",
+        "doc_count": 4
+      },
+      {
+        "key": "AF",
+        "doc_count": 3
+      },
+      {
+        "key": "AL",
+        "doc_count": 3
+      },
+      {
+        "key": "BJ",
+        "doc_count": 3
+      },
+      {
+        "key": "CY",
+        "doc_count": 3
+      },
+      {
+        "key": "GH",
+        "doc_count": 3
+      },
+      {
+        "key": "HN",
+        "doc_count": 3
+      },
+      {
+        "key": "HT",
+        "doc_count": 3
+      },
+      {
+        "key": "JM",
+        "doc_count": 3
+      },
+      {
+        "key": "LR",
+        "doc_count": 3
+      },
+      {
+        "key": "ME",
+        "doc_count": 3
+      },
+      {
+        "key": "MG",
+        "doc_count": 3
+      },
+      {
+        "key": "MR",
+        "doc_count": 3
+      },
+      {
+        "key": "MW",
+        "doc_count": 3
+      },
+      {
+        "key": "NI",
+        "doc_count": 3
+      },
+      {
+        "key": "NL",
+        "doc_count": 3
+      },
+      {
+        "key": "PA",
+        "doc_count": 3
+      },
+      {
+        "key": "TR",
+        "doc_count": 3
+      },
+      {
+        "key": "TT",
+        "doc_count": 3
+      },
+      {
+        "key": "ZM",
+        "doc_count": 3
+      },
+      {
+        "key": "AM",
+        "doc_count": 2
+      },
+      {
+        "key": "BA",
+        "doc_count": 2
+      },
+      {
+        "key": "BZ",
+        "doc_count": 2
+      },
+      {
+        "key": "CG",
+        "doc_count": 2
+      },
+      {
+        "key": "ET",
+        "doc_count": 2
+      },
+      {
+        "key": "GA",
+        "doc_count": 2
+      },
+      {
+        "key": "GQ",
+        "doc_count": 2
+      },
+      {
+        "key": "GT",
+        "doc_count": 2
+      },
+      {
+        "key": "LB",
+        "doc_count": 2
+      },
+      {
+        "key": "LY",
+        "doc_count": 2
+      },
+      {
+        "key": "MH",
+        "doc_count": 2
+      },
+      {
+        "key": "MY",
+        "doc_count": 2
+      },
+      {
+        "key": "NZ",
+        "doc_count": 2
+      },
+      {
+        "key": "RS",
+        "doc_count": 2
+      },
+      {
+        "key": "RW",
+        "doc_count": 2
+      },
+      {
+        "key": "UY",
+        "doc_count": 2
+      },
+      {
+        "key": "AE",
+        "doc_count": 1
+      },
+      {
+        "key": "BY",
+        "doc_count": 1
+      },
+      {
+        "key": "CM",
+        "doc_count": 1
+      },
+      {
+        "key": "DJ",
+        "doc_count": 1
+      },
+      {
+        "key": "FJ",
+        "doc_count": 1
+      },
+      {
+        "key": "GW",
+        "doc_count": 1
+      },
+      {
+        "key": "JP",
+        "doc_count": 1
+      },
+      {
+        "key": "LS",
+        "doc_count": 1
+      },
+      {
+        "key": "LV",
+        "doc_count": 1
+      },
+      {
+        "key": "MV",
+        "doc_count": 1
+      },
+      {
+        "key": "NA",
+        "doc_count": 1
+      },
+      {
+        "key": "PL",
+        "doc_count": 1
+      },
+      {
+        "key": "PW",
+        "doc_count": 1
+      },
+      {
+        "key": "PY",
+        "doc_count": 1
+      },
+      {
+        "key": "SG",
+        "doc_count": 1
+      },
+      {
+        "key": "SV",
+        "doc_count": 1
+      },
+      {
+        "key": "SZ",
+        "doc_count": 1
+      },
+      {
+        "key": "TD",
+        "doc_count": 1
+      },
+      {
+        "key": "TG",
+        "doc_count": 1
+      },
+      {
+        "key": "TH",
+        "doc_count": 1
+      },
+      {
+        "key": "TM",
+        "doc_count": 1
+      },
+      {
+        "key": "VC",
+        "doc_count": 1
+      },
+      {
+        "key": "VE",
+        "doc_count": 1
+      },
+      {
+        "key": "VU",
+        "doc_count": 1
+      },
+      {
+        "key": "ZA",
+        "doc_count": 1
+      }
+    ]
+  }
+}

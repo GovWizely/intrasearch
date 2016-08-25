@@ -11,7 +11,6 @@ module ArticleJSONSerializer
     }
 
     base.snippet_attribute = :atom
-    base.title_attribute = :title
 
     class << base
       attr_accessor :url_prefix

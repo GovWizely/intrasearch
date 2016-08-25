@@ -8,6 +8,7 @@ module WebPageJSONSerializer
                     :extra_attributes
     end
 
+    base.title_attribute = :title
     base.extra_attributes = {}
   end
 

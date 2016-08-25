@@ -1,5 +1,5 @@
-require 'admin/get_trade_event_api'
 require 'admin/get_trade_events_api'
+require 'admin/trade_event_find_by_id_api'
 require 'admin/update_trade_event_api'
 
 module Admin
@@ -8,6 +8,6 @@ module Admin
 
     mount GetTradeEventsAPI
     mount UpdateTradeEventAPI
-    mount GetTradeEventAPI
+    mount TradeEventFindByIdAPI
   end
 end

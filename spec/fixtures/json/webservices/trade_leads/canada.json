@@ -1,0 +1,104 @@
+{
+  "total": 1,
+  "offset": 0,
+  "sources_used": [
+    {
+      "source": "Canada Trade Leads",
+      "source_last_updated": "2016-08-10T02:13:40+00:00",
+      "last_imported": "2016-08-10T02:13:40+00:00"
+    }
+  ],
+  "search_performed_at": "2016-08-10T15:27:01+00:00",
+  "results": [
+    {
+      "id": "539d317fe76effc1e7631ce1a7d2e6b814434f51",
+      "publish_date": "2016-08-10T00:00:00+00:00",
+      "end_date": "2016-09-20T00:00:00+00:00",
+      "publish_date_amended": "2016-08-11T00:00:00+00:00",
+      "source_industry": [
+        "N6850N - Pepper Spray"
+      ],
+      "industry": [
+        "eCommerce Industry",
+        "Franchising"
+      ],
+      "url": [
+        "https://tradelead.example.org/canada/1 with spaces.pdf",
+        "https://tradelead.example.org/canada/2.pdf"
+      ],
+      "click_url": [
+        "https://goo.gl/canada1",
+        "https://goo.gl/canada2"
+      ],
+      "title": "Awesome Lead",
+      "reference_number": "PW-$$BK-379-25940",
+      "contract_number": "47419-188062/B",
+      "amendment_number": "000",
+      "publishing_status": "Active",
+      "specific_location": "Alberta",
+      "notice_type": "APM-NPP",
+      "trade_agreement": "World Trade Organization-Agreement",
+      "bid_type": "All interested suppliers may submit a bid",
+      "competitive_procurement_strategy": "N/A",
+      "procurement_organization": "Public Works and Government Services Canada",
+      "implementing_entity": "Canada Border Services Agency",
+      "description": "Awesome description.",
+      "contact": "Jane Doe",
+      "country": "CA",
+      "country_name": "Canada",
+      "source": "CANADA",
+      "trade_region": [
+        "Asia Pacific Economic Cooperation",
+        "Trans Pacific Partnership",
+        "NAFTA"
+      ],
+      "world_region": [
+        "Pacific Rim",
+        "Western Hemisphere",
+        "North America"
+      ]
+    }
+  ],
+  "aggregations": {
+    "sources": [
+      {
+        "key": "CANADA",
+        "doc_count": 132
+      }
+    ],
+    "trade_regions": [
+      {
+        "key": "Asia Pacific Economic Cooperation",
+        "doc_count": 132
+      },
+      {
+        "key": "NAFTA",
+        "doc_count": 132
+      },
+      {
+        "key": "Trans Pacific Partnership",
+        "doc_count": 132
+      }
+    ],
+    "world_regions": [
+      {
+        "key": "North America",
+        "doc_count": 132
+      },
+      {
+        "key": "Pacific Rim",
+        "doc_count": 132
+      },
+      {
+        "key": "Western Hemisphere",
+        "doc_count": 132
+      }
+    ],
+    "countries": [
+      {
+        "key": "CA",
+        "doc_count": 132
+      }
+    ]
+  }
+}

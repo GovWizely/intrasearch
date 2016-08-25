@@ -24,11 +24,16 @@ namespace :intrasearch do
     TradeEvent::TradeEventImporter.descendants.each(&:import)
   end
 
+  desc 'import trade leads'
+  task import_trade_leads: :environment do
+    TradeLead::TradeLeadImporter.descendants.each(&:import)
+  end
+
   desc 'import web documents'
   task import_web_documents: :environment do
     WebDocumentImporter.import
   end
 
   desc 'import all types of content'
-  task import_all: %i(import_taxonomies import_trade_events import_web_documents import_articles)
+  task import_all: %i(import_taxonomies import_trade_events import_trade_leads import_web_documents import_articles)
 end

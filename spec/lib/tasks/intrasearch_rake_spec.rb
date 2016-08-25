@@ -56,6 +56,20 @@ RSpec.describe 'intrasearch.rake' do
     end
   end
 
+  describe 'intrasearch:import_trade_leads' do
+    it 'imports trade leads' do
+      expect(TradeLead::AustraliaTradeLeadImporter).to receive(:import)
+      expect(TradeLead::CanadaTradeLeadImporter).to receive(:import)
+      expect(TradeLead::FboTradeLeadImporter).to receive(:import)
+      expect(TradeLead::McaTradeLeadImporter).to receive(:import)
+      expect(TradeLead::StateTradeLeadImporter).to receive(:import)
+      expect(TradeLead::UkTradeLeadImporter).to receive(:import)
+      expect(TradeLead::UstdaTradeLeadImporter).to receive(:import)
+
+      @rake['intrasearch:import_trade_leads'].invoke
+    end
+  end
+
   describe 'intrasearch:import_web_documents' do
     it 'imports web documents' do
       expect(WebDocumentImporter).to receive(:import)

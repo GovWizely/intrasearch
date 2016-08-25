@@ -50,23 +50,4 @@ RSpec.describe TradeEventCountAPI, endpoint: '/v1/trade_events/count' do
     ]
     expect(parsed_body[:aggregations][:sources]).to eq(expected_sources)
   end
-
-  it 'returns trade_regions aggregation' do
-    expected_trade_regions = [
-      { key: 'Asia Pacific Economic Cooperation', doc_count: 3 },
-      { key: 'NAFTA', doc_count: 1 }
-    ]
-    expect(parsed_body[:aggregations][:trade_regions]).to eq(expected_trade_regions)
-  end
-
-  it 'returns world_regions aggregation' do
-    expected_world_regions = [
-      { key: '/Asia', doc_count: 1 },
-      { key: '/Asia/East Asia', doc_count: 1 },
-      { key: '/North America', doc_count: 3 },
-      { key: '/Pacific Rim', doc_count: 3 },
-      { key: '/Western Hemisphere', doc_count: 3 }
-    ]
-    expect(parsed_body[:aggregations][:world_regions]).to eq(expected_world_regions)
-  end
 end

@@ -1,0 +1,183 @@
+{
+  "total": 1,
+  "offset": 0,
+  "sources_used": [
+    {
+      "source": "FBO Trade Leads",
+      "source_last_updated": "2016-08-10T02:13:31+00:00",
+      "last_imported": "2016-08-10T02:13:31+00:00"
+    }
+  ],
+  "search_performed_at": "2016-08-10T23:31:21+00:00",
+  "results": [
+    {
+      "id": "995a1c55b26d11fe162f3f61b594be8c403c60f0",
+      "source": "FBO",
+      "contract_number": "sol-674-14-000014",
+      "url": "https://www.fbo.org/url with spaces.html",
+      "click_url": "https://goo.gl/fbo1",
+      "source_industry": "541990: All Other Professional, Scientific, and Technical Services",
+      "industry": [
+        "Scientific and Technical Services"
+      ],
+      "publish_date": "2014-03-03T00:00:00+00:00",
+      "end_date": "2017-04-17T00:00:00+00:00",
+      "notice_type": "COMBINE",
+      "procurement_organization": "Agency for International Development",
+      "procurement_office": "Overseas Missions",
+      "procurement_organization_address": "South Africa USAID-Pretoria",
+      "classification_code": "U",
+      "procurement_office_address": "Dept of State Washington DC 20521-6120",
+      "title": "Education Activity Lead",
+      "contact": "Jane Doe",
+      "description": "See RFP",
+      "competitive_procurement_strategy": "$competitive_procurement_strategy",
+      "country": "ZA",
+      "trade_region": [
+        "African Growth and Opportunity Act",
+        "South African Development Community",
+        "South African Customs Union"
+      ],
+      "world_region": [
+        "Sub-Saharan Africa",
+        "Africa"
+      ],
+      "country_name": "South Africa",
+      "specific_address": "Regional Acquisition and Assistance Office"
+    }
+  ],
+  "aggregations": {
+    "sources": [
+      {
+        "key": "FBO",
+        "doc_count": 10
+      }
+    ],
+    "trade_regions": [
+      {
+        "key": "African Growth and Opportunity Act",
+        "doc_count": 3
+      },
+      {
+        "key": "European Union - 28",
+        "doc_count": 3
+      },
+      {
+        "key": "Economic Cooperation Organization",
+        "doc_count": 2
+      },
+      {
+        "key": "Global System of Trade Preferences among Developing Countries",
+        "doc_count": 2
+      },
+      {
+        "key": "South African Development Community",
+        "doc_count": 2
+      },
+      {
+        "key": "South Asian Association for Regional Cooperation",
+        "doc_count": 2
+      },
+      {
+        "key": "CAFTA-DR",
+        "doc_count": 1
+      },
+      {
+        "key": "Organization of the Petroleum Exporting Countries",
+        "doc_count": 1
+      },
+      {
+        "key": "South African Customs Union",
+        "doc_count": 1
+      },
+      {
+        "key": "West African Economic and Monetary Union",
+        "doc_count": 1
+      }
+    ],
+    "world_regions": [
+      {
+        "key": "Africa",
+        "doc_count": 3
+      },
+      {
+        "key": "Europe",
+        "doc_count": 3
+      },
+      {
+        "key": "Sub-Saharan Africa",
+        "doc_count": 3
+      },
+      {
+        "key": "Asia",
+        "doc_count": 2
+      },
+      {
+        "key": "Central Asia",
+        "doc_count": 2
+      },
+      {
+        "key": "South Asia",
+        "doc_count": 2
+      },
+      {
+        "key": "Caribbean",
+        "doc_count": 1
+      },
+      {
+        "key": "Latin America",
+        "doc_count": 1
+      },
+      {
+        "key": "Middle East",
+        "doc_count": 1
+      },
+      {
+        "key": "Persian Gulf Region",
+        "doc_count": 1
+      },
+      {
+        "key": "West Africa",
+        "doc_count": 1
+      },
+      {
+        "key": "Western Hemisphere",
+        "doc_count": 1
+      }
+    ],
+    "countries": [
+      {
+        "key": "AF",
+        "doc_count": 2
+      },
+      {
+        "key": "DE",
+        "doc_count": 2
+      },
+      {
+        "key": "DO",
+        "doc_count": 1
+      },
+      {
+        "key": "HR",
+        "doc_count": 1
+      },
+      {
+        "key": "IQ",
+        "doc_count": 1
+      },
+      {
+        "key": "NE",
+        "doc_count": 1
+      },
+      {
+        "key": "TZ",
+        "doc_count": 1
+      },
+      {
+        "key": "ZA",
+        "doc_count": 1
+      }
+    ]
+  }
+}

@@ -1,0 +1,164 @@
+default: &default
+  :country:
+    :source_key: country_name
+  :description:
+    :skip_sanitize: true
+  :id:
+  :source:
+  :title:
+
+industries: &industries
+  :industries:
+    :source_key: industry
+    :default: []
+
+AUSTRALIA:
+  <<: *default
+  <<: *industries
+  :agency:
+  :app_reference:
+  :atm_id:
+  :atm_type:
+  :click_url:
+  :conditions_for_participation:
+  :contact_officer:
+  :delivery_timeframe:
+  :email:
+  :end_at:
+    :source_key: end_date
+  :location:
+  :lodgement_address:
+  :multi_agency_access:
+  :other_instructions:
+  :panel_arrangement:
+  :phone:
+  :published_at:
+    :source_key: publish_date
+  :url:
+    :skip_sanitize: true
+
+CANADA:
+  <<: *default
+  <<: *industries
+  :amended_at:
+    :source_key: publish_date_amended
+  :amendment_number:
+  :bid_type:
+  :click_urls:
+    :source_key: click_url
+    :default: []
+  :competitive_procurement_strategy:
+  :contact:
+  :contract_number:
+  :end_at:
+    :source_key: end_date
+  :id:
+  :implementing_entity:
+  :notice_type:
+  :procurement_organization:
+  :published_at:
+    :source_key: publish_date
+  :publishing_status:
+  :reference_number:
+  :source:
+  :specific_location:
+  :trade_agreement:
+  :urls:
+    :skip_sanitize: true
+    :source_key: url
+    :default: []
+
+FBO:
+  <<: *default
+  <<: *industries
+  :classification_code:
+  :click_url:
+    :skip_sanitize: true
+  :competitive_procurement_strategy:
+  :contact:
+  :contract_number:
+  :end_at:
+    :source_key: end_date
+  :notice_type:
+  :procurement_office:
+  :procurement_office_address:
+  :procurement_organization:
+  :procurement_organization_address:
+  :published_at:
+    :source_key: publish_date
+  :specific_address:
+  :url:
+    :skip_sanitize: true
+
+MCA:
+  <<: *default
+  :categories:
+  :click_url:
+    :skip_sanitize: true
+  :funding_source:
+  :published_at:
+    :source_key: publish_date
+  :url:
+    :skip_sanitize: true
+
+STATE:
+  <<: *default
+  <<: *industries
+  :borrowing_entity:
+  :click_url:
+    :skip_sanitize: true
+  :comments:
+  :contact:
+  :end_at:
+    :source_key: end_date
+  :funding_source:
+  :lead_source:
+  :procurement_organization:
+  :project_number:
+  :project_size:
+  :published_at:
+    :source_key: publish_date
+  :record_id:
+  :specific_location:
+  :status:
+  :submitting_officer:
+  :submitting_officer_contact:
+  :tags:
+  :url:
+    :skip_sanitize: true
+
+UK:
+  <<: *default
+  <<: *industries
+  :click_url:
+    :skip_sanitize: true
+  :contact:
+  :contract_end_at:
+    :source_key: contract_end_date
+  :contract_start_at:
+    :source_key: contract_start_date
+  :deadline_at:
+    :source_key: deadline_date
+  :max_contract_value:
+  :min_contract_value:
+  :notice_type:
+  :procurement_organization:
+  :published_at:
+    :source_key: publish_date
+  :record_id:
+  :reference_number:
+  :specific_location:
+  :status:
+  :title:
+  :url:
+    :skip_sanitize: true
+
+USTDA:
+  <<: *default
+  :click_url:
+  :end_at:
+    :source_key: end_date
+  :published_at:
+    :source_key: publish_date
+  :url:
+    :skip_sanitize: true

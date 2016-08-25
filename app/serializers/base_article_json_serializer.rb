@@ -13,5 +13,4 @@ module BaseArticleJSONSerializer
   }
 
   self.snippet_attribute = :atom
-  self.title_attribute = :title
 end

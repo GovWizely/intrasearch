@@ -1,4 +1,3 @@
-require 'article'
 require 'article_search'
 require 'privacy_shield_article_search_response'
 

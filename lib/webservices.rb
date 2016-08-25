@@ -18,3 +18,4 @@ end
 require 'webservices/connection'
 require 'webservices/resource'
 require 'webservices/trade_event'
+require 'webservices/trade_lead'

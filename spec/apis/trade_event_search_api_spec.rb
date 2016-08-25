@@ -58,25 +58,6 @@ RSpec.describe TradeEventSearchAPI, endpoint: '/v1/trade_events/search' do
       expect(parsed_body[:aggregations][:sources]).to eq(expected_sources)
     end
 
-    it 'returns trade_regions aggregation' do
-      expected_trade_regions = [
-        { key: 'Asia Pacific Economic Cooperation', doc_count: 3 },
-        { key: 'NAFTA', doc_count: 1 }
-      ]
-      expect(parsed_body[:aggregations][:trade_regions]).to eq(expected_trade_regions)
-    end
-
-    it 'returns world_regions aggregation' do
-      expected_world_regions = [
-        { key: '/Asia', doc_count: 1 },
-        { key: '/Asia/East Asia', doc_count: 1 },
-        { key: '/North America', doc_count: 3 },
-        { key: '/Pacific Rim', doc_count: 3 },
-        { key: '/Western Hemisphere', doc_count: 3 }
-      ]
-      expect(parsed_body[:aggregations][:world_regions]).to eq(expected_world_regions)
-    end
-
     it 'highlights matching term in the title' do
       expected_first_result = {
         snippet: '<em>Event</em> 36282 description.',
@@ -217,48 +198,6 @@ RSpec.describe TradeEventSearchAPI, endpoint: '/v1/trade_events/search' do
         snippet: 'Event 36282 description.',
         title: 'Trade Event 36282',
         url: 'https://example.org/trade_event?id=36282' }
-      expect(parsed_body[:results].first).to eq(expected_first_result)
-    end
-  end
-
-  context 'when filtering with trade regions' do
-    before { get described_endpoint, 'trade_regions' => 'NAFTA', 'limit' => 1 }
-
-    it_behaves_like 'a successful API response'
-
-    it 'returns metadata' do
-      expect(parsed_body[:metadata]).to eq(total: 1,
-                                           count: 1,
-                                           offset: 0,
-                                           next_offset: nil)
-    end
-
-    it 'returns unhighlighted title and snippet' do
-      expected_first_result = {
-        snippet: 'Event 36282 description.',
-        title: 'Trade Event 36282',
-        url: 'https://example.org/trade_event?id=36282' }
-      expect(parsed_body[:results].first).to eq(expected_first_result)
-    end
-  end
-
-  context 'when filtering with world_regions' do
-    before { get described_endpoint, 'world_regions' => 'East Asia', 'limit' => 1 }
-
-    it_behaves_like 'a successful API response'
-
-    it 'returns metadata' do
-      expect(parsed_body[:metadata]).to eq(total: 1,
-                                           count: 1,
-                                           offset: 0,
-                                           next_offset: nil)
-    end
-
-    it 'returns unhighlighted title and snippet' do
-      expected_first_result = {
-        snippet: 'USTDA Trade Event f0e259 description.',
-        title: 'USTDA Trade Event Summit f0e259',
-        url: 'https://example.org/trade_event?id=f0e2598dbc76ce55cd0a557746375bd911808bac' }
       expect(parsed_body[:results].first).to eq(expected_first_result)
     end
   end

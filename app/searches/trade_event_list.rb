@@ -1,4 +1,5 @@
 require 'trade_event_match_all_query'
+require 'trade_event_repository'
 require 'trade_event_search_response'
 require 'repository'
 require 'search'

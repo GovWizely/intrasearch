@@ -10,6 +10,7 @@ GEM
       minitest (~> 5.1)
       thread_safe (~> 0.3, >= 0.3.4)
       tzinfo (~> 1.1)
+    addressable (2.4.0)
     airbrake (5.2.3)
       airbrake-ruby (~> 1.2)
     airbrake-ruby (1.2.3)
@@ -177,6 +178,7 @@ PLATFORMS
 
 DEPENDENCIES
   activesupport
+  addressable
   airbrake (~> 5.1)
   codeclimate-test-reporter
   elasticsearch-persistence

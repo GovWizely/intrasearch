@@ -10,5 +10,4 @@ module WebDocumentJSONSerializer
   }
 
   self.snippet_attribute = :content
-  self.title_attribute = :title
 end

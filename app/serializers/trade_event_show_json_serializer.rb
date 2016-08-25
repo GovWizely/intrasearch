@@ -18,8 +18,6 @@ module TradeEventShowJSONSerializer
       attribute :end_date
       attribute :countries, default: []
       attribute :industries, default: []
-      attribute :trade_regions, default: []
-      attribute :world_regions, default: []
     end
   end
 

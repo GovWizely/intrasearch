@@ -1,0 +1,75 @@
+{
+  "total": 1,
+  "offset": 0,
+  "sources_used": [
+    {
+      "source": "UK Trade Leads",
+      "source_last_updated": "2016-08-10T02:11:10+00:00",
+      "last_imported": "2016-08-10T02:11:10+00:00"
+    }
+  ],
+  "search_performed_at": "2016-08-10T15:27:01+00:00",
+  "results": [
+    {
+      "id": "d292a188d7ce8dd13419de8c0da4ce7b29c79899",
+      "source": "UK",
+      "country": "GB",
+      "country_name": "United Kingdom",
+      "record_id": "355c8432-d59c-46d4-bd3e-015e3fd9fdd4",
+      "reference_number": "PR16098",
+      "publish_date": "2016-08-15T09:21:36+00:00",
+      "deadline_date": "2016-09-19T00:00:00+00:00",
+      "contract_start_date": "2017-03-14T00:00:00+00:00",
+      "contract_end_date": "2022-03-13T00:00:00+00:00",
+      "min_contract_value": 0.0,
+      "max_contract_value": 6000000.0,
+      "url": "www.example.co.uk",
+      "click_url": "http://goo.gl/uk1",
+      "status": "Open",
+      "procurement_organization": "UK BUSINESS",
+      "contact": "john@example.co.uk",
+      "title": "Advanced Electron Microscopy Lead",
+      "description": "UK Business Services",
+      "notice_type": "Contract",
+      "specific_location": "Any region",
+      "trade_region": [
+        "European Union - 28"
+      ],
+      "world_region": [
+        "Europe"
+      ],
+      "source_industry": [
+        "Research and Development"
+      ],
+      "industry": [
+        "Space"
+      ]
+    }
+  ],
+  "aggregations": {
+    "sources": [
+      {
+        "key": "UK",
+        "doc_count": 294
+      }
+    ],
+    "trade_regions": [
+      {
+        "key": "European Union - 28",
+        "doc_count": 294
+      }
+    ],
+    "world_regions": [
+      {
+        "key": "Europe",
+        "doc_count": 294
+      }
+    ],
+    "countries": [
+      {
+        "key": "GB",
+        "doc_count": 294
+      }
+    ]
+  }
+}

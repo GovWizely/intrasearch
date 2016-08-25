@@ -12,6 +12,21 @@
   - Oceania
   - Pacific Rim
 
+- :id: http://webprotege.stanford.edu/RBTBNP5i0kFGFdhQ82AFali
+  :label: Canada
+  :trade_regions:
+  - Asia Pacific Economic Cooperation
+  - NAFTA
+  - Trans Pacific Partnership
+  :world_region_paths:
+  - "/North America"
+  - "/Pacific Rim"
+  - "/Western Hemisphere"
+  :world_regions:
+  - North America
+  - Pacific Rim
+  - Western Hemisphere
+
 - id: http://webprotege.stanford.edu/RC4HD9CwKjvgX8dSybAp3Sk
   label: United States
   trade_regions:
@@ -71,6 +86,19 @@
   world_region_paths: []
   world_regions: []
 
+- :id: http://webprotege.stanford.edu/RDFbgSy3LZrH6PRhU3Ah9FK
+  :label: South Africa
+  :trade_regions:
+  - African Growth and Opportunity Act
+  - South African Customs Union
+  - South African Development Community
+  :world_region_paths:
+  - "/Africa"
+  - "/Africa/Sub-Saharan Africa"
+  :world_regions:
+  - Africa
+  - Sub-Saharan Africa
+
 - :id: http://webprotege.stanford.edu/R8UBTJoenDbXjYBjcyr1LXc
   :label: Taiwan
   :trade_regions:
@@ -85,3 +113,12 @@
   - Asia Pacific
   - East Asia
   - Pacific Rim
+
+- :id: http://webprotege.stanford.edu/RCs75GXTuLFQAa5lGsmBtpi
+  :label: United Kingdom
+  :trade_regions:
+  - European Union - 28
+  :world_region_paths:
+  - "/Europe"
+  :world_regions:
+  - Europe

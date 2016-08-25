@@ -1,0 +1,220 @@
+{
+  "total": 1,
+  "offset": 0,
+  "sources_used": [
+    {
+      "source": "MCA Trade Leads",
+      "source_last_updated": "2016-08-08T02:13:25+00:00",
+      "last_imported": "2016-08-10T02:13:17+00:00"
+    }
+  ],
+  "search_performed_at": "2016-08-10T23:33:00+00:00",
+  "results": [
+    {
+      "id": "f3a40a7987cd049cbf093079bbef65b1df387d00",
+      "guid": "http://www.dgmarket.com/tenders/np-notice.do?noticeId=14114655",
+      "country": "ZA",
+      "country_name": "South Africa",
+      "publish_date": "2016-06-18T21:10:41-04:00",
+      "url": "http://www.dgmarket.com/tenders/np-notice.do?noticeId=14114655",
+      "click_url": "http://goo.gl/mca1",
+      "categories": [
+        "type/spn",
+        "CPV/30236000",
+        "CPV/30000000",
+        "deadline/2017/Jun/09"
+      ],
+      "title": "Purchase of Computer Equipment Lead",
+      "description": "Buyer: \u003Ca href=\"http://www.dgmarket.com/tenders/adminShowBuyer.do?buyerId=7041575\"\u003EMILLENNIUM CHALLENGE ACCOUNT BENIN II\u003C/a\u003E",
+      "funding_source": "Millennium Challenge Account (MCA)",
+      "source": "MCA",
+      "trade_region": [
+        "African Growth and Opportunity Act",
+        "South African Development Community",
+        "South African Customs Union"
+      ],
+      "world_region": [
+        "Sub-Saharan Africa",
+        "Africa"
+      ]
+    }
+  ],
+  "aggregations": {
+    "sources": [
+      {
+        "key": "MCA",
+        "doc_count": 35
+      }
+    ],
+    "trade_regions": [
+      {
+        "key": "African Growth and Opportunity Act",
+        "doc_count": 21
+      },
+      {
+        "key": "Global System of Trade Preferences among Developing Countries",
+        "doc_count": 17
+      },
+      {
+        "key": "West African Economic and Monetary Union",
+        "doc_count": 15
+      },
+      {
+        "key": "Asia Pacific Economic Cooperation",
+        "doc_count": 5
+      },
+      {
+        "key": "CAFTA-DR",
+        "doc_count": 5
+      },
+      {
+        "key": "Commonwealth of Independent States",
+        "doc_count": 5
+      },
+      {
+        "key": "Association of Southeast Asian Nations",
+        "doc_count": 3
+      },
+      {
+        "key": "Common Market for Eastern and Southern Africa",
+        "doc_count": 2
+      },
+      {
+        "key": "NAFTA",
+        "doc_count": 2
+      },
+      {
+        "key": "South African Development Community",
+        "doc_count": 2
+      },
+      {
+        "key": "Trans Pacific Partnership",
+        "doc_count": 2
+      }
+    ],
+    "world_regions": [
+      {
+        "key": "Africa",
+        "doc_count": 21
+      },
+      {
+        "key": "Sub-Saharan Africa",
+        "doc_count": 21
+      },
+      {
+        "key": "West Africa",
+        "doc_count": 19
+      },
+      {
+        "key": "Pacific Rim",
+        "doc_count": 7
+      },
+      {
+        "key": "Europe",
+        "doc_count": 5
+      },
+      {
+        "key": "Western Hemisphere",
+        "doc_count": 5
+      },
+      {
+        "key": "Caucasus",
+        "doc_count": 4
+      },
+      {
+        "key": "Asia",
+        "doc_count": 3
+      },
+      {
+        "key": "Asia Pacific",
+        "doc_count": 3
+      },
+      {
+        "key": "Central America",
+        "doc_count": 3
+      },
+      {
+        "key": "Latin America",
+        "doc_count": 3
+      },
+      {
+        "key": "Southeast Asia",
+        "doc_count": 3
+      },
+      {
+        "key": "North America",
+        "doc_count": 2
+      },
+      {
+        "key": "Levant",
+        "doc_count": 1
+      },
+      {
+        "key": "Middle East",
+        "doc_count": 1
+      }
+    ],
+    "countries": [
+      {
+        "key": "BJ",
+        "doc_count": 13
+      },
+      {
+        "key": "GE",
+        "doc_count": 4
+      },
+      {
+        "key": "HN",
+        "doc_count": 2
+      },
+      {
+        "key": "ID",
+        "doc_count": 2
+      },
+      {
+        "key": "SL",
+        "doc_count": 2
+      },
+      {
+        "key": "TG",
+        "doc_count": 2
+      },
+      {
+        "key": "US",
+        "doc_count": 2
+      },
+      {
+        "key": "CV",
+        "doc_count": 1
+      },
+      {
+        "key": "GH",
+        "doc_count": 1
+      },
+      {
+        "key": "JO",
+        "doc_count": 1
+      },
+      {
+        "key": "MD",
+        "doc_count": 1
+      },
+      {
+        "key": "MW",
+        "doc_count": 1
+      },
+      {
+        "key": "PH",
+        "doc_count": 1
+      },
+      {
+        "key": "SV",
+        "doc_count": 1
+      },
+      {
+        "key": "ZM",
+        "doc_count": 1
+      }
+    ]
+  }
+}

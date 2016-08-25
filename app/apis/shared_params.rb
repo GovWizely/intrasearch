@@ -26,4 +26,13 @@ module SharedParams
              type: Integer,
              values: Search::DEFAULT_OFFSET..Search::MAX_OFFSET
   end
+
+  params :full_text_search_with_countries_and_industries do
+    optional :countries, type: String
+    optional :industries, type: String
+    optional :q, type: String
+    at_least_one_of :countries,
+                    :industries,
+                    :q
+  end
 end

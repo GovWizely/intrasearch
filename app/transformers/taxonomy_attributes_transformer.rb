@@ -10,15 +10,15 @@ module TaxonomyAttributesTransformer
     attributes[:world_regions] = valid_countries.map(&:world_regions).flatten.uniq.sort
   end
 
-  def transform_industries(attributes)
-    transform_taxonomies Industry, attributes, attributes[:industries]
+  def transform_industries(attributes, name = :industries)
+    transform_taxonomies Industry, attributes, name
   end
 
-  def transform_taxonomies(klass, attributes, labels)
-    taxonomies = klass.search_by_labels(*labels)
+  def transform_taxonomies(klass, attributes, name)
+    taxonomies = klass.search_by_labels(*attributes[name])
     paths = taxonomies.map(&:path).uniq.sort
     attributes["#{klass.name.downcase}_paths"] = paths
-    attributes[klass.name.tableize] = paths_to_labels paths
+    attributes[name] = paths_to_labels paths
   end
 
   def paths_to_labels(paths)

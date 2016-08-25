@@ -1,0 +1,48 @@
+common: &common
+  :description:
+  :event_url:
+    :source_key: url
+  :id:
+  :name:
+    :source_key: event_name
+  :source:
+
+DL:
+  <<: *common
+
+SHARED_ITA_USTDA: &shared_ita_ustda
+  <<: *common
+  :cost:
+  :end_date:
+  :industries:
+    :source_key: ita_industries
+  :registration_title:
+  :registration_url:
+    :source_key: registration_link
+  :start_date:
+  :venues:
+    :attributes:
+      :country:
+        :source_key: country_name
+      :venue:
+
+ITA:
+  <<: *shared_ita_ustda
+
+SBA:
+  <<: *common
+  :cost:
+  :end_date:
+  :industries:
+    :source_key: ita_industries
+  :registration_url:
+    :source_key: registration_link
+  :start_date:
+  :venues:
+    :attributes:
+      :country:
+        :source_key: country_name
+      :venue:
+
+USTDA:
+  <<: *shared_ita_ustda

@@ -1,0 +1,93 @@
+{
+  "total": 4,
+  "offset": 0,
+  "sources_used": [
+    {
+      "source": "USTDA Trade Leads",
+      "source_last_updated": "2016-08-10T02:13:26+00:00",
+      "last_imported": "2016-08-10T02:13:26+00:00"
+    }
+  ],
+  "search_performed_at": "2016-08-10T15:27:01+00:00",
+  "results": [
+    {
+      "id": "26252346bf5f16c1a9a9b2dfa2762bbe2c99b8ae",
+      "source": "USTDA",
+      "title": "Trade Lead: South Africa: Global Logistics Service Provider",
+      "publish_date": "2016-06-13T00:00:00+00:00",
+      "end_date": "2016-09-30T00:00:00+00:00",
+      "description": "Background: a South African state-owned freight logistics company",
+      "url": "https://www.example.org/ustda",
+      "click_url": "https://goo.gl/ustda1",
+      "country_name": "South Africa",
+      "country": "ZA",
+      "trade_region": [
+        "African Growth and Opportunity Act",
+        "South African Development Community",
+        "South African Customs Union"
+      ],
+      "world_region": [
+        "Sub-Saharan Africa",
+        "Africa"
+      ]
+    }
+  ],
+  "aggregations": {
+    "sources": [
+      {
+        "key": "USTDA",
+        "doc_count": 4
+      }
+    ],
+    "trade_regions": [
+      {
+        "key": "African Growth and Opportunity Act",
+        "doc_count": 4
+      },
+      {
+        "key": "Common Market for Eastern and Southern Africa",
+        "doc_count": 2
+      },
+      {
+        "key": "South African Development Community",
+        "doc_count": 2
+      },
+      {
+        "key": "Global System of Trade Preferences among Developing Countries",
+        "doc_count": 1
+      },
+      {
+        "key": "South African Customs Union",
+        "doc_count": 1
+      }
+    ],
+    "world_regions": [
+      {
+        "key": "Africa",
+        "doc_count": 4
+      },
+      {
+        "key": "Sub-Saharan Africa",
+        "doc_count": 4
+      }
+    ],
+    "countries": [
+      {
+        "key": "ET",
+        "doc_count": 1
+      },
+      {
+        "key": "MZ",
+        "doc_count": 1
+      },
+      {
+        "key": "RW",
+        "doc_count": 1
+      },
+      {
+        "key": "ZA",
+        "doc_count": 1
+      }
+    ]
+  }
+}

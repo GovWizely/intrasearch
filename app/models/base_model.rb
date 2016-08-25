@@ -44,5 +44,11 @@ module BaseModel
                            'current'].join('-').freeze
       reset_index_name!
     end
+
+    def not_analyzed_attributes(type, *names)
+      names.each do |name|
+        attribute name, type, mapping: { index: 'not_analyzed' }
+      end
+    end
   end
 end

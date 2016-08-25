@@ -1,6 +1,7 @@
 source 'https://rubygems.org'
 
 gem 'activesupport'
+gem 'addressable'
 gem 'elasticsearch-persistence'
 gem 'grape'
 gem 'rake'

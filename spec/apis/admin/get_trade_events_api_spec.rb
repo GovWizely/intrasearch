@@ -49,12 +49,6 @@ RSpec.describe Admin::GetTradeEventsAPI, endpoint: '/admin/trade_events' do
             'Information and Communication Technology',
             'Retail Trade',
             'eCommerce Industry'
-          ],
-          trade_regions: ['Asia Pacific Economic Cooperation'],
-          world_regions: [
-            'North America',
-            'Pacific Rim',
-            'Western Hemisphere'
           ]
         }
       ]

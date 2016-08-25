@@ -1,7 +1,7 @@
 require 'support/api_shared_examples'
 require 'support/elastic_model_shared_contexts'
 
-RSpec.describe GetTradeEventAPI do
+RSpec.describe TradeEventFindByIdAPI do
   include Rack::Test::Methods
 
   def app
@@ -37,9 +37,7 @@ RSpec.describe GetTradeEventAPI do
         start_date: nil,
         end_date: nil,
         countries: [],
-        industries: [],
-        trade_regions: [],
-        world_regions: []
+        industries: []
       }
       expect(parsed_body).to eq(expected_attributes)
     end
@@ -67,16 +65,7 @@ RSpec.describe GetTradeEventAPI do
         start_date: '2016-05-15',
         end_date: '2016-05-24',
         countries: ['United States'],
-        industries: ['Franchising'],
-        trade_regions: [
-          'Asia Pacific Economic Cooperation',
-          'NAFTA'
-        ],
-        world_regions: [
-          'North America',
-          'Pacific Rim',
-          'Western Hemisphere'
-        ]
+        industries: ['Franchising']
       }
       expect(parsed_body).to eq(expected_attributes)
     end
@@ -108,14 +97,6 @@ RSpec.describe GetTradeEventAPI do
           'Information and Communication Technology',
           'Retail Trade',
           'eCommerce Industry'
-        ],
-        trade_regions: [
-          'Asia Pacific Economic Cooperation'
-        ],
-        world_regions: [
-          'North America',
-          'Pacific Rim',
-          'Western Hemisphere'
         ]
       }
       expect(parsed_body).to eq(expected_attributes)
@@ -150,16 +131,6 @@ RSpec.describe GetTradeEventAPI do
           'Information and Communication Technology',
           'Retail Trade',
           'eCommerce Industry'
-        ],
-        trade_regions: [
-          'Asia Pacific Economic Cooperation',
-        ],
-        world_regions: [
-          'Asia',
-          'East Asia',
-          'North America',
-          'Pacific Rim',
-          'Western Hemisphere'
         ]
       }
       expect(parsed_body).to eq(expected_attributes)

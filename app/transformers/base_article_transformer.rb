@@ -25,8 +25,8 @@ module BaseArticleTransformer
   protected
 
   def transform_topics(attributes)
-    labels = attributes.delete(:trade_topics) || []
-    transform_taxonomies Topic, attributes, labels
+    attributes[:topics] = attributes.delete(:trade_topics) || []
+    transform_taxonomies Topic, attributes, :topics
   end
 
   def transform_url_name(attributes)

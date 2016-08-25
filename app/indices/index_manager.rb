@@ -16,14 +16,22 @@ class IndexManager
     @client = Elasticsearch::Client.new
   end
 
-  def setup_new_index!(index_name_prefix = nil)
+  def setup_new_index!(index_name_prefix = nil, &block)
     current_index_names = get_current_index_names
     index_name_prefix ||= @model_class.index_name_prefix
     new_index_name = create_new_index! index_name_prefix
-    yield if block_given?
-    swap_indices current_index_names, new_index_name
-    @model_class.reset_index_name!
-    @model_class.gateway.refresh_index!
+
+    exception = nil
+    exception = execute_block(&block) if block_given?
+
+    if exception
+      @client.indices.delete index: new_index_name
+      raise exception
+    else
+      swap_indices current_index_names, new_index_name
+      @model_class.reset_index_name!
+      @model_class.gateway.refresh_index!
+    end
   end
 
   def setup_new_index_when_missing
@@ -59,6 +67,13 @@ class IndexManager
   end
 
   private
+
+  def execute_block(&_block)
+    yield
+    nil
+  rescue => e
+    e
+  end
 
   def build_timestamped_index_name(index_name_prefix)
     [index_name_prefix,
