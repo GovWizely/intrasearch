@@ -1,5 +1,6 @@
 module TradeLeadShowJSONSerializer
   EXCLUDED_ATTRIBUTES = %w(
+    countries
     created_at
     expanded_industries
     industry_paths
@@ -10,6 +11,7 @@ module TradeLeadShowJSONSerializer
   ).freeze
 
   def self.serialize(resource)
-    resource.as_json except: EXCLUDED_ATTRIBUTES
+    resource.as_json except: EXCLUDED_ATTRIBUTES,
+                     methods: :country
   end
 end

@@ -59,6 +59,10 @@ module TradeLead
       def attributes
         ActiveSupport::HashWithIndifferentAccess.new super
       end
+
+      def country
+        countries.first
+      end
     end
   end
 end
