@@ -9,7 +9,8 @@ module ShowJSONSerializer
   module ModuleMethods
     def serialize(resource)
       @attribute_mapping.each_with_object({}) do |(name, options), serialized|
-        value = options[:method] ? resource.send(options[:method]) : resource.attributes[name]
+        source_key = options[:source_key] || name
+        value = options[:method] ? resource.send(options[:method]) : resource.attributes[source_key]
         serialized[name] = value || options[:default]
       end
     end

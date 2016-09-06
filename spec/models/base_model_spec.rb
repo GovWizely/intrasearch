@@ -6,7 +6,7 @@ RSpec.describe BaseModel do
                                                        TradeEvent::DlTradeEvent)
       expect(described_class.model_classes).not_to include(BaseArticle,
                                                            Taxonomy,
-                                                           TradeEvent::BaseTradeEventModel)
+                                                           TradeEvent::BaseModel)
     end
   end
 end

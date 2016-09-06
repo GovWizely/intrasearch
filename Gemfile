@@ -1,6 +1,6 @@
 source 'https://rubygems.org'
 
-gem 'activesupport'
+gem 'activesupport', '~> 4.2.7'
 gem 'addressable'
 gem 'elasticsearch-persistence'
 gem 'grape'
@@ -15,7 +15,6 @@ gem 'yajl-ruby', require: 'yajl'
 group :development do
   gem 'guard'
   gem 'guard-rack'
-  gem 'pry'
 end
 
 group :test do
@@ -23,6 +22,10 @@ group :test do
   gem 'rack-test'
   gem 'rspec'
   gem 'simplecov', require: false
+end
+
+group :development, :test do
+  gem 'pry'
 end
 
 group :production do

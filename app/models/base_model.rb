@@ -6,10 +6,10 @@ module BaseModel
       include Elasticsearch::Persistence::Model
 
       class << self
-        attr_reader :base_index_namespace
+        attr_reader :base_index_namespace,
+                    :index_version
         attr_accessor :index_alias_name,
-                      :index_name_prefix,
-                      :index_version
+                      :index_name_prefix
       end
       @base_index_namespace = ['intrasearch',
                                Intrasearch.env].join('-')
@@ -45,9 +45,21 @@ module BaseModel
       reset_index_name!
     end
 
-    def not_analyzed_attributes(type, *names)
+    def analyzed_attributes(analyzer, *names)
       names.each do |name|
-        attribute name, type, mapping: { index: 'not_analyzed' }
+        attribute name, String, mapping: { analyzer: analyzer }
+      end
+    end
+
+    def not_analyzed_attributes(*names)
+      names.each do |name|
+        attribute name, String, mapping: { index: 'not_analyzed' }
+      end
+    end
+
+    def custom_attributes(type, *names)
+      names.each do |name|
+        attribute name, nil, mapping: { type: type }
       end
     end
   end

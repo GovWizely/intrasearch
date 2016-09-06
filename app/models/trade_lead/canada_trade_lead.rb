@@ -7,8 +7,7 @@ module TradeLead
     datetime_attributes :amended_at,
                         :end_at
 
-    not_analyzed_attributes String,
-                            :amendment_number,
+    not_analyzed_attributes :amendment_number,
                             :bid_type,
                             :click_urls,
                             :competitive_procurement_strategy,

@@ -1,9 +1,17 @@
-require 'trade_event_show_json_serializer'
-
 module TradeEventShowAllJSONSerializer
-  extend TradeEventShowJSONSerializer
+  EXCLUDED_ATTRIBUTES = %i(
+    countries
+    created_at
+    expanded_industries
+    industry_paths
+    trade_regions
+    updated_at
+    world_region_paths
+    world_regions
+  ).freeze
 
-  attribute :description
-  attribute :md_description, method: :md_description
-  attribute :html_description, method: :html_description
+  def self.serialize(resource)
+    resource.as_json except: EXCLUDED_ATTRIBUTES,
+                     methods: %i(html_description md_description)
+  end
 end

@@ -29,12 +29,20 @@ RSpec.describe TradeEventSearchAPI, endpoint: '/v1/trade_events/search' do
                                            next_offset: 1)
     end
 
-    it 'returns countries aggregations' do
+    it 'returns countries aggregation' do
       expected_countries = [
         { key: 'Taiwan', doc_count: 1 },
         { key: 'United States', doc_count: 3 }
       ]
       expect(parsed_body[:aggregations][:countries]).to eq(expected_countries)
+    end
+
+    it 'returns event types aggregation' do
+      expected_countries = [
+        { key: 'Resource Partner', doc_count: 1 },
+        { key: 'Trade Mission', doc_count: 1 }
+      ]
+      expect(parsed_body[:aggregations][:event_types]).to eq(expected_countries)
     end
 
     it 'returns industries aggregation' do
@@ -46,6 +54,16 @@ RSpec.describe TradeEventSearchAPI, endpoint: '/v1/trade_events/search' do
         { key: '/Retail Trade/eCommerce Industry', doc_count: 2 }
       ]
       expect(parsed_body[:aggregations][:industries]).to eq(expected_industries)
+    end
+
+    it 'returns states aggregation' do
+      expected_states = [
+        { key: 'CA', doc_count: 1 },
+        { key: 'D.C.', doc_count: 1 },
+        { key: 'NY', doc_count: 1 },
+        { key: 'PA', doc_count: 1 }
+      ]
+      expect(parsed_body[:aggregations][:states]).to eq(expected_states)
     end
 
     it 'returns sources aggregation' do
@@ -181,8 +199,8 @@ RSpec.describe TradeEventSearchAPI, endpoint: '/v1/trade_events/search' do
     end
   end
 
-  context 'when filtering with industries' do
-    before { get described_endpoint, 'industries' => 'Franchising', 'limit' => 1 }
+  context 'when filtering with event types' do
+    before { get described_endpoint, 'event_types' => 'Resource Partner', 'limit' => 1 }
 
     it_behaves_like 'a successful API response'
 
@@ -191,6 +209,69 @@ RSpec.describe TradeEventSearchAPI, endpoint: '/v1/trade_events/search' do
                                            count: 1,
                                            offset: 0,
                                            next_offset: nil)
+    end
+
+    it 'returns unhighlighted title and snippet' do
+      expected_first_result = {
+        snippet: 'SBA Trade Event 73022 description.',
+        title: 'SBA Trade Event 73022',
+        url: 'https://example.org/trade_event?id=730226ea901d6c4bf7e4e4f5ef12ebec8c482a2b' }
+      expect(parsed_body[:results].first).to eq(expected_first_result)
+    end
+  end
+
+  context 'when filtering with industries' do
+    before { get described_endpoint, 'industries' => 'Retail Trade', 'limit' => 1 }
+
+    it_behaves_like 'a successful API response'
+
+    it 'returns metadata' do
+      expect(parsed_body[:metadata]).to eq(total: 2,
+                                           count: 1,
+                                           offset: 0,
+                                           next_offset: 1)
+    end
+
+    it 'returns unhighlighted title and snippet' do
+      expected_first_result = {
+        snippet: 'SBA Trade Event 73022 description.',
+        title: 'SBA Trade Event 73022',
+        url: 'https://example.org/trade_event?id=730226ea901d6c4bf7e4e4f5ef12ebec8c482a2b' }
+      expect(parsed_body[:results].first).to eq(expected_first_result)
+    end
+  end
+
+  context 'when filtering with start date range' do
+    before { get described_endpoint, 'start_date_range' => { 'from' => '2016-05-15', 'to' => '2016-05-16' }, 'limit' => 1 }
+
+    it_behaves_like 'a successful API response'
+
+    it 'returns metadata' do
+      expect(parsed_body[:metadata]).to eq(total: 1,
+                                           count: 1,
+                                           offset: 0,
+                                           next_offset: nil)
+    end
+
+    it 'returns unhighlighted title and snippet' do
+      expected_first_result = {
+        snippet: 'Event 36282 description.',
+        title: 'Trade Event 36282',
+        url: 'https://example.org/trade_event?id=36282' }
+      expect(parsed_body[:results].first).to eq(expected_first_result)
+    end
+  end
+
+  context 'when filtering with states' do
+    before { get described_endpoint, 'states' => 'CA,NY', 'limit' => 1 }
+
+    it_behaves_like 'a successful API response'
+
+    it 'returns metadata' do
+      expect(parsed_body[:metadata]).to eq(total: 2,
+                                           count: 1,
+                                           offset: 0,
+                                           next_offset: 1)
     end
 
     it 'returns unhighlighted title and snippet' do

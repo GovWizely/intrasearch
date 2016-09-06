@@ -17,16 +17,16 @@ module ResourceExtractor
       source = self.name.demodulize.tableize.split('_')[0].upcase
       results = resource.all sources: source
       Enumerator.new do |y|
-        attribute_extractor = attribute_extractor_by_source source
+        hash_extractor = hash_extractor_by_source source
         results.each do |result|
-          y << attribute_extractor.extract(source_hash: result)
+          y << hash_extractor.extract(source_hash: result)
         end
       end
     end
 
     protected
 
-    def attribute_extractor_by_source(source)
+    def hash_extractor_by_source(source)
       yaml = Intrasearch.root.join(keys_options_path).read
       HashExtractor.new YAML.load(yaml)[source]
     end

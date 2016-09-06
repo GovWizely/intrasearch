@@ -15,7 +15,7 @@ RSpec.describe Webservices::TradeEvent do
           "/v2/trade_events/search?#{search_params.to_param}"
         end
 
-        let(:response_file_path) { 'spec/fixtures/json/webservices/trade_events.json' }
+        let(:response_file_path) { 'spec/fixtures/json/webservices/trade_events/all.json' }
       end
 
       it 'returns all trade events' do

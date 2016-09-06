@@ -26,11 +26,19 @@ module FilterByCountriesIndustriesSearch
     end
 
     def build_query
-      self.class.query_class.new countries: @countries,
-                                 industries: @industries,
-                                 limit: @limit,
-                                 offset: @offset,
-                                 q: @q
+      self.class.query_class.new(**query_params)
+    end
+
+    protected
+
+    def query_params
+      {
+        countries: @countries,
+        industries: @industries,
+        limit: @limit,
+        offset: @offset,
+        q: @q
+      }
     end
   end
 end

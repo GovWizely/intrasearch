@@ -1,16 +1,41 @@
-require 'support/trade_event_importer_shared_contexts'
+require 'support/webservices_importer_shared_contexts'
 
 RSpec.describe TradeEvent::ItaTradeEventImporter do
   describe '.import' do
-    include_context 'trade event importer'
+    include_context 'webservices importer', Webservices::TradeEvent
 
     it 'imports trade events' do
       expected_attributes = {
-        cost: '4400.0',
+        contacts: [
+          {
+            'email' => 'John.Doe@example.gov',
+            'first_name' => 'John',
+            'last_name' => 'Doe',
+            'person_title' => 'Commercial Officer',
+            'phone' => '886-2-1111-2222',
+            'post' => 'Taipei'
+          },
+          {
+            'email' => 'Jane.Doe@example.gov',
+            'first_name' => 'Jane',
+            'last_name' => 'Doe',
+            'person_title' => 'Trade Specialist',
+            'phone' => '82-2-333-4444',
+            'post' => 'Seoul'
+          }
+        ],
+        cost: 4400.0,
         countries: ['United States'],
-        description: 'Event 36282 description',
+        original_description: 'Event 36282 description',
         end_date: Date.parse('2016-05-24'),
-        event_url: 'https://ita.trade.event.example.org/event/36282',
+        event_type: 'Trade Mission',
+        expanded_industries: [
+        'Franchising',
+        'Information and Communication Technology',
+        'Retail Trade',
+        'eCommerce Industry'
+      ],
+        hosted_url: 'https://example.org/trade_event?id=36282',
         id: '36282',
         industry_paths: [
           '/Franchising',
@@ -19,8 +44,6 @@ RSpec.describe TradeEvent::ItaTradeEventImporter do
         ],
         industries: [
           'Franchising',
-          'Information and Communication Technology',
-          'Retail Trade',
           'eCommerce Industry'
         ],
         name: 'Trade Event 36282',
@@ -29,8 +52,16 @@ RSpec.describe TradeEvent::ItaTradeEventImporter do
         source: 'ITA',
         start_date: Date.parse('2016-05-15'),
         trade_regions: ['Asia Pacific Economic Cooperation'],
-        url: 'https://example.org/trade_event?id=36282',
-        venues: ['Moscone Center, San Francisco'],
+        url: 'https://ita.trade.event.example.org/event/36282',
+        venues: [
+          {
+            'address' => nil,
+            'city' => 'San Francisco',
+            'country' => 'United States',
+            'name' => 'Moscone Center, San Francisco',
+            'state' => 'CA'
+          }
+        ],
         world_region_paths: [
           '/North America',
           '/Pacific Rim',

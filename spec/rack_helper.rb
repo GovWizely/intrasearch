@@ -15,6 +15,7 @@ CodeClimate::TestReporter.start
 
 require File.expand_path('../../config/environment', __FILE__)
 
+require 'pry'
 require 'rack/test'
 require 'rspec'
 require 'spec_helper'

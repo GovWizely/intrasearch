@@ -5,10 +5,10 @@ module TradeEventSearchJSONSerializer
 
   self.extra_attributes = {
     url: {
-      key: :url
+      key: :hosted_url
     }
   }
 
-  self.snippet_attribute = :description
+  self.snippet_attribute = :original_description
   self.title_attribute = :name
 end

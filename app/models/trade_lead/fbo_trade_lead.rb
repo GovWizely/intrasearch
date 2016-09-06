@@ -6,8 +6,7 @@ module TradeLead
 
     datetime_attributes :end_at
 
-    not_analyzed_attributes String,
-                            :classification_code,
+    not_analyzed_attributes :classification_code,
                             :click_url,
                             :competitive_procurement_strategy,
                             :contact,

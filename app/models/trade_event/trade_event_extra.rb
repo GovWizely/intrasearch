@@ -2,7 +2,7 @@ require 'base_model'
 
 module TradeEvent
   class TradeEventExtra
-    include BaseModel
+    include ::BaseModel
 
     append_index_namespace parent.name.tableize,
                            name.demodulize.tableize

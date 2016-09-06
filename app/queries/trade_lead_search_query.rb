@@ -9,11 +9,4 @@ class TradeLeadSearchQuery
     snippet_field: :description,
     title_field: :title
   }
-
-  def build_filter_options
-    {
-      countries: @countries,
-      expanded_industries: @industries
-    }
-  end
 end

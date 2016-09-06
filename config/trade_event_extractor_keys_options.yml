@@ -1,14 +1,31 @@
 common: &common
-  :description:
-  :event_url:
-    :source_key: url
+  :original_description:
+    :source_key: description
   :id:
   :name:
     :source_key: event_name
   :source:
 
+contact_attributes: &contact_attributes
+  :email:
+  :first_name:
+  :last_name:
+  :person_title:
+  :phone:
+  :post:
+
+venue_attributes: &venue_attributes
+  :address:
+  :city:
+  :country:
+    :source_key: country_name
+  :name:
+    :source_key: venue
+  :state:
+
 DL:
   <<: *common
+  :url:
 
 SHARED_ITA_USTDA: &shared_ita_ustda
   <<: *common
@@ -20,29 +37,41 @@ SHARED_ITA_USTDA: &shared_ita_ustda
   :registration_url:
     :source_key: registration_link
   :start_date:
+  :url:
   :venues:
     :attributes:
-      :country:
-        :source_key: country_name
-      :venue:
+      <<: *venue_attributes
 
 ITA:
   <<: *shared_ita_ustda
+  :contacts:
+    :attributes:
+      <<: *contact_attributes
+  :event_type:
 
 SBA:
   <<: *common
+  :contacts:
+    :attributes:
+      <<: *contact_attributes
   :cost:
   :end_date:
+  :end_time:
+  :event_type:
   :industries:
     :source_key: ita_industries
   :registration_url:
     :source_key: registration_link
   :start_date:
+  :start_time:
+  :time_zone:
   :venues:
     :attributes:
-      :country:
-        :source_key: country_name
-      :venue:
+      <<: *venue_attributes
 
 USTDA:
+  <<: *contact_attributes
   <<: *shared_ita_ustda
+  :cost_currency:
+  :end_time:
+  :start_time:

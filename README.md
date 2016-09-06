@@ -45,7 +45,7 @@ Provides JSON Search API for Salesforce contents.
 - [localhost:9292/v1/stop_fakes_articles/search?q=trade](http://localhost:9292/v1/stop_fakes_articles/search?q=trade)
 - [localhost:9292/v1/trade_events/count](http://localhost:9292/v1/trade_events/count)
 - [localhost:9292/v1/trade_events/search](http://localhost:9292/v1/trade_events/search?q=trade)
-- [localhost:9292/v1/trade_events/:id](http://localhost:9292/v1/trade_events/:id)
+- [localhost:9292/v2/trade_events/:id](http://localhost:9292/v2/trade_events/:id)
 - [localhost:9292/v1/trade_leads/count](http://localhost:9292/v1/trade_leads/count)
 - [localhost:9292/v1/trade_leads/search](http://localhost:9292/v1/trade_leads/search?q=trade)
 - [localhost:9292/v1/trade_leads/:id](http://localhost:9292/v1/trade_leads/:id)

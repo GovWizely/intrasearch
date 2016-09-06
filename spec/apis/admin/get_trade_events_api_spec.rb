@@ -32,23 +32,46 @@ RSpec.describe Admin::GetTradeEventsAPI, endpoint: '/admin/trade_events' do
       expected_results = [
         {
           id: '730226ea901d6c4bf7e4e4f5ef12ebec8c482a2b',
-          name: 'SBA Trade Event 73022',
-          url: 'https://example.org/trade_event?id=730226ea901d6c4bf7e4e4f5ef12ebec8c482a2b',
-          source: 'SBA',
-          event_url: nil,
-          description: 'SBA Trade Event 73022 description.',
-          md_description: '# SBA Trade Event 73022 description.',
-          html_description: '<h1>SBA Trade Event 73022 description.</h1>',
-          cost: '35.00',
-          registration_title: nil,
-          registration_url: 'https://sba.trade.event.example.org/registration/73022',
-          start_date: '2016-05-17',
+          contacts: [
+            {
+              'email': 'john.doe@example.org',
+              'last_name': 'Doe',
+              'phone': '111-222-3333',
+              'post': 'Small Business Administration'
+            }
+          ],
+          cost: 35.0,
           end_date: '2016-05-24',
-          countries: ['United States'],
+          end_time: '10:30',
+          html_description: '<h1>SBA Trade Event 73022 description.</h1>',
+          event_type: 'Resource Partner',
+          hosted_url: 'https://example.org/trade_event?id=730226ea901d6c4bf7e4e4f5ef12ebec8c482a2b',
           industries: [
-            'Information and Communication Technology',
-            'Retail Trade',
             'eCommerce Industry'
+          ],
+          md_description: '# SBA Trade Event 73022 description.',
+          name: 'SBA Trade Event 73022',
+          original_description: 'SBA Trade Event 73022 description.',
+          registration_url: 'https://sba.trade.event.example.org/registration/73022',
+          source: 'SBA',
+          start_date: '2016-05-17',
+          start_time: '08:30',
+          time_zone: 'America/New_York',
+          venues: [
+            {
+              'address': '600 Trade Drive',
+              'city': 'Trade Township',
+              'country': 'United States',
+              'name': 'Trade Business Councils',
+              'state': 'PA'
+            },
+            {
+              'address': '100 Broadway',
+              'city': 'New York',
+              'country': 'United States',
+              'name': 'Hotel TW',
+              'state': 'NY'
+            }
           ]
         }
       ]

@@ -1,27 +1,29 @@
-require 'trade_event/base_trade_event_model'
+require 'trade_event/base_model'
 
 module TradeEvent
   class SbaTradeEvent
-    include BaseTradeEventModel
+    include BaseModel
 
-    attribute :cost, String, mapping: { index: 'not_analyzed' }
-    attribute :countries, String, mapping: { index: 'not_analyzed' }
-    attribute :description, String, mapping: { analyzer: 'english_analyzer' }
-    attribute :end_date,
-              Date,
-              mapping: {
-                format: 'strict_date',
-                index: 'not_analyzed'
-              }
-    attribute :industries, String, mapping: { index: 'not_analyzed' }
-    attribute :industry_paths, String, mapping: { analyzer: 'path_analyzer' }
-    attribute :name, String, mapping: { analyzer: 'english_analyzer' }
-    attribute :registration_url, String, mapping: { index: 'not_analyzed' }
-    attribute :source, String, mapping: { index: 'not_analyzed' }
-    attribute :trade_regions, String, mapping: { index: 'not_analyzed' }
-    attribute :url, String, mapping: { index: 'not_analyzed' }
-    attribute :venues, String, mapping: { analyzer: 'english_analyzer' }
-    attribute :world_region_paths, String, mapping: { analyzer: 'path_analyzer' }
-    attribute :world_regions, String, mapping: { index: 'not_analyzed' }
+    contacts_attribute
+    venues_attribute
+
+    analyzed_attributes 'path_analyzer',
+                        :industry_paths,
+                        :world_region_paths
+
+    custom_attributes 'double', :cost
+
+    date_attributes :end_date
+
+    not_analyzed_attributes :countries,
+                            :end_time,
+                            :event_type,
+                            :expanded_industries,
+                            :industries,
+                            :registration_url,
+                            :start_time,
+                            :time_zone,
+                            :trade_regions,
+                            :world_regions
   end
 end

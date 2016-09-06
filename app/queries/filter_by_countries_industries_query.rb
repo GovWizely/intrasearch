@@ -23,10 +23,12 @@ module FilterByCountriesIndustriesQuery
       @filter_options = build_filter_options
     end
 
+    protected
+
     def build_filter_options
       {
         countries: @countries,
-        industries: @industries
+        expanded_industries: @industries
       }
     end
   end

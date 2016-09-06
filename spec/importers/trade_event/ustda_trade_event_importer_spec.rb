@@ -1,16 +1,33 @@
-require 'support/trade_event_importer_shared_contexts'
+require 'support/webservices_importer_shared_contexts'
 
 RSpec.describe TradeEvent::UstdaTradeEventImporter do
   describe '.import' do
-    include_context 'trade event importer'
+    include_context 'webservices importer', Webservices::TradeEvent
 
     it 'imports trade events' do
       expected_attributes = {
-        cost: nil,
+        contacts: [
+          {
+            'email' => 'john.doe@example.org',
+            'first_name' => 'John',
+            'last_name' => 'Doe',
+            'person_title' => '$person_title',
+            'phone' => '111-222-3333',
+            'post' => '$post'
+          }
+        ],
+        cost: 25.0,
+        cost_currency: 'USD',
         countries: ['United States'],
-        description: 'USTDA Trade Event f0e259 description',
         end_date: Date.parse('2016-05-24'),
-        event_url: 'http://ustda.trade.events.example.org/event/f0e259',
+        end_time: '14:46',
+        expanded_industries: [
+          'Franchising',
+          'Information and Communication Technology',
+          'Retail Trade',
+          'eCommerce Industry'
+        ],
+        hosted_url: 'https://example.org/trade_event?id=f0e2598dbc76ce55cd0a557746375bd911808bac',
         id: 'f0e2598dbc76ce55cd0a557746375bd911808bac',
         industry_paths: [
           '/Franchising',
@@ -19,18 +36,26 @@ RSpec.describe TradeEvent::UstdaTradeEventImporter do
         ],
         industries: [
           'Franchising',
-          'Information and Communication Technology',
-          'Retail Trade',
           'eCommerce Industry'
         ],
         name: 'USTDA Trade Event Summit f0e259',
+        original_description: 'USTDA Trade Event f0e259 description',
         registration_title: 'USTDA Awesome Trade Event Summit',
         registration_url: 'http://ustda.trade.events.example.org/registration/f0e259',
         source: 'USTDA',
         start_date: Date.parse('2016-05-17'),
+        start_time: '15:46',
         trade_regions: ['Asia Pacific Economic Cooperation'],
-        url: 'https://example.org/trade_event?id=f0e2598dbc76ce55cd0a557746375bd911808bac',
-        venues: ['Washington, D.C.'],
+        url: 'http://ustda.trade.events.example.org/event/f0e259',
+        venues: [
+          {
+            'address' => nil,
+            'city' => 'Washington',
+            'country' => 'United States',
+            'name' => 'Washington, D.C.',
+            'state' => 'D.C.'
+          }
+        ],
         world_region_paths: [
           '/North America',
           '/Pacific Rim',

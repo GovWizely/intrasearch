@@ -4,8 +4,7 @@ module TradeLead
   class McaTradeLead
     include BaseModel
 
-    not_analyzed_attributes String,
-                            :categories,
+    not_analyzed_attributes :categories,
                             :click_url,
                             :funding_source,
                             :url

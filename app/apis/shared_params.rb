@@ -31,8 +31,5 @@ module SharedParams
     optional :countries, type: String
     optional :industries, type: String
     optional :q, type: String
-    at_least_one_of :countries,
-                    :industries,
-                    :q
   end
 end

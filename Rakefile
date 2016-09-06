@@ -19,9 +19,10 @@ Dir[File.expand_path('../lib/tasks/*.rake', __FILE__)].each do |f|
 end
 
 task routes: :environment do
-  Intrasearch::Application.routes.each do |route|
-    method = route.route_method.ljust(10)
-    path = route.route_path
-    puts "     #{method} #{path}"
+  routes = Intrasearch::Application.routes.map do |route|
+    method = route.request_method.ljust(10)
+    path = route.path
+    "     #{method} #{path}"
   end
+  puts routes.uniq.join("\n")
 end

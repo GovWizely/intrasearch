@@ -6,8 +6,7 @@ module TradeLead
 
     datetime_attributes :end_at
 
-    not_analyzed_attributes String,
-                            :borrowing_entity,
+    not_analyzed_attributes :borrowing_entity,
                             :click_url,
                             :comments,
                             :contact,

@@ -30,6 +30,14 @@ RSpec.describe TradeEventCountAPI, endpoint: '/v1/trade_events/count' do
     expect(parsed_body[:aggregations][:countries]).to eq(expected_countries)
   end
 
+  it 'returns event types aggregation' do
+    expected_countries = [
+      { key: 'Resource Partner', doc_count: 1 },
+      { key: 'Trade Mission', doc_count: 1 }
+    ]
+    expect(parsed_body[:aggregations][:event_types]).to eq(expected_countries)
+  end
+
   it 'returns industries aggregation' do
     expected_industries = [
       { key: '/Franchising', doc_count: 1 },

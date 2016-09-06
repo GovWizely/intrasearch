@@ -6,8 +6,7 @@ module TradeLead
 
     datetime_attributes :end_at
 
-    not_analyzed_attributes String,
-                            :agency,
+    not_analyzed_attributes :agency,
                             :app_reference,
                             :atm_id,
                             :atm_type,

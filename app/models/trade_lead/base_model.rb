@@ -15,12 +15,10 @@ module TradeLead
                                name.demodulize.tableize
 
         analyzed_attributes 'english_analyzer',
-                            String,
                             :description,
                             :title
 
-        not_analyzed_attributes String,
-                                :countries,
+        not_analyzed_attributes :countries,
                                 :hosted_url,
                                 :source,
                                 :trade_regions,
@@ -30,18 +28,12 @@ module TradeLead
 
         datetime_attributes :published_at
 
-        validates_presence_of :title, :hosted_url
+        validates_presence_of :hosted_url, :source, :title
       end
     end
 
     module ModuleMethods
       protected
-
-      def analyzed_attributes(analyzer, type, *names)
-        names.each do |name|
-          attribute name, type, mapping: { analyzer: analyzer }
-        end
-      end
 
       def datetime_attributes(*names)
         names.each do |name|

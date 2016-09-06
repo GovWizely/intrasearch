@@ -1,15 +1,33 @@
-require 'support/trade_event_importer_shared_contexts'
+require 'support/webservices_importer_shared_contexts'
 
 RSpec.describe TradeEvent::SbaTradeEventImporter do
   describe '.import' do
-    include_context 'trade event importer'
+    include_context 'webservices importer', Webservices::TradeEvent
 
     it 'imports trade events' do
       expected_attributes = {
-        cost: '35.00',
+        contacts: [
+          {
+            'email' => 'john.doe@example.org',
+            'first_name' => nil,
+            'last_name' => 'Doe',
+            'person_title' => nil,
+            'phone' => '111-222-3333',
+            'post' => 'Small Business Administration'
+          }
+        ],
+        cost: 35.0,
         countries: ['United States'],
-        description: 'SBA Trade Event 73022 description',
+        original_description: 'SBA Trade Event 73022 description',
         end_date: Date.parse('2016-05-24'),
+        event_type: 'Resource Partner',
+        expanded_industries: [
+          'Franchising',
+          'Information and Communication Technology',
+          'Retail Trade',
+          'eCommerce Industry'
+        ],
+        hosted_url: 'https://example.org/trade_event?id=730226ea901d6c4bf7e4e4f5ef12ebec8c482a2b',
         id: '730226ea901d6c4bf7e4e4f5ef12ebec8c482a2b',
         industry_paths: [
           '/Franchising',
@@ -18,17 +36,24 @@ RSpec.describe TradeEvent::SbaTradeEventImporter do
         ],
         industries: [
           'Franchising',
-          'Information and Communication Technology',
-          'Retail Trade',
           'eCommerce Industry'
         ],
         name: 'SBA Trade Event 73022',
         registration_url: 'https://sba.trade.event.example.org/registration/73022',
         source: 'SBA',
         start_date: Date.parse('2016-05-17'),
+        start_time: '08:30',
+        time_zone: 'America/New_York',
         trade_regions: ['Asia Pacific Economic Cooperation'],
-        url: 'https://example.org/trade_event?id=730226ea901d6c4bf7e4e4f5ef12ebec8c482a2b',
-        venues: ['Trade Business Councils'],
+        venues: [
+          {
+            'address' => '600 Trade Drive',
+            'city' => 'Trade Township',
+            'country' => 'United States',
+            'name' => 'Trade Business Councils',
+            'state' => 'PA'
+          }
+        ],
         world_region_paths: [
           '/North America',
           '/Pacific Rim',

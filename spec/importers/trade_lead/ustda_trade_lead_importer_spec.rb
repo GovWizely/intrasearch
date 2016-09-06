@@ -1,8 +1,8 @@
-require 'support/trade_lead_importer_shared_contexts'
+require 'support/webservices_importer_shared_contexts'
 
 RSpec.describe TradeLead::UstdaTradeLeadImporter do
   describe '.import' do
-    include_context 'trade lead importer'
+    include_context 'webservices importer', Webservices::TradeLead
 
     it 'imports USTDA trade leads' do
       expected_attributes = {

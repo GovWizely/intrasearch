@@ -1,5 +1,5 @@
 module TradeLeadShowJSONSerializer
-  EXCLUDED_ATTRIBUTES = %w(
+  EXCLUDED_ATTRIBUTES = %i(
     countries
     created_at
     expanded_industries

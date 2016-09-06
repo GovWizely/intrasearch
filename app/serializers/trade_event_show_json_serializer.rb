@@ -1,25 +1,18 @@
-require 'show_json_serializer'
-
 module TradeEventShowJSONSerializer
-  def self.extended(base)
-    base.extend ShowJSONSerializer
+  EXCLUDED_ATTRIBUTES = %i(
+    countries
+    created_at
+    expanded_industries
+    industry_paths
+    original_description
+    trade_regions
+    updated_at
+    world_region_paths
+    world_regions
+  ).freeze
 
-    base.module_eval do
-      attribute :id
-      attribute :name
-      attribute :url
-      attribute :source
-      attribute :event_url
-      attribute :description, method: :display_description
-      attribute :cost
-      attribute :registration_title
-      attribute :registration_url
-      attribute :start_date
-      attribute :end_date
-      attribute :countries, default: []
-      attribute :industries, default: []
-    end
+  def self.serialize(resource)
+    resource.as_json except: EXCLUDED_ATTRIBUTES.dup,
+                     methods: 'description'
   end
-
-  extend self
 end

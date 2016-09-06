@@ -1,12 +1,21 @@
 - :id: 730226ea901d6c4bf7e4e4f5ef12ebec8c482a2b
-  :cost: '35.00'
+  :contacts:
+  - email: john.doe@example.org
+    last_name: Doe
+    phone: 111-222-3333
+    post: Small Business Administration
+  :cost: 35.0
   :countries:
   - United States
-  :description: SBA Trade Event 73022 description.
+  :original_description: SBA Trade Event 73022 description.
   :end_date: 2016-05-24
-  :industries:
+  :end_time: '10:30'
+  :event_type: Resource Partner
+  :expanded_industries:
   - Information and Communication Technology
   - Retail Trade
+  - eCommerce Industry
+  :industries:
   - eCommerce Industry
   :industry_paths:
   - "/Information and Communication Technology/eCommerce Industry"
@@ -15,11 +24,22 @@
   :registration_url: https://sba.trade.event.example.org/registration/73022
   :source: SBA
   :start_date: 2016-05-17
+  :start_time: '08:30'
+  :time_zone: America/New_York
   :trade_regions:
   - Asia Pacific Economic Cooperation
-  :url: https://example.org/trade_event?id=730226ea901d6c4bf7e4e4f5ef12ebec8c482a2b
+  :hosted_url: https://example.org/trade_event?id=730226ea901d6c4bf7e4e4f5ef12ebec8c482a2b
   :venues:
-  - Trade Business Councils
+  - address: 600 Trade Drive
+    city: Trade Township
+    country: United States
+    name: Trade Business Councils
+    state: PA
+  - address: 100 Broadway
+    city: New York
+    country: United States
+    name: Hotel TW
+    state: NY
   :world_region_paths:
   - "/North America"
   - "/Pacific Rim"
