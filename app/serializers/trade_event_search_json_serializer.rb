@@ -4,6 +4,9 @@ module TradeEventSearchJSONSerializer
   extend WebPageJSONSerializer
 
   self.extra_attributes = {
+    id: {
+      key: :id
+    },
     url: {
       key: :hosted_url
     }
