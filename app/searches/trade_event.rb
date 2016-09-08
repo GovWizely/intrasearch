@@ -1,7 +1,9 @@
 require 'finder'
+require 'trade_event_fields_search_response'
 require 'trade_event_list'
 require 'trade_event_repository'
 require 'trade_event_search'
+require 'trade_event_search_response'
 
 module TradeEvent
   def self.all(options = {})
@@ -9,7 +11,10 @@ module TradeEvent
   end
 
   def self.search(options)
-    TradeEventSearch.new(options).run
+    searcher = TradeEventSearch.new options
+    results = searcher.run
+    response_class = options[:result_type] == 'fields' ? TradeEventFieldsSearchResponse : TradeEventSearchResponse
+    response_class.new searcher, results
   end
 
   def self.find_by_id(id)

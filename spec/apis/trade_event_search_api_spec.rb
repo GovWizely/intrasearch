@@ -11,6 +11,7 @@ RSpec.describe TradeEventSearchAPI, endpoint: '/v1/trade_events/search' do
                   TradeEvent::DlTradeEvent,
                   TradeEvent::ItaTradeEvent,
                   TradeEvent::SbaTradeEvent,
+                  TradeEvent::TradeEventExtra,
                   TradeEvent::UstdaTradeEvent,
                   TradeRegion,
                   WorldRegion
@@ -304,6 +305,62 @@ RSpec.describe TradeEventSearchAPI, endpoint: '/v1/trade_events/search' do
                                            count: 2,
                                            offset: 1,
                                            next_offset: 3)
+    end
+  end
+
+  context 'when result type is detail' do
+    before { get described_endpoint, 'q' => 'Event 36282', 'result_type' => 'fields', 'limit' => 1 }
+
+    it_behaves_like 'a successful API response'
+
+    it 'returns metadata' do
+      expect(parsed_body[:metadata]).to eq(total: 1,
+                                           count: 1,
+                                           offset: 0,
+                                           next_offset: nil)
+    end
+
+    it 'returns fields' do
+      expected_first_result = {
+        id: '36282',
+        contacts: [
+          {
+            email: 'John.Doe@example.gov',
+            first_name: 'John',
+            last_name: 'Doe',
+            person_title: 'Commercial Officer',
+            phone: '886-2-1111-2222',
+            post: 'Taipei'
+          },
+          {
+            email: 'Jane.Doe@example.gov',
+            first_name: 'Jane',
+            last_name: 'Doe',
+            person_title: 'Trade Specialist',
+            phone: '82-2-333-4444',
+            post: 'Seoul'
+          }
+        ],
+        cost: 4400.0,
+        description: '<h1>Event 36282 description.</h1>',
+        end_date: '2016-05-24',
+        event_type: 'Trade Mission',
+        hosted_url: 'https://example.org/trade_event?id=36282',
+        industries: ['Franchising'],
+        name: 'Trade Event 36282',
+        registration_title: 'Event 36282 title',
+        registration_url: 'https://ita.trade.event.example.org/registration/36282',
+        source: 'ITA',
+        start_date: '2016-05-15',
+        url: 'https://ita.trade.event.example.org/event/36282',
+        venues: [
+          city: 'San Francisco',
+          country: 'United States',
+          name: 'Moscone Center, San Francisco',
+          state: 'CA'
+        ]
+      }
+      expect(parsed_body[:results].first).to eq(expected_first_result)
     end
   end
 end

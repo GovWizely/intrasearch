@@ -10,9 +10,9 @@ RSpec.describe TradeEventFindByIdAPI do
 
   include_context 'elastic models',
                   TradeEvent::DlTradeEvent,
-                  TradeEvent::TradeEventExtra,
                   TradeEvent::ItaTradeEvent,
                   TradeEvent::SbaTradeEvent,
+                  TradeEvent::TradeEventExtra,
                   TradeEvent::UstdaTradeEvent
 
   describe 'finding DL trade event' do
