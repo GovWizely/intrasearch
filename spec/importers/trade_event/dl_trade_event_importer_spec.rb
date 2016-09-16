@@ -6,10 +6,11 @@ RSpec.describe TradeEvent::DlTradeEventImporter do
 
     it 'imports DL trade events' do
       expected_attributes = {
-        original_description: 'Trade Event 1 Description',
+        click_url: 'https://goo.gl/dl1',
         hosted_url: 'https://example.org/trade_event?id=22346b67a36ab6acb9980bfefde51d2db041b5ed',
         id: '22346b67a36ab6acb9980bfefde51d2db041b5ed',
         name: 'Trade Event 1',
+        original_description: 'Trade Event 1 Description',
         source: 'DL',
         url: 'http://dl.trade.event.example.org/1'
       }

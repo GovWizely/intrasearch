@@ -9,7 +9,7 @@
   - United States
   :original_description: SBA Trade Event 73022 description.
   :end_date: 2016-05-24
-  :end_time: '10:30'
+  :end_time: '10:30 AM'
   :event_type: Resource Partner
   :expanded_industries:
   - Information and Communication Technology
@@ -22,24 +22,27 @@
   - "/Retail Trade/eCommerce Industry"
   :name: SBA Trade Event 73022
   :registration_url: https://sba.trade.event.example.org/registration/73022
+  :registration_click_url: https://goo.gl/sba1
   :source: SBA
   :start_date: 2016-05-17
-  :start_time: '08:30'
+  :start_time: '8:30 AM'
   :time_zone: America/New_York
   :trade_regions:
   - Asia Pacific Economic Cooperation
   :hosted_url: https://example.org/trade_event?id=730226ea901d6c4bf7e4e4f5ef12ebec8c482a2b
   :venues:
-  - address: 600 Trade Drive
-    city: Trade Township
+  - city: Trade Township
     country: United States
     name: Trade Business Councils
+    postal_code: '19147'
     state: PA
-  - address: 100 Broadway
-    city: New York
+    street: 600 Trade Drive
+  - city: New York
     country: United States
     name: Hotel TW
+    postal_code: '10001'
     state: NY
+    street: 100 Broadway
   :world_region_paths:
   - "/North America"
   - "/Pacific Rim"

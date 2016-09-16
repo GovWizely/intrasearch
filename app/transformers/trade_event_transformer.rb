@@ -17,10 +17,12 @@ module TradeEventTransformer
       transform_countries_and_venues attributes
       transform_countries_and_regions attributes,
                                       attributes[:countries]
+      attributes[:industries] ||= []
       attributes[:industries] &&= attributes[:industries].sort
       attributes[:expanded_industries] = attributes[:industries]
       transform_industries attributes, :expanded_industries
       transform_hosted_url attributes
+      transform_time attributes, :start_time, :end_time
       attributes
     end
 
@@ -42,6 +44,16 @@ module TradeEventTransformer
     def transform_hosted_url(attributes)
       encoded_id = URI.encode_www_form_component attributes[:id]
       attributes[:hosted_url] = "#{URL_PREFIX}#{encoded_id}"
+    end
+
+    def transform_time(attributes, *keys)
+      keys.each do |key|
+        attributes[key] &&= normalize_time attributes[key]
+      end
+    end
+
+    def normalize_time(time_str)
+      Time.parse(time_str).strftime('%-I:%M %p') rescue nil
     end
   end
 

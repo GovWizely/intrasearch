@@ -16,41 +16,9 @@
         "doc_count": 21
       }
     ],
-    "trade_regions": [
-      {
-        "key": "Asia Pacific Economic Cooperation",
-        "doc_count": 21
-      },
-      {
-        "key": "CAFTA-DR",
-        "doc_count": 21
-      },
-      {
-        "key": "NAFTA",
-        "doc_count": 21
-      },
-      {
-        "key": "Trans Pacific Partnership",
-        "doc_count": 21
-      }
-    ],
     "countries": [
       {
         "key": "US",
-        "doc_count": 21
-      }
-    ],
-    "world_regions": [
-      {
-        "key": "North America",
-        "doc_count": 21
-      },
-      {
-        "key": "Pacific Rim",
-        "doc_count": 21
-      },
-      {
-        "key": "Western Hemisphere",
         "doc_count": 21
       }
     ]
@@ -60,29 +28,31 @@
       "id": "730226ea901d6c4bf7e4e4f5ef12ebec8c482a2b",
       "event_name": "SBA Trade Event 73022",
       "event_type": "Resource Partner",
-      "start_date": "2016-05-17",
-      "start_time": "08:30",
-      "end_date": "2016-05-24",
-      "end_time": "10:30",
+      "start_date": "2016-05-17T00:00:00+00:00",
+      "start_time": "08:30:00",
+      "end_date": "2016-05-24T00:00:00+00:00",
+      "end_time": "10:30:00",
       "time_zone": "America/New_York",
-      "cost": "35.00",
+      "cost": "35",
       "registration_link": "https://sba.trade.event.example.org/registration/73022",
+      "click_url": "https://goo.gl/sba1",
       "description": "SBA Trade Event 73022 description",
       "industries": [
         "eCommerce",
         "Retail"
       ],
-      "ita_industries": [
+      "industry": [
         "Franchising",
         "eCommerce Industry"
       ],
       "venues": [
         {
-          "address": "600 Trade Drive",
+          "street": "600 Trade Drive",
           "city": "Trade Township",
           "country": "US",
           "state": "PA",
-          "venue": "Trade Business Councils",
+          "postal_code": "19147",
+          "name": "Trade Business Councils",
           "country_name": "United States"
         }
       ],
@@ -94,18 +64,7 @@
           "post": "Small Business Administration"
         }
       ],
-      "source": "SBA",
-      "trade_regions": [
-        "Asia Pacific Economic Cooperation",
-        "CAFTA-DR",
-        "NAFTA",
-        "Trans Pacific Partnership"
-      ],
-      "world_regions": [
-        "Pacific Rim",
-        "North America",
-        "Western Hemisphere"
-      ]
+      "source": "SBA"
     }
   ]
 }

@@ -6,6 +6,7 @@ RSpec.describe TradeEvent::ItaTradeEventImporter do
 
     it 'imports trade events' do
       expected_attributes = {
+        click_url: 'https://goo.gl/ita1',
         contacts: [
           {
             'email' => 'John.Doe@example.gov',
@@ -26,7 +27,6 @@ RSpec.describe TradeEvent::ItaTradeEventImporter do
         ],
         cost: 4400.0,
         countries: ['United States'],
-        original_description: 'Event 36282 description',
         end_date: Date.parse('2016-05-24'),
         event_type: 'Trade Mission',
         expanded_industries: [
@@ -47,6 +47,7 @@ RSpec.describe TradeEvent::ItaTradeEventImporter do
           'eCommerce Industry'
         ],
         name: 'Trade Event 36282',
+        original_description: 'Event 36282 description',
         registration_title: 'Event 36282 title',
         registration_url: 'https://ita.trade.event.example.org/registration/36282',
         source: 'ITA',
@@ -55,11 +56,12 @@ RSpec.describe TradeEvent::ItaTradeEventImporter do
         url: 'https://ita.trade.event.example.org/event/36282',
         venues: [
           {
-            'address' => nil,
             'city' => 'San Francisco',
             'country' => 'United States',
             'name' => 'Moscone Center, San Francisco',
-            'state' => 'CA'
+            'postal_code' => nil,
+            'state' => 'CA',
+            'street' => nil,
           }
         ],
         world_region_paths: [

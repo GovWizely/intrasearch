@@ -1,6 +1,6 @@
 module Webservices
   module TradeEvent
     extend Resource
-    self.version = 'v2'
+    self.version = 'v1'
   end
 end

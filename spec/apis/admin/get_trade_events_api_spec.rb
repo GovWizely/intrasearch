@@ -42,7 +42,7 @@ RSpec.describe Admin::GetTradeEventsAPI, endpoint: '/admin/trade_events' do
           ],
           cost: 35.0,
           end_date: '2016-05-24',
-          end_time: '10:30',
+          end_time: '10:30 AM',
           html_description: '<h1>SBA Trade Event 73022 description.</h1>',
           event_type: 'Resource Partner',
           hosted_url: 'https://example.org/trade_event?id=730226ea901d6c4bf7e4e4f5ef12ebec8c482a2b',
@@ -52,25 +52,28 @@ RSpec.describe Admin::GetTradeEventsAPI, endpoint: '/admin/trade_events' do
           md_description: '# SBA Trade Event 73022 description.',
           name: 'SBA Trade Event 73022',
           original_description: 'SBA Trade Event 73022 description.',
+          registration_click_url: 'https://goo.gl/sba1',
           registration_url: 'https://sba.trade.event.example.org/registration/73022',
           source: 'SBA',
           start_date: '2016-05-17',
-          start_time: '08:30',
+          start_time: '8:30 AM',
           time_zone: 'America/New_York',
           venues: [
             {
-              'address': '600 Trade Drive',
               'city': 'Trade Township',
               'country': 'United States',
               'name': 'Trade Business Councils',
-              'state': 'PA'
+              'postal_code': '19147',
+              'state': 'PA',
+              'street': '600 Trade Drive'
             },
             {
-              'address': '100 Broadway',
               'city': 'New York',
               'country': 'United States',
               'name': 'Hotel TW',
-              'state': 'NY'
+              'postal_code': '10001',
+              'state': 'NY',
+              'street': '100 Broadway'
             }
           ]
         }

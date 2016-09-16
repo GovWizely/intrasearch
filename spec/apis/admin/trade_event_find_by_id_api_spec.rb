@@ -25,6 +25,7 @@ RSpec.describe Admin::TradeEventFindByIdAPI do
     it 'returns DL trade event attributes' do
       expected_attributes = {
         id: '94c68284a1b7698becdcdaa69dda29bb2d76051c',
+        click_url: 'https://goo.gl/dl1',
         hosted_url: 'https://example.org/trade_event?id=94c68284a1b7698becdcdaa69dda29bb2d76051c',
         html_description: nil,
         md_description: nil,
@@ -45,6 +46,7 @@ RSpec.describe Admin::TradeEventFindByIdAPI do
     it 'returns ITA trade event attributes' do
       expected_attributes = {
         id: '36282',
+        click_url: 'https://goo.gl/ita1',
         contacts: [
           {
             email: 'John.Doe@example.gov',
@@ -81,7 +83,9 @@ RSpec.describe Admin::TradeEventFindByIdAPI do
           city: 'San Francisco',
           country: 'United States',
           name: 'Moscone Center, San Francisco',
-          state: 'CA'
+          postal_code: nil,
+          state: 'CA',
+          street: nil
         ]
       }
       expect(parsed_body).to eq(expected_attributes)
@@ -106,7 +110,7 @@ RSpec.describe Admin::TradeEventFindByIdAPI do
         ],
         cost: 35.0,
         end_date: '2016-05-24',
-        end_time: '10:30',
+        end_time: '10:30 AM',
         html_description: '<h1>SBA Trade Event 73022 description.</h1>',
         event_type: 'Resource Partner',
         hosted_url: 'https://example.org/trade_event?id=730226ea901d6c4bf7e4e4f5ef12ebec8c482a2b',
@@ -116,25 +120,28 @@ RSpec.describe Admin::TradeEventFindByIdAPI do
         md_description: '# SBA Trade Event 73022 description.',
         name: 'SBA Trade Event 73022',
         original_description: 'SBA Trade Event 73022 description.',
+        registration_click_url: 'https://goo.gl/sba1',
         registration_url: 'https://sba.trade.event.example.org/registration/73022',
         source: 'SBA',
         start_date: '2016-05-17',
-        start_time: '08:30',
+        start_time: '8:30 AM',
         time_zone: 'America/New_York',
         venues: [
           {
-            'address': '600 Trade Drive',
             'city': 'Trade Township',
             'country': 'United States',
             'name': 'Trade Business Councils',
-            'state': 'PA'
+            'postal_code': '19147',
+            'state': 'PA',
+            'street': '600 Trade Drive'
           },
           {
-            'address': '100 Broadway',
             'city': 'New York',
             'country': 'United States',
             'name': 'Hotel TW',
-            'state': 'NY'
+            'postal_code': '10001',
+            'state': 'NY',
+            'street': '100 Broadway',
           }
         ]
       }
@@ -150,6 +157,7 @@ RSpec.describe Admin::TradeEventFindByIdAPI do
     it 'returns USTDA trade event attributes' do
       expected_attributes = {
         id: 'f0e2598dbc76ce55cd0a557746375bd911808bac',
+        click_url: 'https://goo.gl/ustda1',
         contacts: [
           {
             email: 'john.doe@example.org',
@@ -163,7 +171,7 @@ RSpec.describe Admin::TradeEventFindByIdAPI do
         cost: 25.0,
         cost_currency: 'USD',
         end_date: '2016-05-24',
-        end_time: '14:46',
+        end_time: '5:46 PM',
         hosted_url: 'https://example.org/trade_event?id=f0e2598dbc76ce55cd0a557746375bd911808bac',
         html_description: nil,
         industries: [
@@ -176,14 +184,16 @@ RSpec.describe Admin::TradeEventFindByIdAPI do
         registration_url: 'http://ustda.trade.events.example.org/registration/f0e259',
         source: 'USTDA',
         start_date: '2016-05-17',
-        start_time: '15:46',
+        start_time: '3:46 PM',
         url: 'http://ustda.trade.events.example.org/event/f0e259',
         venues: [
           {
             city: 'Washington',
             country: 'United States',
             name: 'Washington, D.C.',
-            state: 'D.C.'
+            postal_code: nil,
+            state: nil,
+            street: nil
           }
         ]
       }

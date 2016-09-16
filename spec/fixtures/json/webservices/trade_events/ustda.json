@@ -16,41 +16,9 @@
         "doc_count": 1
       }
     ],
-    "trade_regions": [
-      {
-        "key": "Asia Pacific Economic Cooperation",
-        "doc_count": 1
-      },
-      {
-        "key": "CAFTA-DR",
-        "doc_count": 1
-      },
-      {
-        "key": "NAFTA",
-        "doc_count": 1
-      },
-      {
-        "key": "Trans Pacific Partnership",
-        "doc_count": 1
-      }
-    ],
     "countries": [
       {
         "key": "US",
-        "doc_count": 1
-      }
-    ],
-    "world_regions": [
-      {
-        "key": "North America",
-        "doc_count": 1
-      },
-      {
-        "key": "Pacific Rim",
-        "doc_count": 1
-      },
-      {
-        "key": "Western Hemisphere",
         "doc_count": 1
       }
     ]
@@ -58,11 +26,11 @@
   "results": [
     {
       "id": "f0e2598dbc76ce55cd0a557746375bd911808bac",
-      "event_name": "USTDA Trade Event Summit f0e259",
-      "start_date": "2016-05-17",
-      "end_date": "2016-05-24",
+      "title": "USTDA Trade Event Summit f0e259",
+      "start_date": "2016-05-17T00:00:00+00:00",
+      "end_date": "2016-05-24T00:00:00+00:00",
       "start_time": "15:46",
-      "end_time": "14:46",
+      "end_time": "17:46",
       "cost": "25.00",
       "cost_currency": "USD",
       "registration_link": "http://ustda.trade.events.example.org/registration/f0e259",
@@ -72,16 +40,16 @@
         "eCommerce",
         "Retail"
       ],
-      "ita_industries": [
+      "industry": [
         "Franchising",
         "eCommerce Industry"
       ],
       "url": "http://ustda.trade.events.example.org/event/f0e259",
+      "click_url": "https://goo.gl/ustda1",
       "venues": [
         {
           "venue": "Washington, D.C.",
           "city": "Washington",
-          "state": "D.C.",
           "country": "US",
           "country_name": "United States"
         }
@@ -92,19 +60,7 @@
       "person_title": "$person_title",
       "phone": "111-222-3333",
       "email": "john.doe@example.org",
-      "source": "USTDA",
-      "event_type": null,
-      "trade_regions": [
-        "Asia Pacific Economic Cooperation",
-        "CAFTA-DR",
-        "NAFTA",
-        "Trans Pacific Partnership"
-      ],
-      "world_regions": [
-        "Pacific Rim",
-        "North America",
-        "Western Hemisphere"
-      ]
+      "source": "USTDA"
     }
   ]
 }

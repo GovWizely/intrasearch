@@ -15,32 +15,31 @@ contact_attributes: &contact_attributes
   :post:
 
 venue_attributes: &venue_attributes
-  :address:
   :city:
   :country:
     :source_key: country_name
   :name:
-    :source_key: venue
+  :postal_code:
   :state:
+  :street:
 
 DL:
   <<: *common
+  :click_url:
   :url:
 
 SHARED_ITA_USTDA: &shared_ita_ustda
   <<: *common
+  :click_url:
   :cost:
   :end_date:
   :industries:
-    :source_key: ita_industries
+    :source_key: industry
   :registration_title:
   :registration_url:
     :source_key: registration_link
   :start_date:
   :url:
-  :venues:
-    :attributes:
-      <<: *venue_attributes
 
 ITA:
   <<: *shared_ita_ustda
@@ -48,6 +47,11 @@ ITA:
     :attributes:
       <<: *contact_attributes
   :event_type:
+  :venues:
+    :attributes:
+      <<: *venue_attributes
+      :name:
+        :source_key: location
 
 SBA:
   <<: *common
@@ -59,7 +63,9 @@ SBA:
   :end_time:
   :event_type:
   :industries:
-    :source_key: ita_industries
+    :source_key: industry
+  :registration_click_url:
+    :source_key: click_url
   :registration_url:
     :source_key: registration_link
   :start_date:
@@ -74,4 +80,11 @@ USTDA:
   <<: *shared_ita_ustda
   :cost_currency:
   :end_time:
+  :name:
+    :source_key: title
   :start_time:
+  :venues:
+    :attributes:
+      <<: *venue_attributes
+      :name:
+        :source_key: venue

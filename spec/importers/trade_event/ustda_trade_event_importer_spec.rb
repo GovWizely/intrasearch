@@ -20,7 +20,7 @@ RSpec.describe TradeEvent::UstdaTradeEventImporter do
         cost_currency: 'USD',
         countries: ['United States'],
         end_date: Date.parse('2016-05-24'),
-        end_time: '14:46',
+        end_time: '5:46 PM',
         expanded_industries: [
           'Franchising',
           'Information and Communication Technology',
@@ -44,16 +44,17 @@ RSpec.describe TradeEvent::UstdaTradeEventImporter do
         registration_url: 'http://ustda.trade.events.example.org/registration/f0e259',
         source: 'USTDA',
         start_date: Date.parse('2016-05-17'),
-        start_time: '15:46',
+        start_time: '3:46 PM',
         trade_regions: ['Asia Pacific Economic Cooperation'],
         url: 'http://ustda.trade.events.example.org/event/f0e259',
         venues: [
           {
-            'address' => nil,
             'city' => 'Washington',
             'country' => 'United States',
             'name' => 'Washington, D.C.',
-            'state' => 'D.C.'
+            'postal_code' => nil,
+            'state' => nil,
+            'street' => nil
           }
         ],
         world_region_paths: [

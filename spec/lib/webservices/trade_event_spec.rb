@@ -12,7 +12,7 @@ RSpec.describe Webservices::TradeEvent do
             offset: 0,
             size: 100
           }
-          "/v2/trade_events/search?#{search_params.to_param}"
+          "/v1/trade_events/search?#{search_params.to_param}"
         end
 
         let(:response_file_path) { 'spec/fixtures/json/webservices/trade_events/all.json' }
@@ -26,6 +26,7 @@ RSpec.describe Webservices::TradeEvent do
             'event_name' => 'Trade Event 1',
             'description' => 'Trade Event 1 Description',
             'url' => 'http://trade.event.example.org/1',
+            'click_url' => 'https://goo.gl/dl1',
             'source' => 'DL'
           },
           {
@@ -33,6 +34,7 @@ RSpec.describe Webservices::TradeEvent do
             'event_name' => 'Trade Event 2',
             'description' => 'Trade Event 2 Description',
             'url' => 'http://trade.event.example.org/2',
+            'click_url' => 'https://goo.gl/dl2',
             'source' => 'DL'
           }
         ]
@@ -49,7 +51,7 @@ RSpec.describe Webservices::TradeEvent do
             size: 100,
             bad_param: 'bad'
           }
-          "/v2/trade_events/search?#{search_params.to_param}"
+          "/v1/trade_events/search?#{search_params.to_param}"
         end
 
         let(:response_file_path) { 'spec/fixtures/json/webservices/unknown_parameters.json' }

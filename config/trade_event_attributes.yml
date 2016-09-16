@@ -1,0 +1,185 @@
+cost_attribute: &double_attribute
+  :mapping:
+    :type: double
+
+english_analyzed_attribute: &english_analyzed_attribute
+  :mapping:
+    :analyzer: english_analyzer
+    :type: string
+
+path_analyzed_attribute: &path_analyzed_attribute
+  :mapping:
+    :analyzer: path_analyzer
+    :type: string
+
+contacts_attribute: &contacts_attribute
+  :mapping:
+    :type: nested
+    :dynamic: false
+    :properties:
+      :first_name:
+        :index: not_analyzed
+        :type: string
+      :last_name:
+        :index: not_analyzed
+        :type: string
+      :person_title:
+        :index: not_analyzed
+        :type: string
+      :post:
+        :index: not_analyzed
+        :type: string
+      :email:
+        :index: not_analyzed
+        :type: string
+      :phone:
+        :index: not_analyzed
+        :type: string
+
+venues_attribute: &venues_attribute
+  :mapping:
+    :type: object
+    :dynamic: false
+    :properties:
+      :name:
+        :analyzer: english_analyzer
+        :type: string
+      :street:
+        :index: not_analyzed
+        :type: string
+      :city:
+        :index: not_analyzed
+        :type: string
+      :state:
+        :index: not_analyzed
+        :type: string
+      :postal_code:
+        :index: not_analyzed
+        :type: string
+      :country:
+        :index: not_analyzed
+        :type: string
+
+DL:
+  :custom_attributes:
+    - :name: :name
+      <<: *english_analyzed_attribute
+    - :name: :original_description
+      <<: *english_analyzed_attribute
+
+  :date_attributes:
+  - :start_date
+
+  :not_analyzed_attributes:
+    - :url
+    - :click_url
+    - :hosted_url
+    - :source
+
+ITA:
+  :custom_attributes:
+  - :name: :name
+    <<: *english_analyzed_attribute
+  - :name: :original_description
+    <<: *english_analyzed_attribute
+  - :name: :contacts
+    <<: *contacts_attribute
+  - :name: :cost
+    <<: *double_attribute
+  - :name: :industry_paths
+    <<: *path_analyzed_attribute
+  - :name: :world_region_paths
+    <<: *path_analyzed_attribute
+  - :name: :venues
+    <<: *venues_attribute
+
+  :date_attributes:
+    - :start_date
+    - :end_date
+
+  :not_analyzed_attributes:
+  - :url
+  - :click_url
+  - :hosted_url
+  - :source
+  - :countries
+  - :event_type
+  - :expanded_industries
+  - :industries
+  - :registration_title
+  - :registration_url
+  - :trade_regions
+  - :world_regions
+
+SBA:
+  :custom_attributes:
+  - :name: :name
+    <<: *english_analyzed_attribute
+  - :name: :original_description
+    <<: *english_analyzed_attribute
+  - :name: :contacts
+    <<: *contacts_attribute
+  - :name: :cost
+    <<: *double_attribute
+  - :name: :industry_paths
+    <<: *path_analyzed_attribute
+  - :name: :world_region_paths
+    <<: *path_analyzed_attribute
+  - :name: :venues
+    <<: *venues_attribute
+
+  :date_attributes:
+    - :start_date
+    - :end_date
+
+  :not_analyzed_attributes:
+  - :start_time
+  - :end_time
+  - :registration_url
+  - :registration_click_url
+  - :hosted_url
+  - :source
+  - :countries
+  - :event_type
+  - :expanded_industries
+  - :industries
+  - :time_zone
+  - :trade_regions
+  - :world_regions
+
+USTDA:
+  :custom_attributes:
+  - :name: :name
+    <<: *english_analyzed_attribute
+  - :name: :original_description
+    <<: *english_analyzed_attribute
+  - :name: :contacts
+    <<: *contacts_attribute
+  - :name: :cost
+    <<: *double_attribute
+  - :name: :industry_paths
+    <<: *path_analyzed_attribute
+  - :name: :world_region_paths
+    <<: *path_analyzed_attribute
+  - :name: :venues
+    <<: *venues_attribute
+
+  :date_attributes:
+  - :start_date
+  - :end_date
+
+  :not_analyzed_attributes:
+  - :start_time
+  - :end_time
+  - :url
+  - :click_url
+  - :hosted_url
+  - :source
+  - :cost_currency
+  - :countries
+  - :expanded_industries
+  - :industries
+  - :registration_title
+  - :registration_url
+  - :trade_regions
+  - :world_regions

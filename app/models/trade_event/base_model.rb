@@ -15,19 +15,12 @@ module TradeEvent
       base.def_delegators :extra, :md_description, :html_description
 
       base.class_eval do
-        @index_version = 'v2'
+        @index_version = 'v3'
 
         append_index_namespace parent.name.tableize,
                                name.demodulize.tableize
 
-        analyzed_attributes 'english_analyzer',
-                            :original_description,
-                            :name
-
-        not_analyzed_attributes :source,
-                                :hosted_url
-
-        date_attributes :start_date
+        define_attributes
 
         validates_presence_of :hosted_url, :name, :source
       end
@@ -36,7 +29,28 @@ module TradeEvent
     module ModuleMethods
       protected
 
-      def date_attributes(*names)
+      def load_attributes_config
+        yaml = Intrasearch.root.join('config/trade_event_attributes.yml').read
+        source = name.demodulize.sub(/TradeEvent/, '').upcase
+        YAML.load(yaml)[source]
+      end
+
+      def define_attributes
+        config = load_attributes_config
+        define_custom_attributes config[:custom_attributes]
+        define_date_attributes config[:date_attributes]
+        define_not_analyzed_attributes config[:not_analyzed_attributes]
+      end
+
+      def define_custom_attributes(attributes_config)
+        return unless attributes_config.present?
+        attributes_config.each do |config|
+          attribute config[:name], config[:type], mapping: config[:mapping].dup
+        end
+      end
+
+      def define_date_attributes(names)
+        return unless names
         names.each do |name|
           attribute name,
                     Date,
@@ -47,35 +61,8 @@ module TradeEvent
         end
       end
 
-      def contacts_attribute
-        attribute :contacts,
-                  nil,
-                  mapping: {
-                    type: 'nested',
-                    properties: {
-                      first_name: { type: 'string', index: 'not_analyzed' },
-                      last_name: { type: 'string', index: 'not_analyzed' },
-                      person_title: { type: 'string', index: 'not_analyzed' },
-                      post: { type: 'string', index: 'not_analyzed' },
-                      email: { type: 'string', index: 'not_analyzed' },
-                      phone: { type: 'string', index: 'not_analyzed' }
-                    }
-                  }
-      end
-
-      def venues_attribute
-        attribute :venues,
-                  nil,
-                  mapping: {
-                    type: 'object',
-                    properties: {
-                      name: { type: 'string', analyzer: 'english_analyzer' },
-                      address: { type: 'string', index: 'not_analyzed' },
-                      city: { type: 'string', index: 'not_analyzed' },
-                      state: { type: 'string', index: 'not_analyzed' },
-                      country: { type: 'string', index: 'not_analyzed' }
-                    }
-                  }
+      def define_not_analyzed_attributes(names)
+        not_analyzed_attributes(*names) if names.present?
       end
     end
 

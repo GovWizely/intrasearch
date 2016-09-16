@@ -26,6 +26,7 @@ RSpec.describe TradeEventFindByIdAPI do
     it 'returns DL trade event attributes' do
       expected_attributes = {
         id: '94c68284a1b7698becdcdaa69dda29bb2d76051c',
+        click_url: 'https://goo.gl/dl1',
         description: 'Direct Line:A Political and Economic Update Bureau of Economic and Business Affairs. Register to receive information on future Direct Line calls. Brief Description of call: The U.S. Embassy presents an opportunity for U.S. businesses of all sizes to learn about the latest political and economic developments. Following the presentation, participants will have the opportunity to ask questions. Please RSVP by clicking here.',
         hosted_url: 'https://example.org/trade_event?id=94c68284a1b7698becdcdaa69dda29bb2d76051c',
         name: 'DL Trade Event 1',
@@ -47,6 +48,7 @@ RSpec.describe TradeEventFindByIdAPI do
     it 'returns ITA trade event attributes' do
       expected_attributes = {
         id: '36282',
+        click_url: 'https://goo.gl/ita1',
         contacts: [
           {
             email: 'John.Doe@example.gov',
@@ -81,7 +83,9 @@ RSpec.describe TradeEventFindByIdAPI do
           city: 'San Francisco',
           country: 'United States',
           name: 'Moscone Center, San Francisco',
-          state: 'CA'
+          postal_code: nil,
+          state: 'CA',
+          street: nil
         ]
       }
       expect(parsed_body).to eq(expected_attributes)
@@ -110,7 +114,7 @@ RSpec.describe TradeEventFindByIdAPI do
         cost: 35.0,
         description: '<h1>SBA Trade Event 73022 description.</h1>',
         end_date: '2016-05-24',
-        end_time: '10:30',
+        end_time: '10:30 AM',
         name: 'SBA Trade Event 73022',
         event_type: 'Resource Partner',
         hosted_url: 'https://example.org/trade_event?id=730226ea901d6c4bf7e4e4f5ef12ebec8c482a2b',
@@ -118,24 +122,27 @@ RSpec.describe TradeEventFindByIdAPI do
           'eCommerce Industry'
         ],
         registration_url: 'https://sba.trade.event.example.org/registration/73022',
+        registration_click_url: 'https://goo.gl/sba1',
         source: 'SBA',
         start_date: '2016-05-17',
-        start_time: '08:30',
+        start_time: '8:30 AM',
         time_zone: 'America/New_York',
         venues: [
           {
-            'address': '600 Trade Drive',
             'city': 'Trade Township',
             'country': 'United States',
             'name': 'Trade Business Councils',
-            'state': 'PA'
+            'postal_code': '19147',
+            'state': 'PA',
+            'street': '600 Trade Drive'
           },
           {
-            'address': '100 Broadway',
             'city': 'New York',
             'country': 'United States',
             'name': 'Hotel TW',
-            'state': 'NY'
+            'postal_code': '10001',
+            'state': 'NY',
+            'street': '100 Broadway',
           }
         ]
       }
@@ -164,11 +171,12 @@ RSpec.describe TradeEventFindByIdAPI do
             post: '$post'
           }
         ],
+        click_url: 'https://goo.gl/ustda1',
         cost: 25.0,
         cost_currency: 'USD',
         description: 'USTDA Trade Event f0e259 description.',
         end_date: '2016-05-24',
-        end_time: '14:46',
+        end_time: '5:46 PM',
         hosted_url: 'https://example.org/trade_event?id=f0e2598dbc76ce55cd0a557746375bd911808bac',
         industries: [
           'eCommerce Industry'
@@ -178,14 +186,16 @@ RSpec.describe TradeEventFindByIdAPI do
         registration_url: 'http://ustda.trade.events.example.org/registration/f0e259',
         source: 'USTDA',
         start_date: '2016-05-17',
-        start_time: '15:46',
+        start_time: '3:46 PM',
         url: 'http://ustda.trade.events.example.org/event/f0e259',
         venues: [
           {
             city: 'Washington',
             country: 'United States',
             name: 'Washington, D.C.',
-            state: 'D.C.'
+            postal_code: nil,
+            state: nil,
+            street: nil
           }
         ]
       }

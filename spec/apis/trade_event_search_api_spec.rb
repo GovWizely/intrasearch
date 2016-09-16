@@ -60,7 +60,6 @@ RSpec.describe TradeEventSearchAPI, endpoint: '/v1/trade_events/search' do
     it 'returns states aggregation' do
       expected_states = [
         { key: 'CA', doc_count: 1 },
-        { key: 'D.C.', doc_count: 1 },
         { key: 'NY', doc_count: 1 },
         { key: 'PA', doc_count: 1 }
       ]
@@ -323,6 +322,7 @@ RSpec.describe TradeEventSearchAPI, endpoint: '/v1/trade_events/search' do
     it 'returns fields' do
       expected_first_result = {
         id: '36282',
+        click_url: 'https://goo.gl/ita1',
         contacts: [
           {
             email: 'John.Doe@example.gov',
@@ -357,7 +357,9 @@ RSpec.describe TradeEventSearchAPI, endpoint: '/v1/trade_events/search' do
           city: 'San Francisco',
           country: 'United States',
           name: 'Moscone Center, San Francisco',
-          state: 'CA'
+          postal_code: nil,
+          state: 'CA',
+          street: nil
         ]
       }
       expect(parsed_body[:results].first).to eq(expected_first_result)

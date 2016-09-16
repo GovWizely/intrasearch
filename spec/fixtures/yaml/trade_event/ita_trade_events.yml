@@ -34,10 +34,13 @@
   - Asia Pacific Economic Cooperation
   - NAFTA
   :url: https://ita.trade.event.example.org/event/36282
+  :click_url: https://goo.gl/ita1
   :venues:
     - city: San Francisco
       country: United States
       name: Moscone Center, San Francisco
+      postal_code:
+      street:
       state: CA
   :world_region_paths:
   - "/North America"

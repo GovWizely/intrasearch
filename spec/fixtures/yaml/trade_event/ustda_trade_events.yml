@@ -12,7 +12,7 @@
   - Taiwan
   - United States
   :end_date: 2016-05-24
-  :end_time: "14:46"
+  :end_time: "5:46 PM"
   :expanded_industries:
   - Information and Communication Technology
   - Retail Trade
@@ -29,15 +29,18 @@
   :registration_url: http://ustda.trade.events.example.org/registration/f0e259
   :source: USTDA
   :start_date: 2016-05-17
-  :start_time: "15:46"
+  :start_time: "3:46 PM"
   :trade_regions:
   - Asia Pacific Economic Cooperation
   :url: http://ustda.trade.events.example.org/event/f0e259
+  :click_url: https://goo.gl/ustda1
   :venues:
   - city: Washington
     country: United States
     name: Washington, D.C.
-    state: D.C.
+    postal_code:
+    state:
+    street:
   :world_region_paths:
   - "/Asia/East Asia"
   - "/North America"

@@ -20,6 +20,7 @@ RSpec.describe TradeEvent::SbaTradeEventImporter do
         countries: ['United States'],
         original_description: 'SBA Trade Event 73022 description',
         end_date: Date.parse('2016-05-24'),
+        end_time: '10:30 AM',
         event_type: 'Resource Partner',
         expanded_industries: [
           'Franchising',
@@ -42,16 +43,17 @@ RSpec.describe TradeEvent::SbaTradeEventImporter do
         registration_url: 'https://sba.trade.event.example.org/registration/73022',
         source: 'SBA',
         start_date: Date.parse('2016-05-17'),
-        start_time: '08:30',
+        start_time: '8:30 AM',
         time_zone: 'America/New_York',
         trade_regions: ['Asia Pacific Economic Cooperation'],
         venues: [
           {
-            'address' => '600 Trade Drive',
             'city' => 'Trade Township',
             'country' => 'United States',
             'name' => 'Trade Business Councils',
-            'state' => 'PA'
+            'postal_code' => '19147',
+            'state' => 'PA',
+            'street' => '600 Trade Drive',
           }
         ],
         world_region_paths: [
