@@ -1,9 +1,13 @@
+require 'active_model/validations'
+require 'active_model/validations/callbacks'
 require 'active_support/core_ext/string/inflections'
 
 require 'base_model'
 
 class User
   include BaseModel
+  include ActiveModel::Validations::Callbacks
+
   append_index_namespace name.demodulize.tableize
 
   attribute :email, String, mapping: { index: 'not_analyzed' }
@@ -23,17 +27,21 @@ class User
   attribute :unlock_token, String, mapping: { index: 'not_analyzed' }
   attribute :locked_at, DateTime, mapping: { index: 'not_analyzed' }
 
+  before_validation :normalize_email
+
   validates :email, presence: true
+  validate :unique_email
 
   def self.where(params)
     term_clauses = params.map do |(k, v)|
+      v = v.downcase if k.to_s == 'email' && v.present?
       {
         term: {
           k => v
         }
       }
     end
-    response = search query: { bool: { must: term_clauses } }
+    response = all query: { bool: { must: term_clauses } }
     response.results
   end
 
@@ -41,5 +49,17 @@ class User
     find id
   rescue Elasticsearch::Persistence::Repository::DocumentNotFound
     nil
+  end
+
+  private
+
+  def normalize_email
+    self.email = email.downcase.strip if email.present?
+  end
+
+  def unique_email
+    if new_record? && email.present? && self.class.where(email: email).present?
+      errors.add :email, 'has already been taken'
+    end
   end
 end

@@ -2,7 +2,8 @@ require 'active_support/core_ext/string/inflections'
 require 'forwardable'
 
 require 'base_model'
-require 'trade_event/trade_event_extra'
+require 'model_with_extra'
+require 'trade_event/extra'
 
 module TradeEvent
   module BaseModel
@@ -10,6 +11,7 @@ module TradeEvent
       base.include ::BaseModel
       base.extend ModuleMethods
       base.include InstanceMethods
+      base.include ModelWithExtra
 
       base.extend Forwardable
       base.def_delegators :extra, :md_description, :html_description
@@ -70,31 +72,6 @@ module TradeEvent
       def attributes
         ActiveSupport::HashWithIndifferentAccess.new super
       end
-
-      def update_extra_attributes(extra_attributes)
-        @extra = TradeEventExtra.create extra_attributes.merge id: id
-        @extra.persisted?
-      end
-
-      def extra
-        load_extra unless @extra
-        @extra
-      end
-
-      def description
-        extra.html_description.present? ? extra.html_description : original_description
-      end
-
-      private
-
-      def load_extra
-        @extra = begin
-          TradeEventExtra.find id
-        rescue Elasticsearch::Persistence::Repository::DocumentNotFound
-          TradeEventExtra.new
-        end
-      end
-
     end
   end
 end

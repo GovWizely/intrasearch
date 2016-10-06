@@ -5,7 +5,6 @@
   :contact: NSB Fund Management
   :countries:
   - Taiwan
-  :description: Expression of Interest
   :end_at: '2016-08-24T00:00:00+00:00'
   :funding_source: Other
   :hosted_url: https://example.org/trade_lead?id=c118cb6ed4345bb33980b2dfb77303e2a561866a
@@ -14,6 +13,7 @@
   :industry_paths:
   - "/Retail Trade"
   :lead_source: Post Identified Project
+  :original_description: Expression of Interest
   :procurement_organization: Ministry of Transport and Civil Aviation
   :project_number: NSB/SL/1601
   :project_size: 3240000000

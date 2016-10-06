@@ -1,3 +1,4 @@
+require 'time'
 require 'uri'
 
 require 'industry'
@@ -29,7 +30,7 @@ module TradeEventTransformer
     private
 
     def transform_cost(attributes)
-      attributes[:cost] &&= attributes[:cost].to_f rescue 0.0
+      attributes[:cost] &&= attributes[:cost].to_f rescue nil
     end
 
     def transform_countries_and_venues(attributes)
@@ -53,7 +54,7 @@ module TradeEventTransformer
     end
 
     def normalize_time(time_str)
-      Time.parse(time_str).strftime('%-I:%M %p') rescue nil
+      Time.parse(time_str).strftime('%-I:%M %p') rescue time_str
     end
   end
 

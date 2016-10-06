@@ -1,13 +1,13 @@
 require 'match_all_query'
 
-class TradeEventMatchAllQuery
+class TradeLeadMatchAllQuery
   include MatchAllQuery
 
   def to_hash
     hash = super
     hash[:sort] = [
       {
-        start_date: {
+        published_at: {
           missing: '_first',
           order: 'asc'
         }

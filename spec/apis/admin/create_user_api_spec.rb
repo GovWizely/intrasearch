@@ -39,12 +39,16 @@ RSpec.describe Admin::UpdateUserAPI, endpoint: '/admin/users' do
   context 'when the request contains existing email' do
     let(:request_body_hash) {
       {
-        email: 'admin@example.org'
+        email: 'ADMIN@example.org'
       }
     }
 
     before { send_json :post, described_endpoint, request_body_hash }
 
-    it_behaves_like 'a bad request response'
+    it_behaves_like 'an unprocessable entity response'
+
+    it 'returns email has already been taken error' do
+      expect(parsed_body).to eq(errors: { email: ['has already been taken']})
+    end
   end
 end

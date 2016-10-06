@@ -3,7 +3,7 @@ require 'support/api_shared_examples'
 require 'support/api_spec_helpers'
 require 'support/elastic_model_shared_contexts'
 
-RSpec.describe Admin::GetTradeEventsAPI, endpoint: '/admin/trade_events' do
+RSpec.describe Admin::TradeEventListAPI, endpoint: '/admin/trade_events' do
   include APISpecHelpers
 
   include_context 'API response'
@@ -11,7 +11,7 @@ RSpec.describe Admin::GetTradeEventsAPI, endpoint: '/admin/trade_events' do
   context 'when trade events are present' do
     include_context 'elastic models',
                     TradeEvent::DlTradeEvent,
-                    TradeEvent::TradeEventExtra,
+                    TradeEvent::Extra,
                     TradeEvent::ItaTradeEvent,
                     TradeEvent::SbaTradeEvent,
                     TradeEvent::UstdaTradeEvent
@@ -86,7 +86,7 @@ RSpec.describe Admin::GetTradeEventsAPI, endpoint: '/admin/trade_events' do
   context 'when there are no trade events' do
     include_context 'elastic models',
                     TradeEvent::DlTradeEvent,
-                    TradeEvent::TradeEventExtra,
+                    TradeEvent::Extra,
                     TradeEvent::ItaTradeEvent,
                     TradeEvent::SbaTradeEvent,
                     TradeEvent::UstdaTradeEvent,

@@ -6,7 +6,6 @@
   :countries:
   - United Kingdom
   :deadline_at: '2016-09-19T00:00:00+00:00'
-  :description: UK Business Services
   :expanded_industries:
   - Aerospace and Defense
   - Space
@@ -18,6 +17,7 @@
   :max_contract_value: 6000000.0
   :min_contract_value: 0.0
   :notice_type: Contract
+  :original_description: UK Business Services
   :procurement_organization: UK BUSINESS
   :published_at: '2016-08-15T09:21:36+00:00'
   :record_id: 355c8432-d59c-46d4-bd3e-015e3fd9fdd4

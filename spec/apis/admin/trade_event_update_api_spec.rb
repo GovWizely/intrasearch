@@ -3,14 +3,14 @@ require 'support/api_shared_examples'
 require 'support/api_spec_helpers'
 require 'support/elastic_model_shared_contexts'
 
-RSpec.describe Admin::UpdateTradeEventAPI, endpoint: '/admin/trade_events' do
+RSpec.describe Admin::TradeEventUpdateAPI, endpoint: '/admin/trade_events' do
   include APISpecHelpers
 
   include_context 'elastic models',
                   TradeEvent::DlTradeEvent,
+                  TradeEvent::Extra,
                   TradeEvent::ItaTradeEvent,
                   TradeEvent::SbaTradeEvent,
-                  TradeEvent::TradeEventExtra,
                   TradeEvent::UstdaTradeEvent
 
   include_context 'API response'
@@ -26,7 +26,7 @@ RSpec.describe Admin::UpdateTradeEventAPI, endpoint: '/admin/trade_events' do
 
     before { send_json :patch, "#{described_endpoint}/#{id}", request_body_hash }
 
-    it_behaves_like 'a successful API response'
+    it_behaves_like 'a successful no content API response'
 
     it 'saves trade event extra' do
       trade_event = TradeEvent.find_by_id id

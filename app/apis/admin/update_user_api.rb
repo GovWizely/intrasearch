@@ -24,8 +24,20 @@ module Admin
     end
 
     patch '/users/:id' do
-      u = User.create declared(params, include_missing: false)
-      u.persisted? ? u : status(:bad_request)
+      declared_params = declared(params, include_missing: false)
+      user = User.find_by_id declared_params[:id]
+
+      if user
+        user.attributes = declared_params.except(:id)
+        if user.save
+          body false
+        else
+          status :unprocessable_entity
+          { errors: user.errors }
+        end
+      else
+        status :not_found
+      end
     end
   end
 end

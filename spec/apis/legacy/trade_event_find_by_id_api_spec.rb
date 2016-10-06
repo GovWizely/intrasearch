@@ -10,7 +10,7 @@ RSpec.describe Legacy::TradeEventFindByIdAPI do
 
   include_context 'elastic models',
                   TradeEvent::DlTradeEvent,
-                  TradeEvent::TradeEventExtra,
+                  TradeEvent::Extra,
                   TradeEvent::ItaTradeEvent,
                   TradeEvent::SbaTradeEvent,
                   TradeEvent::UstdaTradeEvent

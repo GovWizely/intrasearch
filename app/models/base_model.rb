@@ -5,17 +5,18 @@ module BaseModel
     base.class_eval do
       include Elasticsearch::Persistence::Model
 
-      class << self
-        attr_reader :base_index_namespace,
-                    :index_version
-        attr_accessor :index_alias_name,
-                      :index_name_prefix
-      end
       @base_index_namespace = ['intrasearch',
                                Intrasearch.env].join('-')
       @index_version = 'v1'
 
       extend ModuleMethods
+    end
+
+    class << base
+      attr_reader :base_index_namespace,
+                  :index_version
+      attr_accessor :index_alias_name,
+                    :index_name_prefix
     end
   end
 

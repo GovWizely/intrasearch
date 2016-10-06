@@ -9,7 +9,7 @@ RSpec.describe Admin::TradeEventFindByIdAPI do
   include_context 'elastic models',
                   Country,
                   TradeEvent::DlTradeEvent,
-                  TradeEvent::TradeEventExtra,
+                  TradeEvent::Extra,
                   TradeEvent::ItaTradeEvent,
                   TradeEvent::SbaTradeEvent,
                   TradeEvent::UstdaTradeEvent,

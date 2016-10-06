@@ -53,6 +53,7 @@ class IndexManager
     new_index_name = build_timestamped_index_name index_name_prefix
     @model_class.index_name = new_index_name
     @model_class.create_index!
+    @model_class.gateway.refresh_index!
     new_index_name
   end
 

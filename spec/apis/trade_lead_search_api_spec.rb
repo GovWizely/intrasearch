@@ -10,6 +10,7 @@ RSpec.describe TradeLeadSearchAPI, endpoint: '/v1/trade_leads/search' do
                   Country,
                   TradeLead::AustraliaTradeLead,
                   TradeLead::CanadaTradeLead,
+                  TradeLead::Extra,
                   TradeLead::FboTradeLead,
                   TradeLead::McaTradeLead,
                   TradeLead::StateTradeLead,

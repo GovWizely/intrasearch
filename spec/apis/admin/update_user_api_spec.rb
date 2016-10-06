@@ -7,11 +7,7 @@ RSpec.describe Admin::UpdateUserAPI, endpoint: '/admin/users/%{id}' do
   include APISpecHelpers
 
   include_context 'elastic models',
-                  TradeEvent::DlTradeEvent,
-                  TradeEvent::ItaTradeEvent,
-                  TradeEvent::SbaTradeEvent,
-                  TradeEvent::TradeEventExtra,
-                  TradeEvent::UstdaTradeEvent
+                  User
 
   include_context 'API response'
 
@@ -32,20 +28,21 @@ RSpec.describe Admin::UpdateUserAPI, endpoint: '/admin/users/%{id}' do
         failed_attempts: 1,
         unlock_token: '$unlock_token',
         locked_at: DateTime.parse('Wed, 22 Jun 2016 17:54:24 +0000')
-        }
+      }
     }
 
     before { send_json :patch, (described_endpoint % { id: id }), request_body_hash }
+
+    it_behaves_like 'a successful no content API response'
 
     it 'saves all attributes' do
       user = User.find id
       expect(user).to have_attributes(request_body_hash)
     end
-
   end
 
   context 'when the request contains invalid parameters' do
-    let(:id) { 'AVV-WR5f1r3iRzHwsCgc' }
+    let(:id) { 'AVV-Zgpz1r3iRzHwsCge' }
     let(:request_body_hash) do
       {
         email: nil
@@ -54,6 +51,28 @@ RSpec.describe Admin::UpdateUserAPI, endpoint: '/admin/users/%{id}' do
 
     before { send_json :patch, (described_endpoint % { id: id }), request_body_hash }
 
-    it_behaves_like 'a bad request response'
+    it_behaves_like 'an unprocessable entity response'
+
+    it 'returns errors' do
+      expect(parsed_body).to eq(errors: { email: ["can't be blank"] })
+    end
+
+    it 'leaves user attributes unchanged' do
+      user = User.find id
+      expect(user.email).to eq('other@example.org')
+    end
+  end
+
+  context 'when user is not found' do
+    let(:id) { 'notpresent' }
+    let(:request_body_hash) do
+      {
+        email: 'notpresent@example.org'
+      }
+    end
+
+    before { send_json :patch, (described_endpoint % { id: id }), request_body_hash }
+
+    it_behaves_like 'a resource not found API response'
   end
 end

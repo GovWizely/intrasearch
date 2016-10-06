@@ -6,7 +6,6 @@
   - South Africa
   :contact: Jane Doe
   :contract_number: sol-674-14-000014
-  :description: See RFP
   :end_at: '2017-04-17T00:00:00+00:00'
   :expanded_industries:
   - Business and Professional Services
@@ -17,6 +16,7 @@
   :industry_paths:
   - "/Business and Professional Services/Scientific and Technical Services"
   :notice_type: COMBINE
+  :original_description: See RFP.
   :procurement_office: Overseas Missions
   :procurement_office_address: Dept of State Washington DC 20521-6120
   :procurement_organization: Agency for International Development

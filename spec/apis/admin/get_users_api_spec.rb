@@ -11,8 +11,8 @@ RSpec.describe Admin::GetUsersAPI, endpoint: '/admin/users' do
 
   include_context 'API response'
 
-  context 'when user with matching email exists' do
-    let(:email) { 'admin@example.org' }
+  context 'when user with upppercased matching email exists' do
+    let(:email) { 'ADMIN@example.org' }
 
     before { get described_endpoint, 'email' => email }
 
@@ -20,7 +20,7 @@ RSpec.describe Admin::GetUsersAPI, endpoint: '/admin/users' do
 
     it 'returns user with matching email' do
       expect(parsed_body.count).to eq(1)
-      expect(parsed_body.first[:email]).to eq(email)
+      expect(parsed_body.first[:email]).to eq('admin@example.org')
     end
   end
 

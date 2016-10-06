@@ -1,6 +1,6 @@
 require 'support/elastic_model_shared_contexts'
 
-RSpec.describe TradeEvent::TradeEventExtra do
+RSpec.describe TradeEvent::Extra do
   include_context 'elastic models',
                   described_class
 

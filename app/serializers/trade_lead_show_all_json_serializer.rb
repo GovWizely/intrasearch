@@ -1,10 +1,9 @@
-module TradeLeadShowJSONSerializer
+module TradeLeadShowAllJSONSerializer
   EXCLUDED_ATTRIBUTES = %i(
     countries
     created_at
     expanded_industries
     industry_paths
-    original_description
     trade_regions
     updated_at
     world_region_paths
@@ -13,6 +12,6 @@ module TradeLeadShowJSONSerializer
 
   def self.serialize(resource)
     resource.as_json except: EXCLUDED_ATTRIBUTES,
-                     methods: %i(country description)
+                     methods: %i(country html_description md_description)
   end
 end

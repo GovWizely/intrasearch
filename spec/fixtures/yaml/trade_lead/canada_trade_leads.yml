@@ -10,7 +10,6 @@
   :contract_number: 47419-188062/B
   :countries:
   - Canada
-  :description: Awesome description.
   :end_at: '2016-09-20T00:00:00+00:00'
   :expanded_industries:
   - Franchising
@@ -27,6 +26,7 @@
   - Franchising
   - eCommerce Industry
   :notice_type: APM-NPP
+  :original_description: Awesome description.
   :procurement_organization: Public Works and Government Services Canada
   :published_at: '2016-08-10T00:00:00+00:00'
   :publishing_status: Active

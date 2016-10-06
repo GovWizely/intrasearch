@@ -17,7 +17,7 @@ RSpec.describe TradeLeadFindByIdAPI do
                   TradeLead::UstdaTradeLead
 
   describe 'get AUSTRALIA trade lead by id' do
-    before { get '/v1/trade_leads/62d753fee98294cab8d66d1bcb501cff1a4f6670' }
+    before { get '/admin/trade_leads/62d753fee98294cab8d66d1bcb501cff1a4f6670' }
 
     include_context 'API response'
 
@@ -35,16 +35,18 @@ RSpec.describe TradeLeadFindByIdAPI do
         contact_officer: 'Project Officer',
         country: 'Australia',
         delivery_timeframe: 'The anticipated timeframe for completing work under the contract is six months.',
-        description: 'The Board of Innovation Australia (Board) is an independent statutory board charged with providing advice to government on all innovation, science and research matters. With the passage of legislation by the new parliament, Innovation Australia will change to become Innovation and Science Australia. The Office of Innovation and Science Australia (OISA) has been established within the Department of Industry, Innovation and Science (Department) to support the work of the Board.',
         email: 'email@example.au',
         end_at: '2016-09-06T15:00:00+10:00',
         hosted_url: 'https://example.org/trade_lead?id=62d753fee98294cab8d66d1bcb501cff1a4f6670',
+        html_description: nil,
         industries: [
           'eCommerce Industry'
         ],
         location: 'ACT',
         lodgement_address: 'Tenderers must be lodged electronically using AusTender',
+        md_description: nil,
         multi_agency_access: '$multi_agency_access',
+        original_description: 'The Board of Innovation Australia (Board) is an independent statutory board charged with providing advice to government on all innovation, science and research matters. With the passage of legislation by the new parliament, Innovation Australia will change to become Innovation and Science Australia. The Office of Innovation and Science Australia (OISA) has been established within the Department of Industry, Innovation and Science (Department) to support the work of the Board.',
         other_instructions: '$other_instructions',
         panel_arrangement: '$panel_arrangement',
         phone: '$phone',
@@ -58,7 +60,7 @@ RSpec.describe TradeLeadFindByIdAPI do
   end
 
   describe 'get CANADA trade lead by id' do
-    before { get '/v1/trade_leads/539d317fe76effc1e7631ce1a7d2e6b814434f51' }
+    before { get '/admin/trade_leads/539d317fe76effc1e7631ce1a7d2e6b814434f51' }
 
     include_context 'API response'
 
@@ -75,15 +77,17 @@ RSpec.describe TradeLeadFindByIdAPI do
         contact: 'Jane Doe',
         contract_number: '47419-188062/B',
         country: 'Canada',
-        description: '<h2>Awesome description.</h2>',
         end_at: '2016-09-20T00:00:00+00:00',
         hosted_url: 'https://example.org/trade_lead?id=539d317fe76effc1e7631ce1a7d2e6b814434f51',
+        html_description: '<h2>Awesome description.</h2>',
         implementing_entity: 'Canada Border Services Agency',
         industries: [
           'Franchising',
           'eCommerce Industry'
         ],
+        md_description: '## Awesome description.',
         notice_type: 'APM-NPP',
+        original_description: 'Awesome description.',
         procurement_organization: 'Public Works and Government Services Canada',
         published_at: '2016-08-10T00:00:00+00:00',
         publishing_status: 'Active',
@@ -102,7 +106,7 @@ RSpec.describe TradeLeadFindByIdAPI do
   end
 
   describe 'get FBO trade lead by id' do
-    before { get '/v1/trade_leads/995a1c55b26d11fe162f3f61b594be8c403c60f0' }
+    before { get '/admin/trade_leads/995a1c55b26d11fe162f3f61b594be8c403c60f0' }
 
     include_context 'API response'
 
@@ -117,13 +121,15 @@ RSpec.describe TradeLeadFindByIdAPI do
         contact: 'Jane Doe',
         contract_number: 'sol-674-14-000014',
         country: 'South Africa',
-        description: '<h3>See RFP.</h3>',
         end_at: '2017-04-17T00:00:00+00:00',
         hosted_url: 'https://example.org/trade_lead?id=995a1c55b26d11fe162f3f61b594be8c403c60f0',
+        html_description: '<h3>See RFP.</h3>',
         industries: [
           'Scientific and Technical Services'
         ],
+        md_description: '### See RFP.',
         notice_type: 'COMBINE',
+        original_description: 'See RFP.',
         procurement_office: 'Overseas Missions',
         procurement_office_address: 'Dept of State Washington DC 20521-6120',
         procurement_organization: 'Agency for International Development',
@@ -140,7 +146,7 @@ RSpec.describe TradeLeadFindByIdAPI do
   end
 
   describe 'get MCA trade lead by id' do
-    before { get '/v1/trade_leads/f3a40a7987cd049cbf093079bbef65b1df387d00' }
+    before { get '/admin/trade_leads/f3a40a7987cd049cbf093079bbef65b1df387d00' }
 
     include_context 'API response'
 
@@ -157,9 +163,11 @@ RSpec.describe TradeLeadFindByIdAPI do
         ],
         click_url: 'http://goo.gl/mca1',
         country: 'South Africa',
-        description: '<h3>MILLENNIUM CHALLENGE ACCOUNT BENIN II.</h3>',
         funding_source: 'Millennium Challenge Account (MCA)',
         hosted_url: 'https://example.org/trade_lead?id=f3a40a7987cd049cbf093079bbef65b1df387d00',
+        html_description: '<h3>MILLENNIUM CHALLENGE ACCOUNT BENIN II.</h3>',
+        md_description: '### MILLENNIUM CHALLENGE ACCOUNT BENIN II.',
+        original_description: "Buyer: \u003Ca href=\"http://www.dgmarket.com/tenders/adminShowBuyer.do?buyerId=7041575\"\u003EMILLENNIUM CHALLENGE ACCOUNT BENIN II\u003C/a\u003E",
         source: 'MCA',
         published_at: '2016-06-18T21:10:41-04:00',
         title: 'Purchase of Computer Equipment Lead',
@@ -171,7 +179,7 @@ RSpec.describe TradeLeadFindByIdAPI do
   end
 
   describe 'get STATE trade lead by id' do
-    before { get '/v1/trade_leads/c118cb6ed4345bb33980b2dfb77303e2a561866a' }
+    before { get '/admin/trade_leads/c118cb6ed4345bb33980b2dfb77303e2a561866a' }
 
     include_context 'API response'
 
@@ -185,12 +193,14 @@ RSpec.describe TradeLeadFindByIdAPI do
         comments: 'The value stated is not the correct value it is only for uploading purposes.',
         contact: 'NSB Fund Management',
         country: 'Taiwan',
-        description: 'Expression of Interest',
         end_at: '2016-08-24T00:00:00+00:00',
         funding_source: 'Other',
         hosted_url: 'https://example.org/trade_lead?id=c118cb6ed4345bb33980b2dfb77303e2a561866a',
-        lead_source: 'Post Identified Project',
+        html_description: nil,
         industries: ['Retail Trade'],
+        lead_source: 'Post Identified Project',
+        md_description: nil,
+        original_description: 'Expression of Interest',
         procurement_organization: 'Ministry of Transport and Civil Aviation',
         project_number: 'NSB/SL/1601',
         project_size: 3240000000,
@@ -211,7 +221,7 @@ RSpec.describe TradeLeadFindByIdAPI do
   end
 
   describe 'get UK trade lead by id' do
-    before { get '/v1/trade_leads/d292a188d7ce8dd13419de8c0da4ce7b29c79899' }
+    before { get '/admin/trade_leads/d292a188d7ce8dd13419de8c0da4ce7b29c79899' }
 
     include_context 'API response'
 
@@ -226,12 +236,14 @@ RSpec.describe TradeLeadFindByIdAPI do
         contract_start_at: '2017-03-14T00:00:00+00:00',
         country: 'United Kingdom',
         deadline_at: '2016-09-19T00:00:00+00:00',
-        description: 'UK Business Services',
         hosted_url: 'https://example.org/trade_lead?id=d292a188d7ce8dd13419de8c0da4ce7b29c79899',
+        html_description: nil,
         industries: ['Space'],
         max_contract_value: 6000000.0,
+        md_description: nil,
         min_contract_value: 0.0,
         notice_type: 'Contract',
+        original_description: 'UK Business Services',
         procurement_organization: 'UK BUSINESS',
         published_at: '2016-08-15T09:21:36+00:00',
         record_id: '355c8432-d59c-46d4-bd3e-015e3fd9fdd4',
@@ -248,7 +260,7 @@ RSpec.describe TradeLeadFindByIdAPI do
   end
 
   describe 'get USTDA trade lead by id' do
-    before { get '/v1/trade_leads/26252346bf5f16c1a9a9b2dfa2762bbe2c99b8ae' }
+    before { get '/admin/trade_leads/26252346bf5f16c1a9a9b2dfa2762bbe2c99b8ae' }
 
     include_context 'API response'
 
@@ -259,9 +271,11 @@ RSpec.describe TradeLeadFindByIdAPI do
         id: '26252346bf5f16c1a9a9b2dfa2762bbe2c99b8ae',
         click_url: 'https://goo.gl/ustda1',
         country: 'South Africa',
-        description: 'Background: a South African state-owned freight logistics company',
         end_at: '2016-09-30T00:00:00+00:00',
         hosted_url: 'https://example.org/trade_lead?id=26252346bf5f16c1a9a9b2dfa2762bbe2c99b8ae',
+        html_description: nil,
+        md_description: nil,
+        original_description: 'Background: a South African state-owned freight logistics company',
         published_at: '2016-06-13T00:00:00+00:00',
         source: 'USTDA',
         title: 'Trade Lead: South Africa: Global Logistics Service Provider',

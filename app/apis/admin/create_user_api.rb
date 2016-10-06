@@ -7,13 +7,13 @@ module Admin
     end
 
     post '/users' do
-      declared_params = declared params
-      existing_users = User.where email: declared_params.email
-      if existing_users.present?
-        status :bad_request
+      user = User.create declared(params)
+
+      if user.persisted?
+        user
       else
-        user = User.create declared_params
-        user.persisted? ? user : status(:bad_request)
+        status(:unprocessable_entity)
+        { errors: user.errors }
       end
     end
   end

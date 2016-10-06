@@ -9,9 +9,9 @@ RSpec.describe TradeEventSearchAPI, endpoint: '/v1/trade_events/search' do
   include_context 'elastic models',
                   Country,
                   TradeEvent::DlTradeEvent,
+                  TradeEvent::Extra,
                   TradeEvent::ItaTradeEvent,
                   TradeEvent::SbaTradeEvent,
-                  TradeEvent::TradeEventExtra,
                   TradeEvent::UstdaTradeEvent,
                   TradeRegion,
                   WorldRegion

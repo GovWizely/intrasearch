@@ -1,9 +1,10 @@
 default: &default
   :country:
     :source_key: country_name
-  :description:
-    :skip_sanitize: true
   :id:
+  :original_description:
+    :source_key: description
+    :skip_sanitize: true
   :source:
   :title:
 

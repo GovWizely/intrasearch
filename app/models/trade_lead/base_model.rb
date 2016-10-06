@@ -2,6 +2,8 @@ require 'active_support/core_ext/string/inflections'
 require 'forwardable'
 
 require 'base_model'
+require 'model_with_extra'
+require 'trade_lead/extra'
 
 module TradeLead
   module BaseModel
@@ -9,13 +11,17 @@ module TradeLead
       base.include ::BaseModel
       base.extend ModuleMethods
       base.include InstanceMethods
+      base.include ModelWithExtra
+
+      base.extend Forwardable
+      base.def_delegators :extra, :md_description, :html_description
 
       base.class_eval do
         append_index_namespace parent.name.tableize,
                                name.demodulize.tableize
 
         analyzed_attributes 'english_analyzer',
-                            :description,
+                            :original_description,
                             :title
 
         not_analyzed_attributes :countries,

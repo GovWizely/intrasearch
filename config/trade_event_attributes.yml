@@ -1,4 +1,4 @@
-cost_attribute: &double_attribute
+double_attribute: &double_attribute
   :mapping:
     :type: double
 
@@ -71,10 +71,10 @@ DL:
   - :start_date
 
   :not_analyzed_attributes:
+    - :source
     - :url
     - :click_url
     - :hosted_url
-    - :source
 
 ITA:
   :custom_attributes:
@@ -98,10 +98,10 @@ ITA:
     - :end_date
 
   :not_analyzed_attributes:
+  - :source
   - :url
   - :click_url
   - :hosted_url
-  - :source
   - :countries
   - :event_type
   - :expanded_industries
@@ -133,12 +133,12 @@ SBA:
     - :end_date
 
   :not_analyzed_attributes:
-  - :start_time
-  - :end_time
+  - :source
   - :registration_url
   - :registration_click_url
   - :hosted_url
-  - :source
+  - :start_time
+  - :end_time
   - :countries
   - :event_type
   - :expanded_industries
@@ -169,12 +169,12 @@ USTDA:
   - :end_date
 
   :not_analyzed_attributes:
-  - :start_time
-  - :end_time
+  - :source
   - :url
   - :click_url
   - :hosted_url
-  - :source
+  - :start_time
+  - :end_time
   - :cost_currency
   - :countries
   - :expanded_industries

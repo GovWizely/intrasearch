@@ -9,5 +9,5 @@ module TradeLeadSearchJSONSerializer
     }
   }
 
-  self.snippet_attribute = :description
+  self.snippet_attribute = :original_description
 end
