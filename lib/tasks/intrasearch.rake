@@ -22,11 +22,13 @@ namespace :intrasearch do
   desc 'import trade events'
   task import_trade_events: :environment do
     TradeEvent::TradeEventImporter.descendants.each(&:import)
+    TradeEvent::Extra.prune_obsolete_documents TradeEvent.ids
   end
 
   desc 'import trade leads'
   task import_trade_leads: :environment do
     TradeLead::TradeLeadImporter.descendants.each(&:import)
+    TradeLead::Extra.prune_obsolete_documents TradeLead.ids
   end
 
   desc 'import web documents'

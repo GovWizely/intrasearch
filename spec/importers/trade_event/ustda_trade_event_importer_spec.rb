@@ -27,8 +27,8 @@ RSpec.describe TradeEvent::UstdaTradeEventImporter do
           'Retail Trade',
           'eCommerce Industry'
         ],
-        hosted_url: 'https://example.org/trade_event?id=f0e2598dbc76ce55cd0a557746375bd911808bac',
-        id: 'f0e2598dbc76ce55cd0a557746375bd911808bac',
+        hosted_url: 'https://example.org/trade_event?id=USTDA-f0e2598dbc76ce55cd0a557746375bd911808bac',
+        id: 'USTDA-f0e2598dbc76ce55cd0a557746375bd911808bac',
         industry_paths: [
           '/Franchising',
           '/Information and Communication Technology/eCommerce Industry',

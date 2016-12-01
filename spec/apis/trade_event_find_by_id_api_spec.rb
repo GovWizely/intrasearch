@@ -16,7 +16,7 @@ RSpec.describe TradeEventFindByIdAPI do
                   TradeEvent::UstdaTradeEvent
 
   describe 'finding DL trade event' do
-    before { get '/v2/trade_events/94c68284a1b7698becdcdaa69dda29bb2d76051c' }
+    before { get '/v2/trade_events/DL-94c68284a1b7698becdcdaa69dda29bb2d76051c' }
 
     subject { last_response }
     let(:parsed_body) { JSON.parse(last_response.body, symbolize_names: true) }
@@ -25,10 +25,10 @@ RSpec.describe TradeEventFindByIdAPI do
 
     it 'returns DL trade event attributes' do
       expected_attributes = {
-        id: '94c68284a1b7698becdcdaa69dda29bb2d76051c',
+        id: 'DL-94c68284a1b7698becdcdaa69dda29bb2d76051c',
         click_url: 'https://goo.gl/dl1',
         description: 'Direct Line:A Political and Economic Update Bureau of Economic and Business Affairs. Register to receive information on future Direct Line calls. Brief Description of call: The U.S. Embassy presents an opportunity for U.S. businesses of all sizes to learn about the latest political and economic developments. Following the presentation, participants will have the opportunity to ask questions. Please RSVP by clicking here.',
-        hosted_url: 'https://example.org/trade_event?id=94c68284a1b7698becdcdaa69dda29bb2d76051c',
+        hosted_url: 'https://example.org/trade_event?id=DL-94c68284a1b7698becdcdaa69dda29bb2d76051c',
         name: 'DL Trade Event 1',
         source: 'DL',
         url: 'http://dl.trade.event.example.org/1'
@@ -38,7 +38,7 @@ RSpec.describe TradeEventFindByIdAPI do
   end
 
   describe 'finding ITA trade event' do
-    before { get '/v2/trade_events/36282' }
+    before { get '/v2/trade_events/ITA-36282' }
 
     subject { last_response }
     let(:parsed_body) { JSON.parse(last_response.body, symbolize_names: true) }
@@ -47,7 +47,7 @@ RSpec.describe TradeEventFindByIdAPI do
 
     it 'returns ITA trade event attributes' do
       expected_attributes = {
-        id: '36282',
+        id: 'ITA-36282',
         click_url: 'https://goo.gl/ita1',
         contacts: [
           {
@@ -71,7 +71,7 @@ RSpec.describe TradeEventFindByIdAPI do
         description: '<h1>Event 36282 description.</h1>',
         end_date: '2016-05-24',
         event_type: 'Trade Mission',
-        hosted_url: 'https://example.org/trade_event?id=36282',
+        hosted_url: 'https://example.org/trade_event?id=ITA-36282',
         industries: ['Franchising'],
         name: 'Trade Event 36282',
         registration_title: 'Event 36282 title',
@@ -93,7 +93,7 @@ RSpec.describe TradeEventFindByIdAPI do
   end
 
   describe 'finding SBA trade event' do
-    before { get '/v2/trade_events/730226ea901d6c4bf7e4e4f5ef12ebec8c482a2b' }
+    before { get '/v2/trade_events/SBA-730226ea901d6c4bf7e4e4f5ef12ebec8c482a2b' }
 
     subject { last_response }
     let(:parsed_body) { JSON.parse(last_response.body, symbolize_names: true) }
@@ -102,7 +102,7 @@ RSpec.describe TradeEventFindByIdAPI do
 
     it 'returns SBA trade event attributes' do
       expected_attributes = {
-        id: '730226ea901d6c4bf7e4e4f5ef12ebec8c482a2b',
+        id: 'SBA-730226ea901d6c4bf7e4e4f5ef12ebec8c482a2b',
         contacts: [
           {
             'email': 'john.doe@example.org',
@@ -117,7 +117,7 @@ RSpec.describe TradeEventFindByIdAPI do
         end_time: '10:30 AM',
         name: 'SBA Trade Event 73022',
         event_type: 'Resource Partner',
-        hosted_url: 'https://example.org/trade_event?id=730226ea901d6c4bf7e4e4f5ef12ebec8c482a2b',
+        hosted_url: 'https://example.org/trade_event?id=SBA-730226ea901d6c4bf7e4e4f5ef12ebec8c482a2b',
         industries: [
           'eCommerce Industry'
         ],
@@ -151,7 +151,7 @@ RSpec.describe TradeEventFindByIdAPI do
   end
 
   describe 'finding USTDA trade event' do
-    before { get '/v2/trade_events/f0e2598dbc76ce55cd0a557746375bd911808bac' }
+    before { get '/v2/trade_events/USTDA-f0e2598dbc76ce55cd0a557746375bd911808bac' }
 
     subject { last_response }
     let(:parsed_body) { JSON.parse(last_response.body, symbolize_names: true) }
@@ -160,7 +160,7 @@ RSpec.describe TradeEventFindByIdAPI do
 
     it 'returns USTDA trade event attributes' do
       expected_attributes = {
-        id: 'f0e2598dbc76ce55cd0a557746375bd911808bac',
+        id: 'USTDA-f0e2598dbc76ce55cd0a557746375bd911808bac',
         contacts: [
           {
             email: 'john.doe@example.org',
@@ -177,7 +177,7 @@ RSpec.describe TradeEventFindByIdAPI do
         description: 'USTDA Trade Event f0e259 description.',
         end_date: '2016-05-24',
         end_time: '5:46 PM',
-        hosted_url: 'https://example.org/trade_event?id=f0e2598dbc76ce55cd0a557746375bd911808bac',
+        hosted_url: 'https://example.org/trade_event?id=USTDA-f0e2598dbc76ce55cd0a557746375bd911808bac',
         industries: [
           'eCommerce Industry'
         ],

@@ -19,7 +19,7 @@ RSpec.describe Admin::TradeLeadUpdateAPI, endpoint: '/admin/trade_leads' do
   include_context 'API response'
 
   context 'when the request contains valid parameters' do
-    let(:id) { '62d753fee98294cab8d66d1bcb501cff1a4f6670' }
+    let(:id) { 'AUSTRALIA-62d753fee98294cab8d66d1bcb501cff1a4f6670' }
     let(:request_body_hash) do
       {
         md_description: '#foo',
@@ -39,7 +39,7 @@ RSpec.describe Admin::TradeLeadUpdateAPI, endpoint: '/admin/trade_leads' do
   end
 
   context 'when existing extra is present' do
-    let(:id) { '539d317fe76effc1e7631ce1a7d2e6b814434f51' }
+    let(:id) { 'CANADA-539d317fe76effc1e7631ce1a7d2e6b814434f51' }
     let(:request_body_hash) do
       {
         md_description: '#foo',

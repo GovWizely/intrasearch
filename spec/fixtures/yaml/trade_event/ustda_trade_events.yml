@@ -1,4 +1,4 @@
-- :id: f0e2598dbc76ce55cd0a557746375bd911808bac
+- :id: USTDA-f0e2598dbc76ce55cd0a557746375bd911808bac
   :contacts:
   - email: john.doe@example.org
     first_name: John
@@ -17,7 +17,7 @@
   - Information and Communication Technology
   - Retail Trade
   - eCommerce Industry
-  :hosted_url: https://example.org/trade_event?id=f0e2598dbc76ce55cd0a557746375bd911808bac
+  :hosted_url: https://example.org/trade_event?id=USTDA-f0e2598dbc76ce55cd0a557746375bd911808bac
   :industries:
   - eCommerce Industry
   :industry_paths:

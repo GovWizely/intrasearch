@@ -28,8 +28,8 @@ RSpec.describe TradeEvent::SbaTradeEventImporter do
           'Retail Trade',
           'eCommerce Industry'
         ],
-        hosted_url: 'https://example.org/trade_event?id=730226ea901d6c4bf7e4e4f5ef12ebec8c482a2b',
-        id: '730226ea901d6c4bf7e4e4f5ef12ebec8c482a2b',
+        hosted_url: 'https://example.org/trade_event?id=SBA-730226ea901d6c4bf7e4e4f5ef12ebec8c482a2b',
+        id: 'SBA-730226ea901d6c4bf7e4e4f5ef12ebec8c482a2b',
         industry_paths: [
           '/Franchising',
           '/Information and Communication Technology/eCommerce Industry',

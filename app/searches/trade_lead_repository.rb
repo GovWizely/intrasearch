@@ -8,14 +8,18 @@ require 'trade_lead/uk_trade_lead'
 require 'trade_lead/ustda_trade_lead'
 
 class TradeLeadRepository < Repository
+  MODELS = [
+    TradeLead::AustraliaTradeLead,
+    TradeLead::CanadaTradeLead,
+    TradeLead::FboTradeLead,
+    TradeLead::McaTradeLead,
+    TradeLead::StateTradeLead,
+    TradeLead::UkTradeLead,
+    TradeLead::UstdaTradeLead
+  ].freeze
+
   def initialize
-    super TradeLead::AustraliaTradeLead,
-          TradeLead::CanadaTradeLead,
-          TradeLead::FboTradeLead,
-          TradeLead::McaTradeLead,
-          TradeLead::StateTradeLead,
-          TradeLead::UkTradeLead,
-          TradeLead::UstdaTradeLead
+    super(*MODELS)
   end
 
   private

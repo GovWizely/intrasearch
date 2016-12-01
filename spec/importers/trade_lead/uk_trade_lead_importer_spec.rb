@@ -6,7 +6,7 @@ RSpec.describe TradeLead::UkTradeLeadImporter do
 
     it 'imports UK trade leads' do
       expected_attributes = {
-        id: 'd292a188d7ce8dd13419de8c0da4ce7b29c79899',
+        id: 'UK-d292a188d7ce8dd13419de8c0da4ce7b29c79899',
         click_url: 'http://goo.gl/uk1',
         contact: 'john@example.co.uk',
         contract_end_at: DateTime.parse('2022-03-13T00:00:00+00:00'),
@@ -18,7 +18,7 @@ RSpec.describe TradeLead::UkTradeLeadImporter do
           'Aerospace and Defense',
           'Space'
         ],
-        hosted_url: 'https://example.org/trade_lead?id=d292a188d7ce8dd13419de8c0da4ce7b29c79899',
+        hosted_url: 'https://example.org/trade_lead?id=UK-d292a188d7ce8dd13419de8c0da4ce7b29c79899',
         industries: ['Space'],
         industry_paths: ['/Aerospace and Defense/Space'],
         max_contract_value: 6000000.0,

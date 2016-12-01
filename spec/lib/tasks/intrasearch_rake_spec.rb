@@ -51,6 +51,8 @@ RSpec.describe 'intrasearch.rake' do
       expect(TradeEvent::ItaTradeEventImporter).to receive(:import)
       expect(TradeEvent::SbaTradeEventImporter).to receive(:import)
       expect(TradeEvent::UstdaTradeEventImporter).to receive(:import)
+      expect(TradeEvent).to receive(:ids).and_return(%w(foo bar))
+      expect(TradeEvent::Extra).to receive(:prune_obsolete_documents).with(%w(foo bar))
 
       @rake['intrasearch:import_trade_events'].invoke
     end
@@ -65,6 +67,8 @@ RSpec.describe 'intrasearch.rake' do
       expect(TradeLead::StateTradeLeadImporter).to receive(:import)
       expect(TradeLead::UkTradeLeadImporter).to receive(:import)
       expect(TradeLead::UstdaTradeLeadImporter).to receive(:import)
+      expect(TradeLead).to receive(:ids).and_return(%w(foo bar))
+      expect(TradeLead::Extra).to receive(:prune_obsolete_documents).with(%w(foo bar))
 
       @rake['intrasearch:import_trade_leads'].invoke
     end

@@ -35,7 +35,7 @@ RSpec.describe Admin::TradeLeadListAPI, endpoint: '/admin/trade_leads' do
       expect(actual_results.count).to eq(1)
 
       expected_attributes = {
-        id: 'f3a40a7987cd049cbf093079bbef65b1df387d00',
+        id: 'MCA-f3a40a7987cd049cbf093079bbef65b1df387d00',
         categories: [
           'type/spn',
           'CPV/30236000',
@@ -45,7 +45,7 @@ RSpec.describe Admin::TradeLeadListAPI, endpoint: '/admin/trade_leads' do
         click_url: 'http://goo.gl/mca1',
         country: 'South Africa',
         funding_source: 'Millennium Challenge Account (MCA)',
-        hosted_url: 'https://example.org/trade_lead?id=f3a40a7987cd049cbf093079bbef65b1df387d00',
+        hosted_url: 'https://example.org/trade_lead?id=MCA-f3a40a7987cd049cbf093079bbef65b1df387d00',
         html_description: '<h3>MILLENNIUM CHALLENGE ACCOUNT BENIN II.</h3>',
         md_description: '### MILLENNIUM CHALLENGE ACCOUNT BENIN II.',
         original_description: "Buyer: \u003Ca href=\"http://www.dgmarket.com/tenders/adminShowBuyer.do?buyerId=7041575\"\u003EMILLENNIUM CHALLENGE ACCOUNT BENIN II\u003C/a\u003E",

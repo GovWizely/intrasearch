@@ -76,7 +76,7 @@ RSpec.describe TradeLeadSearchAPI, endpoint: '/v1/trade_leads/search' do
       expected_first_result = {
         snippet: 'Awesome description.',
         title: 'Awesome <em>Lead</em>',
-        url: 'https://example.org/trade_lead?id=539d317fe76effc1e7631ce1a7d2e6b814434f51' }
+        url: 'https://example.org/trade_lead?id=CANADA-539d317fe76effc1e7631ce1a7d2e6b814434f51' }
       expect(parsed_body[:results].first).to eq(expected_first_result)
     end
   end
@@ -92,7 +92,7 @@ RSpec.describe TradeLeadSearchAPI, endpoint: '/v1/trade_leads/search' do
           '<em>board</em> charged with providing advice to government on all innovation, science and research matters. '\
           'With the passage of legislation by the new parliament, Innovation Australia ...',
         title: 'Lead Professional Advice on Innovation System Strategic Planning',
-        url: 'https://example.org/trade_lead?id=62d753fee98294cab8d66d1bcb501cff1a4f6670' }
+        url: 'https://example.org/trade_lead?id=AUSTRALIA-62d753fee98294cab8d66d1bcb501cff1a4f6670' }
       expect(parsed_body[:results].first).to eq(expected_first_result)
     end
   end
@@ -113,7 +113,7 @@ RSpec.describe TradeLeadSearchAPI, endpoint: '/v1/trade_leads/search' do
       expected_first_result = {
         snippet: 'Awesome description.',
         title: 'Awesome Lead',
-        url: 'https://example.org/trade_lead?id=539d317fe76effc1e7631ce1a7d2e6b814434f51' }
+        url: 'https://example.org/trade_lead?id=CANADA-539d317fe76effc1e7631ce1a7d2e6b814434f51' }
       expect(parsed_body[:results].first).to eq(expected_first_result)
     end
   end
@@ -134,7 +134,7 @@ RSpec.describe TradeLeadSearchAPI, endpoint: '/v1/trade_leads/search' do
       expected_first_result = {
         snippet: 'Awesome description.',
         title: 'Awesome Lead',
-        url: 'https://example.org/trade_lead?id=539d317fe76effc1e7631ce1a7d2e6b814434f51' }
+        url: 'https://example.org/trade_lead?id=CANADA-539d317fe76effc1e7631ce1a7d2e6b814434f51' }
       expect(parsed_body[:results].first).to eq(expected_first_result)
     end
   end
@@ -155,7 +155,7 @@ RSpec.describe TradeLeadSearchAPI, endpoint: '/v1/trade_leads/search' do
       expected_first_result = {
         snippet: 'Awesome description.',
         title: 'Awesome Lead',
-        url: 'https://example.org/trade_lead?id=539d317fe76effc1e7631ce1a7d2e6b814434f51' }
+        url: 'https://example.org/trade_lead?id=CANADA-539d317fe76effc1e7631ce1a7d2e6b814434f51' }
       expect(parsed_body[:results].first).to eq(expected_first_result)
     end
   end
@@ -176,7 +176,7 @@ RSpec.describe TradeLeadSearchAPI, endpoint: '/v1/trade_leads/search' do
       expected_first_result = {
         snippet: 'Awesome description.',
         title: 'Awesome Lead',
-        url: 'https://example.org/trade_lead?id=539d317fe76effc1e7631ce1a7d2e6b814434f51'
+        url: 'https://example.org/trade_lead?id=CANADA-539d317fe76effc1e7631ce1a7d2e6b814434f51'
       }
       expect(parsed_body[:results].first).to eq(expected_first_result)
     end
@@ -198,7 +198,7 @@ RSpec.describe TradeLeadSearchAPI, endpoint: '/v1/trade_leads/search' do
       expected_first_result = {
         snippet: 'UK Business Services ...',
         title: 'Advanced Electron Microscopy Lead',
-        url: 'https://example.org/trade_lead?id=d292a188d7ce8dd13419de8c0da4ce7b29c79899'
+        url: 'https://example.org/trade_lead?id=UK-d292a188d7ce8dd13419de8c0da4ce7b29c79899'
       }
       expect(parsed_body[:results].first).to eq(expected_first_result)
     end

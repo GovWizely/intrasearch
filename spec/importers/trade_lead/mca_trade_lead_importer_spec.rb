@@ -6,7 +6,7 @@ RSpec.describe TradeLead::McaTradeLeadImporter do
 
     it 'imports MCA trade leads' do
       expected_attributes = {
-        id: 'f3a40a7987cd049cbf093079bbef65b1df387d00',
+        id: 'MCA-f3a40a7987cd049cbf093079bbef65b1df387d00',
         categories: [
           'type/spn',
           'CPV/30236000',
@@ -17,7 +17,7 @@ RSpec.describe TradeLead::McaTradeLeadImporter do
         countries: ['South Africa'],
         description: "Buyer: \u003Ca href=\"http://www.dgmarket.com/tenders/adminShowBuyer.do?buyerId=7041575\"\u003EMILLENNIUM CHALLENGE ACCOUNT BENIN II\u003C/a\u003E",
         funding_source: 'Millennium Challenge Account (MCA)',
-        hosted_url: 'https://example.org/trade_lead?id=f3a40a7987cd049cbf093079bbef65b1df387d00',
+        hosted_url: 'https://example.org/trade_lead?id=MCA-f3a40a7987cd049cbf093079bbef65b1df387d00',
         source: 'MCA',
         published_at: DateTime.parse('2016-06-18T21:10:41-04:00'),
         title: 'Purchase of Computer Equipment Lead',

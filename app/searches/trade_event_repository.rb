@@ -6,11 +6,15 @@ require 'trade_event/sba_trade_event'
 require 'trade_event/ustda_trade_event'
 
 class TradeEventRepository < Repository
+  MODELS = [
+    TradeEvent::DlTradeEvent,
+    TradeEvent::ItaTradeEvent,
+    TradeEvent::SbaTradeEvent,
+    TradeEvent::UstdaTradeEvent
+  ].freeze
+
   def initialize
-    super TradeEvent::DlTradeEvent,
-          TradeEvent::ItaTradeEvent,
-          TradeEvent::SbaTradeEvent,
-          TradeEvent::UstdaTradeEvent
+    super(*MODELS)
   end
 
   private

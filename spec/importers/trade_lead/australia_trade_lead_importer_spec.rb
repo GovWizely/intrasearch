@@ -6,7 +6,7 @@ RSpec.describe TradeLead::AustraliaTradeLeadImporter do
 
     it 'imports AUSTRALIA trade leads' do
       expected_attributes = {
-        id: '62d753fee98294cab8d66d1bcb501cff1a4f6670',
+        id: 'AUSTRALIA-62d753fee98294cab8d66d1bcb501cff1a4f6670',
         agency: 'Department of Industry, Innovation and Science',
         app_reference: '$app_reference',
         atm_id: 'PRI-00003629',
@@ -25,6 +25,7 @@ RSpec.describe TradeLead::AustraliaTradeLeadImporter do
           'Retail Trade',
           'eCommerce Industry'
         ],
+        hosted_url: 'https://example.org/trade_lead?id=AUSTRALIA-62d753fee98294cab8d66d1bcb501cff1a4f6670',
         industries: [
           'Franchising',
           'eCommerce Industry'

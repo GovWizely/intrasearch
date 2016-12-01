@@ -6,12 +6,12 @@ RSpec.describe TradeLead::UstdaTradeLeadImporter do
 
     it 'imports USTDA trade leads' do
       expected_attributes = {
-        id: '26252346bf5f16c1a9a9b2dfa2762bbe2c99b8ae',
+        id: 'USTDA-26252346bf5f16c1a9a9b2dfa2762bbe2c99b8ae',
         click_url: 'https://goo.gl/ustda1',
         countries: ['South Africa'],
         description: 'Background: a South African state-owned freight logistics company',
         end_at: DateTime.parse('2016-09-30T00:00:00+00:00'),
-        hosted_url: 'https://example.org/trade_lead?id=26252346bf5f16c1a9a9b2dfa2762bbe2c99b8ae',
+        hosted_url: 'https://example.org/trade_lead?id=USTDA-26252346bf5f16c1a9a9b2dfa2762bbe2c99b8ae',
         published_at: DateTime.parse('2016-06-13T00:00:00+00:00'),
         source: 'USTDA',
         title: 'Trade Lead: South Africa: Global Logistics Service Provider',

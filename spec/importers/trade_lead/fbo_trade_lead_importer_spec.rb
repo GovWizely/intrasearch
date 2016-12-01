@@ -6,7 +6,7 @@ RSpec.describe TradeLead::FboTradeLeadImporter do
 
     it 'imports FBO trade leads' do
       expected_attributes = {
-        id: '995a1c55b26d11fe162f3f61b594be8c403c60f0',
+        id: 'FBO-995a1c55b26d11fe162f3f61b594be8c403c60f0',
         classification_code: 'U',
         click_url: 'https://goo.gl/fbo1',
         competitive_procurement_strategy: '$competitive_procurement_strategy',
@@ -19,7 +19,7 @@ RSpec.describe TradeLead::FboTradeLeadImporter do
           'Business and Professional Services',
           'Scientific and Technical Services'
         ],
-        hosted_url: 'https://example.org/trade_lead?id=995a1c55b26d11fe162f3f61b594be8c403c60f0',
+        hosted_url: 'https://example.org/trade_lead?id=FBO-995a1c55b26d11fe162f3f61b594be8c403c60f0',
         industries: [
           'Scientific and Technical Services'
         ],

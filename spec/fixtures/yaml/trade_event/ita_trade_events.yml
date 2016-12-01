@@ -1,4 +1,4 @@
-- :id: '36282'
+- :id: 'ITA-36282'
   :contacts:
   - email: John.Doe@example.gov
     first_name: John
@@ -19,7 +19,7 @@
   :event_type: Trade Mission
   :expanded_industries:
   - Franchising
-  :hosted_url: https://example.org/trade_event?id=36282
+  :hosted_url: https://example.org/trade_event?id=ITA-36282
   :industries:
   - Franchising
   :industry_paths:

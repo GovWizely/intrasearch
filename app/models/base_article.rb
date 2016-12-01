@@ -9,10 +9,8 @@ module BaseArticle
       include BaseModel
       include BaseArticleAttributes
 
-      base.class_eval do
-        append_index_namespace 'articles',
-                               name.tableize
-      end
+      append_index_namespace 'articles',
+                             name.tableize
     end
   end
 end

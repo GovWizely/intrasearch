@@ -31,7 +31,7 @@ RSpec.describe Admin::TradeEventListAPI, endpoint: '/admin/trade_events' do
       actual_results = parsed_body[:results]
       expected_results = [
         {
-          id: '730226ea901d6c4bf7e4e4f5ef12ebec8c482a2b',
+          id: 'SBA-730226ea901d6c4bf7e4e4f5ef12ebec8c482a2b',
           contacts: [
             {
               'email': 'john.doe@example.org',
@@ -45,7 +45,7 @@ RSpec.describe Admin::TradeEventListAPI, endpoint: '/admin/trade_events' do
           end_time: '10:30 AM',
           html_description: '<h1>SBA Trade Event 73022 description.</h1>',
           event_type: 'Resource Partner',
-          hosted_url: 'https://example.org/trade_event?id=730226ea901d6c4bf7e4e4f5ef12ebec8c482a2b',
+          hosted_url: 'https://example.org/trade_event?id=SBA-730226ea901d6c4bf7e4e4f5ef12ebec8c482a2b',
           industries: [
             'eCommerce Industry'
           ],

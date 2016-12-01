@@ -34,6 +34,12 @@ module BaseModel
       self.index_name = index_alias_name
     end
 
+    def ids
+      find_in_batches(size: 10_000, _source_include: 'source').map do |b|
+        b.results.map(&:id)
+      end.flatten
+    end
+
     protected
 
     def append_index_namespace(*namespaces)

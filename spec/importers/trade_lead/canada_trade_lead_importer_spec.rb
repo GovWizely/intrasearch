@@ -6,7 +6,7 @@ RSpec.describe TradeLead::CanadaTradeLeadImporter do
 
     it 'imports CANADA trade leads' do
       expected_attributes = {
-        id: '539d317fe76effc1e7631ce1a7d2e6b814434f51',
+        id: 'CANADA-539d317fe76effc1e7631ce1a7d2e6b814434f51',
         amended_at: DateTime.parse('2016-08-11T00:00:00+00:00'),
         amendment_number: '000',
         bid_type: 'All interested suppliers may submit a bid',
@@ -23,7 +23,7 @@ RSpec.describe TradeLead::CanadaTradeLeadImporter do
           'Retail Trade',
           'eCommerce Industry'
         ],
-        hosted_url: 'https://example.org/trade_lead?id=539d317fe76effc1e7631ce1a7d2e6b814434f51',
+        hosted_url: 'https://example.org/trade_lead?id=CANADA-539d317fe76effc1e7631ce1a7d2e6b814434f51',
         implementing_entity: 'Canada Border Services Agency',
         industries: [
           'Franchising',

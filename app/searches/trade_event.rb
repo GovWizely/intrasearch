@@ -1,4 +1,5 @@
 require 'finder'
+require 'model_ids_collector'
 require 'trade_event_fields_search_response'
 require 'trade_event_list'
 require 'trade_event_repository'
@@ -6,6 +7,10 @@ require 'trade_event_search'
 require 'trade_event_search_response'
 
 module TradeEvent
+  def self.ids
+    ModelIdsCollector.collect(*TradeEventRepository::MODELS)
+  end
+
   def self.all(options = {})
     TradeEventList.new(options).run
   end

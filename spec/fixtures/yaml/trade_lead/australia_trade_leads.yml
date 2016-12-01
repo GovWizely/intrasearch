@@ -1,4 +1,4 @@
-- :id: 62d753fee98294cab8d66d1bcb501cff1a4f6670
+- :id: AUSTRALIA-62d753fee98294cab8d66d1bcb501cff1a4f6670
   :agency: Department of Industry, Innovation and Science
   :app_reference: "$app_reference"
   :atm_id: PRI-00003629
@@ -19,7 +19,7 @@
     is six months.
   :email: email@example.au
   :end_at: '2016-09-06T15:00:00+10:00'
-  :hosted_url: https://example.org/trade_lead?id=62d753fee98294cab8d66d1bcb501cff1a4f6670
+  :hosted_url: https://example.org/trade_lead?id=AUSTRALIA-62d753fee98294cab8d66d1bcb501cff1a4f6670
   :industries:
   - eCommerce Industry
   :expanded_industries:

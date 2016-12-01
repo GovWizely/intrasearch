@@ -35,8 +35,8 @@ RSpec.describe TradeEvent::ItaTradeEventImporter do
         'Retail Trade',
         'eCommerce Industry'
       ],
-        hosted_url: 'https://example.org/trade_event?id=36282',
-        id: '36282',
+        hosted_url: 'https://example.org/trade_event?id=ITA-36282',
+        id: 'ITA-36282',
         industry_paths: [
           '/Franchising',
           '/Information and Communication Technology/eCommerce Industry',

@@ -2,18 +2,21 @@ require 'time'
 require 'uri'
 
 require 'industry'
+require 'namespaced_id_by_source_transformer'
 require 'taxonomy_attributes_transformer'
 
 module TradeEventTransformer
   URL_PREFIX = Intrasearch.config['trade_event_url_prefix'].freeze
 
   def self.extended(base)
+    base.extend NamespacedIdBySourceTransformer
     base.extend TaxonomyAttributesTransformer
     base.extend ModuleMethods
   end
 
   module ModuleMethods
     def transform(attributes)
+      transform_id attributes
       transform_cost attributes
       transform_countries_and_venues attributes
       transform_countries_and_regions attributes,

@@ -2,10 +2,12 @@ require 'addressable/uri'
 require 'uri'
 
 require 'industry'
+require 'namespaced_id_by_source_transformer'
 require 'taxonomy_attributes_transformer'
 
 module TradeLeadTransformer
   def self.extended(base)
+    base.extend NamespacedIdBySourceTransformer
     base.extend TaxonomyAttributesTransformer
     base.extend ModuleMethods
   end
@@ -14,6 +16,7 @@ module TradeLeadTransformer
 
   module ModuleMethods
     def transform(attributes)
+      transform_id attributes
       transform_country attributes
       transform_countries_and_regions attributes,
                                       attributes[:countries]

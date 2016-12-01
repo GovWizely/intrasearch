@@ -16,7 +16,7 @@ RSpec.describe Admin::TradeEventUpdateAPI, endpoint: '/admin/trade_events' do
   include_context 'API response'
 
   context 'when the request contains valid parameters' do
-    let(:id) { '94c68284a1b7698becdcdaa69dda29bb2d76051c' }
+    let(:id) { 'DL-94c68284a1b7698becdcdaa69dda29bb2d76051c' }
     let(:request_body_hash) do
       {
         md_description: '#foo',
@@ -36,7 +36,7 @@ RSpec.describe Admin::TradeEventUpdateAPI, endpoint: '/admin/trade_events' do
   end
 
   context 'when existing extra is present' do
-    let(:id) { '36282' }
+    let(:id) { 'ITA-36282' }
     let(:request_body_hash) do
       {
         md_description: '#foo',

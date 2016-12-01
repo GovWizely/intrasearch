@@ -17,7 +17,7 @@ RSpec.describe TradeLeadFindByIdAPI do
                   TradeLead::UstdaTradeLead
 
   describe 'get AUSTRALIA trade lead by id' do
-    before { get '/v1/trade_leads/62d753fee98294cab8d66d1bcb501cff1a4f6670' }
+    before { get '/v1/trade_leads/AUSTRALIA-62d753fee98294cab8d66d1bcb501cff1a4f6670' }
 
     include_context 'API response'
 
@@ -25,7 +25,7 @@ RSpec.describe TradeLeadFindByIdAPI do
 
     it 'returns AUSTRALIA trade lead attributes' do
       expected_attributes = {
-        id: '62d753fee98294cab8d66d1bcb501cff1a4f6670',
+        id: 'AUSTRALIA-62d753fee98294cab8d66d1bcb501cff1a4f6670',
         agency: 'Department of Industry, Innovation and Science',
         app_reference: '$app_reference',
         atm_id: 'PRI-00003629',
@@ -38,7 +38,7 @@ RSpec.describe TradeLeadFindByIdAPI do
         description: 'The Board of Innovation Australia (Board) is an independent statutory board charged with providing advice to government on all innovation, science and research matters. With the passage of legislation by the new parliament, Innovation Australia will change to become Innovation and Science Australia. The Office of Innovation and Science Australia (OISA) has been established within the Department of Industry, Innovation and Science (Department) to support the work of the Board.',
         email: 'email@example.au',
         end_at: '2016-09-06T15:00:00+10:00',
-        hosted_url: 'https://example.org/trade_lead?id=62d753fee98294cab8d66d1bcb501cff1a4f6670',
+        hosted_url: 'https://example.org/trade_lead?id=AUSTRALIA-62d753fee98294cab8d66d1bcb501cff1a4f6670',
         industries: [
           'eCommerce Industry'
         ],
@@ -58,7 +58,7 @@ RSpec.describe TradeLeadFindByIdAPI do
   end
 
   describe 'get CANADA trade lead by id' do
-    before { get '/v1/trade_leads/539d317fe76effc1e7631ce1a7d2e6b814434f51' }
+    before { get '/v1/trade_leads/CANADA-539d317fe76effc1e7631ce1a7d2e6b814434f51' }
 
     include_context 'API response'
 
@@ -66,7 +66,7 @@ RSpec.describe TradeLeadFindByIdAPI do
 
     it 'returns CANADA trade lead attributes' do
       expected_attributes = {
-        id: '539d317fe76effc1e7631ce1a7d2e6b814434f51',
+        id: 'CANADA-539d317fe76effc1e7631ce1a7d2e6b814434f51',
         amended_at: '2016-08-11T00:00:00+00:00',
         amendment_number: '000',
         bid_type: 'All interested suppliers may submit a bid',
@@ -77,7 +77,7 @@ RSpec.describe TradeLeadFindByIdAPI do
         country: 'Canada',
         description: '<h2>Awesome description.</h2>',
         end_at: '2016-09-20T00:00:00+00:00',
-        hosted_url: 'https://example.org/trade_lead?id=539d317fe76effc1e7631ce1a7d2e6b814434f51',
+        hosted_url: 'https://example.org/trade_lead?id=CANADA-539d317fe76effc1e7631ce1a7d2e6b814434f51',
         implementing_entity: 'Canada Border Services Agency',
         industries: [
           'Franchising',
@@ -102,7 +102,7 @@ RSpec.describe TradeLeadFindByIdAPI do
   end
 
   describe 'get FBO trade lead by id' do
-    before { get '/v1/trade_leads/995a1c55b26d11fe162f3f61b594be8c403c60f0' }
+    before { get '/v1/trade_leads/FBO-995a1c55b26d11fe162f3f61b594be8c403c60f0' }
 
     include_context 'API response'
 
@@ -110,7 +110,7 @@ RSpec.describe TradeLeadFindByIdAPI do
 
     it 'returns FBO trade lead attributes' do
       expected_attributes = {
-        id: '995a1c55b26d11fe162f3f61b594be8c403c60f0',
+        id: 'FBO-995a1c55b26d11fe162f3f61b594be8c403c60f0',
         classification_code: 'U',
         click_url: 'https://goo.gl/fbo1',
         competitive_procurement_strategy: '$competitive_procurement_strategy',
@@ -119,7 +119,7 @@ RSpec.describe TradeLeadFindByIdAPI do
         country: 'South Africa',
         description: '<h3>See RFP.</h3>',
         end_at: '2017-04-17T00:00:00+00:00',
-        hosted_url: 'https://example.org/trade_lead?id=995a1c55b26d11fe162f3f61b594be8c403c60f0',
+        hosted_url: 'https://example.org/trade_lead?id=FBO-995a1c55b26d11fe162f3f61b594be8c403c60f0',
         industries: [
           'Scientific and Technical Services'
         ],
@@ -140,7 +140,7 @@ RSpec.describe TradeLeadFindByIdAPI do
   end
 
   describe 'get MCA trade lead by id' do
-    before { get '/v1/trade_leads/f3a40a7987cd049cbf093079bbef65b1df387d00' }
+    before { get '/v1/trade_leads/MCA-f3a40a7987cd049cbf093079bbef65b1df387d00' }
 
     include_context 'API response'
 
@@ -148,7 +148,7 @@ RSpec.describe TradeLeadFindByIdAPI do
 
     it 'returns MCA trade lead attributes' do
       expected_attributes = {
-        id: 'f3a40a7987cd049cbf093079bbef65b1df387d00',
+        id: 'MCA-f3a40a7987cd049cbf093079bbef65b1df387d00',
         categories: [
           'type/spn',
           'CPV/30236000',
@@ -159,7 +159,7 @@ RSpec.describe TradeLeadFindByIdAPI do
         country: 'South Africa',
         description: '<h3>MILLENNIUM CHALLENGE ACCOUNT BENIN II.</h3>',
         funding_source: 'Millennium Challenge Account (MCA)',
-        hosted_url: 'https://example.org/trade_lead?id=f3a40a7987cd049cbf093079bbef65b1df387d00',
+        hosted_url: 'https://example.org/trade_lead?id=MCA-f3a40a7987cd049cbf093079bbef65b1df387d00',
         source: 'MCA',
         published_at: '2016-06-18T21:10:41-04:00',
         title: 'Purchase of Computer Equipment Lead',
@@ -171,7 +171,7 @@ RSpec.describe TradeLeadFindByIdAPI do
   end
 
   describe 'get STATE trade lead by id' do
-    before { get '/v1/trade_leads/c118cb6ed4345bb33980b2dfb77303e2a561866a' }
+    before { get '/v1/trade_leads/STATE-c118cb6ed4345bb33980b2dfb77303e2a561866a' }
 
     include_context 'API response'
 
@@ -179,7 +179,7 @@ RSpec.describe TradeLeadFindByIdAPI do
 
     it 'returns STATE trade lead attributes' do
       expected_attributes = {
-        id: 'c118cb6ed4345bb33980b2dfb77303e2a561866a',
+        id: 'STATE-c118cb6ed4345bb33980b2dfb77303e2a561866a',
         borrowing_entity: 'Not Applicable',
         click_url: 'http://goo.gl/state1',
         comments: 'The value stated is not the correct value it is only for uploading purposes.',
@@ -188,7 +188,7 @@ RSpec.describe TradeLeadFindByIdAPI do
         description: 'Expression of Interest',
         end_at: '2016-08-24T00:00:00+00:00',
         funding_source: 'Other',
-        hosted_url: 'https://example.org/trade_lead?id=c118cb6ed4345bb33980b2dfb77303e2a561866a',
+        hosted_url: 'https://example.org/trade_lead?id=STATE-c118cb6ed4345bb33980b2dfb77303e2a561866a',
         lead_source: 'Post Identified Project',
         industries: ['Retail Trade'],
         procurement_organization: 'Ministry of Transport and Civil Aviation',
@@ -211,7 +211,7 @@ RSpec.describe TradeLeadFindByIdAPI do
   end
 
   describe 'get UK trade lead by id' do
-    before { get '/v1/trade_leads/d292a188d7ce8dd13419de8c0da4ce7b29c79899' }
+    before { get '/v1/trade_leads/UK-d292a188d7ce8dd13419de8c0da4ce7b29c79899' }
 
     include_context 'API response'
 
@@ -219,7 +219,7 @@ RSpec.describe TradeLeadFindByIdAPI do
 
     it 'returns UK trade lead attributes' do
       expected_attributes = {
-        id: 'd292a188d7ce8dd13419de8c0da4ce7b29c79899',
+        id: 'UK-d292a188d7ce8dd13419de8c0da4ce7b29c79899',
         click_url: 'http://goo.gl/uk1',
         contact: 'john@example.co.uk',
         contract_end_at: '2022-03-13T00:00:00+00:00',
@@ -227,7 +227,7 @@ RSpec.describe TradeLeadFindByIdAPI do
         country: 'United Kingdom',
         deadline_at: '2016-09-19T00:00:00+00:00',
         description: 'UK Business Services',
-        hosted_url: 'https://example.org/trade_lead?id=d292a188d7ce8dd13419de8c0da4ce7b29c79899',
+        hosted_url: 'https://example.org/trade_lead?id=UK-d292a188d7ce8dd13419de8c0da4ce7b29c79899',
         industries: ['Space'],
         max_contract_value: 6000000.0,
         min_contract_value: 0.0,
@@ -248,7 +248,7 @@ RSpec.describe TradeLeadFindByIdAPI do
   end
 
   describe 'get USTDA trade lead by id' do
-    before { get '/v1/trade_leads/26252346bf5f16c1a9a9b2dfa2762bbe2c99b8ae' }
+    before { get '/v1/trade_leads/USTDA-26252346bf5f16c1a9a9b2dfa2762bbe2c99b8ae' }
 
     include_context 'API response'
 
@@ -256,12 +256,12 @@ RSpec.describe TradeLeadFindByIdAPI do
 
     it 'returns USTDA trade lead attributes' do
       expected_attributes = {
-        id: '26252346bf5f16c1a9a9b2dfa2762bbe2c99b8ae',
+        id: 'USTDA-26252346bf5f16c1a9a9b2dfa2762bbe2c99b8ae',
         click_url: 'https://goo.gl/ustda1',
         country: 'South Africa',
         description: 'Background: a South African state-owned freight logistics company',
         end_at: '2016-09-30T00:00:00+00:00',
-        hosted_url: 'https://example.org/trade_lead?id=26252346bf5f16c1a9a9b2dfa2762bbe2c99b8ae',
+        hosted_url: 'https://example.org/trade_lead?id=USTDA-26252346bf5f16c1a9a9b2dfa2762bbe2c99b8ae',
         published_at: '2016-06-13T00:00:00+00:00',
         source: 'USTDA',
         title: 'Trade Lead: South Africa: Global Logistics Service Provider',

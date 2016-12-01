@@ -17,16 +17,16 @@ RSpec.describe Admin::TradeEventFindByIdAPI do
 
   include_context 'API response'
 
-  describe 'find a DL trade event by id', endpoint: '/admin/trade_events/94c68284a1b7698becdcdaa69dda29bb2d76051c' do
+  describe 'find a DL trade event by id', endpoint: '/admin/trade_events/DL-94c68284a1b7698becdcdaa69dda29bb2d76051c' do
     before { get described_endpoint }
 
     it_behaves_like 'a successful API response'
 
     it 'returns DL trade event attributes' do
       expected_attributes = {
-        id: '94c68284a1b7698becdcdaa69dda29bb2d76051c',
+        id: 'DL-94c68284a1b7698becdcdaa69dda29bb2d76051c',
         click_url: 'https://goo.gl/dl1',
-        hosted_url: 'https://example.org/trade_event?id=94c68284a1b7698becdcdaa69dda29bb2d76051c',
+        hosted_url: 'https://example.org/trade_event?id=DL-94c68284a1b7698becdcdaa69dda29bb2d76051c',
         html_description: nil,
         md_description: nil,
         name: 'DL Trade Event 1',
@@ -38,14 +38,14 @@ RSpec.describe Admin::TradeEventFindByIdAPI do
     end
   end
 
-  describe 'find an ITA trade event by id', endpoint: '/admin/trade_events/36282' do
+  describe 'find an ITA trade event by id', endpoint: '/admin/trade_events/ITA-36282' do
     before { get described_endpoint }
 
     it_behaves_like 'a successful API response'
 
     it 'returns ITA trade event attributes' do
       expected_attributes = {
-        id: '36282',
+        id: 'ITA-36282',
         click_url: 'https://goo.gl/ita1',
         contacts: [
           {
@@ -68,7 +68,7 @@ RSpec.describe Admin::TradeEventFindByIdAPI do
         cost: 4400.0,
         end_date: '2016-05-24',
         event_type: 'Trade Mission',
-        hosted_url: 'https://example.org/trade_event?id=36282',
+        hosted_url: 'https://example.org/trade_event?id=ITA-36282',
         html_description: '<h1>Event 36282 description.</h1>',
         industries: ['Franchising'],
         md_description: '# Event 36282 description.',
@@ -92,14 +92,14 @@ RSpec.describe Admin::TradeEventFindByIdAPI do
     end
   end
 
-  describe 'find an SBA trade event by id', endpoint: '/admin/trade_events/730226ea901d6c4bf7e4e4f5ef12ebec8c482a2b' do
+  describe 'find an SBA trade event by id', endpoint: '/admin/trade_events/SBA-730226ea901d6c4bf7e4e4f5ef12ebec8c482a2b' do
     before { get described_endpoint }
 
     it_behaves_like 'a successful API response'
 
     it 'returns SBA trade event attributes' do
       expected_attributes = {
-        id: '730226ea901d6c4bf7e4e4f5ef12ebec8c482a2b',
+        id: 'SBA-730226ea901d6c4bf7e4e4f5ef12ebec8c482a2b',
         contacts: [
           {
             'email': 'john.doe@example.org',
@@ -113,7 +113,7 @@ RSpec.describe Admin::TradeEventFindByIdAPI do
         end_time: '10:30 AM',
         html_description: '<h1>SBA Trade Event 73022 description.</h1>',
         event_type: 'Resource Partner',
-        hosted_url: 'https://example.org/trade_event?id=730226ea901d6c4bf7e4e4f5ef12ebec8c482a2b',
+        hosted_url: 'https://example.org/trade_event?id=SBA-730226ea901d6c4bf7e4e4f5ef12ebec8c482a2b',
         industries: [
           'eCommerce Industry'
         ],
@@ -149,14 +149,14 @@ RSpec.describe Admin::TradeEventFindByIdAPI do
     end
   end
 
-  describe 'find an USTDA trade event by id', endpoint: '/admin/trade_events/f0e2598dbc76ce55cd0a557746375bd911808bac' do
+  describe 'find an USTDA trade event by id', endpoint: '/admin/trade_events/USTDA-f0e2598dbc76ce55cd0a557746375bd911808bac' do
     before { get described_endpoint }
 
     it_behaves_like 'a successful API response'
 
     it 'returns USTDA trade event attributes' do
       expected_attributes = {
-        id: 'f0e2598dbc76ce55cd0a557746375bd911808bac',
+        id: 'USTDA-f0e2598dbc76ce55cd0a557746375bd911808bac',
         click_url: 'https://goo.gl/ustda1',
         contacts: [
           {
@@ -172,7 +172,7 @@ RSpec.describe Admin::TradeEventFindByIdAPI do
         cost_currency: 'USD',
         end_date: '2016-05-24',
         end_time: '5:46 PM',
-        hosted_url: 'https://example.org/trade_event?id=f0e2598dbc76ce55cd0a557746375bd911808bac',
+        hosted_url: 'https://example.org/trade_event?id=USTDA-f0e2598dbc76ce55cd0a557746375bd911808bac',
         html_description: nil,
         industries: [
           'eCommerce Industry'

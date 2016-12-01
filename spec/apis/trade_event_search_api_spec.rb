@@ -78,10 +78,10 @@ RSpec.describe TradeEventSearchAPI, endpoint: '/v1/trade_events/search' do
 
     it 'highlights matching term in the title' do
       expected_first_result = {
-        id: '36282',
+        id: 'ITA-36282',
         snippet: '<em>Event</em> 36282 description.',
         title: 'Trade <em>Event</em> 36282',
-        url: 'https://example.org/trade_event?id=36282' }
+        url: 'https://example.org/trade_event?id=ITA-36282' }
       expect(parsed_body[:results].first).to eq(expected_first_result)
     end
   end
@@ -93,12 +93,12 @@ RSpec.describe TradeEventSearchAPI, endpoint: '/v1/trade_events/search' do
 
     it 'highlights matching term in the description' do
       expected_first_result = {
-        id: '94c68284a1b7698becdcdaa69dda29bb2d76051c',
+        id: 'DL-94c68284a1b7698becdcdaa69dda29bb2d76051c',
         snippet: 'Direct Line:A Political and Economic Update Bureau of Economic and Business Affairs.'\
             ' Register to receive information on future Direct Line calls.'\
             ' Brief Description of call: The U.S. <em>Embassy</em> presents an opportunity for U.S. businesses of all sizes ...',
         title: 'DL Trade Event 1',
-        url: 'https://example.org/trade_event?id=94c68284a1b7698becdcdaa69dda29bb2d76051c' }
+        url: 'https://example.org/trade_event?id=DL-94c68284a1b7698becdcdaa69dda29bb2d76051c' }
       expect(parsed_body[:results].first).to eq(expected_first_result)
     end
   end
@@ -110,10 +110,10 @@ RSpec.describe TradeEventSearchAPI, endpoint: '/v1/trade_events/search' do
 
     it 'returns unhighlighted title and snippet' do
       expected_first_result = {
-        id: '730226ea901d6c4bf7e4e4f5ef12ebec8c482a2b',
+        id: 'SBA-730226ea901d6c4bf7e4e4f5ef12ebec8c482a2b',
         snippet: 'SBA Trade Event 73022 description.',
         title: 'SBA Trade Event 73022',
-        url: 'https://example.org/trade_event?id=730226ea901d6c4bf7e4e4f5ef12ebec8c482a2b' }
+        url: 'https://example.org/trade_event?id=SBA-730226ea901d6c4bf7e4e4f5ef12ebec8c482a2b' }
       expect(parsed_body[:results].first).to eq(expected_first_result)
     end
   end
@@ -132,10 +132,10 @@ RSpec.describe TradeEventSearchAPI, endpoint: '/v1/trade_events/search' do
 
     it 'returns snippet, title and URL' do
       expected_first_result = {
-        id: 'f0e2598dbc76ce55cd0a557746375bd911808bac',
+        id: 'USTDA-f0e2598dbc76ce55cd0a557746375bd911808bac',
         snippet: 'USTDA Trade Event f0e259 description.',
         title: 'USTDA Trade Event Summit f0e259',
-        url: 'https://example.org/trade_event?id=f0e2598dbc76ce55cd0a557746375bd911808bac' }
+        url: 'https://example.org/trade_event?id=USTDA-f0e2598dbc76ce55cd0a557746375bd911808bac' }
       expect(parsed_body[:results].first).to eq(expected_first_result)
     end
   end
@@ -154,10 +154,10 @@ RSpec.describe TradeEventSearchAPI, endpoint: '/v1/trade_events/search' do
 
     it 'returns snippet, title and URL' do
       expected_first_result = {
-        id: '36282',
+        id: 'ITA-36282',
         snippet: 'Event 36282 description.',
         title: 'Trade Event 36282',
-        url: 'https://example.org/trade_event?id=36282' }
+        url: 'https://example.org/trade_event?id=ITA-36282' }
       expect(parsed_body[:results].first).to eq(expected_first_result)
     end
   end
@@ -176,10 +176,10 @@ RSpec.describe TradeEventSearchAPI, endpoint: '/v1/trade_events/search' do
 
     it 'returns snippet, title and URL' do
       expected_first_result = {
-        id: 'f0e2598dbc76ce55cd0a557746375bd911808bac',
+        id: 'USTDA-f0e2598dbc76ce55cd0a557746375bd911808bac',
         snippet: 'USTDA Trade Event f0e259 description.',
         title: 'USTDA Trade Event Summit f0e259',
-        url: 'https://example.org/trade_event?id=f0e2598dbc76ce55cd0a557746375bd911808bac' }
+        url: 'https://example.org/trade_event?id=USTDA-f0e2598dbc76ce55cd0a557746375bd911808bac' }
       expect(parsed_body[:results].first).to eq(expected_first_result)
     end
   end
@@ -198,10 +198,10 @@ RSpec.describe TradeEventSearchAPI, endpoint: '/v1/trade_events/search' do
 
     it 'returns unhighlighted title and snippet' do
       expected_first_result = {
-        id: 'f0e2598dbc76ce55cd0a557746375bd911808bac',
+        id: 'USTDA-f0e2598dbc76ce55cd0a557746375bd911808bac',
         snippet: 'USTDA Trade Event f0e259 description.',
         title: 'USTDA Trade Event Summit f0e259',
-        url: 'https://example.org/trade_event?id=f0e2598dbc76ce55cd0a557746375bd911808bac' }
+        url: 'https://example.org/trade_event?id=USTDA-f0e2598dbc76ce55cd0a557746375bd911808bac' }
       expect(parsed_body[:results].first).to eq(expected_first_result)
     end
   end
@@ -220,10 +220,10 @@ RSpec.describe TradeEventSearchAPI, endpoint: '/v1/trade_events/search' do
 
     it 'returns unhighlighted title and snippet' do
       expected_first_result = {
-        id: '730226ea901d6c4bf7e4e4f5ef12ebec8c482a2b',
+        id: 'SBA-730226ea901d6c4bf7e4e4f5ef12ebec8c482a2b',
         snippet: 'SBA Trade Event 73022 description.',
         title: 'SBA Trade Event 73022',
-        url: 'https://example.org/trade_event?id=730226ea901d6c4bf7e4e4f5ef12ebec8c482a2b' }
+        url: 'https://example.org/trade_event?id=SBA-730226ea901d6c4bf7e4e4f5ef12ebec8c482a2b' }
       expect(parsed_body[:results].first).to eq(expected_first_result)
     end
   end
@@ -242,10 +242,10 @@ RSpec.describe TradeEventSearchAPI, endpoint: '/v1/trade_events/search' do
 
     it 'returns unhighlighted title and snippet' do
       expected_first_result = {
-        id: '730226ea901d6c4bf7e4e4f5ef12ebec8c482a2b',
+        id: 'SBA-730226ea901d6c4bf7e4e4f5ef12ebec8c482a2b',
         snippet: 'SBA Trade Event 73022 description.',
         title: 'SBA Trade Event 73022',
-        url: 'https://example.org/trade_event?id=730226ea901d6c4bf7e4e4f5ef12ebec8c482a2b' }
+        url: 'https://example.org/trade_event?id=SBA-730226ea901d6c4bf7e4e4f5ef12ebec8c482a2b' }
       expect(parsed_body[:results].first).to eq(expected_first_result)
     end
   end
@@ -264,10 +264,10 @@ RSpec.describe TradeEventSearchAPI, endpoint: '/v1/trade_events/search' do
 
     it 'returns unhighlighted title and snippet' do
       expected_first_result = {
-        id: '36282',
+        id: 'ITA-36282',
         snippet: 'Event 36282 description.',
         title: 'Trade Event 36282',
-        url: 'https://example.org/trade_event?id=36282' }
+        url: 'https://example.org/trade_event?id=ITA-36282' }
       expect(parsed_body[:results].first).to eq(expected_first_result)
     end
   end
@@ -286,10 +286,10 @@ RSpec.describe TradeEventSearchAPI, endpoint: '/v1/trade_events/search' do
 
     it 'returns unhighlighted title and snippet' do
       expected_first_result = {
-        id: '36282',
+        id: 'ITA-36282',
         snippet: 'Event 36282 description.',
         title: 'Trade Event 36282',
-        url: 'https://example.org/trade_event?id=36282' }
+        url: 'https://example.org/trade_event?id=ITA-36282' }
       expect(parsed_body[:results].first).to eq(expected_first_result)
     end
   end
@@ -321,7 +321,7 @@ RSpec.describe TradeEventSearchAPI, endpoint: '/v1/trade_events/search' do
 
     it 'returns fields' do
       expected_first_result = {
-        id: '36282',
+        id: 'ITA-36282',
         click_url: 'https://goo.gl/ita1',
         contacts: [
           {
@@ -345,7 +345,7 @@ RSpec.describe TradeEventSearchAPI, endpoint: '/v1/trade_events/search' do
         description: '<h1>Event 36282 description.</h1>',
         end_date: '2016-05-24',
         event_type: 'Trade Mission',
-        hosted_url: 'https://example.org/trade_event?id=36282',
+        hosted_url: 'https://example.org/trade_event?id=ITA-36282',
         industries: ['Franchising'],
         name: 'Trade Event 36282',
         registration_title: 'Event 36282 title',
