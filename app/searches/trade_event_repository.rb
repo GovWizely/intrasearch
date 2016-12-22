@@ -1,5 +1,4 @@
 require 'repository'
-require 'trade_event'
 require 'trade_event/dl_trade_event'
 require 'trade_event/ita_trade_event'
 require 'trade_event/sba_trade_event'
