@@ -22,7 +22,7 @@ class ArticlesSettingsTemplate
           filter: {
             english_stemmer: {
               type: 'stemmer',
-              name: 'minimal_english'
+              language: 'porter2'
             }
           }
         }

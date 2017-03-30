@@ -38,6 +38,7 @@ RSpec.describe 'intrasearch.rake' do
       expect(CountryCommercialGuideImporter).to receive(:import)
       expect(FaqImporter).to receive(:import)
       expect(MarketInsightImporter).to receive(:import)
+      expect(MarketIntelligenceImporter).to receive(:import)
       expect(StateReportImporter).to receive(:import)
       expect(TopMarketsReportImporter).to receive(:import)
 

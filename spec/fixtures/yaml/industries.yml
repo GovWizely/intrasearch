@@ -16,6 +16,12 @@
 - label: Scientific and Technical Services
   path: "/Business and Professional Services/Scientific and Technical Services"
 
+- label: Distribution and Logistics
+  path: "/Distribution and Logistics"
+
+- label: Air Transportation
+  path: "/Distribution and Logistics/Air Transportation"
+
 - label: Franchising
   path: "/Franchising"
 

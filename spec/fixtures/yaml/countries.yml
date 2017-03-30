@@ -62,6 +62,15 @@
   world_region_paths: []
   world_regions: []
 
+- :id: http://webprotege.stanford.edu/RL7MjTu8xoASOkoXft8G2E
+  :label: France
+  :trade_regions:
+  - European Union - 28
+  :world_region_paths:
+  - "/Europe"
+  :world_regions:
+  - Europe
+
 - :id: http://webprotege.stanford.edu/R8CwJ8K2v1OQmxDmOcHfgSj
   :label: Mexico
   :trade_regions:
