@@ -3,8 +3,9 @@ rvm:
 - 2.4.5
 bundler_args: "--without production"
 env:
-- ES_VERSION=2.4.6
-- CC_TEST_REPORTER_ID=c29d1ae72d0b98bf0c2fbe2798493cd0b069a61c4e97025d47087c53b6617fa4
+  global:
+  - CC_TEST_REPORTER_ID=c29d1ae72d0b98bf0c2fbe2798493cd0b069a61c4e97025d47087c53b6617fa4
+  - ES_VERSION=2.4.6
 before_install:
 - curl -s https://download.elasticsearch.org/elasticsearch/release/org/elasticsearch/distribution/tar/elasticsearch/${ES_VERSION}/elasticsearch-${ES_VERSION}.tar.gz
   | tar xz -C /tmp || true
