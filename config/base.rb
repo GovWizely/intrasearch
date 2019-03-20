@@ -1,6 +1,7 @@
 require 'active_support/logger'
 require 'active_support/string_inquirer'
 require 'pathname'
+require 'yaml'
 
 module Intrasearch
   @env = ActiveSupport::StringInquirer.new ENV['RACK_ENV']

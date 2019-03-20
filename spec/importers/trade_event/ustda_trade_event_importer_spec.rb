@@ -44,7 +44,7 @@ RSpec.describe TradeEvent::UstdaTradeEventImporter do
         registration_url: 'http://ustda.trade.events.example.org/registration/f0e259',
         source: 'USTDA',
         start_date: Date.parse('2016-05-17'),
-        start_time: '3:46 PM',
+        start_time: 'invalid',
         trade_regions: ['Asia Pacific Economic Cooperation'],
         url: 'http://ustda.trade.events.example.org/event/f0e259',
         venues: [

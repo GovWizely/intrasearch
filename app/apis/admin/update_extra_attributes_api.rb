@@ -9,7 +9,7 @@ module UpdateExtraAttributesAPI
       finder_module = base.name.demodulize.sub(/UpdateAPI\Z/, '').constantize
       patch "/#{finder_module.name.tableize}/:id" do
         declared_params = declared(params)
-        model = finder_module.find_by_id declared_params.id
+        model = finder_module.find_by_id declared_params[:id]
 
         if model
           model.update_extra_attributes declared_params.except(:id)

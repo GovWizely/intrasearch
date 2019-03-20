@@ -8,7 +8,7 @@ module FindByIdAPI
       end
 
       get "/#{search_module.name.tableize}/:id" do
-        model = search_module.find_by_id params.id
+        model = search_module.find_by_id params[:id]
         model ? serializer.serialize(model) : status(:not_found)
       end
     end

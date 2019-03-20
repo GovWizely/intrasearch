@@ -25,7 +25,7 @@ module WebPageJSONSerializer
     protected
 
     def assign_highlighted_fields(resource, hash)
-      if resource.hit.highlight?
+      if resource.hit['highlight']
         title_str = get_hit_value resource.hit, self.title_attribute
         snippet_str = get_hit_value resource.hit, self.snippet_attribute
       end
@@ -38,7 +38,7 @@ module WebPageJSONSerializer
     end
 
     def get_hit_value(hit, field_symbol)
-      highlighted_collection = hit.highlight[field_symbol]
+      highlighted_collection = hit['highlight'][field_symbol]
       highlighted_collection.first if highlighted_collection
     end
 

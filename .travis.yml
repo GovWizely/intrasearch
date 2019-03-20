@@ -1,18 +1,20 @@
 language: ruby
 rvm:
-- 2.2.5
+- 2.4.5
 bundler_args: "--without production"
 env:
-- ES_VERSION=2.2.2
+- ES_VERSION=2.4.6
+- CC_TEST_REPORTER_ID=c29d1ae72d0b98bf0c2fbe2798493cd0b069a61c4e97025d47087c53b6617fa4
 before_install:
 - curl -s https://download.elasticsearch.org/elasticsearch/release/org/elasticsearch/distribution/tar/elasticsearch/${ES_VERSION}/elasticsearch-${ES_VERSION}.tar.gz
   | tar xz -C /tmp || true
 - "/tmp/elasticsearch-${ES_VERSION}/bin/elasticsearch -d"
 before_script:
+- curl -L https://codeclimate.com/downloads/test-reporter/test-reporter-latest-linux-amd64 > ./cc-test-reporter
+- chmod +x ./cc-test-reporter
+- ./cc-test-reporter before-build
 - cp config/intrasearch.yml.example config/intrasearch.yml
 - cp config/restforce.yml.example config/restforce.yml
 - cp config/webservices.yml.example config/webservices.yml
-addons:
-  code_climate:
-    repo_token:
-      secure: ffRFcJVQ0r2btgEpC9GTYWfLY3vs0KUZuSlpTeRZldopjO6qsuW9JhpzeMby3GmXjNUolUH/A/sx1Za7suPYTbVFa1s/ITycNz6DX90fHIekhdk0rFy5ZGQgwjf/3ANE/LqQXdh+/UPJ6qgx6156fP9Av9Ql6XSi2g6t5KbqhuRtl4h1sv96JS+Xi5LDVQ9COrJtNfBb0XZSxnTEO/8ARpq4n5WB8O0IQxiIFeGsCdbmD1L1Zt66SuYbMto3Novgn/lrAYhE0ke8JuRlebSMsLQuVzjx+hqi/KPljRNGhjXYSDM3/gVWPl9nzcf8uvU4XZt9kCTJWcrmppvHkjFCtevpMPGZIE6+BYAiVxbhO1G4crMwTP/91ijMa1VJSCHqUuF2hp2QiUZqMOWMbZ0q8wyH5xwEl2WvJ9/yqg8+zqeOJyiSg6fGqqo7FiIUlNufc7X+VQ+Ryw7HSeLYzy4bpTV7lZDLltw9INbltDXP1BDl/tu+KWDL9/5gwZsAFF87Szuwryg0uNcXSbv44u5zcvuJnlaK/GRSsfAF15w3vGxX0tM5q0IhbSr6gTWesUzpGhk9hbwpYdhYpLLfNt5inELJLhFwd+S/gz83MJxPQ5r8IBe7MTj2yXGFV1VFxdp6eJub/zPcCTHoM0r/i3pQWFsgy3IFNs7o6UhOI0TvUSs=
+after_script:
+- ./cc-test-reporter after-build --exit-code $TRAVIS_TEST_RESULT

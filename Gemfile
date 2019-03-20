@@ -1,9 +1,12 @@
 source 'https://rubygems.org'
 
-gem 'activesupport', '~> 4.2.7'
+gem 'activesupport', '~> 4.2.11.1'
 gem 'addressable'
-gem 'elasticsearch-persistence'
+gem 'elasticsearch', '~> 2.0.1'
+gem 'elasticsearch-model', '~> 2.0.1'
+gem 'elasticsearch-persistence', '~> 2.0.1'
 gem 'grape'
+gem 'hashie', '~> 3.4.6'
 gem 'rake'
 gem 'rack-console'
 gem 'rack-cors', require: 'rack/cors'
@@ -18,7 +21,6 @@ group :development do
 end
 
 group :test do
-  gem 'codeclimate-test-reporter', require: false
   gem 'rack-test'
   gem 'rspec'
   gem 'simplecov', require: false
@@ -29,7 +31,7 @@ group :development, :test do
 end
 
 group :production do
-  gem 'airbrake', '~> 5.1'
+  gem 'airbrake'
   gem 'newrelic_rpm'
   gem 'unicorn'
 end

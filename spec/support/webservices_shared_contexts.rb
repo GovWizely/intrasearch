@@ -13,12 +13,6 @@ RSpec.shared_context 'webservices request' do |status_code|
       end
     end
 
-    connection.adapter :test do |stub|
-      stub.get(request_path) do |_env|
-        [status_code, {}, response_body]
-      end
-    end
-
     expect(Webservices::Connection).to receive(:get_instance).and_return(connection)
   end
 end

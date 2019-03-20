@@ -7,7 +7,7 @@ module Admin
     end
 
     get '/users/:id' do
-      user = User.find_by_id params.id
+      user = User.find_by_id params[:id]
       user ? user : status(:not_found)
     end
   end
